@@ -10,6 +10,9 @@ Monster Hunter XX (Nintendo Switch) の各種 ID を、**CSV / TSV / 単一 HTML
 > **🌐 オンライン版**: <https://nexy451z.github.io/mhxx-id-memo/>
 > （GitHub Pages・インストール不要。ローカルで使う場合は下記の HTML を直接開いてください）
 
+> **📊 アクセス解析**: オンライン版には Google Tag Manager（`GTM-T9NHWQW4`）を設置しています。
+> ローカルで開いた場合は外部リクエストが失敗しますが、動作には影響しません。
+
 ---
 
 ## クイックスタート（インストール不要）
