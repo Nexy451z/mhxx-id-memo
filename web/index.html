@@ -27,6 +27,7 @@
   --shadow:0 10px 30px rgba(16,32,48,.12);
   --mono: ui-monospace, "Cascadia Mono", "SFMono-Regular", Consolas, Menlo, monospace;
   --sans: system-ui, -apple-system, "Segoe UI", "Yu Gothic UI", Meiryo, "Hiragino Kaku Gothic ProN", sans-serif;
+  color-scheme: light;
 }
 html[data-theme="dark"]{
   --bg:#0e1116; --bg2:#141920; --bg3:#1b222b; --bg4:#232c37;
@@ -38,6 +39,7 @@ html[data-theme="dark"]{
   --err:#e86a6a; --err-bg:#2a1616;
   --row-hover:#171e26; --row-sel:#152b3d;
   --shadow:0 10px 30px rgba(0,0,0,.55);
+  color-scheme: dark;
 }
 *{box-sizing:border-box}
 /* hidden 属性は必ず効かせる（display:flex 等の指定に負けないように） */
@@ -85,8 +87,8 @@ button,input,select{font:inherit;color:inherit}
 #toolbar{padding:7px 12px 8px;border-bottom:1px solid var(--line);background:var(--bg);display:flex;flex-direction:column;gap:6px}
 .tb-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 #q{flex:1 1 240px;min-width:140px}
-input[type=search],input[type=text],select{background:var(--bg);border:1px solid var(--line2);border-radius:6px;padding:5px 8px;outline:none;min-width:0}
-input[type=search]:focus,input[type=text]:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
+input[type=search],input[type=text],input[type=number],select{background:var(--bg);border:1px solid var(--line2);border-radius:6px;padding:5px 8px;outline:none;min-width:0;color:var(--fg)}
+input[type=search]:focus,input[type=text]:focus,input[type=number]:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
 input::placeholder{color:var(--fg3)}
 #fcol{flex:0 0 auto;max-width:180px}
 #fval{flex:0 1 180px}
@@ -213,33 +215,138 @@ input[type=checkbox]:focus-visible{outline:2px solid var(--accent);outline-offse
 .toast.err{border-color:var(--err);color:var(--err);background:var(--err-bg)}
 .toast[hidden]{display:none}
 
+/* ---------------- mode switch ---------------- */
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:8px;overflow:hidden;flex:0 0 auto}
+.seg button{background:var(--bg);border:0;padding:6px 12px;cursor:pointer;color:var(--fg2);font-size:12.5px;white-space:nowrap;min-height:32px}
+.seg button+button{border-left:1px solid var(--line2)}
+.seg button.on{background:var(--accent);color:#fff;font-weight:700}
+.seg button:hover:not(.on){background:var(--bg3)}
+
+/* ---------------- memory mode ---------------- */
+#mem{flex:1;overflow:auto;min-height:0;background:var(--bg2);padding:14px}
+#mem[hidden]{display:none}
+.mem-wrap{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.mem-card{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.mem-card h3{margin:0 0 10px;font-size:13px;color:var(--fg);display:flex;align-items:center;gap:8px}
+.mem-card h3 .num{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:700;flex:0 0 auto}
+.mem-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.mem-row label{color:var(--fg2);font-size:12px;white-space:nowrap}
+.mem-row select,.mem-row input{min-width:0}
+.mem-list{max-height:280px;overflow:auto;border:1px solid var(--line);border-radius:8px;margin-top:6px;background:var(--bg)}
+.mem-item{display:flex;gap:10px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--fg);font-size:12.5px;min-height:40px}
+.mem-item:last-child{border-bottom:0}
+.mem-item:hover{background:var(--bg3)}
+.mem-item.on{background:var(--accent-bg);font-weight:700}
+.mem-item .id{font:11px var(--mono);color:var(--fg3);flex:0 0 auto}
+.mem-item .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mem-item .sub{font:10.5px var(--mono);color:var(--fg3);flex:0 0 auto}
+.mem-empty{padding:16px;color:var(--fg3);font-size:12px;text-align:center}
+.mem-note{color:var(--fg3);font-size:11.5px;line-height:1.7}
+.mem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.mem-box{background:var(--bg3);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.mem-box .k{font-size:11px;color:var(--fg3);margin-bottom:4px}
+.mem-box .v{font:13px var(--mono);color:var(--fg);word-break:break-all}
+.mem-box input{width:100%;margin-top:4px}
+.mem-copybar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 4px;padding:10px 12px;background:var(--accent-bg);border:1px solid var(--accent);border-radius:8px}
+.mem-copybar .btn.primary{min-height:44px;font-size:14px;font-weight:700}
+.mem-copybar .mem-note{color:var(--accent-fg);font-size:11.5px;flex:1;min-width:150px}
+.mem-help{font-size:12px;color:var(--fg2);line-height:1.95}
+.mem-help ol{margin:6px 0 0;padding-left:20px}
+.mem-help code{background:var(--bg3);padding:1px 5px;border-radius:4px;font-family:var(--mono);font-size:11.5px}
+
+/* hex dump */
+.hex{display:flex;flex-wrap:wrap;gap:3px;font:13px/1.9 var(--mono);margin:4px 0 10px}
+.hex span{padding:1px 5px;border-radius:3px;border:1px solid transparent}
+.hex .f0{background:#dbeafe;color:#123a63}
+.hex .f1{background:#dcfce7;color:#14532d}
+.hex .f2{background:#fef3c7;color:#5b4300}
+.hex .f3{background:#fae8ff;color:#5b1a6b}
+.hex .f4{background:#fee2e2;color:#6b1a1a}
+.hex .f5{background:#e0e7ff;color:#2b2f6b}
+.hex .f6{background:#e8eaed;color:#3c4043}
+html[data-theme="dark"] .hex .f0{background:#12324d;color:#bcdcf7}
+html[data-theme="dark"] .hex .f1{background:#123222;color:#a7f3c9}
+html[data-theme="dark"] .hex .f2{background:#33280d;color:#f3d99b}
+html[data-theme="dark"] .hex .f3{background:#2e1638;color:#e9c8f5}
+html[data-theme="dark"] .hex .f4{background:#3a1a1a;color:#f5c2c2}
+html[data-theme="dark"] .hex .f5{background:#1e2350;color:#c7cdf7}
+html[data-theme="dark"] .hex .f6{background:#262c34;color:#b6c0cb}
+.hex-legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11.5px;color:var(--fg2);margin-top:4px}
+.hex-legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.pat{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.pat .lbl{font:11px var(--mono);color:var(--fg3);flex:0 0 120px;line-height:1.35}
+.pat code{flex:1;min-width:180px;background:var(--bg3);border:1px solid var(--line);border-radius:6px;padding:7px 9px;font:12px var(--mono);word-break:break-all}
+.annot{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:12px;margin-top:6px}
+.annot dt{font:11px var(--mono);color:var(--fg3);white-space:nowrap}
+.annot dd{margin:0;color:var(--fg2);word-break:break-word}
+
 /* ---------------- responsive ---------------- */
-@media (max-width: 1100px){
+/* --- タブレット: サイドバー縮小 + ツールバー 2 段 --- */
+@media (max-width: 1024px){
+  #sidebar{width:208px;flex-basis:208px}
   #q{flex-basis:180px}
   #fval{flex-basis:140px}
   #counts{gap:9px;font-size:11px}
+  #toolbar .tb-row{gap:5px}
+  .mem-wrap{max-width:none}
 }
+/* --- スマホ: ドロワー + タッチ向けサイズ --- */
 @media (max-width: 900px){
-  #sidebar{position:fixed;top:0;left:0;bottom:0;transform:translateX(-100%);transition:transform .16s ease;box-shadow:var(--shadow)}
+  #sidebar{position:fixed;top:0;left:0;bottom:0;width:264px;flex-basis:264px;transform:translateX(-100%);transition:transform .16s ease;box-shadow:var(--shadow)}
   #sidebar.open{transform:none}
   #btn-menu{display:inline-block}
   #detail{width:100vw}
-  #topbar{flex-wrap:wrap;min-height:0;padding:7px 10px}
+  #topbar{flex-wrap:wrap;min-height:0;padding:7px 10px;gap:8px}
   #tbl-title{flex:1 1 100%;order:3}
+  #mode-switch{order:2}
   #counts{order:4;width:100%;justify-content:flex-start;gap:10px}
   #btn-menu{order:1}
-  #btn-theme{order:2;margin-left:auto}
+  #btn-theme{order:1;margin-left:auto}
+}
+@media (max-width: 768px), (pointer: coarse){
+  .btn,.seg button{min-height:44px;padding:10px 12px;font-size:13px}
+  input[type=search],input[type=text],input[type=number],select{min-height:44px;font-size:14px}
+  .menu .mi{min-height:44px;padding:10px 12px}
+  .menu label.mi{min-height:44px}
+  #grid tbody td{padding:10px;font-size:13px}
+  #grid thead th{padding:8px 10px}
+  #grid input[type=checkbox]{width:22px;height:22px}
+  #grid td.c-sel,#grid th.c-sel{width:48px}
+  #grid td.c-num,#grid th.c-num{width:48px;font-size:11px}
+  .mem-item{min-height:44px;padding:10px}
+  #mem{padding:10px}
+  .mem-card{padding:12px}
+  .mem-row{gap:8px}
+  .mem-row label{font-size:12.5px}
+  .mini{min-height:36px;padding:6px 10px;font-size:12px}
+  #pager .btn{min-height:40px;padding:6px 10px}
+  .pat .lbl{flex-basis:100%}
 }
 @media (max-width: 700px){
   #toolbar{padding:6px 8px 7px}
   .tb-row{gap:5px}
-  .btn{padding:5px 8px}
   #fcol{max-width:130px}
   #fval{flex:1 1 100px}
   #pager{padding:5px 8px}
   #pg-right{gap:4px}
   #psize,#pagein{font-size:11px}
   .state.error .box{padding:18px 16px}
+  #mode-switch button{padding:10px 10px;font-size:12.5px}
+}
+@media (max-width: 420px){
+  #topbar{padding:6px 8px}
+  #tbl-name{font-size:14px}
+  #counts{font-size:10.5px;gap:8px}
+  #toolbar{padding:5px 6px 6px}
+  #q{flex:1 1 100%}
+  #fcol{flex:0 0 44%;max-width:44%}
+  #fval{flex:1 1 40%}
+  #btn-clear{flex:0 0 auto;padding:10px 10px}
+  .mem-row label{min-width:100%}
+  .mem-row select,.mem-row input{width:100%}
+  .hex{font-size:12px}
+  .pat code{font-size:11px}
+  #pager{font-size:10.5px}
 }
 </style>
 </head>
@@ -268,6 +375,10 @@ input[type=checkbox]:focus-visible{outline:2px solid var(--accent);outline-offse
       <button id="btn-menu" class="btn" title="テーブル一覧">☰</button>
       <div id="tbl-title">
         <span id="tbl-name">読み込み中…</span><span id="tbl-id" class="mono"></span>
+      </div>
+      <div id="mode-switch" class="seg" role="tablist" aria-label="表示モード">
+        <button type="button" data-mode="list" class="on" role="tab" aria-selected="true">一覧</button>
+        <button type="button" data-mode="mem" role="tab" aria-selected="false">メモリ配置</button>
       </div>
       <div id="counts"></div>
       <button id="btn-theme" class="btn" title="ダークテーマに切替">🌙</button>
@@ -314,6 +425,97 @@ input[type=checkbox]:focus-visible{outline:2px solid var(--accent);outline-offse
       <div id="pg-left">—</div>
       <div id="pg-right"></div>
     </footer>
+
+    <section id="mem" hidden>
+      <div class="mem-wrap">
+
+        <div class="mem-card">
+          <h3><span class="num">1</span>装備を選ぶ</h3>
+          <div class="mem-row">
+            <label for="mem-cat">カテゴリ</label>
+            <select id="mem-cat">
+              <option value="armor">防具</option>
+              <option value="weapon">武器</option>
+              <option value="talisman">護石</option>
+            </select>
+            <span id="mem-part-wrap">
+              <label for="mem-part">部位</label>
+              <select id="mem-part"></select>
+            </span>
+            <span id="mem-wtype-wrap" hidden>
+              <label for="mem-wtype">武器種</label>
+              <select id="mem-wtype"></select>
+            </span>
+          </div>
+          <div class="mem-row">
+            <input id="mem-search" type="search" placeholder="名前で絞り込み（日本語・英語）" autocomplete="off" spellcheck="false" aria-label="装備名で絞り込み">
+            <span id="mem-count" class="mem-note"></span>
+          </div>
+          <div id="mem-list" class="mem-list"></div>
+        </div>
+
+        <div class="mem-card">
+          <h3><span class="num">2</span>オプション</h3>
+          <div class="mem-row">
+            <label for="mem-level">レベル</label>
+            <input id="mem-level" type="number" min="1" max="31" value="1" style="width:88px">
+            <label for="mem-tl">着せ替えLv</label>
+            <input id="mem-tl" type="number" min="1" max="31" value="1" style="width:88px">
+            <label for="mem-tm">着せ替えID</label>
+            <input id="mem-tm" type="number" min="0" max="65535" value="0" style="width:110px">
+          </div>
+          <div class="mem-row">
+            <label>装飾品</label>
+            <select id="mem-deco1" aria-label="装飾品1"></select>
+            <select id="mem-deco2" aria-label="装飾品2"></select>
+            <select id="mem-deco3" aria-label="装飾品3"></select>
+          </div>
+          <div class="mem-row" id="mem-tal-opts" hidden>
+            <label for="mem-kind">護石の種類</label>
+            <select id="mem-kind" aria-label="護石の種類"></select>
+            <label for="mem-skill1">スキル1</label>
+            <select id="mem-skill1" aria-label="スキル1"></select>
+            <input id="mem-p1" type="number" min="-3" max="10" value="1" style="width:72px" aria-label="スキル1のポイント">
+            <label for="mem-skill2">スキル2</label>
+            <select id="mem-skill2" aria-label="スキル2"></select>
+            <input id="mem-p2" type="number" min="-3" max="10" value="0" style="width:72px" aria-label="スキル2のポイント">
+            <label for="mem-slots">スロット数</label>
+            <select id="mem-slots" aria-label="スロット数">
+              <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3" selected>3</option>
+            </select>
+          </div>
+          <div class="mem-note">装飾品は <b>item_id</b> で記録されます。既定は「なし」(0)。レベルは 1 始まりで、記録上は (レベル-1) が入ります。</div>
+        </div>
+
+        <div class="mem-card">
+          <h3><span class="num">3</span>36 バイトのレコード</h3>
+          <div id="mem-hex" class="hex"></div>
+          <div id="mem-legend" class="hex-legend"></div>
+          <div class="mem-copybar">
+            <button type="button" class="btn primary" id="mem-copy-main" data-act="mem-copy" data-len="12">推奨パターンをコピー</button>
+            <span class="mem-note" id="mem-copy-note"></span>
+          </div>
+          <dl id="mem-annot" class="annot"></dl>
+        </div>
+
+        <div class="mem-card">
+          <h3><span class="num">4</span>スキャンパターン</h3>
+          <div id="mem-pats"></div>
+          <div class="mem-note">エミュレータのメモリ検索には <b>6 バイト</b> から始めるのが実用的です（装飾品を付けたら 8 バイト、テールが 00 埋めなら 36 バイトでも可）。</div>
+        </div>
+
+        <div class="mem-card">
+          <h3><span class="num">5</span>オフセット計算</h3>
+          <div class="mem-grid" id="mem-calc"></div>
+        </div>
+
+        <div class="mem-card">
+          <h3><span class="num">6</span>使い方</h3>
+          <div class="mem-help" id="mem-help"></div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <aside id="detail" hidden></aside>
@@ -451,7 +653,7 @@ function showLoading(msg) {
 function hideState() {
   $('state').hidden = true;
   $('grid').hidden = false;
-  $('pager').hidden = false;
+  $('pager').hidden = (S.mode === 'mem');
 }
 
 function showFatal(title, bodyHtml) {
@@ -491,6 +693,7 @@ function showLoadError(t, err) {
 
 /* ============================================================ state */
 var S = {
+  mode: 'list',
   tableId: null,
   q: '',
   fcol: '',
@@ -1240,6 +1443,8 @@ function handleAct(node) {
   else if (a === 'close-detail') { closeDetail(); }
   else if (a === 'close-modal') { closeModal(); }
   else if (a === 'reload') { location.reload(); }
+  else if (a === 'mem-pick') { memPick(node.getAttribute('data-key')); }
+  else if (a === 'mem-copy') { memCopy(parseInt(node.getAttribute('data-len'), 10) || 6); }
   else if (a === 'copy-val') {
     copyText(node.getAttribute('data-v')).then(function (ok) {
       toast(ok ? 'コピーしました' : 'コピーできませんでした', !ok);
@@ -1390,6 +1595,719 @@ function bindEvents() {
     var h = (location.hash || '').replace(/^#/, '');
     if (h && h !== S.tableId && tableById(h)) { selectTable(h); }
   });
+
+  memBind();
+}
+
+
+/* ============================================================ メモリ配置モード */
+var DEFAULT_FIELDS = [
+  { offset: 0, size: 2, name: 'head', desc_ja: 'type / level-1 / transmog_level-1（5bit x3）' },
+  { offset: 2, size: 2, name: 'id', desc_ja: '装備ID' },
+  { offset: 4, size: 2, name: 'transmog_id', desc_ja: '着せ替えID（0=なし）' },
+  { offset: 6, size: 2, name: 'deco1', desc_ja: '装飾品1 item_id' },
+  { offset: 8, size: 2, name: 'deco2', desc_ja: '装飾品2 item_id' },
+  { offset: 10, size: 2, name: 'deco3', desc_ja: '装飾品3 item_id' },
+  { offset: 12, size: 24, name: 'tail', desc_ja: 'type ごとの追加データ' }
+];
+
+var M = {
+  ready: false, loading: false,
+  cat: 'armor', part: 0, wtype: 0, query: '',
+  selected: null, fmt: 'space',
+  level: 1, tl: 1, tm: 0,
+  decos: [0, 0, 0],
+  tal: { kind: 10, skill1: 0, skill2: 0, p1: 1, p2: 0, slots: 3 },
+  layout: null
+};
+
+function pickNum(obj, names, dflt) {
+  if (!obj) { return dflt; }
+  for (var i = 0; i < names.length; i++) {
+    var v = obj[names[i]];
+    if (typeof v === 'number' && isFinite(v)) { return v; }
+  }
+  return dflt;
+}
+
+/* analyst の equip-record-layout.json（入れ子スキーマ）と旧フラット形式の両方を読む */
+function normalizeLayout(raw) {
+  raw = raw || {};
+  var box = raw.box || null;
+  var rec = raw.record || null;
+  var pg = raw.page_geometry || null;
+  var L = {
+    recordSize: pickNum(box, ['record_bytes'], pickNum(raw, ['record_size', 'recordSize', 'size', 'record_bytes'], 36)),
+    recordCount: pickNum(box, ['record_count'], pickNum(raw, ['record_count', 'recordCount', 'count'], 2000)),
+    saveOffset: pickNum(box, ['offset_from_slot_base'], pickNum(raw, ['save_offset', 'saveOffset', 'box_offset', 'offset'], 0x62EE)),
+    pageSize: pickNum(pg, ['slots_per_page'], pickNum(raw, ['page_size', 'pageSize'], 9)),
+    pageCount: pickNum(pg, ['page_count'], 0),
+    talisman: raw.talisman || null,
+    typeMap: Array.isArray(raw.type_map) ? raw.type_map : null,
+    source: raw.generated_by || raw.source || '',
+    confidence: raw.confidence || ''
+  };
+  var f = (rec && Array.isArray(rec.fields) && rec.fields.length) ? rec.fields
+        : (Array.isArray(raw.fields) && raw.fields.length ? raw.fields : DEFAULT_FIELDS);
+  L.fields = f;
+  return L;
+}
+
+function loadLayout() {
+  if (window.MHXX_EQUIP_LAYOUT) {
+    M.layout = normalizeLayout(window.MHXX_EQUIP_LAYOUT);
+    return Promise.resolve();
+  }
+  return new Promise(function (resolve) {
+    var s = document.createElement('script');
+    s.src = 'data/equip-record-layout.js';
+    s.async = true;
+    s.onload = function () { M.layout = normalizeLayout(window.MHXX_EQUIP_LAYOUT || {}); resolve(); };
+    s.onerror = function () { M.layout = normalizeLayout({}); resolve(); };
+    document.head.appendChild(s);
+  });
+}
+
+function dataOf(id) {
+  var s = window.MHXX_ID_MEMO_TABLES;
+  var e = s && s[id];
+  if (!e) { return null; }
+  if (!e._idx) {
+    var idx = {};
+    for (var i = 0; i < e.header.length; i++) { idx[e.header[i]] = i; }
+    e._idx = idx;
+  }
+  return { rows: e.rows, idx: e._idx };
+}
+
+function memEnsure() {
+  var need = ['armor', 'weapons', 'talismans', 'skills', 'decorations', 'weapon-types', 'armor-parts'];
+  var jobs = [];
+  for (var i = 0; i < need.length; i++) {
+    if (tableById(need[i])) { jobs.push(ensureTable(need[i])); }
+  }
+  return Promise.all(jobs).then(loadLayout);
+}
+
+function weaponTypeValue(wtypeId) {
+  var d = dataOf('weapon-types');
+  if (d) {
+    for (var i = 0; i < d.rows.length; i++) {
+      if (Number(d.rows[i][d.idx.weapon_type_id]) === wtypeId) {
+        var e = Number(d.rows[i][d.idx.equip_type_id]);
+        if (e) { return e; }
+      }
+    }
+  }
+  return wtypeId + 7;
+}
+
+function typeLabel(type) {
+  if (type >= 1 && type <= 5) {
+    var d = dataOf('armor-parts');
+    var nm = '';
+    if (d) {
+      for (var i = 0; i < d.rows.length; i++) {
+        if (Number(d.rows[i][d.idx.part_id]) === type - 1) { nm = d.rows[i][d.idx.name_ja]; }
+      }
+    }
+    return '防具' + (nm ? '（' + nm + '）' : '');
+  }
+  if (type === 6) { return '護石'; }
+  var w = dataOf('weapon-types');
+  if (w) {
+    for (var j = 0; j < w.rows.length; j++) {
+      if (Number(w.rows[j][w.idx.equip_type_id]) === type) {
+        return '武器（' + w.rows[j][w.idx.name_ja] + '）';
+      }
+    }
+  }
+  return '不明';
+}
+
+function kindRarity(kind) {
+  var d = dataOf('talismans');
+  if (d) {
+    for (var i = 0; i < d.rows.length; i++) {
+      if (Number(d.rows[i][d.idx.talisman_id]) === kind) {
+        return pickNum({ v: Number(d.rows[i][d.idx.rarity]) }, ['v'], 99);
+      }
+    }
+  }
+  return 99;
+}
+
+function skillName(id) {
+  var d = dataOf('skills');
+  if (!d || !id) { return id ? ('skill_id ' + id) : 'なし'; }
+  for (var i = 0; i < d.rows.length; i++) {
+    if (Number(d.rows[i][d.idx.skill_id]) === id) { return d.rows[i][d.idx.name_ja]; }
+  }
+  return 'skill_id ' + id;
+}
+
+/* ---------- select 構築 ---------- */
+function memBuildSelects() {
+  var partSel = $('mem-part');
+  var d = dataOf('armor-parts');
+  partSel.innerHTML = '';
+  if (d) {
+    for (var i = 0; i < d.rows.length; i++) {
+      var o = el('option', null, d.rows[i][d.idx.name_ja] + '（part_id ' + d.rows[i][d.idx.part_id] + '）');
+      o.value = String(d.rows[i][d.idx.part_id]);
+      partSel.appendChild(o);
+    }
+  }
+  partSel.value = String(M.part);
+
+  var wSel = $('mem-wtype');
+  var w = dataOf('weapon-types');
+  wSel.innerHTML = '';
+  if (w) {
+    for (var j = 0; j < w.rows.length; j++) {
+      var r = w.rows[j];
+      if (r[w.idx.used] !== 'yes') { continue; }
+      var o2 = el('option', null, r[w.idx.name_ja] + '（type ' + r[w.idx.equip_type_id] + '）');
+      o2.value = String(r[w.idx.weapon_type_id]);
+      wSel.appendChild(o2);
+    }
+  }
+  wSel.value = String(M.wtype);
+
+  var deco = dataOf('decorations');
+  var ids = ['mem-deco1', 'mem-deco2', 'mem-deco3'];
+  for (var k = 0; k < ids.length; k++) {
+    var sel = $(ids[k]);
+    sel.innerHTML = '';
+    var none = el('option', null, 'なし');
+    none.value = '0';
+    sel.appendChild(none);
+    if (deco) {
+      for (var m = 0; m < deco.rows.length; m++) {
+        var dr = deco.rows[m];
+        var o3 = el('option', null, dr[deco.idx.name_ja] + '（' + dr[deco.idx.item_id] + '）');
+        o3.value = String(dr[deco.idx.item_id]);
+        sel.appendChild(o3);
+      }
+    }
+    sel.value = String(M.decos[k] || 0);
+  }
+
+  var kSel = $('mem-kind');
+  var t = dataOf('talismans');
+  kSel.innerHTML = '';
+  if (t) {
+    for (var n = 0; n < t.rows.length; n++) {
+      var tr = t.rows[n];
+      var kid = Number(tr[t.idx.talisman_id]);
+      if (!kid) { continue; }
+      var o4 = el('option', null, tr[t.idx.name_ja] + '（kind ' + kid + '）');
+      o4.value = String(kid);
+      kSel.appendChild(o4);
+    }
+  }
+  kSel.value = String(M.tal.kind);
+
+  var sk = dataOf('skills');
+  ['mem-skill1', 'mem-skill2'].forEach(function (sid, si) {
+    var s2 = $(sid);
+    s2.innerHTML = '';
+    var z = el('option', null, 'なし');
+    z.value = '0';
+    s2.appendChild(z);
+    if (sk) {
+      for (var q = 0; q < sk.rows.length; q++) {
+        var sr = sk.rows[q];
+        var o5 = el('option', null, sr[sk.idx.name_ja] + '（' + sr[sk.idx.skill_id] + '）');
+        o5.value = String(sr[sk.idx.skill_id]);
+        s2.appendChild(o5);
+      }
+    }
+    s2.value = String(si === 0 ? M.tal.skill1 : M.tal.skill2);
+  });
+  $('mem-p1').value = String(M.tal.p1);
+  $('mem-p2').value = String(M.tal.p2);
+  $('mem-slots').value = String(M.tal.slots);
+}
+
+/* ---------- 一覧 ---------- */
+function memListItems() {
+  var out = [];
+  if (M.cat === 'armor') {
+    var d = dataOf('armor');
+    if (!d) { return out; }
+    var seen = {};
+    for (var i = 0; i < d.rows.length; i++) {
+      var r = d.rows[i];
+      if (Number(r[d.idx.part_id]) !== M.part) { continue; }
+      var sid = Number(r[d.idx.series_id]);
+      if (!sid) { continue; }  /* series 0 = 装備なし（実在しないパターンになるため除外） */
+      if (seen[sid]) { continue; }
+      seen[sid] = 1;
+      out.push({ key: 'a' + sid, kind: 'armor', type: M.part + 1, id: sid, name: r[d.idx.name_ja], en: r[d.idx.name_en], sub: 'series_id ' + sid });
+    }
+  } else if (M.cat === 'weapon') {
+    var dw = dataOf('weapons');
+    if (!dw) { return out; }
+    var seen2 = {};
+    var tv = weaponTypeValue(M.wtype);
+    for (var j = 0; j < dw.rows.length; j++) {
+      var w = dw.rows[j];
+      if (Number(w[dw.idx.weapon_type_id]) !== M.wtype) { continue; }
+      var wi = Number(w[dw.idx.weapon_index]);
+      if (!wi) { continue; }  /* weapon_index 0 = 装備なし */
+      if (seen2[wi]) { continue; }
+      seen2[wi] = 1;
+      out.push({ key: 'w' + wi, kind: 'weapon', type: tv, id: wi, name: w[dw.idx.name_ja], en: w[dw.idx.name_en], sub: 'weapon_index ' + wi });
+    }
+  } else {
+    var dt = dataOf('talismans');
+    if (!dt) { return out; }
+    for (var k = 0; k < dt.rows.length; k++) {
+      var t = dt.rows[k];
+      var kid = Number(t[dt.idx.talisman_id]);
+      if (!kid) { continue; }
+      out.push({ key: 'k' + kid, kind: 'talisman', type: 6, id: kid, name: t[dt.idx.name_ja], en: t[dt.idx.name_en], sub: 'kind ' + kid });
+    }
+  }
+  return out;
+}
+
+function memRenderList() {
+  var items = memListItems();
+  var q = norm(M.query.trim());
+  var filtered = [];
+  for (var i = 0; i < items.length; i++) {
+    var it = items[i];
+    if (q && norm(it.name + '\u0001' + (it.en || '')).indexOf(q) < 0) { continue; }
+    filtered.push(it);
+  }
+  var shown = filtered.slice(0, 400);
+  var html = [];
+  for (var k = 0; k < shown.length; k++) {
+    var s = shown[k];
+    var on = (M.selected && M.selected.key === s.key) ? ' on' : '';
+    html.push('<button type="button" class="mem-item' + on + '" data-act="mem-pick" data-key="' + esc(s.key) + '">' +
+      '<span class="id">' + esc(s.sub) + '</span>' +
+      '<span class="nm">' + esc(s.name || '(名前なし)') + '</span>' +
+      (s.en ? '<span class="sub">' + esc(s.en) + '</span>' : '') +
+      '</button>');
+  }
+  $('mem-list').innerHTML = html.length ? html.join('') : '<div class="mem-empty">該当する装備がありません</div>';
+  $('mem-count').textContent = filtered.length
+    ? (filtered.length > shown.length
+        ? filtered.length + ' 件中 ' + shown.length + ' 件を表示（絞り込んでください）'
+        : filtered.length + ' 件')
+    : '';
+}
+
+/* ---------- レコード生成 ---------- */
+function clampInt(v, lo, hi, dflt) {
+  v = parseInt(v, 10);
+  if (isNaN(v)) { v = dflt; }
+  if (v < lo) { v = lo; }
+  if (v > hi) { v = hi; }
+  return v;
+}
+function hex2(n) { return ('0' + (n & 0xFF).toString(16).toUpperCase()).slice(-2); }
+function hex4(n) { return ('000' + (n & 0xFFFF).toString(16).toUpperCase()).slice(-4); }
+function put16(b, off, v) {
+  b[off] = v & 0xFF;
+  b[off + 1] = (v >> 8) & 0xFF;
+}
+function get16(b, off) {
+  return (b[off] | (b[off + 1] << 8)) & 0xFFFF;
+}
+
+function buildRecord(sel) {
+  var L = M.layout || normalizeLayout({});
+  var b = new Uint8Array(L.recordSize);
+
+  if (sel.kind === 'talisman') {
+    var k = clampInt(M.tal.kind, 0, 10, 10);
+    b[0] = 6; b[1] = 0;
+    b[2] = k; b[3] = 0;
+    put16(b, 4, 0);
+    put16(b, 6, M.decos[0] || 0);
+    put16(b, 8, M.decos[1] || 0);
+    put16(b, 10, M.decos[2] || 0);
+    b[12] = clampInt(M.tal.skill1, 0, 255, 0) & 0xFF;
+    b[13] = clampInt(M.tal.skill2, 0, 255, 0) & 0xFF;
+    b[14] = clampInt(M.tal.p1, -128, 127, 0) & 0xFF;
+    b[15] = clampInt(M.tal.p2, -128, 127, 0) & 0xFF;
+    b[16] = clampInt(M.tal.slots, 0, 3, 0);
+    b[17] = 0;
+    b[18] = kindRarity(k) & 0xFF;
+    b[19] = 1;
+    return b;
+  }
+
+  var lv = clampInt(M.level, 1, 31, 1);
+  var tl = clampInt(M.tl, 1, 31, 1);
+  var w0 = (sel.type & 0x1F) | (((lv - 1) & 0x1F) << 5) | (((tl - 1) & 0x1F) << 10);
+  put16(b, 0, w0);
+  put16(b, 2, sel.id & 0xFFFF);
+  put16(b, 4, clampInt(M.tm, 0, 65535, 0));
+  put16(b, 6, M.decos[0] || 0);
+  put16(b, 8, M.decos[1] || 0);
+  put16(b, 10, M.decos[2] || 0);
+  return b;
+}
+
+/* 36 バイトのレコードを len バイトのパターンに拡張する（足りない分は 0 = 空き枠） */
+function patternBytes(rec, len) {
+  if (len <= rec.length) { return rec; }
+  var out = new Uint8Array(len);
+  out.set(rec.subarray(0, Math.min(rec.length, len)), 0);
+  return out;
+}
+
+function formatBytes(b, len, fmt) {
+  var vals = [];
+  for (var i = 0; i < len; i++) { vals.push(b[i] === undefined ? 0 : b[i]); }
+  if (fmt === 'compact') { return vals.map(function (v) { return hex2(v); }).join(''); }
+  if (fmt === 'escaped') { return vals.map(function (v) { return '\\x' + hex2(v); }).join(''); }
+  if (fmt === 'carray') { return '{ ' + vals.map(function (v) { return '0x' + hex2(v); }).join(', ') + ' }'; }
+  if (fmt === 'dec') { return vals.join(' '); }
+  return vals.map(function (v) { return hex2(v); }).join(' ');
+}
+
+function recommendedLen(sel) {
+  return (sel && sel.kind === 'talisman') ? 20 : 12;
+}
+
+/* ---------- 描画 ---------- */
+function memRenderRecord() {
+  var L = M.layout || normalizeLayout({});
+  var sel = M.selected;
+  var main = $('mem-copy-main');
+  if (!sel) {
+    $('mem-hex').innerHTML = '<span class="mem-note">上の一覧から装備を選んでください。</span>';
+    $('mem-legend').innerHTML = '';
+    $('mem-annot').innerHTML = '';
+    $('mem-pats').innerHTML = '<div class="mem-note">装備を選ぶとスキャンパターンが出ます。</div>';
+    if (main) { main.disabled = true; }
+    $('mem-copy-note').textContent = '';
+    return;
+  }
+  if (main) { main.disabled = false; }
+  var b = buildRecord(sel);
+
+  var chips = [];
+  var legend = [];
+  for (var i = 0; i < L.fields.length; i++) {
+    var f = L.fields[i];
+    var cls = 'f' + (i % 7);
+    var parts = [];
+    for (var k = 0; k < f.size; k++) {
+      var off = f.offset + k;
+      parts.push(hex2(b[off] === undefined ? 0 : b[off]));
+    }
+    chips.push('<span class="' + cls + '" title="+0x' + hex2(f.offset) + ' ' + esc(f.name) + '">' + parts.join(' ') + '</span>');
+    legend.push('<span class="' + cls + '">' + esc(f.name) + '</span>');
+  }
+  $('mem-hex').innerHTML = chips.join('');
+  $('mem-legend').innerHTML = '<div class="hex" style="margin:0;gap:8px">' + legend.join('') + '</div>';
+
+  var rows = [];
+  function row(k, v) { rows.push('<dt>' + esc(k) + '</dt><dd>' + v + '</dd>'); }
+
+  if (sel.kind === 'talisman') {
+    var kind = b[2];
+    var s1 = b[12], s2 = b[13];
+    var p1 = (b[14] << 24) >> 24, p2 = (b[15] << 24) >> 24;
+    row('+0x00 type', '0x' + hex2(b[0]) + '（type 6 = 護石, level 1）');
+    row('+0x02 kind', '0x' + hex2(kind) + ' = ' + kind + '（' + esc(sel.name || '') + '）');
+    row('+0x06 deco1..3', hex2(b[6]) + ' ' + hex2(b[7]) + ' / ' + hex2(b[8]) + ' ' + hex2(b[9]) + ' / ' + hex2(b[10]) + ' ' + hex2(b[11]));
+    row('+0x0C skill1', '0x' + hex2(s1) + ' = ' + s1 + '（' + esc(skillName(s1)) + '） ポイント ' + p1);
+    row('+0x0D skill2', '0x' + hex2(s2) + ' = ' + s2 + '（' + esc(skillName(s2)) + '） ポイント ' + p2);
+    row('+0x10 slots', '0x' + hex2(b[16]) + ' = ' + b[16] + ' 枠');
+    row('+0x12 rarity', '0x' + hex2(b[18]) + ' = ' + b[18] + '（kind から自動）');
+    row('+0x13', '0x' + hex2(b[19]) + '（固定 0x01）');
+    row('+0x14..0x23 tail', '16 バイト（護石では常に 0）');
+  } else {
+    var w0 = get16(b, 0);
+    var type = w0 & 0x1F;
+    var lv = ((w0 >> 5) & 0x1F) + 1;
+    var tl = ((w0 >> 10) & 0x1F) + 1;
+    row('+0x00 head', '0x' + hex4(w0) + ' → type=' + type + '（' + esc(typeLabel(type)) + '）, level=' + lv + ', 着せ替えLv=' + tl + ', bit15=0');
+    row('+0x02 id', '0x' + hex4(get16(b, 2)) + ' = ' + get16(b, 2) + '（' + esc(sel.name || '') + '）');
+    if (sel.kind === 'armor') {
+      row('+0x02 → armor_id', 'id*5 + (type-1) = ' + (get16(b, 2) * 5 + (type - 1)));
+    } else if (sel.kind === 'weapon') {
+      row('+0x02 → weapon_id', '(type-7)*10000 + id*10 = ' + ((type - 7) * 10000 + get16(b, 2) * 10) + '（form 0）');
+    }
+    row('+0x04 transmog', '0x' + hex4(get16(b, 4)) + (get16(b, 4) ? '' : '（なし）'));
+    for (var d = 0; d < 3; d++) {
+      var dv = get16(b, 6 + d * 2);
+      row('+0x0' + (6 + d * 2).toString(16).toUpperCase() + ' deco' + (d + 1), '0x' + hex4(dv) + (dv ? '（item_id ' + dv + '）' : '（なし）'));
+    }
+    row('+0x0C..0x23 tail', '24 バイト — <b>通常は 0 ですが、前の持ち主のバイトが残ることがあります</b>');
+  }
+  $('mem-annot').innerHTML = rows.join('');
+
+  var rl = recommendedLen(sel);
+  if (main) {
+    main.setAttribute('data-len', String(rl));
+    main.textContent = '推奨 ' + rl + ' バイトをコピー';
+  }
+  $('mem-copy-note').textContent = (sel.kind === 'talisman')
+    ? '護石は +0x0C 以降のスキル情報まで含めないと一致しません。'
+    : 'head + id + 着せ替え + 装飾品3 まで。tail の残骸に影響されません。';
+
+  memRenderPatterns(b, sel);
+}
+
+function memRenderPatterns(b, sel) {
+  var L = M.layout || normalizeLayout({});
+  var rec = recommendedLen(sel);
+  var pats = [];
+  pats.push({ label: rec + ' バイト（推奨）', len: rec, note: 'tail の残骸に影響されない。まずこれで検索' });
+  if (sel.kind === 'talisman') {
+    pats.push({ label: '12 バイト', len: 12, note: 'head + kind + 装飾品（護石では絞り込みが弱い）' });
+  } else {
+    pats.push({ label: '6 バイト', len: 6, note: '最短。実測では 19 件中 14 件が一意、5 件は 3〜4 ヒット' });
+  }
+  pats.push({ label: '72 バイト（隣の枠が空）', len: 72, note: '36B レコード + 空き枠 36B。実測で 1 ヒットになりやすい' });
+  pats.push({ label: '36 バイト', len: 36, note: 'tail がゼロのときのみ有効（残骸があると取りこぼす）' });
+
+  var fmts = [
+    ['space', 'スペース区切り'],
+    ['compact', '連続'],
+    ['escaped', '\\xNN'],
+    ['carray', 'C 配列'],
+    ['dec', '10 進']
+  ];
+  var html = [];
+  html.push('<div class="pat"><span class="lbl">コピー形式</span>' +
+    '<select id="mem-fmt" style="flex:0 0 auto">' +
+    fmts.map(function (f) {
+      return '<option value="' + f[0] + '"' + (M.fmt === f[0] ? ' selected' : '') + '>' + f[1] + '</option>';
+    }).join('') +
+    '</select></div>');
+  for (var i = 0; i < pats.length; i++) {
+    var n = pats[i].len;
+    var pb = patternBytes(b, n);
+    html.push('<div class="pat"><span class="lbl">' + pats[i].label + '</span>' +
+      '<code>' + esc(formatBytes(pb, n, M.fmt)) + '</code>' +
+      '<button type="button" class="mini" data-act="mem-copy" data-len="' + n + '">コピー</button></div>');
+    if (pats[i].note) {
+      html.push('<div class="mem-note" style="margin:-4px 0 8px 120px">' + esc(pats[i].note) + '</div>');
+    }
+  }
+  html.push('<div class="mem-note" style="margin-top:10px">' +
+    '<b>絞り込みのヒント（実測）:</b> 6 バイトは 19 件中 14 件が一意、5 件は 3〜4 ヒットでした。' +
+    '装備が 1 件だけの箱なら <b>72 バイト（隣の枠が空）</b>が最も確実です。' +
+    'ヒットが複数出たら <b>36 バイト間隔で並んでいるもの</b>と <b>36 の倍数境界</b>で絞ってください。' +
+    '空レコード（全 0）は 6 バイトだと数百万ヒットするので使えません。' +
+    '<br>補助条件: head word の <b>bit15 = 0</b>（生成値は常に 0）、type は <b>1..11, 13..21</b>（12 は欠番）。' +
+    '</div>');
+  $('mem-pats').innerHTML = html.join('');
+  var selEl = $('mem-fmt');
+  if (selEl) {
+    selEl.addEventListener('change', function () {
+      M.fmt = this.value;
+      if (M.selected) { memRenderPatterns(buildRecord(M.selected), M.selected); }
+    });
+  }
+}
+
+function memRenderCalc() {
+  var L = M.layout || normalizeLayout({});
+  var html = [];
+  html.push('<div class="mem-box"><div class="k">box index → スロット内オフセット（主）</div>' +
+    '<input id="mem-idx" type="number" min="0" max="' + (L.recordCount - 1) + '" value="0" aria-label="BOX index">' +
+    '<div class="v" id="mem-idx-out">—</div></div>');
+  html.push('<div class="mem-box"><div class="k">ヒットしたアドレス → ボックス先頭 / slot base</div>' +
+    '<input id="mem-hit" type="text" placeholder="例: 0x1A2B3C4D" aria-label="ヒットしたアドレス">' +
+    '<input id="mem-hit-idx" type="number" min="0" value="0" aria-label="BOX index">' +
+    '<div class="v" id="mem-hit-out">—</div></div>');
+  html.push('<div class="mem-box"><div class="k">ページ番号 → index（参考: エディタ基準 ' + L.pageSize + ' 枠/ページ' +
+    (L.pageCount ? '・全 ' + L.pageCount + ' ページ' : '') + '）</div>' +
+    '<input id="mem-page" type="number" min="1" value="1" aria-label="ページ番号">' +
+    '<div class="v" id="mem-page-out">—</div></div>');
+  $('mem-calc').innerHTML = html.join('');
+
+  function updIdx() {
+    var i = clampInt($('mem-idx').value, 0, L.recordCount - 1, 0);
+    var off = L.saveOffset + i * L.recordSize;
+    var pg = Math.floor(i / L.pageSize), rw = i % L.pageSize;
+    $('mem-idx-out').innerHTML = '0x' + off.toString(16).toUpperCase() + '（' + off + '）' +
+      '<br><span style="color:var(--fg3);font-size:11px">参考: ' + (pg + 1) + ' ページ目の ' + (rw + 1) + ' 行目（エディタ基準）</span>';
+  }
+  function updHit() {
+    var raw = ($('mem-hit').value || '').trim().replace(/^0x/i, '');
+    var addr = parseInt(raw, 16);
+    var i = clampInt($('mem-hit-idx').value, 0, L.recordCount - 1, 0);
+    if (isNaN(addr)) { $('mem-hit-out').textContent = '—'; return; }
+    var boxStart = addr - i * L.recordSize;
+    var slotBase = boxStart - L.saveOffset;
+    $('mem-hit-out').innerHTML =
+      'ボックス先頭 = 0x' + (boxStart >>> 0).toString(16).toUpperCase() +
+      '<br>slot base = 0x' + (slotBase >>> 0).toString(16).toUpperCase() +
+      '<br><span style="color:var(--fg3);font-size:11px">A - i×' + L.recordSize + ' / A - i×' + L.recordSize + ' - 0x' + L.saveOffset.toString(16).toUpperCase() + '</span>';
+  }
+  function updPage() {
+    var p = clampInt($('mem-page').value, 1, 100000, 1);
+    var a = (p - 1) * L.pageSize;
+    var b2 = Math.min(a + L.pageSize - 1, L.recordCount - 1);
+    $('mem-page-out').innerHTML = 'index ' + a + ' 〜 ' + b2 +
+      '<br><span style="color:var(--fg3);font-size:11px">ゲーム本体の 1 ページ枠数は未確定（エディタ基準の値）</span>';
+  }
+  $('mem-idx').addEventListener('input', updIdx);
+  $('mem-hit').addEventListener('input', updHit);
+  $('mem-hit-idx').addEventListener('input', updHit);
+  $('mem-page').addEventListener('input', updPage);
+  updIdx(); updPage();
+}
+
+function memRenderHelp() {
+  var L = M.layout || normalizeLayout({});
+  var html = [];
+  html.push('<ol>');
+  html.push('<li>装備を選ぶと 36 バイトのレコードと検索用 hex が出ます。<b>「推奨 N バイトをコピー」</b>でそのまま検索できます。</li>');
+  html.push('<li>エミュレータ（Ryujinx など）のメモリ検索で、コピーした hex を <b>16 進数</b>として検索します。</li>');
+  html.push('<li>値は <b>リトルエンディアン</b>です。type=1, id=3 なら <code>01 00 03 00</code>（u16 の 0x0001, 0x0003）。</li>');
+  html.push('<li>ヒットしたアドレス A と box index i から、<b>ボックス先頭 = A - i×' + L.recordSize + '</b>、<b>slot base = A - i×' + L.recordSize + ' - 0x' + L.saveOffset.toString(16).toUpperCase() + '</b> です。</li>');
+  html.push('<li>スロット内の位置は <code>0x' + L.saveOffset.toString(16).toUpperCase() + ' + index×' + L.recordSize + '</code>（index は 0 始まり、全 ' + L.recordCount + ' 枠）。</li>');
+  html.push('<li><b>tail（+0x0C 以降）は前の持ち主のバイトが残ることがあります。</b>36 バイト全体パターンは tail がゼロのときだけ使ってください。</li>');
+  html.push('<li>ヒット数（実測）: 6 バイトは 19 件中 14 件が一意・5 件は 3〜4 ヒット。<b>隣の枠が空なら 72 バイト（36B + 空き 36B）が 1 ヒット</b>で最も確実。空レコード（全 0）は 6 バイトだと数百万ヒットします。</li>');
+  html.push('<li>護石は +0x0C 以降にスキル情報があり、装備本体と構造が違います（このツールは護石用に別途組み立てます）。</li>');
+  html.push('</ol>');
+  html.push('<div class="mem-note" style="margin-top:8px">レイアウト出典: ' +
+    esc(L.source || '既定値') + (L.confidence ? '（confidence: ' + esc(L.confidence) + '）' : '') + '</div>');
+  $('mem-help').innerHTML = html.join('');
+}
+
+function memRenderAll() {
+  memRenderList();
+  memRenderRecord();
+  memRenderCalc();
+  memRenderHelp();
+}
+
+/* ---------- 操作 ---------- */
+function memPick(key) {
+  var items = memListItems();
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].key === key) {
+      M.selected = items[i];
+      if (items[i].kind === 'talisman') { M.tal.kind = items[i].id; }
+      memRenderList();
+      memRenderRecord();
+      return;
+    }
+  }
+}
+
+function memCopy(len) {
+  if (!M.selected) { return; }
+  var b = buildRecord(M.selected);
+  var n = Math.min(len, b.length);
+  copyText(formatBytes(b, n, M.fmt)).then(function (ok) {
+    toast(ok ? n + ' バイトをコピーしました' : 'コピーできませんでした', !ok);
+  });
+}
+
+function setMode(m) {
+  S.mode = m;
+  var isMem = (m === 'mem');
+  $('toolbar').hidden = isMem;
+  $('gridwrap').hidden = isMem;
+  $('mem').hidden = !isMem;
+  $('counts').hidden = isMem;
+  if (isMem) { $('pager').hidden = true; }
+  var bs = document.querySelectorAll('#mode-switch button');
+  for (var i = 0; i < bs.length; i++) {
+    var on = bs[i].getAttribute('data-mode') === m;
+    if (on) { bs[i].classList.add('on'); } else { bs[i].classList.remove('on'); }
+    bs[i].setAttribute('aria-selected', on ? 'true' : 'false');
+  }
+  if (isMem) { memInit(); }
+  else if (cur() && curRows()) { renderAll(); }
+}
+
+function memInit() {
+  if (M.ready) { memRenderAll(); return; }
+  if (M.loading) { return; }
+  M.loading = true;
+  $('mem-list').innerHTML = '<div class="mem-empty">読み込んでいます…</div>';
+  memEnsure().then(function () {
+    M.loading = false;
+    M.ready = true;
+    memBuildSelects();
+    memRenderAll();
+  }, function (err) {
+    M.loading = false;
+    $('mem-list').innerHTML = '<div class="mem-empty">データを読み込めませんでした: ' +
+      esc(err && err.message ? err.message : err) + '</div>';
+  });
+}
+
+function memBind() {
+  $('mem-cat').addEventListener('change', function () {
+    M.cat = this.value;
+    M.selected = null;
+    M.query = '';
+    $('mem-search').value = '';
+    $('mem-part-wrap').hidden = (M.cat !== 'armor');
+    $('mem-wtype-wrap').hidden = (M.cat !== 'weapon');
+    $('mem-tal-opts').hidden = (M.cat !== 'talisman');
+    memRenderList();
+    memRenderRecord();
+  });
+  $('mem-part').addEventListener('change', function () {
+    M.part = parseInt(this.value, 10) || 0;
+    M.selected = null;
+    memRenderList();
+    memRenderRecord();
+  });
+  $('mem-wtype').addEventListener('change', function () {
+    M.wtype = parseInt(this.value, 10) || 0;
+    M.selected = null;
+    memRenderList();
+    memRenderRecord();
+  });
+  var t = null;
+  $('mem-search').addEventListener('input', function () {
+    var v = this.value;
+    if (t) { clearTimeout(t); }
+    t = setTimeout(function () { M.query = v; memRenderList(); }, 120);
+  });
+  function opt() {
+    M.level = clampInt($('mem-level').value, 1, 31, 1);
+    M.tl = clampInt($('mem-tl').value, 1, 31, 1);
+    M.tm = clampInt($('mem-tm').value, 0, 65535, 0);
+    memRenderRecord();
+  }
+  $('mem-level').addEventListener('input', opt);
+  $('mem-tl').addEventListener('input', opt);
+  $('mem-tm').addEventListener('input', opt);
+  ['mem-deco1', 'mem-deco2', 'mem-deco3'].forEach(function (id, i) {
+    $(id).addEventListener('change', function () {
+      M.decos[i] = parseInt(this.value, 10) || 0;
+      memRenderRecord();
+    });
+  });
+  function talOpt() {
+    M.tal.kind = clampInt($('mem-kind').value, 1, 10, 10);
+    M.tal.skill1 = clampInt($('mem-skill1').value, 0, 255, 0);
+    M.tal.skill2 = clampInt($('mem-skill2').value, 0, 255, 0);
+    M.tal.p1 = clampInt($('mem-p1').value, -128, 127, 0);
+    M.tal.p2 = clampInt($('mem-p2').value, -128, 127, 0);
+    M.tal.slots = clampInt($('mem-slots').value, 0, 3, 0);
+    memRenderRecord();
+  }
+  ['mem-kind', 'mem-skill1', 'mem-skill2', 'mem-p1', 'mem-p2', 'mem-slots'].forEach(function (id) {
+    $(id).addEventListener('change', talOpt);
+    $(id).addEventListener('input', talOpt);
+  });
+  var mbs = document.querySelectorAll('#mode-switch button');
+  for (var i = 0; i < mbs.length; i++) {
+    (function (b) {
+      b.addEventListener('click', function () { setMode(b.getAttribute('data-mode')); });
+    })(mbs[i]);
+  }
 }
 
 /* ============================================================ go */

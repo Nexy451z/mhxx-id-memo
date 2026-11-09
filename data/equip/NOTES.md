@@ -5,6 +5,8 @@ Monster Hunter XX (Nintendo Switch) の装備・アイテム系 ID を、**romfs
 
 - 生成: `python tools/extract_equip_tables.py`
 - 検証: `python tools/verify_equip_tables.py`
+- 装備レコード配置仕様（メモリスキャン補助）: `equip-record-layout.json` / `equip-record-layout.md` /
+  `python tools/verify_equip_record_layout.py`（→ §6）
 - 文字コード: CSV は UTF-8 BOM 付き / 改行 LF / 値内の改行も LF に統一。`_manifest.json` は BOM なし UTF-8。
 
 > **TSV は `tools/build.py` が CSV から生成する（analyst は作らない）。** このディレクトリに
@@ -329,9 +331,171 @@ PASS: all checks green (23 tables, 33129 rows)
 14. **`*.tsv` は builder の生成物。** CSV を更新したので `tools/build.py` の再実行が必要
     （このディレクトリの TSV は第 1 バッチ時点の内容のまま）。
 
+### 装備レコード配置（§6）の未解決点
+
+15. **ゲーム本体の装備ボックス画面の 1 ページあたりの枠数が未確定。** エディタの一覧は 9 行（§6）だが、
+    ゲーム内の画面が何枠かは資料から確定できない。
+16. **護石の `+0x02` kind = 0 が 2 件だけ観測**され、レア度 99 と結び付いている。
+    `TALISMAN_RARITY` の表（kind 5..7 → 99）に無い組み合わせで、意味は不明。
+    （サンプルセーブの slot 1 / slot 2 の index 1629 に同一レコードがある）
+17. **護石以外の type でも `+0x0C` 以降が非 0 のレコードがある**（サンプルセーブで 15 件）。
+    値は護石ブロックや猟虫ブロックの形をしており、前の持ち主のバイトが残っていると見られる。
+    どの操作で残るのかは未確定（エディタの type 変更が原因の可能性がある）。
+18. **武器の装飾品数が武器のスロット数を超えないかは未検証。**
+    `weaponNNLevelData` のスロット数を読んでいない。
+19. **type 22 以上がハンターの装備ボックスに現れるかは未確認。**
+    2,350 レコードでは 21 が最大。オトモ装備ボックスは別領域（`0x17C2E`）で type 22/23/24 を使う。
+20. **head word の bit15** は 2,350 レコードで 0 だったが、ゲームが将来使うかは不明。
+21. **`+0x02` の id が 0 のレコード**（type 1..5 / 7..21）は観測していない。id 0 が有効かは未確認。
+
 ---
 
-## 6. 再生成手順
+## 6. 装備ボックスレコードの配置仕様（メモリスキャン補助）
+
+「メモリスキャン補助」機能のため、装備ボックス 1 レコード 36 バイトの実バイト配置を確定し、
+実セーブ 2 本で検証した。詳細は **`equip-record-layout.md`**（人間向け）と
+**`equip-record-layout.json`**（機械可読・`tools/verify_equip_record_layout.py --json` が生成）。
+
+### 確定した仕様
+
+| 項目 | 値 | 出典 |
+|---|---|---|
+| レコード長 | 36 バイト | `equip.rs` `EQUIP_RECORD` |
+| レコード数 | 2000 | `equip.rs` `EQUIP_COUNT` / `save.rs` `TOTAL_EQUIP_SLOTS` |
+| ボックス全体 | 72,000 バイト | 2000 × 36 |
+| slot base からの位置 | `+0x62EE` | `save.rs` `OFF_EQUIPMENT_BOX` |
+| ボックス終端 | `+0x17C2E`（= オトモ装備ボックスの開始） | `save.rs` `OFF_PALICO_EQUIPMENT` |
+| slot base の持ち方 | `body+0x10/0x14/0x18` の u32le | `review_save_layout.md` Claim 2 |
+| slot stride | `0x11D088` + `0x1738` = `0x11E7C0` | `save.rs` `SLOT_DATA_SIZE` |
+
+レコードのフィールド:
+
+```
++0x00 u16le  head word = type(bit0..4) | (level-1)(bit5..9) | (transmog_level-1)(bit10..14)
++0x02 u16le  id          防具=series_id / 武器=weapon_index
++0x04 u16le  transmog_id 0 = なし
++0x06 u16le  deco1       装飾品のアイテムID (2638..2899)、0 = 空き
++0x08 u16le  deco2
++0x0A u16le  deco3
++0x0C 24 B   tail        type 6 = 護石ブロック / type 20 = 猟虫ブロック
+```
+
+type の対応: `1..5` = 防具（`armor_id = id*5 + (type-1)`）、`6` = 護石、
+`7..21` = 武器（`weapon_type_id = type-7`、`weapon_id = (type-7)*10000 + id*10`）、`12` は未使用。
+
+### ページ幾何
+
+| 項目 | 値 |
+|---|---:|
+| 1 ページの枠数 | **9** |
+| ページ数 | **223** = ceil(2000/9) |
+| 最終ページ | page 222 = index 1998..1999（2 枠） |
+| page → index | `[p*9, min(p*9+9, 2000))` |
+
+根拠は `hbedit.rs` の `page_move` の doc コメント「the equipment box shows nine and a warning strip
+takes one」と、`tests/scroll_ui.rs` の「The track the equipment box uses: nine 56px rows.」
+（`TRACK = 504 = 9 × 56`）／「Nine rows on screen means nine rows a page」。
+**これはエディタの一覧画面のページ**で、ゲーム本体の画面の枠数は未確定（§5-15）。
+
+### 実セーブでの検証結果
+
+`python tools/verify_equip_record_layout.py` → **PASS**
+
+```
+== 仕様の算術
+  ok   2000 x 36 = 72,000
+  ok   0x62EE + 72,000 = 0x17C2E (オトモ装備ボックスの開始)
+  ok   ceil(2000 / 9) = 223 ページ
+  ok   最終ページは 2 枠
+
+== live  (Ryujinx の現行セーブ)
+  ok   ファイルサイズ 4,726,188 B / body = サイズ - 36
+  ok   slot base が昇順  0x126474, 0x244c34, 0x3633f4
+  ok   slot stride = 0x11D088 + 0x1738  0x11e7c0
+  ok   全スロットの装備ボックスが body 内に収まる
+  ok   slot 0: type 12 は現れない / head word の bit15 は立たない  19 レコード
+  ok   slot 0: type/id が全て名前表に解決  19/19 件
+  ok   slot 0 の使用レコード数 = 19
+  ok   slot 0 の type 集合 = 防具 5 部位 + 武器 14 種
+
+== sample (save_backups/_conv/system)
+  ok   3 スロットすべて同じ幾何
+  ok   slot 0: type/id が全て名前表に解決  601/789 件（残り 188 は護石）
+  ok   slot 1: 540/771 件 / slot 2: 540/771 件
+  ok   護石ブロックの不変条件  188 / 231 / 231 件
+  ok   装飾品 ID が decorations.csv に解決  59 / 5 / 5 レコード
+  ok   防具の装飾品数 <= armorSeriesData のスロット数
+
+== 合計
+  使用レコード: 2,350 / 護石: 650 / 装飾品付き: 69
+  type 別: 1:278 2:274 3:269 4:264 5:254 6:650 7:74 8:93 9:4 10:4 11:19
+           13:31 14:73 15:10 16:7 17:10 18:16 19:7 20:10 21:3
+
+PASS: 装備ボックスレコードの配置仕様は実セーブと矛盾しない
+```
+
+現行セーブ 19 レコードの突合（type/id → 名前）:
+
+| idx | type | id | Lv | 名前 |
+|---:|---:|---:|---:|---|
+| 0 | 7 | 1 | 1 | ベルダーブレイド / Petrified Blade |
+| 1 | 14 | 1 | 1 | ベルダーサーベル / Petrified Saber |
+| 2 | 8 | 1 | 1 | ベルダーソード / Petrified Sword |
+| 3 | 18 | 1 | 1 | ベルダーダガー / Petrified Daggers |
+| 4 | 9 | 1 | 1 | ベルダーハンマー / Petrified Hammer |
+| 5 | 19 | 1 | 1 | ベルダーホルン / Petrified Horn |
+| 6 | 10 | 1 | 1 | ベルダーランス / Petrified Lance |
+| 7 | 16 | 1 | 1 | ベルダーガンランス / Petrified Gunlance |
+| 8 | 15 | 1 | 1 | ベルダーアックス / Petrified Axe |
+| 9 | 21 | 1 | 1 | ベルダーアームズ / Petrified Strongarm |
+| 10 | 20 | 1 | 1 | ベルダーロッド / Petrified Rod |
+| 11 | 13 | 1 | 1 | ベルダーバレット / Petrified Shooter |
+| 12 | 11 | 1 | 1 | ベルダーキャノン / Petrified Cannon |
+| 13 | 17 | 1 | 1 | ベルダーボウ / Petrified Bow |
+| 14 | 1 | 3 | 1 | ベルダーターバン / Bherna Turban |
+| 15 | 2 | 3 | 1 | ベルダーメイル / Bherna Mail |
+| 16 | 3 | 3 | 1 | ベルダーアーム / Bherna Braces |
+| 17 | 4 | 3 | 1 | ベルダーベルト / Bherna Belt |
+| 18 | 5 | 3 | 1 | ベルダーグリーヴ / Bherna Greaves |
+
+（`type 1 id 3` → `armor_id = 3*5 + 0 = 15` = ベルダーターバン。防具の id は部位ごとに同じ series_id。）
+
+### 護石（type 6）の構造
+
+```
++0x00 u8 0x06 / +0x01 u8 0x00 / +0x02 u8 kind(1..10) / +0x03 u8 0x00
++0x04 u16 0x0000
++0x06 u16 deco1 / +0x08 u16 deco2 / +0x0A u16 deco3   ← 護石にも装飾品が挿さる
++0x0C u8 skill1_id / +0x0D u8 skill2_id               ← skills.csv の skill_id
++0x0E i8 skill1_points / +0x0F i8 skill2_points
++0x10 u8 slots(0..3) / +0x11 u8 0x00
++0x12 u8 rarity(97..100) / +0x13 u8 0x01              ← u16 で護石アイテムID 353..356
++0x14 16 B 0x00
+```
+
+サンプルセーブの護石 650 件で、固定バイト・レア度・護石アイテムID・スキルID・
+装飾品数 ≤ スロット数 のすべてが成立した。
+
+### 装飾品フィールドの検証
+
+- `+0x06/+0x08/+0x0A` は **type 1..5 / 6 / 7..21 のすべてで同じ意味**（装飾品のアイテムID）。
+- 非 0 の個数が装備のスロット数を超えないことを確認:
+  防具 48 レコード（`armorSeriesData.asd` の `+108+part`）と護石 15 レコード（`+0x10`）。
+  武器は未検証（`weaponNNLevelData` のスロット数を読んでいない）。
+
+### この調査で分かった「注意すべき」点
+
+1. **tail（+0x0C 以降）は type 6/20 以外でも非 0 のことがある。** サンプルセーブで 15 件。
+   値は護石ブロックや猟虫ブロックの形をしており、前の持ち主のバイトが残っていると見られる。
+   テールを 0 と仮定したパターン検索は取りこぼす。
+2. **空き判定は全バイト 0 で行う。** `equip.rs` の `is_empty` は type だけを見るが、
+   書き込み可否は `record_is_blank`（全バイト 0）側で判定している。
+3. **レベルは -1 格納。** bit 5 から上をまとめて読むと着せ替えレベルが混ざる。
+4. **護石の kind=0 が 2 件だけ観測**され、レア度 99 と結び付いている（`TALISMAN_RARITY` の表に無い組み合わせ）。
+
+---
+
+## 7. 再生成手順
 
 ```
 python tools/extract_equip_tables.py

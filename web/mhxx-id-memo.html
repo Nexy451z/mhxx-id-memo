@@ -27,6 +27,7 @@
   --shadow:0 10px 30px rgba(16,32,48,.12);
   --mono: ui-monospace, "Cascadia Mono", "SFMono-Regular", Consolas, Menlo, monospace;
   --sans: system-ui, -apple-system, "Segoe UI", "Yu Gothic UI", Meiryo, "Hiragino Kaku Gothic ProN", sans-serif;
+  color-scheme: light;
 }
 html[data-theme="dark"]{
   --bg:#0e1116; --bg2:#141920; --bg3:#1b222b; --bg4:#232c37;
@@ -38,6 +39,7 @@ html[data-theme="dark"]{
   --err:#e86a6a; --err-bg:#2a1616;
   --row-hover:#171e26; --row-sel:#152b3d;
   --shadow:0 10px 30px rgba(0,0,0,.55);
+  color-scheme: dark;
 }
 *{box-sizing:border-box}
 /* hidden 属性は必ず効かせる（display:flex 等の指定に負けないように） */
@@ -85,8 +87,8 @@ button,input,select{font:inherit;color:inherit}
 #toolbar{padding:7px 12px 8px;border-bottom:1px solid var(--line);background:var(--bg);display:flex;flex-direction:column;gap:6px}
 .tb-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 #q{flex:1 1 240px;min-width:140px}
-input[type=search],input[type=text],select{background:var(--bg);border:1px solid var(--line2);border-radius:6px;padding:5px 8px;outline:none;min-width:0}
-input[type=search]:focus,input[type=text]:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
+input[type=search],input[type=text],input[type=number],select{background:var(--bg);border:1px solid var(--line2);border-radius:6px;padding:5px 8px;outline:none;min-width:0;color:var(--fg)}
+input[type=search]:focus,input[type=text]:focus,input[type=number]:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
 input::placeholder{color:var(--fg3)}
 #fcol{flex:0 0 auto;max-width:180px}
 #fval{flex:0 1 180px}
@@ -213,33 +215,138 @@ input[type=checkbox]:focus-visible{outline:2px solid var(--accent);outline-offse
 .toast.err{border-color:var(--err);color:var(--err);background:var(--err-bg)}
 .toast[hidden]{display:none}
 
+/* ---------------- mode switch ---------------- */
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:8px;overflow:hidden;flex:0 0 auto}
+.seg button{background:var(--bg);border:0;padding:6px 12px;cursor:pointer;color:var(--fg2);font-size:12.5px;white-space:nowrap;min-height:32px}
+.seg button+button{border-left:1px solid var(--line2)}
+.seg button.on{background:var(--accent);color:#fff;font-weight:700}
+.seg button:hover:not(.on){background:var(--bg3)}
+
+/* ---------------- memory mode ---------------- */
+#mem{flex:1;overflow:auto;min-height:0;background:var(--bg2);padding:14px}
+#mem[hidden]{display:none}
+.mem-wrap{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.mem-card{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.mem-card h3{margin:0 0 10px;font-size:13px;color:var(--fg);display:flex;align-items:center;gap:8px}
+.mem-card h3 .num{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:700;flex:0 0 auto}
+.mem-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.mem-row label{color:var(--fg2);font-size:12px;white-space:nowrap}
+.mem-row select,.mem-row input{min-width:0}
+.mem-list{max-height:280px;overflow:auto;border:1px solid var(--line);border-radius:8px;margin-top:6px;background:var(--bg)}
+.mem-item{display:flex;gap:10px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--fg);font-size:12.5px;min-height:40px}
+.mem-item:last-child{border-bottom:0}
+.mem-item:hover{background:var(--bg3)}
+.mem-item.on{background:var(--accent-bg);font-weight:700}
+.mem-item .id{font:11px var(--mono);color:var(--fg3);flex:0 0 auto}
+.mem-item .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mem-item .sub{font:10.5px var(--mono);color:var(--fg3);flex:0 0 auto}
+.mem-empty{padding:16px;color:var(--fg3);font-size:12px;text-align:center}
+.mem-note{color:var(--fg3);font-size:11.5px;line-height:1.7}
+.mem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.mem-box{background:var(--bg3);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.mem-box .k{font-size:11px;color:var(--fg3);margin-bottom:4px}
+.mem-box .v{font:13px var(--mono);color:var(--fg);word-break:break-all}
+.mem-box input{width:100%;margin-top:4px}
+.mem-copybar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 4px;padding:10px 12px;background:var(--accent-bg);border:1px solid var(--accent);border-radius:8px}
+.mem-copybar .btn.primary{min-height:44px;font-size:14px;font-weight:700}
+.mem-copybar .mem-note{color:var(--accent-fg);font-size:11.5px;flex:1;min-width:150px}
+.mem-help{font-size:12px;color:var(--fg2);line-height:1.95}
+.mem-help ol{margin:6px 0 0;padding-left:20px}
+.mem-help code{background:var(--bg3);padding:1px 5px;border-radius:4px;font-family:var(--mono);font-size:11.5px}
+
+/* hex dump */
+.hex{display:flex;flex-wrap:wrap;gap:3px;font:13px/1.9 var(--mono);margin:4px 0 10px}
+.hex span{padding:1px 5px;border-radius:3px;border:1px solid transparent}
+.hex .f0{background:#dbeafe;color:#123a63}
+.hex .f1{background:#dcfce7;color:#14532d}
+.hex .f2{background:#fef3c7;color:#5b4300}
+.hex .f3{background:#fae8ff;color:#5b1a6b}
+.hex .f4{background:#fee2e2;color:#6b1a1a}
+.hex .f5{background:#e0e7ff;color:#2b2f6b}
+.hex .f6{background:#e8eaed;color:#3c4043}
+html[data-theme="dark"] .hex .f0{background:#12324d;color:#bcdcf7}
+html[data-theme="dark"] .hex .f1{background:#123222;color:#a7f3c9}
+html[data-theme="dark"] .hex .f2{background:#33280d;color:#f3d99b}
+html[data-theme="dark"] .hex .f3{background:#2e1638;color:#e9c8f5}
+html[data-theme="dark"] .hex .f4{background:#3a1a1a;color:#f5c2c2}
+html[data-theme="dark"] .hex .f5{background:#1e2350;color:#c7cdf7}
+html[data-theme="dark"] .hex .f6{background:#262c34;color:#b6c0cb}
+.hex-legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11.5px;color:var(--fg2);margin-top:4px}
+.hex-legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.pat{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.pat .lbl{font:11px var(--mono);color:var(--fg3);flex:0 0 120px;line-height:1.35}
+.pat code{flex:1;min-width:180px;background:var(--bg3);border:1px solid var(--line);border-radius:6px;padding:7px 9px;font:12px var(--mono);word-break:break-all}
+.annot{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:12px;margin-top:6px}
+.annot dt{font:11px var(--mono);color:var(--fg3);white-space:nowrap}
+.annot dd{margin:0;color:var(--fg2);word-break:break-word}
+
 /* ---------------- responsive ---------------- */
-@media (max-width: 1100px){
+/* --- タブレット: サイドバー縮小 + ツールバー 2 段 --- */
+@media (max-width: 1024px){
+  #sidebar{width:208px;flex-basis:208px}
   #q{flex-basis:180px}
   #fval{flex-basis:140px}
   #counts{gap:9px;font-size:11px}
+  #toolbar .tb-row{gap:5px}
+  .mem-wrap{max-width:none}
 }
+/* --- スマホ: ドロワー + タッチ向けサイズ --- */
 @media (max-width: 900px){
-  #sidebar{position:fixed;top:0;left:0;bottom:0;transform:translateX(-100%);transition:transform .16s ease;box-shadow:var(--shadow)}
+  #sidebar{position:fixed;top:0;left:0;bottom:0;width:264px;flex-basis:264px;transform:translateX(-100%);transition:transform .16s ease;box-shadow:var(--shadow)}
   #sidebar.open{transform:none}
   #btn-menu{display:inline-block}
   #detail{width:100vw}
-  #topbar{flex-wrap:wrap;min-height:0;padding:7px 10px}
+  #topbar{flex-wrap:wrap;min-height:0;padding:7px 10px;gap:8px}
   #tbl-title{flex:1 1 100%;order:3}
+  #mode-switch{order:2}
   #counts{order:4;width:100%;justify-content:flex-start;gap:10px}
   #btn-menu{order:1}
-  #btn-theme{order:2;margin-left:auto}
+  #btn-theme{order:1;margin-left:auto}
+}
+@media (max-width: 768px), (pointer: coarse){
+  .btn,.seg button{min-height:44px;padding:10px 12px;font-size:13px}
+  input[type=search],input[type=text],input[type=number],select{min-height:44px;font-size:14px}
+  .menu .mi{min-height:44px;padding:10px 12px}
+  .menu label.mi{min-height:44px}
+  #grid tbody td{padding:10px;font-size:13px}
+  #grid thead th{padding:8px 10px}
+  #grid input[type=checkbox]{width:22px;height:22px}
+  #grid td.c-sel,#grid th.c-sel{width:48px}
+  #grid td.c-num,#grid th.c-num{width:48px;font-size:11px}
+  .mem-item{min-height:44px;padding:10px}
+  #mem{padding:10px}
+  .mem-card{padding:12px}
+  .mem-row{gap:8px}
+  .mem-row label{font-size:12.5px}
+  .mini{min-height:36px;padding:6px 10px;font-size:12px}
+  #pager .btn{min-height:40px;padding:6px 10px}
+  .pat .lbl{flex-basis:100%}
 }
 @media (max-width: 700px){
   #toolbar{padding:6px 8px 7px}
   .tb-row{gap:5px}
-  .btn{padding:5px 8px}
   #fcol{max-width:130px}
   #fval{flex:1 1 100px}
   #pager{padding:5px 8px}
   #pg-right{gap:4px}
   #psize,#pagein{font-size:11px}
   .state.error .box{padding:18px 16px}
+  #mode-switch button{padding:10px 10px;font-size:12.5px}
+}
+@media (max-width: 420px){
+  #topbar{padding:6px 8px}
+  #tbl-name{font-size:14px}
+  #counts{font-size:10.5px;gap:8px}
+  #toolbar{padding:5px 6px 6px}
+  #q{flex:1 1 100%}
+  #fcol{flex:0 0 44%;max-width:44%}
+  #fval{flex:1 1 40%}
+  #btn-clear{flex:0 0 auto;padding:10px 10px}
+  .mem-row label{min-width:100%}
+  .mem-row select,.mem-row input{width:100%}
+  .hex{font-size:12px}
+  .pat code{font-size:11px}
+  #pager{font-size:10.5px}
 }
 </style>
 </head>
@@ -268,6 +375,10 @@ input[type=checkbox]:focus-visible{outline:2px solid var(--accent);outline-offse
       <button id="btn-menu" class="btn" title="テーブル一覧">☰</button>
       <div id="tbl-title">
         <span id="tbl-name">読み込み中…</span><span id="tbl-id" class="mono"></span>
+      </div>
+      <div id="mode-switch" class="seg" role="tablist" aria-label="表示モード">
+        <button type="button" data-mode="list" class="on" role="tab" aria-selected="true">一覧</button>
+        <button type="button" data-mode="mem" role="tab" aria-selected="false">メモリ配置</button>
       </div>
       <div id="counts"></div>
       <button id="btn-theme" class="btn" title="ダークテーマに切替">🌙</button>
@@ -314,6 +425,97 @@ input[type=checkbox]:focus-visible{outline:2px solid var(--accent);outline-offse
       <div id="pg-left">—</div>
       <div id="pg-right"></div>
     </footer>
+
+    <section id="mem" hidden>
+      <div class="mem-wrap">
+
+        <div class="mem-card">
+          <h3><span class="num">1</span>装備を選ぶ</h3>
+          <div class="mem-row">
+            <label for="mem-cat">カテゴリ</label>
+            <select id="mem-cat">
+              <option value="armor">防具</option>
+              <option value="weapon">武器</option>
+              <option value="talisman">護石</option>
+            </select>
+            <span id="mem-part-wrap">
+              <label for="mem-part">部位</label>
+              <select id="mem-part"></select>
+            </span>
+            <span id="mem-wtype-wrap" hidden>
+              <label for="mem-wtype">武器種</label>
+              <select id="mem-wtype"></select>
+            </span>
+          </div>
+          <div class="mem-row">
+            <input id="mem-search" type="search" placeholder="名前で絞り込み（日本語・英語）" autocomplete="off" spellcheck="false" aria-label="装備名で絞り込み">
+            <span id="mem-count" class="mem-note"></span>
+          </div>
+          <div id="mem-list" class="mem-list"></div>
+        </div>
+
+        <div class="mem-card">
+          <h3><span class="num">2</span>オプション</h3>
+          <div class="mem-row">
+            <label for="mem-level">レベル</label>
+            <input id="mem-level" type="number" min="1" max="31" value="1" style="width:88px">
+            <label for="mem-tl">着せ替えLv</label>
+            <input id="mem-tl" type="number" min="1" max="31" value="1" style="width:88px">
+            <label for="mem-tm">着せ替えID</label>
+            <input id="mem-tm" type="number" min="0" max="65535" value="0" style="width:110px">
+          </div>
+          <div class="mem-row">
+            <label>装飾品</label>
+            <select id="mem-deco1" aria-label="装飾品1"></select>
+            <select id="mem-deco2" aria-label="装飾品2"></select>
+            <select id="mem-deco3" aria-label="装飾品3"></select>
+          </div>
+          <div class="mem-row" id="mem-tal-opts" hidden>
+            <label for="mem-kind">護石の種類</label>
+            <select id="mem-kind" aria-label="護石の種類"></select>
+            <label for="mem-skill1">スキル1</label>
+            <select id="mem-skill1" aria-label="スキル1"></select>
+            <input id="mem-p1" type="number" min="-3" max="10" value="1" style="width:72px" aria-label="スキル1のポイント">
+            <label for="mem-skill2">スキル2</label>
+            <select id="mem-skill2" aria-label="スキル2"></select>
+            <input id="mem-p2" type="number" min="-3" max="10" value="0" style="width:72px" aria-label="スキル2のポイント">
+            <label for="mem-slots">スロット数</label>
+            <select id="mem-slots" aria-label="スロット数">
+              <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3" selected>3</option>
+            </select>
+          </div>
+          <div class="mem-note">装飾品は <b>item_id</b> で記録されます。既定は「なし」(0)。レベルは 1 始まりで、記録上は (レベル-1) が入ります。</div>
+        </div>
+
+        <div class="mem-card">
+          <h3><span class="num">3</span>36 バイトのレコード</h3>
+          <div id="mem-hex" class="hex"></div>
+          <div id="mem-legend" class="hex-legend"></div>
+          <div class="mem-copybar">
+            <button type="button" class="btn primary" id="mem-copy-main" data-act="mem-copy" data-len="12">推奨パターンをコピー</button>
+            <span class="mem-note" id="mem-copy-note"></span>
+          </div>
+          <dl id="mem-annot" class="annot"></dl>
+        </div>
+
+        <div class="mem-card">
+          <h3><span class="num">4</span>スキャンパターン</h3>
+          <div id="mem-pats"></div>
+          <div class="mem-note">エミュレータのメモリ検索には <b>6 バイト</b> から始めるのが実用的です（装飾品を付けたら 8 バイト、テールが 00 埋めなら 36 バイトでも可）。</div>
+        </div>
+
+        <div class="mem-card">
+          <h3><span class="num">5</span>オフセット計算</h3>
+          <div class="mem-grid" id="mem-calc"></div>
+        </div>
+
+        <div class="mem-card">
+          <h3><span class="num">6</span>使い方</h3>
+          <div class="mem-help" id="mem-help"></div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <aside id="detail" hidden></aside>
@@ -492,6 +694,9 @@ window.MHXX_ID_MEMO_TABLES["rotating-quests"] = {"id":"rotating-quests","header"
 /* 自動生成: tools/build.py — 手で編集しないこと */
 window.MHXX_ID_MEMO_TABLES = window.MHXX_ID_MEMO_TABLES || {};
 window.MHXX_ID_MEMO_TABLES["request-offer"] = {"id":"request-offer","header":["offer_id","request_index","quest_id","quest_name_en","quest_name_ja","npc_file","npc_bit","npc_name","talk_kind","talk_line","accept_flag","also","offer"],"rows":[["1","0","208","On the Rebound","古代林の暴れん坊","20","14","Reliable Villager","8","0","300","","village_star:2"],["2","1","336","Moofah Must-haves","ムーファたちのふんわり毛玉","20","14","Reliable Villager","8","12","302","","village_star:3 AND flag:301"],["3","2","629","Advanced: The Goliaths","高難度：天地征服せし強者","20","14","Reliable Villager","8","28","304","","village_star:6 AND flag:303 AND cleared:10710"],["4","3","341","Travelers in Trouble","観光客の旅路を守れ！","2","1","Bherna Gal","8","119","306","","village_star:3 AND flag:16"],["5","4","406","A Unique Cuppa","とびきりのゼンマイティー作り","2","1","Bherna Gal","8","129","308","","village_star:4 AND flag:307 AND flag:25"],["6","5","10651","Woe Malfestio","夜鳥の会・危機一髪！","2","1","Bherna Gal","8","146","310","","flag:309 AND listed:10646"],["7","6","310","Fishy Favor","ステキなお魚、錦魚","26","20","Cheeko Sands Chief","8","0","312","","village_star:3"],["8","7","420","Hunt-a-thon: Daimyo Hermitaur","チコ村のヒーロー伝説","26","20","Cheeko Sands Chief","8","16","314","","village_star:4 AND flag:313"],["9","8","407","Hunt-a-thon: Gendrome","厄介者のドスゲネポス","41","22","Caravaneer","8","5","316","","village_star:4"],["10","9","632","Advanced: Nothing is Sacred","高難度：廻帰せし災厄の古龍","41","22","Caravaneer","8","19","318","","flag:317 AND hr:7"],["11","10","10739","Primal Forest Defense","原生林の平和を守れ","41","22","Caravaneer","8","32","320","","flag:319 AND listed:10646"],["12","11","10421","So Notable: Great Maccao","超☆メモ帳　～跳狗竜狩猟編～","46","27","Guildmarm","8","6","322","","hub_star:4"],["13","12","10506","So Notable: Kecha Wacha","超☆メモ帳　～奇猿狐狩猟編～","46","27","Guildmarm","8","21","324","","hub_star:5 AND flag:323"],["14","13","10706","So Notable: Seregios","超☆メモ帳　～千刃竜捕獲編～","46","27","Guildmarm","8","31","326","","hub_star:7 AND flag:325"],["15","14","10604","Watch Your Steppe","遺跡平原の黒蝕竜調査","42","23","Ace Commander","8","11","328","",""],["16","15","10723","Putting the Gore in Magala","顕現せし黒蝕竜","42","23","Ace Commander","8","22","330","","flag:329 AND listed:10646"],["17","16","10529","Twin Velocidrome","２頭のドスランポス","45","26","Ace Cadet","8","0","332","",""],["18","17","220","Slay the Velociprey!","ランポスたちを討伐せよ！","101","36","Kokoto Chief","4","0","336","150","village_star:2 AND notflag:150"],["19","18","219","Hunt Down the Velocidrome!","ドスランポスを狩猟せよ！","101","36","Kokoto Chief","4","16","338","152","notflag:152 AND flag:151"],["20","19","318","Local Threat","大怪鳥イャンクックを倒せ！","101","36","Kokoto Chief","4","25","340","154","village_star:3 AND notflag:154 AND flag:153"],["21","20","319","Into the Wyvern's Den","潜入！　飛竜の巣！","101","36","Kokoto Chief","4","35","342","156","notflag:156 AND flag:155"],["22","21","504","The Thunderclaw Wyvern","翠玉の閃電","101","36","Kokoto Chief","4","47","344","158","village_star:5 AND notflag:158 AND flag:157"],["23","22","639","Advanced: Wrath of Rath","高難度：天と地の怒り","101","36","Kokoto Chief","9","70","346","160","village_star:6 AND questset:48 AND notflag:160 AND points:Kokoto:1500"],["24","23","","","","102","37","Kokoto Gal","8","65","348","","village_star:5"],["25","24","10726","A Fiery Temper","獰にして猛だが火でもある","127","52","Minegarde Sweetheart","8","4","350","","hub_star:7 AND flag:349 AND listed:10646"],["26","25","306","Jurassic Treasure: The Frog","古代林のトレジャー！　蛙の巻","126","51","Treshi","8","8","360","","village_star:3"],["27","26","404","Jurassic Treasure: The Bug","古代林のトレジャー！　虫の巻","126","51","Treshi","8","19","362","","flag:361 AND cleared:425 AND npc_idle:126"],["28","27","623","Advanced: Jurassic Treasure","高難度：古代林のトレジャー！","126","51","Treshi","8","31","364","","village_star:6 AND hr:7 AND flag:363 AND npc_idle:126"],["29","28","625","Advanced: Invoking Rath","高難度：一対の巨影","129","54","Red Hell Hunter","8","35","372","","village_star:6 AND flag:128 AND listed:10646"],["30","28","625","Advanced: Invoking Rath","高難度：一対の巨影","130","55","Black Hell Hunter","8","35","372","","village_star:6 AND flag:128 AND listed:10646"],["31","29","624","Advanced: Sly Swooper","高難度：黒狼鳥は舞い降りた","131","56","Dundorma Guardsman","8","8","374","","village_star:6 AND hr:5"],["32","30","634","Advanced: Invisible Thief","高難度：対霞龍防衛作戦！","131","56","Dundorma Guardsman","8","17","376","","hr:9 AND flag:375"],["33","31","10426","Delicious White Livers","肴のキモはホワイトレバー","132","57","Cathar Elder","8","0","378","",""],["34","32","10115","Ingredient Hunter","新たな食材ハンターの誕生！？","47","28","Street Cook","8","0","380","","village_star:2"],["35","33","","","","50","31","Lil Miss Forge","8","9","382","","hub_star:4"],["36","34","10650","The Coal Still Burns","心を燃やせ、燃石炭！","50","31","Lil Miss Forge","8","16","384","","flag:383 AND listed:10646"],["37","35","10649","Triple Toady Terror","３頭寄れば獰猛蛙","336","103","Harth Chief","8","7","386","","village_star:3 AND flag:385 AND listed:10646"],["38","36","514","Hunt-a-thon: Gypceros","ゲリョスな季節","51","32","Wycoon","8","7","388","","village_star:5"],["39","37","10305","Fossilized Memories","化石に眠る太古の記憶","51","32","Wycoon","8","16","390","","hub_star:3 AND flag:389"],["40","38","10530","The New Tenant","雪山の主、ドドブランゴ","51","32","Wycoon","8","25","392","","hub_star:5 AND flag:391"],["41","39","10220","Ahoy! Royal Ludroth!","輸送中！　水獣の追従！","52","33","Argosy Captain","8","9","394","-796","hub_star:2"],["42","40","607","The Perilous Pair","予想外！　つがいの妨害！","52","33","Argosy Captain","8","29","396","-796","village_star:6 AND flag:395"],["43","41","","","","52","33","Argosy Captain","8","45","398","-796","hub_star:5 AND flag:397"],["44","42","10732","Into the Maelstrom","蒼く渦巻く登竜門","52","33","Argosy Captain","8","64","400","-796","hub_star:7 AND listed:10646 AND flag:399"],["45","43","225","Slay the Giaprey!","ギアノスたちを討伐せよ！","201","58","Pokke Chief","4","0","402","200","village_star:2 AND notflag:200"],["46","44","224","The Mountain Roughrider","雪山の荒くれ者","201","58","Pokke Chief","4","16","404","202","notflag:202 AND flag:201"],["47","45","323","The Shadow in the Mountains","雪山に潜む影","201","58","Pokke Chief","4","25","406","204","village_star:3 AND notflag:204 AND flag:203"],["48","46","324","No Go on the Popo","忍び寄る気配","201","58","Pokke Chief","4","33","408","206","notflag:206 AND flag:205"],["49","47","508","The Unwavering Colossus","峨々たる巨獣","201","58","Pokke Chief","4","42","410","208","village_star:5 AND notflag:208 AND flag:207"],["50","48","640","Advanced: The Golden Pair","高難度：最後の招待状","201","58","Pokke Chief","8","60","412","210","village_star:6 AND notflag:210 AND questset:48 AND points:Pokke:1500"],["51","49","","","","202","59","Pokke Gal","8","66","414","","village_star:5"],["52","50","10623","Bl-Bl-Blangongas!","ドドドドブランゴ！","229","76","Jumbo Sweetheart","8","0","416","","hub_star:6 AND flag:415"],["53","51","314","Cancer of the Dunes","旧砂漠の縄張り争いニャ！！","225","72","Trenya","8","5","418","","village_star:3"],["54","52","412","Hunt-a-thon: Velocidrome","森丘の静寂を守るのニャ！！","225","72","Trenya","8","14","420","","village_star:4 AND flag:419 AND npc_idle:225"],["55","53","615","Drawing the Waterline","渓流の覇権争いニャ！！","225","72","Trenya","8","24","422","","village_star:6 AND flag:421 AND npc_idle:225"],["56","54","10664","The Magma's Rage","極秘依頼！　獰猛なる溶岩竜！","226","73","Felcote","8","6","424","","hub_star:6 AND listed:10646 AND hr:8 AND npc_idle:226"],["57","55","10724","Tigrex, Tigrex, Burning Bright","轟虎馮海","226","73","Felcote","8","15","426","","hr:8 AND flag:425 AND listed:10646 AND npc_idle:226"],["58","56","626","Advanced: Seismic Scares","高難度：異常震域","226","73","Felcote","8","24","428","","village_star:6 AND hr:8 AND flag:427 AND npc_idle:226"],["59","57","10524","Nargacuga Throwdown","疾き迅竜の狩猟披露","228","75","Pokke Sweetheart","8","0","430","",""],["60","58","10317","Fro Shizzle","パッション炸裂☆究極アフロ","230","77","Funky Felyne","8","6","432","","hub_star:3"],["61","59","10124","The Ingredient of Legend","伝説のメニューに不可欠なモノ","48","29","Itinerant Cook","8","0","434","",""],["62","60","608","The Hero's Journey","英雄への道","231","78","Armory Granny","8","18","542","","flag:786 AND npc_idle:231 AND cleared:605"],["63","61","","","","231","78","Armory Granny","8","40","436","","hub_star:7 AND flag:543 AND npc_idle:231"],["64","62","635","Advanced: Teostra's Return","高難度：炎王の帰還","231","78","Armory Granny","8","59","438","","village_star:6 AND flag:437 AND hr:9 AND npc_idle:231"],["65","63","10432","Clash of Rivals","ライバルの激突！！","53","34","Cha-Cha","8","10","440","865","hub_star:4"],["66","64","10665","Minion Audition Imposition","子分・取り分・イイ気分♪","53","34","Cha-Cha","8","29","442","865","flag:441 AND listed:10646"],["67","65","10743","Show Me Your Shaka-Strength","汝ノチカラヲ、見セテミヨ","53","34","Cha-Cha","8","47","444","865","hub_star:7 AND flag:443"],["68","66","230","Bye Bye Jaggia","渓流のジャギィノス退治","301","79","Yukumo Chief","4","0","446","250","village_star:2 AND notflag:250"],["69","67","229","Arzuros the Azure Beast","青熊獣アオアシラ","301","79","Yukumo Chief","4","16","448","252","village_star:2 AND notflag:252 AND flag:251"],["70","68","328","Royal Spit Take","ロアルドロスを狩猟せよ！","301","79","Yukumo Chief","4","28","450","254","village_star:3 AND notflag:254 AND flag:253"],["71","69","329","A Forest Fracas","ざわめく森","301","79","Yukumo Chief","4","37","452","256","village_star:3 AND notflag:256 AND flag:255"],["72","70","510","The Entrancing Water Dancer","淡紅の泡狐がたゆたうか","301","79","Yukumo Chief","4","47","454","258","village_star:5 AND notflag:258 AND flag:257"],["73","71","641","Advanced: Out of the Fry Pan","高難度：終焉を喰らう者","301","79","Yukumo Chief","8","62","456","260","village_star:6 AND notflag:260 AND questset:48 AND points:Yukumo:1500"],["74","72","507","Hunt-a-thon: Khezu","ビリビリするらしいです×？？","302","80","Yukumo Gal","8","67","458","","village_star:5"],["75","73","10711","The Yukumo Gal Special","受付嬢オススメ！　雷狼竜×２","325","92","Yukumo Sweetheart","8","6","460","","hub_star:7 AND flag:459"],["76","74","","","","307","85","Palico Armory","8","4","462","","village_star:3"],["77","75","10213","Finishing the Job","無謀な弟子の、後始末","307","85","Palico Armory","8","15","464","","hub_star:2 AND flag:463"],["78","76","10712","Repaying the Favor","無理した弟子の、後始末","307","85","Palico Armory","8","21","466","","hub_star:7 AND flag:465"],["79","77","10735","The Wolf and the Footbath","ユクモノ足湯と雷狼竜","323","90","Bath Cattendant","8","19","468","","hr:8 AND footbath AND listed:10646"],["80","78","10737","Steam and Smoke","湯けむりと噴煙と","323","90","Bath Cattendant","8","37","470","","flag:469 AND requests_done:99-105:4 AND footbath AND npc_idle:323"],["81","79","10742","Searching for Secret Baths","まだ見ぬ秘湯をもとめて","323","90","Bath Cattendant","8","54","472","","flag:471 AND requests_done:99-105:7 AND footbath AND npc_idle:323"],["82","80","331","Royal Honey Hunt","ロイヤルハニーハント","327","94","Head Moga Farmer","8","6","474","","village_star:3 AND npc_idle:327"],["83","81","416","Royal Pains","スプラッシュ・ストリーム","327","94","Head Moga Farmer","8","20","476","","village_star:4 AND flag:475 AND npc_idle:327"],["84","82","509","Lagiacrus Fuss","エレクトリカル・バトル","327","94","Head Moga Farmer","8","32","478","","flag:477 AND cleared:511"],["85","83","","","","328","95","Moga Chief's Son","8","0","480","","village_star:2"],["86","84","418","Island Menace","孤島の鳥","328","95","Moga Chief's Son","8","16","482","","village_star:4 AND flag:481"],["87","85","10313","Lagiacrushed","孤島に渦巻く恐怖","328","95","Moga Chief's Son","8","29","484","","hub_star:3 AND flag:483"],["88","86","10315","Isle About that Bass","孤島を揺るがす剛音","328","95","Moga Chief's Son","8","41","486","","hub_star:3 AND flag:485"],["89","87","","","","329","96","Fishmongress","8","0","488","","village_star:2"],["90","88","335","The Fungus Among Us","ほいっ！　キノコ納品ですよ！","330","97","Moga Sweetheart","8","0","490","",""],["91","89","10532","Awful Guest","孤島の迷惑客","330","97","Moga Sweetheart","8","21","492","","hub_star:5 AND flag:491"],["92","90","10519","Liver and Let Die","キモ・キモ・キモ！！！","332","99","Tanzia Sweetheart","8","9","494","","hub_star:5"],["93","91","622","Advanced: Fungus Fetchin'","高難度：食は渓流にあり！","332","99","Tanzia Sweetheart","8","35","496","","village_star:6 AND flag:495"],["94","92","","","","334","101","Captain Tool","8","0","498","","village_star:2"],["95","93","609","The Bellowing Zinogre","雷狼竜はかく吠えり","335","102","Uppity Instructor","8","8","500","","village_star:6 AND cleared:603"],["96","94","233","Sunsnug Sprout Courier","ぽかぽかタケノコ納品","337","104","Headwhiskress","8","0","502","","village_star:2"],["97","95","338","Sunsnug Isle Rescue!","ぽかぽかレスキュー隊出動！","337","104","Headwhiskress","8","15","504","","flag:503 AND cleared:303"],["98","96","333","The Crabbiest Catch","盾蟹と貝と狩り","420","105","Moga Chief","8","10","506","","cleared:311 AND footbath"],["99","97","","","","40","21","Jumbo Chief","8","0","508","",""],["100","98","633","Advanced: Snowtal Recall","高難度：吹雪の召喚者","40","21","Jumbo Chief","8","14","510","","village_star:6 AND hr:9 AND flag:509"],["101","99","10214","Fresh is Best","食材の価値は鮮度なり","422","107","Village Grocer","8","2","512","","footbath"],["102","100","","","","423","108","The Combinator","8","12","514","","footbath"],["103","101","10653","Nibeling on Apples","幻のハップル？","424","109","Master Tool","8","7","516","","footbath AND listed:10646"],["104","102","10656","The Plesioth Adventure","ガノトトス冒険記","425","110","Master Shipwright","8","12","518","","footbath AND listed:10646"],["105","103","417","Peddling Practice","ぎょーしょーしゅぎょー","426","111","Spittle-ful Girl","8","2","520","","footbath"],["106","104","512","Island Heat","赤いおひさまアッチッチ","427","112","Tubular Tabby","8","8","522","","footbath AND cleared:516"],["107","105","327","For Whom the Egg Yolks","おいしい卵は誰のため？","428","113","Loc Lac Guide","8","12","524","","village_star:3 AND footbath"],["108","106","628","Advanced: Seltas Queen","高難度：重甲虫と腕試し！","128","53","Val Habar Master","8","0","526","",""],["109","107","630","Advanced: Barrage of Blue","高難度：青の連撃！","227","74","Pokke Manager","8","6","530","","hub_star:6 AND flag:527 AND flag:701"],["110","108","631","Advanced: Seeing Red","高難度：赤の猛攻！","227","74","Pokke Manager","8","19","532","","hub_star:6 AND flag:531"],["111","109","627","Advanced: Twinkle Toes","高難度：渾身のドボルベルク","331","98","Tanzia Port Boss","8","7","534","","flag:533 AND footbath"],["112","110","10744","The Marshlands Nightmare","沼地酔夢譚","324","91","Yukumo Manager","8","6","528","","hub_star:7 AND flag:535 AND listed:10646"],["113","111","10741","The Descending Fog","森丘の黒い霧","421","106","Minegarde Hermit","8","11","536","","flag:529 AND hr:8 AND footbath"],["114","112","10755","Triumphant Rage","憤怒の雄叫び","333","100","Loc Lac Chief","8","5","538","","flag:537"],["115","113","10740","The End of the Trials","試練の帰結点","128","53","Val Habar Master","8","13","540","","flag:539"],["116","114","10540","Desert Brawlers","熱砂の喧嘩は武器の素","326","93","Wyverian Artisan","8","5","544","","hub_star:5 AND flag:543"],["117","115","10631","Coal Hearted","たんと掘れ燃石炭","305","83","Yukumo Smithy","8","3","546","","hub_star:6 AND flag:545"],["118","116","10709","The Hapless Bodyguard","容赦なき、金獅子相手に用心棒","5","4","Manvil Smithy","8","67","548","","hub_star:7 AND flag:547 AND listed:10646"],["119","118","10736","The Thieving Gypceros","凶賊ゲリョス狩り","5","4","Manvil Smithy","8","114","552","","flag:877 AND npc_idle:4"],["120","119","107","Another Pack Attack","ネコ嬢のジャギィ討伐依頼","613","125","Meowstress","4","3","554","6","flag:5 AND notflag:6"],["121","120","","","","701","154","Wyventurer","8","407","1270","","village_star:10 AND cleared:1002"],["122","121","924","Flappy Pest","空路を阻む電竜退治！","702","155","Soaratorium Gal","8","237","1272","","village_star:9 AND cleared:910 AND cleared:908 AND cleared:909 AND cleared:907 AND cleared:916"],["123","122","11469","The Ol' Razzle Dazzle","感動の生まれる瞬間","714","165","Tanzia Arena Gal","8","37","1274","","hub_star:12 AND flag:1415"],["124","123","833","The Furtilizer That Time Furgot","珍肥料を手に入れるのニャ！","722","173","Moga Farm Felyne","8","33","1276","","village_star:8"],["125","124","11110","Pleasantly Sozzled","罪深きタルの食材探訪","720","171","Furtive Felyne","8","43","1278","","hub_star:9 AND cleared:11109"],["126","125","936","Sky Tribe: Rice to the Occasion","空の家族・メシを作るッス","718","169","Redspear Hunter","8","48","1280","","village_star:9"],["127","126","11210","Sky Tribe: Savior of the Skyway","空の家族・空路を守るッス","719","170","Blackspear Hunter","8","89","1282","","hub_star:10 AND flag:1281"],["128","127","913","Earn Your Gear","……求めるならば力を示して","721","172","Tanzia Gong Girl","8","36","1284","","village_star:9 AND cleared:905"],["129","128","11213","Earn Your Strength","……欲するならば資格を示して","721","172","Tanzia Gong Girl","8","49","1286","","hub_star:10 AND flag:1285"],["130","129","813","The Perils of Commerce","宣伝ネコの受難","613","125","Meowstress","8","162","1288","","village_star:8"],["131","130","11124","After That Bird!","毒怪鳥が盗んだものを追って","613","125","Meowstress","8","178","1290","","hub_star:9 AND flag:1289 AND cleared:11109"],["132","131","11329","Sweets for My Sweets","妹奮闘記～夜鳥退治～","805","182","Mewstress","8","126","1292","","hub_star:11 AND flag:1289 AND group_done:11 AND cleared:11206|cleared:11235"],["133","132","1051","Advanced: Jurassic Pair","高難度：古代林に現る２頭の影","1","0","Bherna Chief","8","315","1294","","village_star:10 AND hr_unlocked AND cleared:1039"],["134","133","11239","Commission: Basarios","依頼委託：火山の岩竜","43","24","Ace Lancer","8","46","1296","","hub_star:10"],["135","134","11244","Commission: Hyper Kecha Wacha","調査委託：獰猛な奇猿狐","43","24","Ace Lancer","8","63","1298","","hub_star:10 AND flag:1297 AND group_done:10 AND cleared:11127|cleared:11107"],["136","135","11207","Through Thick and Fin","閃きへの１ピースを求めて","125","50","Resting Hunter","8","72","1300","","hub_star:10 AND cond140:0:0"],["137","135","11207","Through Thick and Fin","閃きへの１ピースを求めて","125","50","Resting Hunter","8","91","1300","","hub_star:10"],["138","136","","","","805","182","Mewstress","8","122","1302","","village_star:7 AND hub_star:9 AND flag:1071 AND flag:1206"],["139","137","11303","Uragaan Grief","トラウマガンキンを退治せよ","621","127","d'Artanyan","8","73","1304","","hub_star:11 AND cleared:11313 AND flag:240"],["140","138","11352","PR Disaster","ベルナ村の観光業が大炎上！","2","1","Bherna Gal","8","380","1306","","hub_star:11 AND flag:311"],["141","139","11349","Hunt-a-Thon: Gravios","グラビモス連続狩猟","41","22","Caravaneer","8","75","1308","","hub_star:11 AND flag:321 AND cleared:11313"],["142","140","11242","So Notable: Hyper Hermitaur","超☆メモ帳　～獰猛化盾蟹編～","46","27","Guildmarm","8","76","1310","","hub_star:10 AND flag:327 AND group_done:10 AND cleared:11113"],["143","141","11216","Face-off in the Jungle","密林のナルガクルガと対峙せよ","42","23","Ace Commander","8","73","1312","","hub_star:10 AND flag:331"],["144","142","11482","Primal Screams","原生林にて呻くは渾沌の竜","42","23","Ace Commander","8","91","1314","","hub_star:12 AND flag:1313 AND hr:35"],["145","143","11211","Share the Load (and the Reward)","二人で特訓、成果は山分け","45","26","Ace Cadet","8","50","1316","","hub_star:10 AND flag:333"],["146","144","1040","Advanced: Ranging Rathalos","高難度：森丘にて火竜は旋廻す","101","36","Kokoto Chief","8","178","1318","","village_star:10 AND flag:159 AND hr:12 AND cleared:1039"],["147","145","933","Interruption: Eggstra Delivery","割り込み受注：卵納品","127","52","Minegarde Sweetheart","8","53","1320","","village_star:9 AND flag:351 AND cleared:905"],["148","146","","","","102","37","Kokoto Gal","8","277","1322","","hub_star:10 AND flag:1321 AND cleared:11205"],["149","147","11238","Interruption: Conga Line","割り込み受注：２頭の桃毛獣","127","52","Minegarde Sweetheart","8","63","1324","","hub_star:10 AND flag:1323"],["150","148","11206","Treasure Pinnacle: Rice","遺群嶺のトレジャー！　米の巻","126","51","Treshi","8","74","1326","","hub_star:10 AND flag:365 AND cleared:11209 AND cleared:11209"],["151","149","914","Fearful Symmetry","轟竜の狩猟をさせてやるぜ！","129","54","Red Hell Hunter","8","128","1328","1397","village_star:9"],["152","149","914","Fearful Symmetry","轟竜の狩猟をさせてやるぜ！","130","55","Black Hell Hunter","8","128","1328","1397","village_star:9"],["153","150","11214","Feeling Generally Crabby","鎌蟹の狩猟をさせてやるぜ！","129","54","Red Hell Hunter","8","143","1330","1398","hub_star:10 AND flag:1329"],["154","150","11214","Feeling Generally Crabby","鎌蟹の狩猟をさせてやるぜ！","130","55","Black Hell Hunter","8","143","1330","1398","hub_star:10 AND flag:1329"],["155","151","11129","The Bird Who Wood Be King","森丘の迷惑な怪鳥さん","131","56","Dundorma Guardsman","8","58","1332","","hub_star:9 AND flag:377"],["156","152","11445","Seregios Exposé","所により獰猛なセルレギオス","716","167","Elder Hall Minister","8","36","1334","","hub_star:12 AND flag:1333 AND hr_unlocked AND cleared:11403|cleared:11463"],["157","153","935","Snowball Skirmish","雪山、雪玉、雪合戦！！","47","28","Street Cook","8","49","1336","","village_star:9 AND flag:381"],["158","154","11233","Please Plesioth Me!","チコ村を脅かす水竜を狩れ！","47","28","Street Cook","8","65","1342","","hub_star:10 AND flag:1337"],["159","155","818","It's Not Uragaan's, It's Mine!","熱地に現る、ウラガンキン！","50","31","Lil Miss Forge","8","57","1338","","village_star:8 AND flag:385 AND cleared:809 AND cleared:814 AND cleared:811"],["160","156","1031","Deviljho Dispossession","遺群嶺を塞ぐ恐暴竜","51","32","Wycoon","8","67","1340","","village_star:10 AND cleared:1001"],["161","157","1041","Advanced: Roaring in the Ridge","高難度：雪山に佇む轟竜","201","58","Pokke Chief","8","156","1344","","village_star:10 AND hr_unlocked AND cleared:1039"],["162","158","1052","Advanced: Quarrel Quelling","高難度：喧嘩の仲裁は村を救う","202","59","Pokke Gal","8","281","1346","","village_star:10 AND hr_unlocked AND flag:417 AND cleared:1039"],["163","159","11424","Polar Peril","極天より来たる、崩せし神","226","73","Felcote","8","77","1348","","hub_star:12 AND flag:429 AND hr:60"],["164","160","11249","Afro Soul Is a Way of Life","ぶつけろ生き様☆アフロソウル","230","77","Funky Felyne","8","44","1350","","hub_star:10 AND flag:433 AND cleared:11205"],["165","161","11113","Daimyo Hermitaur Flambé","アツアツ砂漠の盾蟹狩猟","48","29","Itinerant Cook","8","54","1352","","hub_star:9 AND flag:435"],["166","162","11366","Material Old Girl","強い防具は素材から！","231","78","Armory Granny","8","103","1354","","hub_star:3 AND flag:439 AND group_done:11 AND cleared:11328 AND cleared:11338"],["167","163","11471","Fiery Four-way Fracas","鎧・砕・斬の包囲網を越えて","717","168","Legendary Artisan","8","37","1356","","hub_star:12 AND flag:1355 AND flag:1415"],["168","164","11241","Minion's Devotion","子分の自覚が足りないっチャ！","53","34","Cha-Cha","8","122","1358","","hub_star:10 AND flag:445 AND cleared:11209"],["169","165","11365","Arena Bakalaka-Battle! Woo!","闘技場での最終テストっチャ！","53","34","Cha-Cha","8","139","1360","","hub_star:11 AND flag:1359 AND cleared:11310"],["170","166","1042","Advanced: Moonlight Zinogre","高難度：月夜を仰ぐ雷狼竜","301","79","Yukumo Chief","8","153","1362","","village_star:10 AND hr:12 AND cleared:1039"],["171","167","11116","Sweetheart's Pick: Lofty Ludroth","看板娘セレクト：遺群嶺の水獣","325","92","Yukumo Sweetheart","8","63","1364","","hub_star:9 AND flag:461 AND cleared:11109"],["172","168","11215","A Coil to Arms","グルグルするらしいです","302","80","Yukumo Gal","8","287","1366","","hub_star:10 AND flag:1365 AND cleared:11209"],["173","169","11355","Howl at the Moon","月下雷鳴の記憶","307","85","Palico Armory","8","77","1368","","hub_star:11 AND flag:715 AND cleared:11310"],["174","170","11208","Chilled to the Marrow","身体の芯までビッリビリ","323","90","Bath Cattendant","8","118","1370","","hub_star:10 AND flag:473 AND footbath AND cleared:11205"],["175","171","925","Pheromone Moans","ジャングル・フェロモン","327","94","Head Moga Farmer","8","89","1372","","village_star:9 AND flag:479 AND cleared:905"],["176","172","11478","Zinogre-enthusiasm","孤島で遭遇！　獰猛な雷狼竜","328","95","Moga Chief's Son","8","106","1374","","hub_star:12 AND flag:487 AND hr_unlocked AND cleared:11308|cleared:11355"],["177","173","11104","Riverside Rumble","川辺のアオアシラ退治","329","96","Fishmongress","8","39","1376","","hub_star:9 AND flag:489 AND cleared:11130"],["178","174","11353","I Hope It's Not Barioth Flavored","氷牙竜が大発明のカギ？","330","97","Moga Sweetheart","8","75","1378","","hub_star:11 AND flag:493 AND cleared:11310"],["179","175","","","","332","99","Tanzia Sweetheart","8","81","1380","","hub_star:11 AND flag:497"],["180","176","11449","Even Brachydios Need A Holiday","獰猛な砕竜は、孤島で何を思う","420","105","Moga Chief","8","62","1382","","hub_star:12 AND flag:507 AND footbath AND hr_unlocked AND cleared:11407|cleared:11466"],["181","177","736","Season's Eatings","旬な食材を採らせておくれ！","422","107","Village Grocer","8","42","1384","","village_star:7 AND footbath AND flag:513 AND cleared:716"],["182","178","11224","The Legend of King Apple","至宝の林檎王？","424","109","Master Tool","8","47","1386","","hub_star:10 AND flag:517 AND footbath"],["183","179","11470","Quest of Friendship","絆の証！　孤島の大決戦","128","53","Val Habar Master","8","51","1388","","hub_star:12 AND flag:541 AND flag:1415"],["184","180","11480","Arena Allegiances","絆の証！　闘技場の大決戦","333","100","Loc Lac Chief","8","50","1390","","hub_star:12 AND flag:1389 AND hr_unlocked AND flag:940"],["185","181","11479","Arctic Ridge Allegiances","絆の証？　雪山の獰猛大決戦","227","74","Pokke Manager","8","68","1392","","hub_star:12 AND flag:1391 AND hr_unlocked AND flag:940"],["186","182","11436","Seeking the Sea King","獰猛な海の王者は武器の素","326","93","Wyverian Artisan","8","50","1394","","hub_star:12 AND flag:545 AND hr_unlocked AND cleared:11344|cleared:11307"]]};
+
+/* 自動生成: tools/build.py — 手で編集しないこと */
+window.MHXX_EQUIP_LAYOUT = {"schema":"mhxx-id-memo/equip-record-layout","schema_version":1,"title_ja":"MHXX 装備ボックスレコード配置仕様","game":"Monster Hunter XX (Nintendo Switch)","generated_by":"tools/verify_equip_record_layout.py --json","confidence":"verified","summary_ja":"装備ボックスは 1 レコード 36 バイト x 2000 枠。先頭 2 バイトのワードに type と 2 つのレベルが5 ビットずつ入り、+0x02 が ID、+0x04 が着せ替え、+0x06/+0x08/+0x0A が装飾品 3 枠。type 6 と type 20 だけ +0x0C 以降に独自のブロックを持つ。","save_file":{"size_bytes":4726188,"header_bytes":36,"body_offset":36,"body_bytes":4726152,"header_note_ja":"先頭 36 バイトは Switch のセーブヘッダ。装備ボックスの位置は body 先頭からの相対値で持つ","slot_base_pointer_offsets":["0x10","0x14","0x18"],"slot_base_pointer_type":"u32le","slot_count":3,"slot_data_size_hex":"0x11D088","slot_footer_hex":"0x1738","slot_stride_note_ja":"slot stride = SLOT_DATA_SIZE + フッタ = 0x11D088 + 0x1738 = 0x11E7C0。ただし stride はセーブから読まずに body+0x10/0x14/0x18 の 3 つのポインタを使う方が安全"},"box":{"offset_from_slot_base":25326,"offset_from_slot_base_hex":"0x62EE","record_bytes":36,"record_count":2000,"box_bytes":72000,"end_offset_from_slot_base_hex":"0x17C2E","order_note_ja":"レコードの並びはゲーム内ボックスの並びと同じ（refsrc docs/07-equipment.md）","after_box_ja":"オトモ装備ボックス (1000 枠 x 36 バイト = 36,000 バイト) が続く"},"record":{"fields":[{"offset":0,"size":2,"type":"u16le","name":"head","desc_ja":"type / level-1 / transmog_level-1 を 5 ビットずつ詰めたワード","desc_en":"Packed word: type, level-1, transmog level-1","confidence":"verified"},{"offset":2,"size":2,"type":"u16le","name":"id","desc_ja":"武器/防具の ID。防具は series_id、武器は武器種ごとの weapon_index。護石では未使用（0）","desc_en":"Armour series id or per-class weapon index","confidence":"verified"},{"offset":4,"size":2,"type":"u16le","name":"transmog_id","desc_ja":"着せ替え（重ね着）元の装備 ID。0 = なし","desc_en":"Transmog (layered) id, 0 = none","confidence":"verified"},{"offset":6,"size":2,"type":"u16le","name":"deco1","desc_ja":"装飾品 1 のアイテム ID（2638..2899）。0 = 空き","desc_en":"Decoration 1 item id, 0 = empty","confidence":"verified"},{"offset":8,"size":2,"type":"u16le","name":"deco2","desc_ja":"装飾品 2 のアイテム ID。0 = 空き","desc_en":"Decoration 2 item id, 0 = empty","confidence":"verified"},{"offset":10,"size":2,"type":"u16le","name":"deco3","desc_ja":"装飾品 3 のアイテム ID。0 = 空き","desc_en":"Decoration 3 item id, 0 = empty","confidence":"verified"},{"offset":12,"size":24,"type":"bytes","name":"tail","desc_ja":"type ごとの追加データ。type 6 = 護石ブロック、type 20 = 猟虫ブロック。それ以外の type では通常 0 だが、前の持ち主のバイトが残ることがある（下記 unknown 参照）","desc_en":"Type specific tail: talisman block (6), kinsect block (20)","confidence":"verified"}],"head_word":{"offset":0,"type":"u16le","bits":[{"bits":"0..4","mask":"0x001F","shift":0,"name":"type","desc_ja":"種類。0 が空き、1..5 が防具、6 が護石、7..21 が武器（12 は未使用）"},{"bits":"5..9","mask":"0x03E0","shift":5,"name":"level_minus_1","desc_ja":"強化レベル - 1（0 始まり）。読むときは +1 する"},{"bits":"10..14","mask":"0x7C00","shift":10,"name":"transmog_level_minus_1","desc_ja":"着せ替え元のレベル - 1。着せ替えしていないレコードでは 0（= Lv1）"},{"bits":"15","mask":"0x8000","shift":15,"name":"unused","desc_ja":"未使用。実セーブ 2,331 レコードで 1 度も立っていない"}],"decode_python":"head = rec[0] | (rec[1] << 8); type = head & 0x1F; level = ((head >> 5) & 0x1F) + 1; transmog_level = ((head >> 10) & 0x1F) + 1"},"empty_record_ja":"36 バイトすべてが 0 のレコードが空き枠。type だけ 0 で他のバイトが残っているレコードもあり得るので、空き判定は全バイト 0 で行う（equip.rs の is_empty は type だけを見るが、書き込み可否の判定は record_is_blank 側）"},"type_map":[{"type":0,"kind":"empty","table":null,"id_formula":null,"desc_ja":"空き枠。レコード 36 バイトがすべて 0"},{"type":1,"kind":"armor","part_id":0,"table":"armor.csv","id_formula":"armor_id = id * 5 + 0","desc_ja":"防具（頭）"},{"type":2,"kind":"armor","part_id":1,"table":"armor.csv","id_formula":"armor_id = id * 5 + 1","desc_ja":"防具（胴）"},{"type":3,"kind":"armor","part_id":2,"table":"armor.csv","id_formula":"armor_id = id * 5 + 2","desc_ja":"防具（腕）"},{"type":4,"kind":"armor","part_id":3,"table":"armor.csv","id_formula":"armor_id = id * 5 + 3","desc_ja":"防具（腰）"},{"type":5,"kind":"armor","part_id":4,"table":"armor.csv","id_formula":"armor_id = id * 5 + 4","desc_ja":"防具（脚）"},{"type":6,"kind":"talisman","table":"talismans.csv","id_formula":null,"desc_ja":"護石。id は使わず +0x0C 以降の護石ブロックを見る"},{"type":7,"kind":"weapon","weapon_type_id":0,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 0）"},{"type":8,"kind":"weapon","weapon_type_id":1,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 1）"},{"type":9,"kind":"weapon","weapon_type_id":2,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 2）"},{"type":10,"kind":"weapon","weapon_type_id":3,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 3）"},{"type":11,"kind":"weapon","weapon_type_id":4,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 4）"},{"type":12,"kind":"unused","table":null,"id_formula":null,"desc_ja":"未使用（weapon_type_id 5 の欠番に対応）"},{"type":13,"kind":"weapon","weapon_type_id":6,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 6）"},{"type":14,"kind":"weapon","weapon_type_id":7,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 7）"},{"type":15,"kind":"weapon","weapon_type_id":8,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 8）"},{"type":16,"kind":"weapon","weapon_type_id":9,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 9）"},{"type":17,"kind":"weapon","weapon_type_id":10,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 10）"},{"type":18,"kind":"weapon","weapon_type_id":11,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 11）"},{"type":19,"kind":"weapon","weapon_type_id":12,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 12）"},{"type":20,"kind":"weapon","weapon_type_id":13,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 13）"},{"type":21,"kind":"weapon","weapon_type_id":14,"table":"weapons.csv","id_formula":"weapon_id = (type - 7) * 10000 + id * 10 (form 0)","desc_ja":"武器（weapon_type_id 14）"}],"talisman":{"type":6,"fields":[{"offset":0,"size":1,"type":"u8","name":"type","desc_ja":"常に 0x06（= type 6, level 1）","observed":"650/650 が 0x06"},{"offset":1,"size":1,"type":"u8","name":"zero","desc_ja":"常に 0x00","observed":"650/650 が 0x00"},{"offset":2,"size":1,"type":"u8","name":"kind","desc_ja":"護石の種類 (amuletData_jpn.gmd の行, 1..10)。0 も 2 件観測されている","observed":"0:2, 4:2, 6:20, 7:46, 10:580"},{"offset":3,"size":1,"type":"u8","name":"zero","desc_ja":"常に 0x00","observed":"650/650 が 0x00"},{"offset":4,"size":2,"type":"u16le","name":"unused","desc_ja":"常に 0（武器/防具の transmog_id にあたる位置だが護石では使わない）","observed":"650/650 が 0"},{"offset":6,"size":6,"type":"3 x u16le","name":"deco1..deco3","desc_ja":"護石に挿した装飾品のアイテム ID。武器/防具と同じ位置・同じ意味","observed":"15/650 が非 0。非 0 の個数は +0x10 のスロット数を超えない"},{"offset":12,"size":1,"type":"u8","name":"skill1_id","desc_ja":"スキル 1 のスキル ID (skills.csv の skill_id)。0 = なし","observed":"全件が skills.csv に存在"},{"offset":13,"size":1,"type":"u8","name":"skill2_id","desc_ja":"スキル 2 のスキル ID。0 = なし","observed":"全件が skills.csv に存在"},{"offset":14,"size":1,"type":"i8","name":"skill1_points","desc_ja":"スキル 1 のポイント（符号あり）","observed":"実測 -3..+10"},{"offset":15,"size":1,"type":"i8","name":"skill2_points","desc_ja":"スキル 2 のポイント（符号あり）","observed":"実測 -3..+10"},{"offset":16,"size":1,"type":"u8","name":"slots","desc_ja":"この護石の装飾品スロット数 (0..3)","observed":"0:32, 1:10, 2:18, 3:590"},{"offset":17,"size":1,"type":"u8","name":"zero","desc_ja":"常に 0x00","observed":"650/650 が 0x00"},{"offset":18,"size":1,"type":"u8","name":"rarity","desc_ja":"レア度 (97..100)。護石アイテム ID の下位バイト","observed":"98:2, 99:68, 100:580"},{"offset":19,"size":1,"type":"u8","name":"one","desc_ja":"常に 0x01。+0x12 と合わせて u16 で護石アイテム ID (353..356) になる","observed":"650/650 が 0x01"},{"offset":20,"size":16,"type":"bytes","name":"zero","desc_ja":"常に 0","observed":"650/650 が全 0"}],"kind_to_rarity":{"1":97,"2":97,"3":98,"4":98,"5":99,"6":99,"7":99,"8":100,"9":100,"10":100},"charm_item_id_range":[353,356],"note_ja":"護石は +0x12/+0x13 の u16 が護石アイテム ID (353..356) で、下位バイトがレア度、上位バイトが常に 1。+0x02 の kind は TALISMAN_RARITY でレア度に結び付くが、kind=0 のレコードが 2 件だけ観測され、そのレア度は 99 で表と一致しない（unknown 参照）。"},"decoration_fields":{"offsets":["0x06","0x08","0x0A"],"type":"u16le x 3","item_id_range":[2638,2899],"zero_means":"空き","applies_to":"type 1..5 (防具), 6 (護石), 7..21 (武器)","note_ja":"装飾品はサイズ (1..3) に関係なく 1 枠を 1 個で使い、先頭から詰める（refsrc docs/07-equipment.md）。非 0 の個数は装備のスロット数を超えない。"},"page_geometry":{"slots_per_page":9,"page_count":223,"row_height_px":56,"scroll_track_px":504,"page_to_index_range":"page p (0 始まり) -> [p * 9, min(p * 9 + 9, 2000))","index_to_page":"page = index // 9, 行内位置 = index % 9","last_page":{"page":222,"first_index":1998,"last_index":1999,"rows":2},"source_ja":"hbedit.rs の page_move の doc コメント「the equipment box shows nine and a warning strip takes one」と tests/scroll_ui.rs の「The track the equipment box uses: nine 56px rows.」(TRACK = 504 = 9 x 56) /「Nine rows on screen means nine rows a page」","scope_ja":"これはエディタの一覧画面のページ。ゲーム本体の装備ボックス画面が 1 ページ何枠かは手元の資料からは確定できない（unknown 参照）"},"verification":{"saves":[{"key":"live","path":"C:\\Users\\haruk\\AppData\\Roaming\\Ryujinx\\bis\\user\\save\\0000000000000001\\0\\system","role_ja":"実機相当の現行セーブ（Ryujinx のセーブ）","size_bytes":4726188,"slot_bases_hex":["0x126474","0x244c34","0x3633f4"],"slots":[{"slot":0,"base_hex":"0x126474","box_offset_hex":"0x12c762","used":19,"talismans":0,"with_decorations":0,"by_type":{"1":1,"2":1,"3":1,"4":1,"5":1,"7":1,"8":1,"9":1,"10":1,"11":1,"13":1,"14":1,"15":1,"16":1,"17":1,"18":1,"19":1,"20":1,"21":1}},{"slot":1,"base_hex":"0x244c34","box_offset_hex":"0x24af22","used":0,"talismans":0,"with_decorations":0,"by_type":{}},{"slot":2,"base_hex":"0x3633f4","box_offset_hex":"0x3696e2","used":0,"talismans":0,"with_decorations":0,"by_type":{}}]},{"key":"sample","path":"C:\\anyWorkspace\\nx\\mhxx\\save_backups\\_conv\\system","role_ja":"サンプルセーブ（3 キャラすべてに装備あり。護石 650 件の検証に使う）","size_bytes":4726188,"slot_bases_hex":["0x126474","0x244c34","0x3633f4"],"slots":[{"slot":0,"base_hex":"0x126474","box_offset_hex":"0x12c762","used":789,"talismans":188,"with_decorations":59,"by_type":{"1":101,"2":101,"3":98,"4":95,"5":95,"6":188,"7":23,"8":24,"9":1,"10":1,"11":6,"13":10,"14":28,"15":3,"16":2,"17":3,"18":5,"19":2,"20":3}},{"slot":1,"base_hex":"0x244c34","box_offset_hex":"0x24af22","used":771,"talismans":231,"with_decorations":5,"by_type":{"1":88,"2":86,"3":85,"4":84,"5":79,"6":231,"7":25,"8":34,"9":1,"10":1,"11":6,"13":10,"14":22,"15":3,"16":2,"17":3,"18":5,"19":2,"20":3,"21":1}},{"slot":2,"base_hex":"0x3633f4","box_offset_hex":"0x3696e2","used":771,"talismans":231,"with_decorations":5,"by_type":{"1":88,"2":86,"3":85,"4":84,"5":79,"6":231,"7":25,"8":34,"9":1,"10":1,"11":6,"13":10,"14":22,"15":3,"16":2,"17":3,"18":5,"19":2,"20":3,"21":1}}]}],"checks":[],"totals":{"records":2350,"talismans":650,"with_decorations":69,"by_type":{"1":278,"2":274,"3":269,"4":264,"5":254,"6":650,"7":74,"8":93,"9":4,"10":4,"11":19,"13":31,"14":73,"15":10,"16":7,"17":10,"18":16,"19":7,"20":10,"21":3}}},"live_save_records":[{"index":0,"type":7,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーブレイド","name_en":"Petrified Blade"},{"index":1,"type":14,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーサーベル","name_en":"Petrified Saber"},{"index":2,"type":8,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーソード","name_en":"Petrified Sword"},{"index":3,"type":18,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーダガー","name_en":"Petrified Daggers"},{"index":4,"type":9,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーハンマー","name_en":"Petrified Hammer"},{"index":5,"type":19,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーホルン","name_en":"Petrified Horn"},{"index":6,"type":10,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーランス","name_en":"Petrified Lance"},{"index":7,"type":16,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーガンランス","name_en":"Petrified Gunlance"},{"index":8,"type":15,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーアックス","name_en":"Petrified Axe"},{"index":9,"type":21,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーアームズ","name_en":"Petrified Strongarm"},{"index":10,"type":20,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーロッド","name_en":"Petrified Rod"},{"index":11,"type":13,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーバレット","name_en":"Petrified Shooter"},{"index":12,"type":11,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーキャノン","name_en":"Petrified Cannon"},{"index":13,"type":17,"id":1,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"weapons.csv","name_ja":"ベルダーボウ","name_en":"Petrified Bow"},{"index":14,"type":1,"id":3,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"armor.csv","name_ja":"ベルダーターバン","name_en":"Bherna Turban"},{"index":15,"type":2,"id":3,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"armor.csv","name_ja":"ベルダーメイル","name_en":"Bherna Mail"},{"index":16,"type":3,"id":3,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"armor.csv","name_ja":"ベルダーアーム","name_en":"Bherna Braces"},{"index":17,"type":4,"id":3,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"armor.csv","name_ja":"ベルダーベルト","name_en":"Bherna Belt"},{"index":18,"type":5,"id":3,"level":1,"transmog_id":0,"transmog_level":1,"decorations":[0,0,0],"table":"armor.csv","name_ja":"ベルダーグリーヴ","name_en":"Bherna Greaves"}],"unknown":["ゲーム本体の装備ボックス画面の 1 ページあたりの枠数。エディタの一覧は 9 行だが、ゲーム内の画面は未確認。","type 6 (護石) の +0x02 kind=0 が 2 件だけ観測され、レア度 99 と結び付いている。TALISMAN_RARITY の表 (kind 5..7 -> 99) に無い組み合わせで、意味は不明。","護石以外の type でも +0x0C 以降が非 0 のレコードがある（サンプルセーブで 15 件）。値は護石ブロックや猟虫ブロックの形をしており、前の持ち主のバイトが残っていると見られる。どの操作で残るのかは未確定。","武器の装飾品数が武器のスロット数を超えないかは未検証（weaponNNLevelData のスロット数を読んでいない）。","type 22 以上がハンターの装備ボックスに現れるかは未確認（サンプル 2,331 レコードでは 21 が最大）。","head word の bit15 は 2,331 レコードで 0 だったが、ゲームが将来使うかは不明。"]};
 </script>
 <script>
 (function () {
@@ -623,7 +828,7 @@ function showLoading(msg) {
 function hideState() {
   $('state').hidden = true;
   $('grid').hidden = false;
-  $('pager').hidden = false;
+  $('pager').hidden = (S.mode === 'mem');
 }
 
 function showFatal(title, bodyHtml) {
@@ -663,6 +868,7 @@ function showLoadError(t, err) {
 
 /* ============================================================ state */
 var S = {
+  mode: 'list',
   tableId: null,
   q: '',
   fcol: '',
@@ -1412,6 +1618,8 @@ function handleAct(node) {
   else if (a === 'close-detail') { closeDetail(); }
   else if (a === 'close-modal') { closeModal(); }
   else if (a === 'reload') { location.reload(); }
+  else if (a === 'mem-pick') { memPick(node.getAttribute('data-key')); }
+  else if (a === 'mem-copy') { memCopy(parseInt(node.getAttribute('data-len'), 10) || 6); }
   else if (a === 'copy-val') {
     copyText(node.getAttribute('data-v')).then(function (ok) {
       toast(ok ? 'コピーしました' : 'コピーできませんでした', !ok);
@@ -1562,6 +1770,719 @@ function bindEvents() {
     var h = (location.hash || '').replace(/^#/, '');
     if (h && h !== S.tableId && tableById(h)) { selectTable(h); }
   });
+
+  memBind();
+}
+
+
+/* ============================================================ メモリ配置モード */
+var DEFAULT_FIELDS = [
+  { offset: 0, size: 2, name: 'head', desc_ja: 'type / level-1 / transmog_level-1（5bit x3）' },
+  { offset: 2, size: 2, name: 'id', desc_ja: '装備ID' },
+  { offset: 4, size: 2, name: 'transmog_id', desc_ja: '着せ替えID（0=なし）' },
+  { offset: 6, size: 2, name: 'deco1', desc_ja: '装飾品1 item_id' },
+  { offset: 8, size: 2, name: 'deco2', desc_ja: '装飾品2 item_id' },
+  { offset: 10, size: 2, name: 'deco3', desc_ja: '装飾品3 item_id' },
+  { offset: 12, size: 24, name: 'tail', desc_ja: 'type ごとの追加データ' }
+];
+
+var M = {
+  ready: false, loading: false,
+  cat: 'armor', part: 0, wtype: 0, query: '',
+  selected: null, fmt: 'space',
+  level: 1, tl: 1, tm: 0,
+  decos: [0, 0, 0],
+  tal: { kind: 10, skill1: 0, skill2: 0, p1: 1, p2: 0, slots: 3 },
+  layout: null
+};
+
+function pickNum(obj, names, dflt) {
+  if (!obj) { return dflt; }
+  for (var i = 0; i < names.length; i++) {
+    var v = obj[names[i]];
+    if (typeof v === 'number' && isFinite(v)) { return v; }
+  }
+  return dflt;
+}
+
+/* analyst の equip-record-layout.json（入れ子スキーマ）と旧フラット形式の両方を読む */
+function normalizeLayout(raw) {
+  raw = raw || {};
+  var box = raw.box || null;
+  var rec = raw.record || null;
+  var pg = raw.page_geometry || null;
+  var L = {
+    recordSize: pickNum(box, ['record_bytes'], pickNum(raw, ['record_size', 'recordSize', 'size', 'record_bytes'], 36)),
+    recordCount: pickNum(box, ['record_count'], pickNum(raw, ['record_count', 'recordCount', 'count'], 2000)),
+    saveOffset: pickNum(box, ['offset_from_slot_base'], pickNum(raw, ['save_offset', 'saveOffset', 'box_offset', 'offset'], 0x62EE)),
+    pageSize: pickNum(pg, ['slots_per_page'], pickNum(raw, ['page_size', 'pageSize'], 9)),
+    pageCount: pickNum(pg, ['page_count'], 0),
+    talisman: raw.talisman || null,
+    typeMap: Array.isArray(raw.type_map) ? raw.type_map : null,
+    source: raw.generated_by || raw.source || '',
+    confidence: raw.confidence || ''
+  };
+  var f = (rec && Array.isArray(rec.fields) && rec.fields.length) ? rec.fields
+        : (Array.isArray(raw.fields) && raw.fields.length ? raw.fields : DEFAULT_FIELDS);
+  L.fields = f;
+  return L;
+}
+
+function loadLayout() {
+  if (window.MHXX_EQUIP_LAYOUT) {
+    M.layout = normalizeLayout(window.MHXX_EQUIP_LAYOUT);
+    return Promise.resolve();
+  }
+  return new Promise(function (resolve) {
+    var s = document.createElement('script');
+    s.src = 'data/equip-record-layout.js';
+    s.async = true;
+    s.onload = function () { M.layout = normalizeLayout(window.MHXX_EQUIP_LAYOUT || {}); resolve(); };
+    s.onerror = function () { M.layout = normalizeLayout({}); resolve(); };
+    document.head.appendChild(s);
+  });
+}
+
+function dataOf(id) {
+  var s = window.MHXX_ID_MEMO_TABLES;
+  var e = s && s[id];
+  if (!e) { return null; }
+  if (!e._idx) {
+    var idx = {};
+    for (var i = 0; i < e.header.length; i++) { idx[e.header[i]] = i; }
+    e._idx = idx;
+  }
+  return { rows: e.rows, idx: e._idx };
+}
+
+function memEnsure() {
+  var need = ['armor', 'weapons', 'talismans', 'skills', 'decorations', 'weapon-types', 'armor-parts'];
+  var jobs = [];
+  for (var i = 0; i < need.length; i++) {
+    if (tableById(need[i])) { jobs.push(ensureTable(need[i])); }
+  }
+  return Promise.all(jobs).then(loadLayout);
+}
+
+function weaponTypeValue(wtypeId) {
+  var d = dataOf('weapon-types');
+  if (d) {
+    for (var i = 0; i < d.rows.length; i++) {
+      if (Number(d.rows[i][d.idx.weapon_type_id]) === wtypeId) {
+        var e = Number(d.rows[i][d.idx.equip_type_id]);
+        if (e) { return e; }
+      }
+    }
+  }
+  return wtypeId + 7;
+}
+
+function typeLabel(type) {
+  if (type >= 1 && type <= 5) {
+    var d = dataOf('armor-parts');
+    var nm = '';
+    if (d) {
+      for (var i = 0; i < d.rows.length; i++) {
+        if (Number(d.rows[i][d.idx.part_id]) === type - 1) { nm = d.rows[i][d.idx.name_ja]; }
+      }
+    }
+    return '防具' + (nm ? '（' + nm + '）' : '');
+  }
+  if (type === 6) { return '護石'; }
+  var w = dataOf('weapon-types');
+  if (w) {
+    for (var j = 0; j < w.rows.length; j++) {
+      if (Number(w.rows[j][w.idx.equip_type_id]) === type) {
+        return '武器（' + w.rows[j][w.idx.name_ja] + '）';
+      }
+    }
+  }
+  return '不明';
+}
+
+function kindRarity(kind) {
+  var d = dataOf('talismans');
+  if (d) {
+    for (var i = 0; i < d.rows.length; i++) {
+      if (Number(d.rows[i][d.idx.talisman_id]) === kind) {
+        return pickNum({ v: Number(d.rows[i][d.idx.rarity]) }, ['v'], 99);
+      }
+    }
+  }
+  return 99;
+}
+
+function skillName(id) {
+  var d = dataOf('skills');
+  if (!d || !id) { return id ? ('skill_id ' + id) : 'なし'; }
+  for (var i = 0; i < d.rows.length; i++) {
+    if (Number(d.rows[i][d.idx.skill_id]) === id) { return d.rows[i][d.idx.name_ja]; }
+  }
+  return 'skill_id ' + id;
+}
+
+/* ---------- select 構築 ---------- */
+function memBuildSelects() {
+  var partSel = $('mem-part');
+  var d = dataOf('armor-parts');
+  partSel.innerHTML = '';
+  if (d) {
+    for (var i = 0; i < d.rows.length; i++) {
+      var o = el('option', null, d.rows[i][d.idx.name_ja] + '（part_id ' + d.rows[i][d.idx.part_id] + '）');
+      o.value = String(d.rows[i][d.idx.part_id]);
+      partSel.appendChild(o);
+    }
+  }
+  partSel.value = String(M.part);
+
+  var wSel = $('mem-wtype');
+  var w = dataOf('weapon-types');
+  wSel.innerHTML = '';
+  if (w) {
+    for (var j = 0; j < w.rows.length; j++) {
+      var r = w.rows[j];
+      if (r[w.idx.used] !== 'yes') { continue; }
+      var o2 = el('option', null, r[w.idx.name_ja] + '（type ' + r[w.idx.equip_type_id] + '）');
+      o2.value = String(r[w.idx.weapon_type_id]);
+      wSel.appendChild(o2);
+    }
+  }
+  wSel.value = String(M.wtype);
+
+  var deco = dataOf('decorations');
+  var ids = ['mem-deco1', 'mem-deco2', 'mem-deco3'];
+  for (var k = 0; k < ids.length; k++) {
+    var sel = $(ids[k]);
+    sel.innerHTML = '';
+    var none = el('option', null, 'なし');
+    none.value = '0';
+    sel.appendChild(none);
+    if (deco) {
+      for (var m = 0; m < deco.rows.length; m++) {
+        var dr = deco.rows[m];
+        var o3 = el('option', null, dr[deco.idx.name_ja] + '（' + dr[deco.idx.item_id] + '）');
+        o3.value = String(dr[deco.idx.item_id]);
+        sel.appendChild(o3);
+      }
+    }
+    sel.value = String(M.decos[k] || 0);
+  }
+
+  var kSel = $('mem-kind');
+  var t = dataOf('talismans');
+  kSel.innerHTML = '';
+  if (t) {
+    for (var n = 0; n < t.rows.length; n++) {
+      var tr = t.rows[n];
+      var kid = Number(tr[t.idx.talisman_id]);
+      if (!kid) { continue; }
+      var o4 = el('option', null, tr[t.idx.name_ja] + '（kind ' + kid + '）');
+      o4.value = String(kid);
+      kSel.appendChild(o4);
+    }
+  }
+  kSel.value = String(M.tal.kind);
+
+  var sk = dataOf('skills');
+  ['mem-skill1', 'mem-skill2'].forEach(function (sid, si) {
+    var s2 = $(sid);
+    s2.innerHTML = '';
+    var z = el('option', null, 'なし');
+    z.value = '0';
+    s2.appendChild(z);
+    if (sk) {
+      for (var q = 0; q < sk.rows.length; q++) {
+        var sr = sk.rows[q];
+        var o5 = el('option', null, sr[sk.idx.name_ja] + '（' + sr[sk.idx.skill_id] + '）');
+        o5.value = String(sr[sk.idx.skill_id]);
+        s2.appendChild(o5);
+      }
+    }
+    s2.value = String(si === 0 ? M.tal.skill1 : M.tal.skill2);
+  });
+  $('mem-p1').value = String(M.tal.p1);
+  $('mem-p2').value = String(M.tal.p2);
+  $('mem-slots').value = String(M.tal.slots);
+}
+
+/* ---------- 一覧 ---------- */
+function memListItems() {
+  var out = [];
+  if (M.cat === 'armor') {
+    var d = dataOf('armor');
+    if (!d) { return out; }
+    var seen = {};
+    for (var i = 0; i < d.rows.length; i++) {
+      var r = d.rows[i];
+      if (Number(r[d.idx.part_id]) !== M.part) { continue; }
+      var sid = Number(r[d.idx.series_id]);
+      if (!sid) { continue; }  /* series 0 = 装備なし（実在しないパターンになるため除外） */
+      if (seen[sid]) { continue; }
+      seen[sid] = 1;
+      out.push({ key: 'a' + sid, kind: 'armor', type: M.part + 1, id: sid, name: r[d.idx.name_ja], en: r[d.idx.name_en], sub: 'series_id ' + sid });
+    }
+  } else if (M.cat === 'weapon') {
+    var dw = dataOf('weapons');
+    if (!dw) { return out; }
+    var seen2 = {};
+    var tv = weaponTypeValue(M.wtype);
+    for (var j = 0; j < dw.rows.length; j++) {
+      var w = dw.rows[j];
+      if (Number(w[dw.idx.weapon_type_id]) !== M.wtype) { continue; }
+      var wi = Number(w[dw.idx.weapon_index]);
+      if (!wi) { continue; }  /* weapon_index 0 = 装備なし */
+      if (seen2[wi]) { continue; }
+      seen2[wi] = 1;
+      out.push({ key: 'w' + wi, kind: 'weapon', type: tv, id: wi, name: w[dw.idx.name_ja], en: w[dw.idx.name_en], sub: 'weapon_index ' + wi });
+    }
+  } else {
+    var dt = dataOf('talismans');
+    if (!dt) { return out; }
+    for (var k = 0; k < dt.rows.length; k++) {
+      var t = dt.rows[k];
+      var kid = Number(t[dt.idx.talisman_id]);
+      if (!kid) { continue; }
+      out.push({ key: 'k' + kid, kind: 'talisman', type: 6, id: kid, name: t[dt.idx.name_ja], en: t[dt.idx.name_en], sub: 'kind ' + kid });
+    }
+  }
+  return out;
+}
+
+function memRenderList() {
+  var items = memListItems();
+  var q = norm(M.query.trim());
+  var filtered = [];
+  for (var i = 0; i < items.length; i++) {
+    var it = items[i];
+    if (q && norm(it.name + '\u0001' + (it.en || '')).indexOf(q) < 0) { continue; }
+    filtered.push(it);
+  }
+  var shown = filtered.slice(0, 400);
+  var html = [];
+  for (var k = 0; k < shown.length; k++) {
+    var s = shown[k];
+    var on = (M.selected && M.selected.key === s.key) ? ' on' : '';
+    html.push('<button type="button" class="mem-item' + on + '" data-act="mem-pick" data-key="' + esc(s.key) + '">' +
+      '<span class="id">' + esc(s.sub) + '</span>' +
+      '<span class="nm">' + esc(s.name || '(名前なし)') + '</span>' +
+      (s.en ? '<span class="sub">' + esc(s.en) + '</span>' : '') +
+      '</button>');
+  }
+  $('mem-list').innerHTML = html.length ? html.join('') : '<div class="mem-empty">該当する装備がありません</div>';
+  $('mem-count').textContent = filtered.length
+    ? (filtered.length > shown.length
+        ? filtered.length + ' 件中 ' + shown.length + ' 件を表示（絞り込んでください）'
+        : filtered.length + ' 件')
+    : '';
+}
+
+/* ---------- レコード生成 ---------- */
+function clampInt(v, lo, hi, dflt) {
+  v = parseInt(v, 10);
+  if (isNaN(v)) { v = dflt; }
+  if (v < lo) { v = lo; }
+  if (v > hi) { v = hi; }
+  return v;
+}
+function hex2(n) { return ('0' + (n & 0xFF).toString(16).toUpperCase()).slice(-2); }
+function hex4(n) { return ('000' + (n & 0xFFFF).toString(16).toUpperCase()).slice(-4); }
+function put16(b, off, v) {
+  b[off] = v & 0xFF;
+  b[off + 1] = (v >> 8) & 0xFF;
+}
+function get16(b, off) {
+  return (b[off] | (b[off + 1] << 8)) & 0xFFFF;
+}
+
+function buildRecord(sel) {
+  var L = M.layout || normalizeLayout({});
+  var b = new Uint8Array(L.recordSize);
+
+  if (sel.kind === 'talisman') {
+    var k = clampInt(M.tal.kind, 0, 10, 10);
+    b[0] = 6; b[1] = 0;
+    b[2] = k; b[3] = 0;
+    put16(b, 4, 0);
+    put16(b, 6, M.decos[0] || 0);
+    put16(b, 8, M.decos[1] || 0);
+    put16(b, 10, M.decos[2] || 0);
+    b[12] = clampInt(M.tal.skill1, 0, 255, 0) & 0xFF;
+    b[13] = clampInt(M.tal.skill2, 0, 255, 0) & 0xFF;
+    b[14] = clampInt(M.tal.p1, -128, 127, 0) & 0xFF;
+    b[15] = clampInt(M.tal.p2, -128, 127, 0) & 0xFF;
+    b[16] = clampInt(M.tal.slots, 0, 3, 0);
+    b[17] = 0;
+    b[18] = kindRarity(k) & 0xFF;
+    b[19] = 1;
+    return b;
+  }
+
+  var lv = clampInt(M.level, 1, 31, 1);
+  var tl = clampInt(M.tl, 1, 31, 1);
+  var w0 = (sel.type & 0x1F) | (((lv - 1) & 0x1F) << 5) | (((tl - 1) & 0x1F) << 10);
+  put16(b, 0, w0);
+  put16(b, 2, sel.id & 0xFFFF);
+  put16(b, 4, clampInt(M.tm, 0, 65535, 0));
+  put16(b, 6, M.decos[0] || 0);
+  put16(b, 8, M.decos[1] || 0);
+  put16(b, 10, M.decos[2] || 0);
+  return b;
+}
+
+/* 36 バイトのレコードを len バイトのパターンに拡張する（足りない分は 0 = 空き枠） */
+function patternBytes(rec, len) {
+  if (len <= rec.length) { return rec; }
+  var out = new Uint8Array(len);
+  out.set(rec.subarray(0, Math.min(rec.length, len)), 0);
+  return out;
+}
+
+function formatBytes(b, len, fmt) {
+  var vals = [];
+  for (var i = 0; i < len; i++) { vals.push(b[i] === undefined ? 0 : b[i]); }
+  if (fmt === 'compact') { return vals.map(function (v) { return hex2(v); }).join(''); }
+  if (fmt === 'escaped') { return vals.map(function (v) { return '\\x' + hex2(v); }).join(''); }
+  if (fmt === 'carray') { return '{ ' + vals.map(function (v) { return '0x' + hex2(v); }).join(', ') + ' }'; }
+  if (fmt === 'dec') { return vals.join(' '); }
+  return vals.map(function (v) { return hex2(v); }).join(' ');
+}
+
+function recommendedLen(sel) {
+  return (sel && sel.kind === 'talisman') ? 20 : 12;
+}
+
+/* ---------- 描画 ---------- */
+function memRenderRecord() {
+  var L = M.layout || normalizeLayout({});
+  var sel = M.selected;
+  var main = $('mem-copy-main');
+  if (!sel) {
+    $('mem-hex').innerHTML = '<span class="mem-note">上の一覧から装備を選んでください。</span>';
+    $('mem-legend').innerHTML = '';
+    $('mem-annot').innerHTML = '';
+    $('mem-pats').innerHTML = '<div class="mem-note">装備を選ぶとスキャンパターンが出ます。</div>';
+    if (main) { main.disabled = true; }
+    $('mem-copy-note').textContent = '';
+    return;
+  }
+  if (main) { main.disabled = false; }
+  var b = buildRecord(sel);
+
+  var chips = [];
+  var legend = [];
+  for (var i = 0; i < L.fields.length; i++) {
+    var f = L.fields[i];
+    var cls = 'f' + (i % 7);
+    var parts = [];
+    for (var k = 0; k < f.size; k++) {
+      var off = f.offset + k;
+      parts.push(hex2(b[off] === undefined ? 0 : b[off]));
+    }
+    chips.push('<span class="' + cls + '" title="+0x' + hex2(f.offset) + ' ' + esc(f.name) + '">' + parts.join(' ') + '</span>');
+    legend.push('<span class="' + cls + '">' + esc(f.name) + '</span>');
+  }
+  $('mem-hex').innerHTML = chips.join('');
+  $('mem-legend').innerHTML = '<div class="hex" style="margin:0;gap:8px">' + legend.join('') + '</div>';
+
+  var rows = [];
+  function row(k, v) { rows.push('<dt>' + esc(k) + '</dt><dd>' + v + '</dd>'); }
+
+  if (sel.kind === 'talisman') {
+    var kind = b[2];
+    var s1 = b[12], s2 = b[13];
+    var p1 = (b[14] << 24) >> 24, p2 = (b[15] << 24) >> 24;
+    row('+0x00 type', '0x' + hex2(b[0]) + '（type 6 = 護石, level 1）');
+    row('+0x02 kind', '0x' + hex2(kind) + ' = ' + kind + '（' + esc(sel.name || '') + '）');
+    row('+0x06 deco1..3', hex2(b[6]) + ' ' + hex2(b[7]) + ' / ' + hex2(b[8]) + ' ' + hex2(b[9]) + ' / ' + hex2(b[10]) + ' ' + hex2(b[11]));
+    row('+0x0C skill1', '0x' + hex2(s1) + ' = ' + s1 + '（' + esc(skillName(s1)) + '） ポイント ' + p1);
+    row('+0x0D skill2', '0x' + hex2(s2) + ' = ' + s2 + '（' + esc(skillName(s2)) + '） ポイント ' + p2);
+    row('+0x10 slots', '0x' + hex2(b[16]) + ' = ' + b[16] + ' 枠');
+    row('+0x12 rarity', '0x' + hex2(b[18]) + ' = ' + b[18] + '（kind から自動）');
+    row('+0x13', '0x' + hex2(b[19]) + '（固定 0x01）');
+    row('+0x14..0x23 tail', '16 バイト（護石では常に 0）');
+  } else {
+    var w0 = get16(b, 0);
+    var type = w0 & 0x1F;
+    var lv = ((w0 >> 5) & 0x1F) + 1;
+    var tl = ((w0 >> 10) & 0x1F) + 1;
+    row('+0x00 head', '0x' + hex4(w0) + ' → type=' + type + '（' + esc(typeLabel(type)) + '）, level=' + lv + ', 着せ替えLv=' + tl + ', bit15=0');
+    row('+0x02 id', '0x' + hex4(get16(b, 2)) + ' = ' + get16(b, 2) + '（' + esc(sel.name || '') + '）');
+    if (sel.kind === 'armor') {
+      row('+0x02 → armor_id', 'id*5 + (type-1) = ' + (get16(b, 2) * 5 + (type - 1)));
+    } else if (sel.kind === 'weapon') {
+      row('+0x02 → weapon_id', '(type-7)*10000 + id*10 = ' + ((type - 7) * 10000 + get16(b, 2) * 10) + '（form 0）');
+    }
+    row('+0x04 transmog', '0x' + hex4(get16(b, 4)) + (get16(b, 4) ? '' : '（なし）'));
+    for (var d = 0; d < 3; d++) {
+      var dv = get16(b, 6 + d * 2);
+      row('+0x0' + (6 + d * 2).toString(16).toUpperCase() + ' deco' + (d + 1), '0x' + hex4(dv) + (dv ? '（item_id ' + dv + '）' : '（なし）'));
+    }
+    row('+0x0C..0x23 tail', '24 バイト — <b>通常は 0 ですが、前の持ち主のバイトが残ることがあります</b>');
+  }
+  $('mem-annot').innerHTML = rows.join('');
+
+  var rl = recommendedLen(sel);
+  if (main) {
+    main.setAttribute('data-len', String(rl));
+    main.textContent = '推奨 ' + rl + ' バイトをコピー';
+  }
+  $('mem-copy-note').textContent = (sel.kind === 'talisman')
+    ? '護石は +0x0C 以降のスキル情報まで含めないと一致しません。'
+    : 'head + id + 着せ替え + 装飾品3 まで。tail の残骸に影響されません。';
+
+  memRenderPatterns(b, sel);
+}
+
+function memRenderPatterns(b, sel) {
+  var L = M.layout || normalizeLayout({});
+  var rec = recommendedLen(sel);
+  var pats = [];
+  pats.push({ label: rec + ' バイト（推奨）', len: rec, note: 'tail の残骸に影響されない。まずこれで検索' });
+  if (sel.kind === 'talisman') {
+    pats.push({ label: '12 バイト', len: 12, note: 'head + kind + 装飾品（護石では絞り込みが弱い）' });
+  } else {
+    pats.push({ label: '6 バイト', len: 6, note: '最短。実測では 19 件中 14 件が一意、5 件は 3〜4 ヒット' });
+  }
+  pats.push({ label: '72 バイト（隣の枠が空）', len: 72, note: '36B レコード + 空き枠 36B。実測で 1 ヒットになりやすい' });
+  pats.push({ label: '36 バイト', len: 36, note: 'tail がゼロのときのみ有効（残骸があると取りこぼす）' });
+
+  var fmts = [
+    ['space', 'スペース区切り'],
+    ['compact', '連続'],
+    ['escaped', '\\xNN'],
+    ['carray', 'C 配列'],
+    ['dec', '10 進']
+  ];
+  var html = [];
+  html.push('<div class="pat"><span class="lbl">コピー形式</span>' +
+    '<select id="mem-fmt" style="flex:0 0 auto">' +
+    fmts.map(function (f) {
+      return '<option value="' + f[0] + '"' + (M.fmt === f[0] ? ' selected' : '') + '>' + f[1] + '</option>';
+    }).join('') +
+    '</select></div>');
+  for (var i = 0; i < pats.length; i++) {
+    var n = pats[i].len;
+    var pb = patternBytes(b, n);
+    html.push('<div class="pat"><span class="lbl">' + pats[i].label + '</span>' +
+      '<code>' + esc(formatBytes(pb, n, M.fmt)) + '</code>' +
+      '<button type="button" class="mini" data-act="mem-copy" data-len="' + n + '">コピー</button></div>');
+    if (pats[i].note) {
+      html.push('<div class="mem-note" style="margin:-4px 0 8px 120px">' + esc(pats[i].note) + '</div>');
+    }
+  }
+  html.push('<div class="mem-note" style="margin-top:10px">' +
+    '<b>絞り込みのヒント（実測）:</b> 6 バイトは 19 件中 14 件が一意、5 件は 3〜4 ヒットでした。' +
+    '装備が 1 件だけの箱なら <b>72 バイト（隣の枠が空）</b>が最も確実です。' +
+    'ヒットが複数出たら <b>36 バイト間隔で並んでいるもの</b>と <b>36 の倍数境界</b>で絞ってください。' +
+    '空レコード（全 0）は 6 バイトだと数百万ヒットするので使えません。' +
+    '<br>補助条件: head word の <b>bit15 = 0</b>（生成値は常に 0）、type は <b>1..11, 13..21</b>（12 は欠番）。' +
+    '</div>');
+  $('mem-pats').innerHTML = html.join('');
+  var selEl = $('mem-fmt');
+  if (selEl) {
+    selEl.addEventListener('change', function () {
+      M.fmt = this.value;
+      if (M.selected) { memRenderPatterns(buildRecord(M.selected), M.selected); }
+    });
+  }
+}
+
+function memRenderCalc() {
+  var L = M.layout || normalizeLayout({});
+  var html = [];
+  html.push('<div class="mem-box"><div class="k">box index → スロット内オフセット（主）</div>' +
+    '<input id="mem-idx" type="number" min="0" max="' + (L.recordCount - 1) + '" value="0" aria-label="BOX index">' +
+    '<div class="v" id="mem-idx-out">—</div></div>');
+  html.push('<div class="mem-box"><div class="k">ヒットしたアドレス → ボックス先頭 / slot base</div>' +
+    '<input id="mem-hit" type="text" placeholder="例: 0x1A2B3C4D" aria-label="ヒットしたアドレス">' +
+    '<input id="mem-hit-idx" type="number" min="0" value="0" aria-label="BOX index">' +
+    '<div class="v" id="mem-hit-out">—</div></div>');
+  html.push('<div class="mem-box"><div class="k">ページ番号 → index（参考: エディタ基準 ' + L.pageSize + ' 枠/ページ' +
+    (L.pageCount ? '・全 ' + L.pageCount + ' ページ' : '') + '）</div>' +
+    '<input id="mem-page" type="number" min="1" value="1" aria-label="ページ番号">' +
+    '<div class="v" id="mem-page-out">—</div></div>');
+  $('mem-calc').innerHTML = html.join('');
+
+  function updIdx() {
+    var i = clampInt($('mem-idx').value, 0, L.recordCount - 1, 0);
+    var off = L.saveOffset + i * L.recordSize;
+    var pg = Math.floor(i / L.pageSize), rw = i % L.pageSize;
+    $('mem-idx-out').innerHTML = '0x' + off.toString(16).toUpperCase() + '（' + off + '）' +
+      '<br><span style="color:var(--fg3);font-size:11px">参考: ' + (pg + 1) + ' ページ目の ' + (rw + 1) + ' 行目（エディタ基準）</span>';
+  }
+  function updHit() {
+    var raw = ($('mem-hit').value || '').trim().replace(/^0x/i, '');
+    var addr = parseInt(raw, 16);
+    var i = clampInt($('mem-hit-idx').value, 0, L.recordCount - 1, 0);
+    if (isNaN(addr)) { $('mem-hit-out').textContent = '—'; return; }
+    var boxStart = addr - i * L.recordSize;
+    var slotBase = boxStart - L.saveOffset;
+    $('mem-hit-out').innerHTML =
+      'ボックス先頭 = 0x' + (boxStart >>> 0).toString(16).toUpperCase() +
+      '<br>slot base = 0x' + (slotBase >>> 0).toString(16).toUpperCase() +
+      '<br><span style="color:var(--fg3);font-size:11px">A - i×' + L.recordSize + ' / A - i×' + L.recordSize + ' - 0x' + L.saveOffset.toString(16).toUpperCase() + '</span>';
+  }
+  function updPage() {
+    var p = clampInt($('mem-page').value, 1, 100000, 1);
+    var a = (p - 1) * L.pageSize;
+    var b2 = Math.min(a + L.pageSize - 1, L.recordCount - 1);
+    $('mem-page-out').innerHTML = 'index ' + a + ' 〜 ' + b2 +
+      '<br><span style="color:var(--fg3);font-size:11px">ゲーム本体の 1 ページ枠数は未確定（エディタ基準の値）</span>';
+  }
+  $('mem-idx').addEventListener('input', updIdx);
+  $('mem-hit').addEventListener('input', updHit);
+  $('mem-hit-idx').addEventListener('input', updHit);
+  $('mem-page').addEventListener('input', updPage);
+  updIdx(); updPage();
+}
+
+function memRenderHelp() {
+  var L = M.layout || normalizeLayout({});
+  var html = [];
+  html.push('<ol>');
+  html.push('<li>装備を選ぶと 36 バイトのレコードと検索用 hex が出ます。<b>「推奨 N バイトをコピー」</b>でそのまま検索できます。</li>');
+  html.push('<li>エミュレータ（Ryujinx など）のメモリ検索で、コピーした hex を <b>16 進数</b>として検索します。</li>');
+  html.push('<li>値は <b>リトルエンディアン</b>です。type=1, id=3 なら <code>01 00 03 00</code>（u16 の 0x0001, 0x0003）。</li>');
+  html.push('<li>ヒットしたアドレス A と box index i から、<b>ボックス先頭 = A - i×' + L.recordSize + '</b>、<b>slot base = A - i×' + L.recordSize + ' - 0x' + L.saveOffset.toString(16).toUpperCase() + '</b> です。</li>');
+  html.push('<li>スロット内の位置は <code>0x' + L.saveOffset.toString(16).toUpperCase() + ' + index×' + L.recordSize + '</code>（index は 0 始まり、全 ' + L.recordCount + ' 枠）。</li>');
+  html.push('<li><b>tail（+0x0C 以降）は前の持ち主のバイトが残ることがあります。</b>36 バイト全体パターンは tail がゼロのときだけ使ってください。</li>');
+  html.push('<li>ヒット数（実測）: 6 バイトは 19 件中 14 件が一意・5 件は 3〜4 ヒット。<b>隣の枠が空なら 72 バイト（36B + 空き 36B）が 1 ヒット</b>で最も確実。空レコード（全 0）は 6 バイトだと数百万ヒットします。</li>');
+  html.push('<li>護石は +0x0C 以降にスキル情報があり、装備本体と構造が違います（このツールは護石用に別途組み立てます）。</li>');
+  html.push('</ol>');
+  html.push('<div class="mem-note" style="margin-top:8px">レイアウト出典: ' +
+    esc(L.source || '既定値') + (L.confidence ? '（confidence: ' + esc(L.confidence) + '）' : '') + '</div>');
+  $('mem-help').innerHTML = html.join('');
+}
+
+function memRenderAll() {
+  memRenderList();
+  memRenderRecord();
+  memRenderCalc();
+  memRenderHelp();
+}
+
+/* ---------- 操作 ---------- */
+function memPick(key) {
+  var items = memListItems();
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].key === key) {
+      M.selected = items[i];
+      if (items[i].kind === 'talisman') { M.tal.kind = items[i].id; }
+      memRenderList();
+      memRenderRecord();
+      return;
+    }
+  }
+}
+
+function memCopy(len) {
+  if (!M.selected) { return; }
+  var b = buildRecord(M.selected);
+  var n = Math.min(len, b.length);
+  copyText(formatBytes(b, n, M.fmt)).then(function (ok) {
+    toast(ok ? n + ' バイトをコピーしました' : 'コピーできませんでした', !ok);
+  });
+}
+
+function setMode(m) {
+  S.mode = m;
+  var isMem = (m === 'mem');
+  $('toolbar').hidden = isMem;
+  $('gridwrap').hidden = isMem;
+  $('mem').hidden = !isMem;
+  $('counts').hidden = isMem;
+  if (isMem) { $('pager').hidden = true; }
+  var bs = document.querySelectorAll('#mode-switch button');
+  for (var i = 0; i < bs.length; i++) {
+    var on = bs[i].getAttribute('data-mode') === m;
+    if (on) { bs[i].classList.add('on'); } else { bs[i].classList.remove('on'); }
+    bs[i].setAttribute('aria-selected', on ? 'true' : 'false');
+  }
+  if (isMem) { memInit(); }
+  else if (cur() && curRows()) { renderAll(); }
+}
+
+function memInit() {
+  if (M.ready) { memRenderAll(); return; }
+  if (M.loading) { return; }
+  M.loading = true;
+  $('mem-list').innerHTML = '<div class="mem-empty">読み込んでいます…</div>';
+  memEnsure().then(function () {
+    M.loading = false;
+    M.ready = true;
+    memBuildSelects();
+    memRenderAll();
+  }, function (err) {
+    M.loading = false;
+    $('mem-list').innerHTML = '<div class="mem-empty">データを読み込めませんでした: ' +
+      esc(err && err.message ? err.message : err) + '</div>';
+  });
+}
+
+function memBind() {
+  $('mem-cat').addEventListener('change', function () {
+    M.cat = this.value;
+    M.selected = null;
+    M.query = '';
+    $('mem-search').value = '';
+    $('mem-part-wrap').hidden = (M.cat !== 'armor');
+    $('mem-wtype-wrap').hidden = (M.cat !== 'weapon');
+    $('mem-tal-opts').hidden = (M.cat !== 'talisman');
+    memRenderList();
+    memRenderRecord();
+  });
+  $('mem-part').addEventListener('change', function () {
+    M.part = parseInt(this.value, 10) || 0;
+    M.selected = null;
+    memRenderList();
+    memRenderRecord();
+  });
+  $('mem-wtype').addEventListener('change', function () {
+    M.wtype = parseInt(this.value, 10) || 0;
+    M.selected = null;
+    memRenderList();
+    memRenderRecord();
+  });
+  var t = null;
+  $('mem-search').addEventListener('input', function () {
+    var v = this.value;
+    if (t) { clearTimeout(t); }
+    t = setTimeout(function () { M.query = v; memRenderList(); }, 120);
+  });
+  function opt() {
+    M.level = clampInt($('mem-level').value, 1, 31, 1);
+    M.tl = clampInt($('mem-tl').value, 1, 31, 1);
+    M.tm = clampInt($('mem-tm').value, 0, 65535, 0);
+    memRenderRecord();
+  }
+  $('mem-level').addEventListener('input', opt);
+  $('mem-tl').addEventListener('input', opt);
+  $('mem-tm').addEventListener('input', opt);
+  ['mem-deco1', 'mem-deco2', 'mem-deco3'].forEach(function (id, i) {
+    $(id).addEventListener('change', function () {
+      M.decos[i] = parseInt(this.value, 10) || 0;
+      memRenderRecord();
+    });
+  });
+  function talOpt() {
+    M.tal.kind = clampInt($('mem-kind').value, 1, 10, 10);
+    M.tal.skill1 = clampInt($('mem-skill1').value, 0, 255, 0);
+    M.tal.skill2 = clampInt($('mem-skill2').value, 0, 255, 0);
+    M.tal.p1 = clampInt($('mem-p1').value, -128, 127, 0);
+    M.tal.p2 = clampInt($('mem-p2').value, -128, 127, 0);
+    M.tal.slots = clampInt($('mem-slots').value, 0, 3, 0);
+    memRenderRecord();
+  }
+  ['mem-kind', 'mem-skill1', 'mem-skill2', 'mem-p1', 'mem-p2', 'mem-slots'].forEach(function (id) {
+    $(id).addEventListener('change', talOpt);
+    $(id).addEventListener('input', talOpt);
+  });
+  var mbs = document.querySelectorAll('#mode-switch button');
+  for (var i = 0; i < mbs.length; i++) {
+    (function (b) {
+      b.addEventListener('click', function () { setMode(b.getAttribute('data-mode')); });
+    })(mbs[i]);
+  }
 }
 
 /* ============================================================ go */

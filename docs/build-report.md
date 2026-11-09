@@ -96,9 +96,10 @@
 | `web/data/size-variation.js` | 31,824 B |
 | `web/data/rotating-quests.js` | 4,135 B |
 | `web/data/request-offer.js` | 29,064 B |
-| `web/mhxx-id-memo.html` | 7,384,154 B |
+| `web/data/equip-record-layout.js` | 18,379 B |
+| `web/mhxx-id-memo.html` | 7,442,981 B |
 | `docs/table-definitions.md` | 67,264 B |
-| `docs/sources.md` | 59,809 B |
+| `docs/sources.md` | 68,851 B |
 
 ## テーブル別の検証結果
 
@@ -192,5 +193,6 @@ OK     world/unlock-lists: 1418 行 / 5 列 / 主キー unlock_id
 OK     world/size-variation: 1385 行 / 4 列 / 主キー variation_id
 OK     world/rotating-quests: 51 行 / 5 列 / 主キー rotating_bit
 OK     world/request-offer: 186 行 / 13 列 / 主キー offer_id
+OK     equip-record-layout.json を読み込みました（キー: box, confidence, decoration_fields, game, generated_by, live_save_records, page_geometry, record, save_file, schema, sch）
 ```
 

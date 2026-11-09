@@ -484,6 +484,59 @@ def build_table_js(t):
             + _js_literal(payload) + ";\n")
 
 
+# 装備 BOX レコードの既定レイアウト（data/equip/equip-record-layout.json が無い場合に使う）
+DEFAULT_EQUIP_LAYOUT = {
+    "record_size": 36,
+    "record_count": 2000,
+    "save_offset": 0x62EE,
+    "page_size": 100,
+    "source": "SPEC (lead 確認済みの実セーブ仕様)",
+    "fields": [
+        {"offset": 0, "size": 2, "name": "type_level",
+         "desc_ja": "type(5bit) | (level-1)(5bit) | (transmog_level-1)(5bit)"},
+        {"offset": 2, "size": 2, "name": "id",
+         "desc_ja": "装備ID（防具=series_id / 武器=weapon_index / 護石=talisman_id）"},
+        {"offset": 4, "size": 2, "name": "transmog_id", "desc_ja": "着せ替えID（0=なし）"},
+        {"offset": 6, "size": 2, "name": "deco1", "desc_ja": "装飾品1 の item_id"},
+        {"offset": 8, "size": 2, "name": "deco2", "desc_ja": "装飾品2 の item_id"},
+        {"offset": 10, "size": 2, "name": "deco3", "desc_ja": "装飾品3 の item_id"},
+        {"offset": 12, "size": 24, "name": "tail", "desc_ja": "テール（未使用・通常 00 埋め）"},
+    ],
+    "types": {
+        "armor": {"base": 1, "desc_ja": "1..5 = 防具（頭/胴/腕/腰/脚）"},
+        "talisman": {"value": 6, "desc_ja": "6 = 護石"},
+        "weapon": {"base": 7, "desc_ja": "7..21 = 武器（12 は未使用）"},
+    },
+}
+
+
+def build_equip_layout_js(root, report):
+    """data/equip/equip-record-layout.json を web/data/equip-record-layout.js にする。
+
+    JSON が無い / 壊れている場合は既定レイアウトで動く（ビルドは落とさない）。
+    """
+    src = root / "data" / "equip" / "equip-record-layout.json"
+    data = None
+    if src.is_file():
+        try:
+            data = json.loads(src.read_text(encoding="utf-8-sig"))
+            if not isinstance(data, dict):
+                report.warn("data/equip/equip-record-layout.json がオブジェクトではないので既定値を使います")
+                data = None
+            else:
+                report.ok("equip-record-layout.json を読み込みました（キー: {0}）".format(
+                    ", ".join(sorted(data.keys()))[:120]))
+        except Exception as exc:
+            report.warn("data/equip/equip-record-layout.json を読めません: {0}".format(exc))
+            data = None
+    else:
+        report.warn("data/equip/equip-record-layout.json が無いので既定レイアウトを使います")
+    if data is None:
+        data = DEFAULT_EQUIP_LAYOUT
+    return ("/* 自動生成: tools/build.py — 手で編集しないこと */\n"
+            "window.MHXX_EQUIP_LAYOUT = " + _js_literal(data) + ";\n")
+
+
 def render_table_definitions(tables, meta):
     out = []
     out.append("# テーブル定義")
@@ -822,8 +875,13 @@ def main(argv=None):
         write_text(p, text)
         outputs.append(p)
 
+    layout_js = build_equip_layout_js(root, report)
+    layout_path = data_dir / "equip-record-layout.js"
+    write_text(layout_path, layout_js)
+    outputs.append(layout_path)
+
     if not args.no_single_file:
-        single = build_single_file(root, index_js, table_js_list, report)
+        single = build_single_file(root, index_js, table_js_list + [layout_js], report)
         if single is not None:
             outputs.append(single)
 
