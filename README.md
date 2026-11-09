@@ -19,7 +19,7 @@ Monster Hunter XX (Nintendo Switch) の各種 ID を、**CSV / TSV / 単一 HTML
 | ファイル | 内容 |
 |---|---|
 | `web/mhxx-id-memo.html` | **これ 1 ファイルで完結**（データ埋め込み・完全オフライン） |
-| `web/index.html` | `web/data.js` を読み込む版（データ更新時は再読み込みするだけ） |
+| `web/index.html` | `web/data/` から必要なテーブルだけ**遅延読込**する版（`web/` フォルダごと配布すること） |
 
 どちらも `file://` で直接開けます。ローカルサーバー・外部 CDN・外部フォントは不要です。
 
@@ -148,7 +148,8 @@ python tools/build.py
 |---|---|
 | `data/index.json` | 全テーブルカタログ（manifest のマージ結果） |
 | `data/<area>/*.tsv` | CSV から生成した TSV |
-| `web/data.js` | `window.MHXX_ID_MEMO`（ビューア用データ） |
+| `web/data/index.js` | テーブル一覧と列定義だけ（軽量・最初に読む） |
+| `web/data/<table-id>.js` | テーブルごとの行データ（選択時に遅延読込） |
 | `web/mhxx-id-memo.html` | データ埋め込みの自己完結版 |
 | `docs/table-definitions.md` | 全テーブルの列定義（自動生成） |
 | `docs/sources.md` | 出典と抽出方法（自動生成・NOTES.md を統合） |
@@ -200,7 +201,9 @@ mhxx-id-memo/
 │   └── extract_*.py         抽出スクリプト
 └── web/
     ├── index.html           ビューア本体（オフライン動作）
-    ├── data.js              ビューア用データ（自動生成）
+    ├── data/                ビューア用データ（自動生成）
+    │   ├── index.js         テーブル一覧・列定義（軽量）
+    │   └── <table-id>.js    テーブルごとの行データ（遅延読込）
     └── mhxx-id-memo.html    自己完結版（自動生成）
 ```
 

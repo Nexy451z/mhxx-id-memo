@@ -38,7 +38,7 @@ AREAS = (("equip", "装備・アイテム"), ("world", "世界・進行"))
 AREA_JA = dict(AREAS)
 BUILD_VERSION = 1
 CSV_ENCODING = "utf-8-sig"
-DATA_TAG = '<script src="data.js" id="mhxx-data"></script>'
+DATA_TAG = '<script src="data/index.js" id="mhxx-index"></script>'
 README_BEGIN = "<!-- BEGIN:TABLES"
 README_END = "<!-- END:TABLES -->"
 VALID_TYPES = ("int", "str", "float", "bool")
@@ -436,13 +436,52 @@ def build_index(tables, meta):
     }
 
 
-def build_data_js(tables, meta):
-    payload = {"meta": meta, "tables": tables}
-    text = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+def _js_literal(obj):
+    """JSON を JS リテラルとして安全に埋め込む（</ と U+2028/2029 を退避）。"""
+    text = json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
     text = text.replace("</", "<\\/")
     text = text.replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
+    return text
+
+
+def build_index_js(tables, meta):
+    """web/data/index.js — meta + テーブル一覧 + 列定義のみ。行データは含めない。"""
+    catalog = []
+    for t in tables:
+        catalog.append({
+            "id": t["id"],
+            "area": t["area"],
+            "area_ja": t["area_ja"],
+            "title_ja": t["title_ja"],
+            "title_en": t["title_en"],
+            "file": t["file"],
+            "tsv": t["tsv"],
+            "primary_key": t["primary_key"],
+            "row_count": t["row_count"],
+            "id_range": t["id_range"],
+            "columns": t["columns"],
+            "source": t["source"],
+            "confidence": t["confidence"],
+            "notes_ja": t["notes_ja"],
+            "notes_en": t["notes_en"],
+        })
+    payload = {"meta": meta, "areas": meta["areas"], "tables": catalog}
     return ("/* 自動生成: tools/build.py — 手で編集しないこと */\n"
-            "window.MHXX_ID_MEMO = " + text + ";\n")
+            "window.__MHXX_INDEX_AT = (window.performance && performance.now) ? performance.now() : Date.now();\n"
+            "window.MHXX_ID_MEMO_INDEX = " + _js_literal(payload) + ";\n")
+
+
+def build_table_js(t):
+    """web/data/<id>.js — 1 テーブル分の行データ。"""
+    payload = {
+        "id": t["id"],
+        "header": [c["name"] for c in t["columns"]],
+        "rows": t["rows"],
+    }
+    return ("/* 自動生成: tools/build.py — 手で編集しないこと */\n"
+            "window.MHXX_ID_MEMO_TABLES = window.MHXX_ID_MEMO_TABLES || {};\n"
+            "window.MHXX_ID_MEMO_TABLES[" + json.dumps(t["id"], ensure_ascii=False) + "] = "
+            + _js_literal(payload) + ";\n")
 
 
 def render_table_definitions(tables, meta):
@@ -671,7 +710,8 @@ def update_readme(root, tables, meta, report):
     return True
 
 
-def build_single_file(root, data_js, report):
+def build_single_file(root, index_js, table_js_list, report):
+    """index.js + 全テーブル JS を 1 ファイルに埋め込んだ自己完結版を作る。"""
     src = root / "web" / "index.html"
     if not src.is_file():
         report.error("web/index.html がありません（単一ファイル版を作れません）")
@@ -680,7 +720,7 @@ def build_single_file(root, data_js, report):
     if DATA_TAG not in html:
         report.error("web/index.html に " + DATA_TAG + " が見つかりません")
         return None
-    inline = '<script id="mhxx-data">\n' + data_js + "</script>"
+    inline = ('<script id="mhxx-index">\n' + index_js + "\n" + "\n".join(table_js_list) + "</script>")
     out = html.replace(DATA_TAG, inline, 1)
     dst = root / "web" / "mhxx-id-memo.html"
     write_text(dst, out)
@@ -759,16 +799,31 @@ def main(argv=None):
     for t in tables:
         outputs.append(root / t["tsv"])
 
-    plain_tables = []
+    data_dir = root / "web" / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    # 旧形式（web/data.js 単体）が残っていれば削除する
+    stale = root / "web" / "data.js"
+    if stale.is_file():
+        try:
+            stale.unlink()
+        except OSError:
+            report.warn("web/data.js を削除できませんでした（手動で削除してください）")
+
+    index_js = build_index_js(tables, meta)
+    index_js_path = data_dir / "index.js"
+    write_text(index_js_path, index_js)
+    outputs.append(index_js_path)
+
+    table_js_list = []
     for t in tables:
-        plain_tables.append({k: v for k, v in t.items() if not k.startswith("_")})
-    data_js = build_data_js(plain_tables, meta)
-    data_js_path = root / "web" / "data.js"
-    write_text(data_js_path, data_js)
-    outputs.append(data_js_path)
+        text = build_table_js(t)
+        table_js_list.append(text)
+        p = data_dir / (t["id"] + ".js")
+        write_text(p, text)
+        outputs.append(p)
 
     if not args.no_single_file:
-        single = build_single_file(root, data_js, report)
+        single = build_single_file(root, index_js, table_js_list, report)
         if single is not None:
             outputs.append(single)
 
@@ -794,12 +849,24 @@ def main(argv=None):
         print("  tables      : {0}".format(len(tables)))
         print("  rows        : {0:,}".format(meta["row_count"]))
         print("  data_version: {0}".format(meta["data_version"]))
+        table_js_total = 0
+        table_js_count = 0
         for p in outputs:
+            if p.parent == data_dir and p.name != "index.js":
+                table_js_count += 1
+                try:
+                    table_js_total += p.stat().st_size
+                except OSError:
+                    pass
+                continue
             try:
                 size = p.stat().st_size
             except OSError:
                 size = 0
             print("  out         : {0:<34} {1:>12,} B".format(rel(p, root), size))
+        if table_js_count:
+            print("  out         : {0:<34} {1:>12,} B".format(
+                "web/data/<table>.js ({0} files)".format(table_js_count), table_js_total))
         if report.errors:
             print("")
             print("  ERRORS ({0}):".format(len(report.errors)))
