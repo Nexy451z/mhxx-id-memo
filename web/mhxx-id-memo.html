@@ -9,6 +9,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T9NHWQW4');</script>
 <!-- End Google Tag Manager -->
+<!-- gtag 互換シム（GA4 の gtag() 形式でも送れるようにする。GTM スニペットとは共存可） -->
+<script>window.gtag = window.gtag || function () { (window.dataLayer = window.dataLayer || []).push(arguments); };</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>MHXX ID MEMO — Monster Hunter XX データ ID ビューア</title>
@@ -770,6 +772,24 @@ function isTyping(node) {
   return t === 'INPUT' || t === 'TEXTAREA' || t === 'SELECT' || node.isContentEditable === true;
 }
 
+/* ============================================================ 計測（GTM / GA4）
+   方針:
+   - 失敗してもアプリの挙動に影響させない（try/catch で握りつぶす）
+   - 検索文字列・行の中身は送らない。件数・ID・種別だけ送る
+   - イベント名は mhxx_ 接頭辞 + snake_case（40 文字以内） */
+function track(name, params) {
+  try {
+    window.dataLayer = window.dataLayer || [];
+    var o = { event: name };
+    if (params) {
+      for (var k in params) {
+        if (Object.prototype.hasOwnProperty.call(params, k)) { o[k] = params[k]; }
+      }
+    }
+    window.dataLayer.push(o);
+  } catch (e) { /* 計測失敗は無視 */ }
+}
+
 /* ============================================================ テーマ */
 function currentTheme() {
   return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
@@ -790,7 +810,9 @@ function setTheme(t) {
   }
 }
 function toggleTheme() {
-  setTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+  var next = (currentTheme() === 'dark') ? 'light' : 'dark';
+  setTheme(next);
+  track('mhxx_theme_change', { theme: next });
 }
 
 /* ============================================================ データ */
@@ -1036,6 +1058,7 @@ function selectTable(id) {
   buildColFilter(t);
   markSidebar();
   try { location.hash = t.id; } catch (e) { /* noop */ }
+  track('mhxx_table_select', { table_id: t.id, table_title: t.title_ja, rows: t.row_count });
 
   if (rowsOf(id)) { renderAll(); return; }
   showLoading('「' + t.title_ja + '」を読み込んでいます…');
@@ -1128,6 +1151,7 @@ function renderAll() {
   hideState();
   if (!window.__MHXX_TIMING.firstRowsAt) {
     window.__MHXX_TIMING.firstRowsAt = now();
+    track('mhxx_ready', { tables: TABLES.length, rows: META.row_count || 0, mode: S.mode });
   }
 }
 
@@ -1405,6 +1429,7 @@ function doCopy(scope, fmt) {
   if (!t || !curRows()) { return; }
   var m = matrix(scope);
   if (!m.count) { toast('対象の行がありません', true); return; }
+  track('mhxx_copy', { scope: scope, format: fmt, rows: m.count, table_id: t.id });
   var text = (fmt === 'csv') ? toCSV(m) : toTSV(m);
   copyText(text).then(function (ok) {
     if (ok) { toast(fmtNum(m.count) + ' 行を ' + fmt.toUpperCase() + ' でコピーしました'); }
@@ -1431,6 +1456,7 @@ function doDownload(scope, fmt) {
   if (!t || !curRows()) { return; }
   var m = matrix(scope);
   if (!m.count) { toast('対象の行がありません', true); return; }
+  track('mhxx_download', { scope: scope, format: fmt, rows: m.count, table_id: t.id });
   var text = (fmt === 'csv') ? toCSV(m) : toTSV(m);
   var name = 'mhxx-' + t.id + '-' + scope + '-' + stamp() + '.' + fmt;
   var mime = (fmt === 'csv') ? 'text/csv' : 'text/tab-separated-values';
@@ -1443,6 +1469,7 @@ function openDetail(ri) {
   var t = cur();
   var rows = curRows();
   if (!t || !rows || ri < 0 || ri >= rows.length) { return; }
+  track('mhxx_detail_open', { table_id: t.id, row_index: ri });
   S.detail = ri;
   var row = rows[ri];
   var pkv = row[colIndex(t, t.primary_key)];
@@ -1645,7 +1672,12 @@ function bindEvents() {
   $('q').addEventListener('input', function () {
     var v = this.value;
     if (qTimer) { clearTimeout(qTimer); }
-    qTimer = setTimeout(function () { S.q = v; refresh(true); }, 110);
+    qTimer = setTimeout(function () {
+      S.q = v;
+      refresh(true);
+      /* 検索文字列そのものは送らない（長さと件数だけ） */
+      track('mhxx_search', { query_len: v.length, results: S.view.length, table_id: S.tableId });
+    }, 110);
   });
   $('fcol').addEventListener('change', function () {
     S.fcol = this.value;
@@ -1711,6 +1743,12 @@ function bindEvents() {
       S.sortCol = c;
       S.sortDir = 1;
     }
+    var ct = cur();
+    track('mhxx_sort', {
+      table_id: S.tableId,
+      column: (ct && S.sortCol >= 0) ? ct.columns[S.sortCol].name : '',
+      dir: (S.sortCol < 0) ? 'none' : (S.sortDir > 0 ? 'asc' : 'desc')
+    });
     refresh(false);
   });
 
@@ -2379,6 +2417,7 @@ function memPick(key) {
     if (items[i].key === key) {
       M.selected = items[i];
       if (items[i].kind === 'talisman') { M.tal.kind = items[i].id; }
+      track('mhxx_memory_pick', { category: M.cat, name: items[i].name, type: items[i].type, id: items[i].id });
       memRenderList();
       memRenderRecord();
       return;
@@ -2389,8 +2428,10 @@ function memPick(key) {
 function memCopy(len) {
   if (!M.selected) { return; }
   var b = buildRecord(M.selected);
-  var n = Math.min(len, b.length);
-  copyText(formatBytes(b, n, M.fmt)).then(function (ok) {
+  var n = len;
+  var pb = patternBytes(b, n);  /* 72 バイトなど、レコードより長いパターンにも対応 */
+  track('mhxx_memory_copy', { bytes: n, category: M.cat });
+  copyText(formatBytes(pb, n, M.fmt)).then(function (ok) {
     toast(ok ? n + ' バイトをコピーしました' : 'コピーできませんでした', !ok);
   });
 }
@@ -2409,6 +2450,7 @@ function setMode(m) {
     if (on) { bs[i].classList.add('on'); } else { bs[i].classList.remove('on'); }
     bs[i].setAttribute('aria-selected', on ? 'true' : 'false');
   }
+  track('mhxx_mode_change', { mode: m });
   if (isMem) { memInit(); }
   else if (cur() && curRows()) { renderAll(); }
 }

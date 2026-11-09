@@ -97,7 +97,7 @@
 | `web/data/rotating-quests.js` | 4,135 B |
 | `web/data/request-offer.js` | 29,064 B |
 | `web/data/equip-record-layout.js` | 18,379 B |
-| `web/mhxx-id-memo.html` | 7,443,672 B |
+| `web/mhxx-id-memo.html` | 7,445,824 B |
 | `docs/table-definitions.md` | 67,264 B |
 | `docs/sources.md` | 68,851 B |
 
