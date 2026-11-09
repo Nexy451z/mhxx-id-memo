@@ -3,6 +3,15 @@
 このビューアは Google Tag Manager（コンテナ `GTM-T9NHWQW4`）を設置済みで、
 ページ内の操作を `dataLayer.push({ event: 'mhxx_xxx', ... })` で送ります。
 
+| 項目 | 値 |
+|---|---|
+| GTM コンテナ | `GTM-T9NHWQW4` |
+| GA4 測定 ID | `G-QPCD4BGBL8` |
+| GA4 プロパティ | mhxx-id-memo |
+| サイト | <https://nexy451z.github.io/mhxx-id-memo/> |
+
+> サイト側に `gtag.js` を直接貼ると GTM と二重計測になります。**GA4 は GTM 経由で設定**してください。
+
 - 実装: `web/index.html` の `track(name, params)` ヘルパー
 - すべての呼び出しは `try/catch` で包んであり、**計測が失敗してもアプリの挙動は変わりません**
 - イベント名は `mhxx_` 接頭辞 + snake_case（40 文字以内）
