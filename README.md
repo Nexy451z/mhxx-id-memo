@@ -7,6 +7,9 @@ Monster Hunter XX (Nintendo Switch) の各種 ID を、**CSV / TSV / 単一 HTML
 - 不明な値は**空文字**（推測で埋めていない）
 - `confidence` で根拠の強さを明示（`verified` / `derived` / `curated`）
 
+> **🌐 オンライン版**: <https://nexy451z.github.io/mhxx-id-memo/>
+> （GitHub Pages・インストール不要。ローカルで使う場合は下記の HTML を直接開いてください）
+
 ---
 
 ## クイックスタート（インストール不要）
