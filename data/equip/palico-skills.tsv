@@ -1,0 +1,97 @@
+﻿palico_skill_id	name_ja	name_en	cost	points
+0	スキル無し	-----	0	0
+1	体力強化の術【小】	Health Up (S)	1	1
+2	体力強化の術【大】	Health Up (L)	2	2
+3	攻撃強化の術【小】	Attack Up (S)	2	0
+4	攻撃強化の術【大】	Attack Up (L)	3	2
+5	防御強化の術【小】	Defense Up (S)	1	0
+6	防御強化の術【大】	Defense Up (L)	2	2
+7	全耐性強化の術	Omniresistance	3	3
+8	会心強化の術【小】	Critical Up (S)	1	1
+9	会心強化の術【大】	Critical Up (L)	2	2
+10	匠の術	Handicraft	4	0
+11	爆弾強化の術	Bombay Boost	3	0
+12	属性攻撃強化の術	Element Attack Up	3	3
+13	状態異常攻撃強化の術	Status Attack Up	4	3
+14	ＫＯの術	Knockout King	2	2
+15	減気攻撃強化の術	Stamina Drain	1	1
+16	ガード性能の術【小】	Guard (S)	1	0
+17	ガード性能の術【大】	Guard (L)	2	2
+18	ガード強化の術	Guard Boost	2	0
+19	サポート優先の術	Support Priority	3	3
+20	サポートプラスの術	Support Boost	1	2
+21	サポート行動追加の術	Support Move +1	2	3
+22	ぶんどり強化の術	Pilfer Boost	3	0
+23	復活上手の術	Revival Pro	4	3
+24	熱・爆弾耐性の術	Heat/Bomb Res	1	0
+25	毒耐性の術	Negate Poison	1	1
+26	風圧無効の術	Negate Wind	2	1
+27	麻痺無効の術	Negate Paralysis	1	1
+28	気絶無効の術	Negate Stun	1	2
+29	混乱無効の術	Negate Confusion	2	1
+30	耐震の術	Tremor Res	1	1
+31	防音の術	Earplugs	2	2
+32	睡眠無効の術	Negate Sleep	1	1
+33	細菌学の術	Biology	1	1
+34	防御力DOWN無効の術	Iron Hide	1	1
+35	だるま早割りの術	Non-Stick Fur	1	1
+36	七転八起の術【攻】	Nine Lives (Attack)	4	2
+37	七転八起の術【防】	Nine Lives (Defense)	3	1
+38	背水の陣の術	Last Stand	3	0
+39	怒り発動強化の術	Anger Prone	2	3
+40	反撃サポート上昇の術	Counter Boost	2	2
+41	モンスター探知の術	Monsterdar	2	0
+42	ブーメラン上手の術	Boomerang Pro	1	1
+43	罠設置上手の術	Pro Trapper	3	0
+44	採集専門の術	Gathering Pro	1	0
+45	サボりお仕置きの術	Slacker Slap	1	0
+46	笛上手の術	Health Harmonics	3	0
+47	黄金魚狙いの術	Goldenfish Catcher	1	1
+48	最高のネコよ！の術	Baddest Cat Ever	3	0
+49	ハイケイデンスの術	High Cadence	1	0
+50	地上最強の術	World's Strongest	2	0
+51	ゾンビーの術	Zombie	2	0
+52	絶体絶命の術	Desperation	2	0
+53	長飛丸の術	Nagatobimaru	2	0
+54	ファナリスの術	Fanalis	2	0
+55	エーラの術	Aera	2	0
+56	遠隔攻撃強化の術	Ranged Attack Up	2	0
+57	プチタル爆弾改造の術	Sonic Mini Bombay	1	0
+58	着こなし上手の術	Fashion Sense	2	0
+59	ユニバーサルの術	Universal	3	0
+60	きりみ弁当の術	Bento Jutsu	2	0
+61	ぐでぐでの術	Jugido	1	0
+62	歌姫の術	Diva	2	0
+63	風のタクトの術	Wind Waker	3	0
+64	ランドマスターの術	Landmaster	3	0
+65	スーパーキノコの術	Super Mushroom	2	0
+66	あきんどの術	Shopkeeping	2	0
+67	トライフォースの術	Triforce	4	0
+68	モーフボールボムの術	Morph Ball Bomb	1	0
+69	メガフレアの術	Megaflare	2	0
+70	防御優先の術	DEF-centric	2	0
+71	体力強化優先の術	STAM-centric	2	0
+72	火耐性強化の術	Fire Res Up	1	0
+73	水耐性強化の術	Water Res Up	1	0
+74	雷耐性強化の術	Thunder Res Up	1	0
+75	氷耐性強化の術	Ice Res Up	1	0
+76	龍耐性強化の術	Dragon Res Up	1	0
+77	超会心の術	Crit Boost	4	0
+78	回復速度＋の術	Recovery Up	2	0
+79	爆弾爆破追加の術	Bombercat	2	1
+80	怒り延長の術	Angery	2	2
+81	回避上手の術	Evasion Up	2	2
+82	経験上手の術	Trainer	4	0
+83	水属性強化の術	Water Up	2	0
+84	氷属性強化の術	Ice Up	2	0
+85	龍属性強化の術	Dragon Up	2	0
+86	ＳＰ状態延長の術	SP Extender	3	0
+87	弱点特効の術	Weakness Exploit	2	0
+88	潜り上手の術	Ground Diver	1	0
+89	根性の術	Moxie	3	0
+90	ビースト延長の術	Beastly Cat	2	0
+91	カブリもの上手の術	Misty Helper	1	0
+92	ネコ加護の術	Lucky Protector	2	0
+93	運搬上手の術	Bomb Transporter	1	0
+94	防御超優先の術	Defense Priority	4	0
+95	転がり転がし上手の術	Rolling Boost	2	0

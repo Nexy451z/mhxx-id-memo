@@ -1,0 +1,189 @@
+﻿npc_id,bit,name_ja,name_en,talk_file
+1,0,ベルナ村の村長,Bherna Chief,yes
+2,1,ベルナ村の受付嬢,Bherna Gal,yes
+3,2,ベルナ村の雑貨屋,Bherna Market,yes
+4,3,ベルナ村の武具屋,Bherna Armory,yes
+5,4,ベルナ村の加工屋,Manvil Smithy,yes
+6,5,ベルナ屋台のおかみ,Purr-prietress,yes
+7,6,オトモ武具屋,Palico Armory,yes
+8,7,郵便屋さん,Courier,yes
+9,8,飛行船窓口,Flight Cattendant,yes
+10,9,ルームサービス,Chamberlyne,yes
+11,10,フェニー,Moofy,yes
+12,11,プーギー,Poogie,yes
+14,12,龍歴院の主席研究員,Chief Researcher,yes
+15,13,カリスタ教官,Master of Style,yes
+20,14,しっかり者の村人,Reliable Villager,yes
+21,15,のんきな村人,Paranoid Villager,yes
+22,16,研究所の職員,Researcher,yes
+23,17,旅の商人,Traveling Merchant,yes
+24,18,村のムーファ,Village Moofah,yes
+25,19,村のムーファ,Village Moofah,yes
+26,20,チコ村の村長,Cheeko Sands Chief,yes
+40,21,ジャンボ村の村長,Jumbo Chief,yes
+41,22,キャラバンの団長,Caravaneer,yes
+42,23,筆頭リーダー,Ace Commander,yes
+43,24,筆頭ランサー,Ace Lancer,yes
+44,25,筆頭ガンナー,Ace Gunner,yes
+45,26,筆頭ルーキー,Ace Cadet,yes
+46,27,キャラバンの看板娘,Guildmarm,yes
+47,28,キャラバンの料理長,Street Cook,yes
+48,29,さすらいのコック,Itinerant Cook,yes
+49,30,キャラバンの加工担当,The Man,yes
+50,31,キャラバンの娘,Lil Miss Forge,yes
+51,32,キャラバンの竜人商人,Wycoon,yes
+52,33,交易船の船長,Argosy Captain,yes
+53,34,チャチャ,Cha-Cha,yes
+54,35,カヤンバ,Kayamba,yes
+101,36,ココット村の村長,Kokoto Chief,yes
+102,37,ココット村の受付嬢,Kokoto Gal,yes
+103,38,ココット村の雑貨屋,Kokoto Market,yes
+104,39,ココット村の武具屋,Kokoto Armory,yes
+105,40,ココット村の加工屋,Kokoto Smithy,yes
+106,41,ココット屋台のコック,Meat Meowster,yes
+107,42,オトモ武具屋　,Palico Armory,yes
+113,43,ネコバァ,Grandmeow,yes
+114,44,マカ錬金屋さん,Maximeld XIV,yes
+120,45,おっとりした村人,Innocent Villager,yes
+121,46,おしゃべりな村人,Chatty Villager,yes
+122,47,噂好きの村人,Gossipy Villager,yes
+123,48,買い物中の村人,Shopping Villager,yes
+124,49,行商の青年,Peddler Man,yes
+125,50,休息中のハンター,Resting Hunter,yes
+126,51,トレジィ,Treshi,yes
+127,52,ミナガルデの看板娘,Minegarde Sweetheart,yes
+128,53,バルバレの仕切り役,Val Habar Master,yes
+129,54,ヘルブラザーズ・赤鬼,Red Hell Hunter,yes
+130,55,ヘルブラザーズ・黒鬼,Black Hell Hunter,yes
+131,56,ドンドルマの守護兵,Dundorma Guardsman,yes
+132,57,シナト村の長老,Cathar Elder,yes
+201,58,ポッケ村の村長,Pokke Chief,yes
+202,59,ポッケ村の受付嬢,Pokke Gal,yes
+203,60,ポッケ村の雑貨屋,Pokke Market,yes
+204,61,ポッケ村の武具屋,Pokke Armory,yes
+205,62,ポッケ村の加工屋,Pokke Smithy,yes
+206,63,ポッケ屋台の板前,Sushi Meowster,yes
+207,64,オトモ武具屋　,Palico Armory,yes
+213,65,ネコバァ,Grandmeow,yes
+214,66,洞窟案内ネコ,Cave Cattendant,yes
+220,67,世話好きな村人,Kind Villager,yes
+221,68,心配性な村人,Worrywart Villager,yes
+222,69,物知りなアイルー,Savvy Felyne,yes
+223,70,博識な老竜人,Wise Wyverian,yes
+224,71,意地っ張りなハンター,Stubborn Hunter,yes
+225,72,トレニャー,Trenya,yes
+226,73,ネコート,Felcote,yes
+227,74,ギルドマネージャー,Pokke Manager,yes
+228,75,ポッケ村の看板娘,Pokke Sweetheart,yes
+229,76,ジャンボ村の看板娘,Jumbo Sweetheart,yes
+230,77,カリスマ美容師ネコ,Funky Felyne,yes
+231,78,工房のばあちゃん,Armory Granny,yes
+301,79,ユクモ村の村長,Yukumo Chief,yes
+302,80,ユクモ村の受付嬢,Yukumo Gal,yes
+303,81,ユクモ村の雑貨屋,Yukumo Market,yes
+304,82,ユクモ村の武具屋,Yukumo Armory,yes
+305,83,ユクモ村の加工屋,Yukumo Smithy,yes
+306,84,ユクモ屋台の料理番,Brew Meowster,yes
+307,85,オトモ武具屋　,Palico Armory,yes
+313,86,ネコバァ,Grandmyama,yes
+320,87,門番の青年,Gatekeeper Guy,yes
+321,88,冷静なハンター,Calm Hunter,yes
+322,89,のんびりした村人,Relaxed Villager,yes
+323,90,集会浴場の番台さん,Bath Cattendant,yes
+324,91,ギルドマネージャー,Yukumo Manager,yes
+325,92,ユクモ村の看板娘,Yukumo Sweetheart,yes
+326,93,モガの村の老職人,Wyverian Artisan,yes
+327,94,モガの村の農場長,Head Moga Farmer,yes
+328,95,モガの村長の息子,Moga Chief's Son,yes
+329,96,漁港の女主人,Fishmongress,yes
+330,97,モガの村の看板娘,Moga Sweetheart,yes
+331,98,タンジアの港のカシラ,Tanzia Port Boss,yes
+332,99,タンジアの港の看板娘,Tanzia Sweetheart,yes
+333,100,ロックラックの長,Loc Lac Chief,yes
+334,101,ロックラックの宿屋,Captain Tool,yes
+335,102,孤高の教官,Uppity Instructor,yes
+336,103,ナグリ村の村長,Harth Chief,yes
+337,104,ぽかぽか島の管理人,Headwhiskress,yes
+420,105,モガの村の村長,Moga Chief,yes
+421,106,ミナガルデのご隠居,Minegarde Hermit,yes
+422,107,食材屋の女将,Village Grocer,yes
+423,108,調合屋のあるじ,The Combinator,yes
+424,109,ドンドルマの道具屋,Master Tool,yes
+425,110,船大工の親方,Master Shipwright,yes
+426,111,シナト村の女の子,Spittle-ful Girl,yes
+427,112,まったりアイルー,Tubular Tabby,yes
+428,113,ロックラックガイド,Loc Lac Guide,yes
+502,114,集会所の受付嬢,Wycademy Gal,yes
+503,115,ギルドストア店員,Guild Store Clerk,yes
+520,116,ギルドマネージャー,Guild Manager,yes
+521,117,ミッケルー,@,no
+522,118,闘技場の教官,Arena Instructor,yes
+523,119,8人通信プレイ受付,@,no
+524,120,ニャンコック,Gourmew Chef,yes
+525,121,龍歴院所属ハンター,Wycademy Hunter,yes
+526,122,新米ハンター,Rookie Hunter,yes
+554,123,武具屋兼加工屋,Armory & Smithy,yes
+557,124,オトモ武具屋,Palico Armory,yes
+613,125,ネコ嬢,Meowstress,yes
+620,126,オトモ広場案内ネコ,Ranch Paw,yes
+621,127,ニャント様,d'Artanyan,yes
+622,128,オトモ道場窓口,Palico Dojo Staff,yes
+623,129,剣ニャン丸,"Neko (Means ""Cat"")",yes
+624,130,ネコ嬢のムーファ,@,no
+625,131,クラパカ（ねこちぐら部分）,@,no
+626,132,村のムーファ,Village Moofah,yes
+627,133,村のムーファ,Village Moofah,yes
+991,134,-,-,yes
+992,135,-,-,no
+993,136,-,-,no
+994,137,-,-,no
+995,138,-,-,no
+996,139,-,-,no
+997,140,-,-,no
+998,141,-,-,no
+999,142,-,-,no
+215,143,洞窟案内ネコ,Cave Cattendant,yes
+16,144,-,-,yes
+17,145,-,-,yes
+18,146,-,-,yes
+19,147,-,-,yes
+112,148,-,-,no
+212,149,-,-,no
+312,150,-,-,no
+981,151,ふらっとハンター,Hunters for Hire,yes
+982,152,ふらっとハンター,Hunters for Hire,no
+983,153,ふらっとハンター,Hunters for Hire,no
+701,154,調査隊の隊長,Wyventurer,yes
+702,155,龍識船の受付嬢,Soaratorium Gal,yes
+703,156,龍識船の雑貨屋,Soaratorium Market,yes
+705,157,武具屋兼加工屋,Soaratorium Smithy,yes
+706,158,龍識船屋台の炊事長,Dairy Meowster,yes
+707,159,オトモ武具屋　,Palico Armory,yes
+708,160,龍識船研究員ネコ,Ms. Meow-It-All,yes
+710,161,キャラバンの娘,Lil Miss Forge,yes
+711,162,カリスマ美容師ネコ,Funky Felyne,yes
+712,163,龍識船の船員,Soaratorium Crew,yes
+713,164,オトモ雇用窓口,Palico Scout,yes
+714,165,タンジアの大会担当,Tanzia Arena Gal,yes
+715,166,美容師ネコ,@,yes
+716,167,大老殿の大臣,Elder Hall Minister,yes
+717,168,伝説の職人,Legendary Artisan,yes
+718,169,狩猟船団・赤槍,Redspear Hunter,yes
+719,170,狩猟船団・黒槍,Blackspear Hunter,yes
+720,171,タルアイルー,Furtive Felyne,yes
+721,172,タンジアの銅鑼担当,Tanzia Gong Girl,yes
+722,173,モガの農場アイルー,Moga Farm Felyne,yes
+724,174,ベルナ村の村長,Bherna Chief,yes
+725,175,ココット村の村長,Kokoto Chief,yes
+726,176,ポッケ村の村長,Pokke Chief,yes
+727,177,ユクモ村の村長,Yukumo Chief,yes
+801,178,酒場のマスター,Pub Manager,yes
+802,179,酒場のクエスト受付,Questender,yes
+803,180,酒場の闘技場教官,Arena Master,yes
+804,181,酒場の雑貨屋,Pub Market,yes
+805,182,酒場の看板娘,Mewstress,yes
+806,183,酒場の武具屋兼加工屋,Horns Armory & Smithy,yes
+807,184,酒場のオトモ武具屋,Horns Palico Armory,yes
+810,185,馴染みのハンター,Hoarding Hunter,yes
+811,186,馴染みのハンター,Hoarding Hunter,yes
+812,187,常連のニャンター,Layabout Prowler,yes

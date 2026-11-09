@@ -1,0 +1,1291 @@
+{
+  "area": "equip",
+  "tables": [
+    {
+      "id": "armor",
+      "title_ja": "防具",
+      "title_en": "Armor",
+      "file": "armor.csv",
+      "primary_key": "armor_id",
+      "columns": [
+        {
+          "name": "armor_id",
+          "type": "int",
+          "desc_ja": "防具ID = series_id*5 + part_id",
+          "desc_en": "Armor ID"
+        },
+        {
+          "name": "series_id",
+          "type": "int",
+          "desc_ja": "シリーズID (armorSeriesData のレコード番号)",
+          "desc_en": "Series ID"
+        },
+        {
+          "name": "part_id",
+          "type": "int",
+          "desc_ja": "部位ID (armor-parts.csv)",
+          "desc_en": "Part ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "防具名（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "防具名（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "desc_ja",
+          "type": "str",
+          "desc_ja": "説明（日本語）",
+          "desc_en": "Description (Japanese)"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/armorSeriesData_jpn.gmd",
+        "romfs/nativeNX/table/armorSeriesData.asd",
+        "extract/jp_names/armor_series.csv",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (EQUIP_*_NAMES/_IDS)"
+      ],
+      "confidence": "verified",
+      "notes_ja": "armorSeriesData.asd は 127 バイト/系列で、+6..+10 が部位の有無 (頭/胴/腕/腰/脚)。この有無フラグは gamedata.rs の EQUIP_HEAD/CHEST/ARMS/WAIST/LEGS_I_DS と件数・並び順まで完全一致した (1204/1189/1158/1108/1177)。部位が無い系列の行は出力していない。armor_id = series*5 + part は mhnxeditor の equipnames.rs が明記している並び。",
+      "notes_en": "armorSeriesData.asd +6..+10 holds the per-part presence flags, which match EQUIP_*_I_DS exactly. Rows for absent parts are omitted.",
+      "row_count": 5836,
+      "id_range": [
+        0,
+        6431
+      ]
+    },
+    {
+      "id": "armor-parts",
+      "title_ja": "防具部位",
+      "title_en": "Armor parts",
+      "file": "armor-parts.csv",
+      "primary_key": "part_id",
+      "columns": [
+        {
+          "name": "part_id",
+          "type": "int",
+          "desc_ja": "部位ID (0=頭 1=胴 2=腕 3=腰 4=脚)",
+          "desc_en": "Part ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "部位名（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "部位名（英語）",
+          "desc_en": "Name (English)"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/armorSeriesData_jpn.gmd",
+        "extract/jp_names/gen.py (PARTS)",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (EQUIPMENT_TYPES)"
+      ],
+      "confidence": "verified",
+      "notes_ja": "armorSeriesData_jpn.gmd の 10 文字列 = 5 部位 x (名前, 説明) の並び (頭,胴,腕,腰,脚)。英語名は EQUIPMENT_TYPES の 1..5 (Head, Chest, Arms, Waist, Legs)。",
+      "notes_en": "Order taken from the 10-strings-per-series layout of armorSeriesData_jpn.gmd.",
+      "row_count": 5,
+      "id_range": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "armor-skills",
+      "title_ja": "防具スキルポイント",
+      "title_en": "Armor skill points",
+      "file": "armor-skills.csv",
+      "primary_key": "row_id",
+      "columns": [
+        {
+          "name": "row_id",
+          "type": "int",
+          "desc_ja": "連番 (1 始まり)。(armor_id, skill_id) が複合キーのため便宜上の主キー",
+          "desc_en": "Sequential key"
+        },
+        {
+          "name": "armor_id",
+          "type": "int",
+          "desc_ja": "防具ID (armor.csv)。= series_id*5 + part_id",
+          "desc_en": "Armor ID"
+        },
+        {
+          "name": "series_id",
+          "type": "int",
+          "desc_ja": "シリーズID",
+          "desc_en": "Series ID"
+        },
+        {
+          "name": "part_id",
+          "type": "int",
+          "desc_ja": "部位ID (0=頭 1=胴 2=腕 3=腰 4=脚)",
+          "desc_en": "Part ID"
+        },
+        {
+          "name": "skill_id",
+          "type": "int",
+          "desc_ja": "スキルID (skills.csv)",
+          "desc_en": "Skill ID"
+        },
+        {
+          "name": "points",
+          "type": "int",
+          "desc_ja": "スキルポイント (マイナスあり)",
+          "desc_en": "Skill points"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/armor-skills.csv",
+        "romfs/nativeNX/table/armorSeriesData.asd"
+      ],
+      "confidence": "derived",
+      "notes_ja": "armorSeriesData.asd の +28 から 15 バイト/部位 = 5 x (u16 スキルID, i8 ポイント) を読んだ結果 (mhnxeditor の tools/skill_tables.py と同じ手順)。1 部位に最大 5 スキルが付くため複合キーになり、SPEC 準拠で 1 列目に連番 row_id を置いた。refsrc の part は 1..5 (頭..脚) なので part_id = part-1 に直し、armor.csv の armor_id と直接結合できるようにした。14639 行すべてで armor_id が armor.csv に存在し、skill_id が skills.csv に存在することを確認済み。",
+      "notes_en": "Read from armorSeriesData.asd +28 (5 x (u16 skill, i8 points) per part). row_id is a sequential key because (armor_id, skill_id) is composite.",
+      "row_count": 14639,
+      "id_range": [
+        1,
+        14639
+      ]
+    },
+    {
+      "id": "combinations",
+      "title_ja": "調合",
+      "title_en": "Item combinations",
+      "file": "combinations.csv",
+      "primary_key": "row_id",
+      "columns": [
+        {
+          "name": "row_id",
+          "type": "int",
+          "desc_ja": "連番 (1 始まり)。(item1_id, item2_id) が複合キーのため便宜上の主キー",
+          "desc_en": "Sequential key"
+        },
+        {
+          "name": "item1_id",
+          "type": "int",
+          "desc_ja": "材料1のアイテムID (items.csv)",
+          "desc_en": "Material 1 item ID"
+        },
+        {
+          "name": "item2_id",
+          "type": "int",
+          "desc_ja": "材料2のアイテムID (items.csv)",
+          "desc_en": "Material 2 item ID"
+        },
+        {
+          "name": "result_item_id",
+          "type": "int",
+          "desc_ja": "調合結果のアイテムID (items.csv)",
+          "desc_en": "Result item ID"
+        },
+        {
+          "name": "chance_percent",
+          "type": "int",
+          "desc_ja": "調合成功率 (%)",
+          "desc_en": "Success chance (%)"
+        },
+        {
+          "name": "item1_name_ja",
+          "type": "str",
+          "desc_ja": "材料1の名前（日本語）",
+          "desc_en": "Material 1 name (Japanese)"
+        },
+        {
+          "name": "item2_name_ja",
+          "type": "str",
+          "desc_ja": "材料2の名前（日本語）",
+          "desc_en": "Material 2 name (Japanese)"
+        },
+        {
+          "name": "result_name_ja",
+          "type": "str",
+          "desc_ja": "結果の名前（日本語）",
+          "desc_en": "Result name (Japanese)"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/combinations.csv",
+        "romfs/nativeNX/table/itemPreData.itp",
+        "romfs/nativeNX/table/itemData_jpn.gmd"
+      ],
+      "confidence": "derived",
+      "notes_ja": "itemPreData の 24 バイト/レコード 183 件 (+2 と +6 が材料, +10 が結果, +14 が成功率%) を 読んだ結果 (mhnxeditor の tools/item_combos.py と同じ手順)。(item1, item2) は 183 行で重複なし。数値だけでは読めないので、items.csv から引いた名前 3 列を併記した (参照先が単一なので値の揺れは無い)。183 行すべてで 3 つのアイテムIDが items.csv に存在することを確認済み。",
+      "notes_en": "Read from itemPreData (24-byte records: materials at +2/+6, result at +10, chance% at +14). Item names are joined from items.csv.",
+      "row_count": 183,
+      "id_range": [
+        1,
+        183
+      ]
+    },
+    {
+      "id": "decorations",
+      "title_ja": "装飾品（珠）",
+      "title_en": "Decorations",
+      "file": "decorations.csv",
+      "primary_key": "decoration_id",
+      "columns": [
+        {
+          "name": "decoration_id",
+          "type": "int",
+          "desc_ja": "装飾品ID (1..262)",
+          "desc_en": "Decoration ID"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語、対応するアイテム名）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "item_id",
+          "type": "int",
+          "desc_ja": "対応するアイテムID",
+          "desc_en": "Item ID"
+        },
+        {
+          "name": "slot_size",
+          "type": "int",
+          "desc_ja": "必要スロット数 (1..3)",
+          "desc_en": "Slot size"
+        },
+        {
+          "name": "skill1_id",
+          "type": "int",
+          "desc_ja": "スキル1のスキルID (skills.csv)",
+          "desc_en": "Skill 1 ID"
+        },
+        {
+          "name": "skill1_name_ja",
+          "type": "str",
+          "desc_ja": "スキル1の名前（日本語）",
+          "desc_en": "Skill 1 name (Japanese)"
+        },
+        {
+          "name": "skill1_points",
+          "type": "int",
+          "desc_ja": "スキル1のポイント",
+          "desc_en": "Skill 1 points"
+        },
+        {
+          "name": "skill2_id",
+          "type": "int",
+          "desc_ja": "スキル2のスキルID (skills.csv)",
+          "desc_en": "Skill 2 ID"
+        },
+        {
+          "name": "skill2_name_ja",
+          "type": "str",
+          "desc_ja": "スキル2の名前（日本語）",
+          "desc_en": "Skill 2 name (Japanese)"
+        },
+        {
+          "name": "skill2_points",
+          "type": "int",
+          "desc_ja": "スキル2のポイント（マイナスあり）",
+          "desc_en": "Skill 2 points"
+        },
+        {
+          "name": "is_dummy",
+          "type": "bool",
+          "desc_ja": "decoData に実体が無いダミー行か",
+          "desc_en": "Dummy row"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/decoData.deco",
+        "romfs/nativeNX/table/skillTypeData_jpn.gmd",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (JWL_NAMES, JWL_I_DS)",
+        "mhnxeditor/.work/finalaudit/refsrc/data/decorations.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "decoData.deco は 5 バイト/レコードで 251 件、レコード k がアイテム 2638+k。JWL_I_DS は decoration_id k -> アイテム 2637+k で、全 262 件でこの関係が成立することを確認した。decoData から復元した (アイテム, スロット, スキル, ポイント) 424 行は refsrc の decorations.csv と完全一致した。decoration_id 252..262 は JWL_NAMES にのみ存在する Dummy Jwl 10..20 で、decoData に実体が無いため スキル列は空・is_dummy=yes にしてある。スキルID は skills.csv のスキルIDを指す。",
+      "notes_en": "decoData.deco has 251 five-byte records; record k is item 2638+k. The 424 rows reproduce refsrc decorations.csv exactly.",
+      "row_count": 262,
+      "id_range": [
+        1,
+        262
+      ]
+    },
+    {
+      "id": "hunter-arts",
+      "title_ja": "狩技",
+      "title_en": "Hunter arts",
+      "file": "hunter-arts.csv",
+      "primary_key": "art_id",
+      "columns": [
+        {
+          "name": "art_id",
+          "type": "int",
+          "desc_ja": "狩技ID (1..190。71..82 は空レコード)",
+          "desc_en": "Hunter art ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "weapon_type_id",
+          "type": "int",
+          "desc_ja": "武器種ID (weapon-types.csv)。空=全武器共通",
+          "desc_en": "Weapon type ID (empty = common)"
+        },
+        {
+          "name": "weapon_type_ja",
+          "type": "str",
+          "desc_ja": "武器種名（日本語、共通含む）",
+          "desc_en": "Weapon type (Japanese)"
+        },
+        {
+          "name": "cost",
+          "type": "int",
+          "desc_ja": "狩技ゲージ量 (hunterArtsData.hta +19 の u16)",
+          "desc_en": "Gauge cost"
+        },
+        {
+          "name": "art_group",
+          "type": "int",
+          "desc_ja": "狩技ファミリーID (hta +8 の u32。I/II/III が同じ値)",
+          "desc_en": "Art family ID"
+        },
+        {
+          "name": "desc_ja",
+          "type": "str",
+          "desc_ja": "説明（日本語、長文）",
+          "desc_en": "Description (Japanese)"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/hunterArtsData.hta",
+        "romfs/nativeNX/table/hunterArtsData_jpn.gmd",
+        "mhnxeditor/.work/finalaudit/refsrc/data/hunter-arts.csv"
+      ],
+      "confidence": "derived",
+      "notes_ja": "hunterArtsData.hta は 25 バイト/レコードで 191 件 (0=装備なし, 1..190=狩技)。hunterArtsData_jpn.gmd は 4 文字列/件 (名前, 名前, 短い説明, 長い説明)。ID 71..82 は名前が全角空白のみのプレースホルダなので出力していない (英語名テーブル hunter-arts.csv も同じ 178 件)。hta 自体に武器種の列は無い。レコードは art_group (+8) ごとに武器種ブロックの順で並んでおり、各ブロック先頭の説明文がその武器を明記している (11-15=大剣, 19-22=ハンマー, 23-26=ランス, 27-30=ヘビィボウガン, 35-38=ライトボウガン, 39-42=太刀, 43-46=スラッシュアックス, 47-50=ガンランス, 51-54=弓, 55-58=双剣, 59-62=狩猟笛, 63-66=操虫棍, 67-70=チャージアックス) ため、その対応を weapon_type_id に入れた (1-10 は全武器共通)。31-34 は空きブロック。cost は hta +19 の u16 で、+21 の f32 がちょうど 3.5 倍になることだけ確認済み (意味は未確定)。",
+      "notes_en": "25-byte records; ids 71..82 are blank placeholders. The weapon type comes from the art-group block order, cross-checked against the weapon named in each block's description.",
+      "row_count": 178,
+      "id_range": [
+        1,
+        190
+      ]
+    },
+    {
+      "id": "item-categories",
+      "title_ja": "アイテムカテゴリ（素材分類）",
+      "title_en": "Item categories (material)",
+      "file": "item-categories.csv",
+      "primary_key": "category_id",
+      "columns": [
+        {
+          "name": "category_id",
+          "type": "int",
+          "desc_ja": "カテゴリID (0..337)",
+          "desc_en": "Category ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "カテゴリ名（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "variant_index",
+          "type": "int",
+          "desc_ja": "レコード 3 バイト目。同名の 3 連レコードで 0,1,2 と巡回する",
+          "desc_en": "Third byte of the record"
+        },
+        {
+          "name": "raw_tag",
+          "type": "str",
+          "desc_ja": "レコード先頭 2 バイト (16進、意味未確定)",
+          "desc_en": "First two bytes, hex"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/itemCategoryTypeData.ict",
+        "romfs/nativeNX/table/itemCategoryTypeData_jpn.gmd"
+      ],
+      "confidence": "verified",
+      "notes_ja": "itemCategoryTypeData.ict は 7 バイト/レコードで 338 件、itemCategoryTypeData_jpn.gmd の 338 文字列と 1:1 対応する。名前は素材の分類 (モンスター素材, 鉱石素材, マッカォ素材 ...) で、同名が 3 件ずつ並び 3 バイト目が 0,1,2 と巡回する。先頭 2 バイトの意味は未確定のため 16 進の生値で残した。items.material_category_id がこの ID を指す。",
+      "notes_en": "338 records of 7 bytes, one name each. The first two bytes are unexplained and kept as hex.",
+      "row_count": 338,
+      "id_range": [
+        0,
+        337
+      ]
+    },
+    {
+      "id": "items",
+      "title_ja": "アイテム",
+      "title_en": "Items",
+      "file": "items.csv",
+      "primary_key": "item_id",
+      "columns": [
+        {
+          "name": "item_id",
+          "type": "int",
+          "desc_ja": "アイテムID (0..2990)",
+          "desc_en": "Item ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語、未取得）",
+          "desc_en": "Name (English, unavailable)"
+        },
+        {
+          "name": "desc_ja",
+          "type": "str",
+          "desc_ja": "説明（日本語）",
+          "desc_en": "Description (Japanese)"
+        },
+        {
+          "name": "category_id",
+          "type": "int",
+          "desc_ja": "アイテム分類ID (itemData.itm +16 の u8。0..105、名前テーブルは未発見)",
+          "desc_en": "Item category group"
+        },
+        {
+          "name": "material_category_id",
+          "type": "int",
+          "desc_ja": "素材カテゴリID (item-categories.csv)",
+          "desc_en": "Material category ID"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/itemData_jpn.gmd",
+        "romfs/nativeNX/table/itemData.itm",
+        "romfs/nativeNX/table/itemCategoryTypeData.ict"
+      ],
+      "confidence": "verified",
+      "notes_ja": "itemData_jpn.gmd は 2 文字列/アイテム (名前, 説明)、itemData.itm は 44 バイト/アイテムで レコード数 2991 が一致する。日本語版 romfs しか手元に無いため name_en は全行空 (英語版の itemData_eng.gmd が必要)。category_id は itemData.itm +16 の u8 で、値ごとにアイテムが意味的にまとまる (22=回復薬系, 24=罠, 26=タル爆弾, 43=調合書, 44=原珠/珠, 52=お守り など) ことを確認したが、この分類の名前テーブルは romfs の gmd に見つからないため数値のみ。material_category_id は +28 の u16 で itemCategoryTypeData の ID (0..337)。",
+      "notes_en": "Only the Japanese romfs is available, so name_en is empty. category_id is the u8 at itemData.itm +16; its name table was not found.",
+      "row_count": 2991,
+      "id_range": [
+        0,
+        2990
+      ]
+    },
+    {
+      "id": "kinsects",
+      "title_ja": "猟虫",
+      "title_en": "Kinsects",
+      "file": "kinsects.csv",
+      "primary_key": "kinsect_id",
+      "columns": [
+        {
+          "name": "kinsect_id",
+          "type": "int",
+          "desc_ja": "猟虫ID (0..31)",
+          "desc_en": "Kinsect ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語）",
+          "desc_en": "Name (English)"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/insectData_jpn.gmd",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (KINSECT_NAMES)"
+      ],
+      "confidence": "verified",
+      "notes_ja": "insectData_jpn.gmd は 1 文字列/虫で 32 件、insectData.isd も 47 バイト x 32 件。日本語名 (クルドローン...) と英語名 (Culldrone...) は添字で 1:1 対応する。説明文は romfs に無い。",
+      "notes_en": "32 kinsects; names align by index between the Japanese gmd and KINSECT_NAMES.",
+      "row_count": 32,
+      "id_range": [
+        0,
+        31
+      ]
+    },
+    {
+      "id": "palico-actions",
+      "title_ja": "オトモ行動（支援行動・スキル）",
+      "title_en": "Palico actions",
+      "file": "palico-actions.csv",
+      "primary_key": "row_id",
+      "columns": [
+        {
+          "name": "row_id",
+          "type": "int",
+          "desc_ja": "連番 (1 始まり)。(kind, action_id) が複合キーのため便宜上の主キー",
+          "desc_en": "Sequential key"
+        },
+        {
+          "name": "kind",
+          "type": "str",
+          "desc_ja": "種別 (move=支援行動, skill=オトモスキル)",
+          "desc_en": "Kind"
+        },
+        {
+          "name": "action_id",
+          "type": "int",
+          "desc_ja": "kind ごとの ID (palico-support.csv / palico-skills.csv)",
+          "desc_en": "Action ID"
+        },
+        {
+          "name": "points",
+          "type": "int",
+          "desc_ja": "抽選ポイント (1..3、固有のものは 0)",
+          "desc_en": "Draw points"
+        },
+        {
+          "name": "cost",
+          "type": "int",
+          "desc_ja": "スロットコスト (skill のみ。move は空)",
+          "desc_en": "Slot cost"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）。palico-support / palico-skills から引いた",
+          "desc_en": "Name (Japanese)"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/palico-actions.csv",
+        "romfs/nativeNX/arc/resident.arc (otomo/ot_skl, otomo/support/spt_act_base, table/lobby/otSupportIni*pt, otSkillIni*pt)"
+      ],
+      "confidence": "derived",
+      "notes_ja": "resident.arc の otomo/ot_skl (11 バイト: u32 ID, u8 ID, +5 スロットコスト) と otomo/support/spt_act_base、table/lobby/otSupportIni{1,2,3}pt / otSkillIni{1,2,3}pt (抽選ポイント) から作った表 (mhnxeditor の tools/palico_tables.py と同じ手順)。move 58 件 + skill 96 件 = 154 件。(kind, action_id) が複合キーなので連番 row_id を 1 列目に置いた。move の id 57 は spt_act_base にレコードがあるが gamedata.rs 側の名前が NULL プレースホルダなので name_ja が空。name_ja は palico-support.csv / palico-skills.csv から引いた (参照先が単一なので値の揺れは無い)。",
+      "notes_en": "Built from ot_skl / spt_act_base / otSupportIni*pt / otSkillIni*pt in resident.arc. 58 moves + 96 skills.",
+      "row_count": 154,
+      "id_range": [
+        1,
+        154
+      ]
+    },
+    {
+      "id": "palico-armor",
+      "title_ja": "オトモ防具",
+      "title_en": "Palico armor",
+      "file": "palico-armor.csv",
+      "primary_key": "palico_armor_id",
+      "columns": [
+        {
+          "name": "palico_armor_id",
+          "type": "int",
+          "desc_ja": "オトモ防具ID = series_id*2 + part_id",
+          "desc_en": "Palico armor ID"
+        },
+        {
+          "name": "series_id",
+          "type": "int",
+          "desc_ja": "シリーズID (otArmorData.oar のレコード番号)",
+          "desc_en": "Series ID"
+        },
+        {
+          "name": "part_id",
+          "type": "int",
+          "desc_ja": "部位ID (0=頭 1=胴)",
+          "desc_en": "Part ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "desc_ja",
+          "type": "str",
+          "desc_ja": "説明（日本語）",
+          "desc_en": "Description (Japanese)"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/otArmorData_jpn.gmd",
+        "extract/jp_names/palico_armor.csv",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (PALICO_HEAD_NAMES/_IDS, PALICO_ARMOR_NAMES/_IDS)"
+      ],
+      "confidence": "verified",
+      "notes_ja": "otArmorData_jpn.gmd は 4 文字列/系列 (頭名, 胴名, 頭説明, 胴説明) で 527 系列。部位が無い系列は名前が全角ダッシュ (U+2015) になっているので、その行は出力していない (生存 頭 502 件 / 胴 524 件 = PALICO_HEAD_I_DS / PALICO_ARMOR_I_DS の件数と一致。系列 0 は両部位とも「装備なし」で、これは ID 0/1 の意味を残すため出力している)。英語名は PALICO_HEAD/ARMOR_NAMES を _IDS で引いた。",
+      "notes_en": "527 series x (head, body). Series whose part name is a dash are omitted; the counts match PALICO_HEAD_I_DS / PALICO_ARMOR_I_DS.",
+      "row_count": 1026,
+      "id_range": [
+        0,
+        1053
+      ]
+    },
+    {
+      "id": "palico-levels",
+      "title_ja": "オトモレベル",
+      "title_en": "Palico levels",
+      "file": "palico-levels.csv",
+      "primary_key": "level",
+      "columns": [
+        {
+          "name": "level",
+          "type": "int",
+          "desc_ja": "オトモレベル (1..99)",
+          "desc_en": "Palico level"
+        },
+        {
+          "name": "support_slots",
+          "type": "int",
+          "desc_ja": "自由に付けられる支援行動スロット数 (ot_lvl +10)",
+          "desc_en": "Support move slots"
+        },
+        {
+          "name": "skill_slots",
+          "type": "int",
+          "desc_ja": "装備できるオトモスキルのスロット数 (ot_lvl +11)",
+          "desc_en": "Skill slots"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/palico-levels.csv",
+        "romfs/nativeNX/arc/resident.arc (otomo/ot_lvl)"
+      ],
+      "confidence": "derived",
+      "notes_ja": "resident.arc の otomo/ot_lvl (15 バイト/レベル, 99 件) の +10 と +11 を読んだもの (mhnxeditor の tools/palico_tables.py と同じ手順)。level は 1..99 で重複なしなのでそのまま主キーにした。",
+      "notes_en": "Read from otomo/ot_lvl +10 and +11 (99 levels).",
+      "row_count": 99,
+      "id_range": [
+        1,
+        99
+      ]
+    },
+    {
+      "id": "palico-skills",
+      "title_ja": "オトモスキル（術）",
+      "title_en": "Palico skills",
+      "file": "palico-skills.csv",
+      "primary_key": "palico_skill_id",
+      "columns": [
+        {
+          "name": "palico_skill_id",
+          "type": "int",
+          "desc_ja": "オトモスキルID (0..95)",
+          "desc_en": "Palico skill ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "cost",
+          "type": "int",
+          "desc_ja": "スロットコスト (ot_skl +5)",
+          "desc_en": "Slot cost"
+        },
+        {
+          "name": "points",
+          "type": "int",
+          "desc_ja": "抽選ポイント (1..3、固有スキルは 0)",
+          "desc_en": "Draw points"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/ot_skl_jpn.gmd",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (PALICO_SKILLS, PALICO_SKILL_NAMES)",
+        "mhnxeditor/.work/finalaudit/refsrc/data/palico-actions.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "ot_skl_jpn.gmd は 2 文字列/スキルで 96 件、gamedata.rs の PALICO_SKILL_NAMES 0..95 と 位置まで一致することを mhnxeditor の romfstables.rs が検証済み。PALICO_SKILL_NAMES/SKILLS の 97 件目 (index 96) は NULL [96] のプレースホルダなので出力していない。ID 0 はスキル無し。cost と points は refsrc の palico-actions.csv (ot_skl の +5 と抽選ポイント) から。",
+      "notes_en": "96 skills; index 96 in gamedata.rs is a NULL placeholder and is omitted.",
+      "row_count": 96,
+      "id_range": [
+        0,
+        95
+      ]
+    },
+    {
+      "id": "palico-support",
+      "title_ja": "オトモ支援行動",
+      "title_en": "Palico support moves",
+      "file": "palico-support.csv",
+      "primary_key": "support_move_id",
+      "columns": [
+        {
+          "name": "support_move_id",
+          "type": "int",
+          "desc_ja": "支援行動ID (0..56)",
+          "desc_en": "Support move ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "points",
+          "type": "int",
+          "desc_ja": "抽選ポイント (1..3、固有行動は 0)",
+          "desc_en": "Draw points"
+        }
+      ],
+      "source": [
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (PALICO_SUPPORT_MOVES)",
+        "mhnxeditor/.work/finalaudit/refsrc/data/palico-actions.csv"
+      ],
+      "confidence": "derived",
+      "notes_ja": "PALICO_SUPPORT_MOVES は 58 件で、57 件目が NULL [57] のプレースホルダなので 0..56 の 57 件を出力した。romfs に支援行動名の gmd は無く、日本語名は gamedata.rs の表だけが持つ。英語名は無い。points は refsrc の palico-actions.csv (otSupportIni1..3pt の抽選テーブル) から。",
+      "notes_en": "57 real moves; entry 57 of PALICO_SUPPORT_MOVES is a NULL placeholder. No English names exist.",
+      "row_count": 57,
+      "id_range": [
+        0,
+        56
+      ]
+    },
+    {
+      "id": "palico-weapons",
+      "title_ja": "オトモ武器",
+      "title_en": "Palico weapons",
+      "file": "palico-weapons.csv",
+      "primary_key": "palico_weapon_id",
+      "columns": [
+        {
+          "name": "palico_weapon_id",
+          "type": "int",
+          "desc_ja": "オトモ武器ID (0..508)",
+          "desc_en": "Palico weapon ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "desc_ja",
+          "type": "str",
+          "desc_ja": "説明（日本語）",
+          "desc_en": "Description (Japanese)"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/otWeaponData_jpn.gmd",
+        "extract/jp_names/palico_weapon.csv",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (PALICO_WEAPON_NAMES)"
+      ],
+      "confidence": "verified",
+      "notes_ja": "otWeaponData_jpn.gmd は 2 文字列/武器で 509 件、otWeaponData.owp も 31 バイト x 509 件。ID 0 は 1234567890 という開発用ダミー文字列で、英語名テーブルの該当行もプレースホルダなので空にしてある。",
+      "notes_en": "509 records; id 0 is a developer placeholder string.",
+      "row_count": 509,
+      "id_range": [
+        0,
+        508
+      ]
+    },
+    {
+      "id": "skill-effects",
+      "title_ja": "スキル効果（発動後のスキル名）",
+      "title_en": "Skill effects",
+      "file": "skill-effects.csv",
+      "primary_key": "effect_id",
+      "columns": [
+        {
+          "name": "effect_id",
+          "type": "int",
+          "desc_ja": "スキル効果ID (skillData のレコード番号)",
+          "desc_en": "Skill effect ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "スキル名（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "desc_ja",
+          "type": "str",
+          "desc_ja": "説明（日本語）",
+          "desc_en": "Description (Japanese)"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/skillData_jpn.gmd",
+        "extract/jp_names/skills.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "skillData_jpn.gmd は 2 文字列/件で 328 件 (スキル無し, 毒耐性, 毒倍加, 麻痺無効 ...)。skills.csv のスキルIDとは別の ID 空間で、skills.csv の各段階がここを指す。SPEC の担当表には無いが、skills.csv の段階を解決するために追加した (Lead に報告)。",
+      "notes_en": "328 skillData records; skills.csv tiers point into this table. Added beyond the SPEC table list.",
+      "row_count": 328,
+      "id_range": [
+        0,
+        327
+      ]
+    },
+    {
+      "id": "skills",
+      "title_ja": "スキル",
+      "title_en": "Skills",
+      "file": "skills.csv",
+      "primary_key": "skill_id",
+      "columns": [
+        {
+          "name": "skill_id",
+          "type": "int",
+          "desc_ja": "スキルID (skillTypeData のレコード番号。防具/装飾品/護石が指す)",
+          "desc_en": "Skill ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "スキル名（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "スキル名（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "desc_ja",
+          "type": "str",
+          "desc_ja": "説明（日本語）",
+          "desc_en": "Description (Japanese)"
+        },
+        {
+          "name": "kind",
+          "type": "int",
+          "desc_ja": "種別 (0=通常, 1=二つ名スキル【魂】, 2=【魂・極】)",
+          "desc_en": "Kind"
+        },
+        {
+          "name": "max_level",
+          "type": "int",
+          "desc_ja": "最大レベル (プラス段階で発動するスキルの種類数)",
+          "desc_en": "Max level"
+        },
+        {
+          "name": "min_level",
+          "type": "int",
+          "desc_ja": "マイナス側の段階数",
+          "desc_en": "Negative levels"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/skillTypeData.skt",
+        "romfs/nativeNX/table/skillTypeData_jpn.gmd",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (SKILL_NAMES)"
+      ],
+      "confidence": "derived",
+      "notes_ja": "skillTypeData.skt は 19 バイト/スキルで 206 件: u32 スキルID, u8 kind, u16 x7 が -20/-15/-10/+10/+15/+20/+25 ポイントで発動するスキル (skill-effects.csv の ID)。名前と説明は skillTypeData_jpn.gmd (2 文字列/件) から取った。max_level は +10/+15/+20 で発動するスキルの種類数、min_level は -10/-15/-20 の種類数として算出した (攻撃=3/3, 気絶=2/1, 体力=2/2 など、既知の段階数と一致することを確認)。kind の 1/2 は 144..161 / 162..179 の二つ名スキルにだけ付く。",
+      "notes_en": "19-byte records: u32 id, u8 kind, 7 u16 skill ids for -20/-15/-10/+10/+15/+20/+25 points. max_level counts distinct positive tiers.",
+      "row_count": 206,
+      "id_range": [
+        0,
+        205
+      ]
+    },
+    {
+      "id": "smithy-lists",
+      "title_ja": "鍛冶屋リスト",
+      "title_en": "Smithy lists",
+      "file": "smithy-lists.csv",
+      "primary_key": "row_id",
+      "columns": [
+        {
+          "name": "row_id",
+          "type": "int",
+          "desc_ja": "連番 (1 始まり)。元のキーが文字列 (list) なので便宜上の主キー",
+          "desc_en": "Sequential key"
+        },
+        {
+          "name": "list_name",
+          "type": "str",
+          "desc_ja": "元データのリスト名 (weapon:0, armor:1, deco, palico:helm ...)",
+          "desc_en": "List name"
+        },
+        {
+          "name": "kind",
+          "type": "str",
+          "desc_ja": "list_name の前半 (weapon / armor / deco / palico)",
+          "desc_en": "List kind"
+        },
+        {
+          "name": "class_id",
+          "type": "int",
+          "desc_ja": "kind が weapon / armor のときの武器種ID・部位ID。それ以外は空",
+          "desc_en": "Class or part id"
+        },
+        {
+          "name": "records",
+          "type": "int",
+          "desc_ja": "そのリストのレコード数",
+          "desc_en": "Record count"
+        },
+        {
+          "name": "ids",
+          "type": "str",
+          "desc_ja": "レコードごとの 1 桁コードの並び (armor のみ。意味未確定)",
+          "desc_en": "Per-record code string"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/smithy-lists.csv",
+        "romfs/nativeNX/arc/facility/blacksmith.arc"
+      ],
+      "confidence": "derived",
+      "notes_ja": "blacksmith.arc の weaponCreateWNN / armorCreateANN / decoCreate / otWeaponCreate / otArmorCreate の レコード数を数えたもの (mhnxeditor の tools/smithy_lists.py)。元の主キーは list という文字列なので、SPEC の「1 列目は主キー・ID は整数」に合わせて 連番 row_id を 1 列目に置き、list_name をそのまま残した。kind / class_id は list_name から機械的に分割しただけ。ids 列は armor の 5 行だけ値が入る 1 桁コードの並びで、意味は未確定のため生のまま残した。",
+      "notes_en": "Record counts of the blacksmith.arc create tables. row_id is sequential because the original key is a string.",
+      "row_count": 23,
+      "id_range": [
+        1,
+        23
+      ]
+    },
+    {
+      "id": "talisman-tables",
+      "title_ja": "護石スキル抽選範囲",
+      "title_en": "Talisman skill ranges",
+      "file": "talisman-tables.csv",
+      "primary_key": "row_id",
+      "columns": [
+        {
+          "name": "row_id",
+          "type": "int",
+          "desc_ja": "連番 (1 始まり)。(kind, tier, skill_id) が複合キーのため便宜上の主キー",
+          "desc_en": "Sequential key"
+        },
+        {
+          "name": "kind",
+          "type": "str",
+          "desc_ja": "種別 (skill1=第1スキル, skill2=第2スキル, slots=スロット数)",
+          "desc_en": "Kind"
+        },
+        {
+          "name": "tier",
+          "type": "int",
+          "desc_ja": "レア度 (97=神秘 98=閃光 99=風化 100=歴戦)",
+          "desc_en": "Rarity tier"
+        },
+        {
+          "name": "skill_id",
+          "type": "int",
+          "desc_ja": "スキルID (skills.csv)。kind=slots の行は空",
+          "desc_en": "Skill ID"
+        },
+        {
+          "name": "min_points",
+          "type": "int",
+          "desc_ja": "そのスキルに付くポイントの下限",
+          "desc_en": "Min points"
+        },
+        {
+          "name": "max_points",
+          "type": "int",
+          "desc_ja": "上限。kind=slots の行では最大スロット数を表す",
+          "desc_en": "Max points / max slots"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/talisman-tables.csv",
+        "romfs/nativeNX/arc/resident.arc (amuletSkillDataNN, amuletSlotDataNN)"
+      ],
+      "confidence": "derived",
+      "notes_ja": "resident.arc の amuletSkillDataNN (4 バイト: u16 スキルID, i8 下限, i8 上限) と amuletSlotDataNN から作った表 (mhnxeditor の tools/talisman_tables.py と同じ手順)。自然キーは (kind, tier, skill_id) で、525 行すべてで一意になることを確認した (kind=slots の 4 行は skill_id が空なので、この 3 列だけで一意)。SPEC の「1 列目は主キー・ID 列は整数」に合わせて 1 列目に連番 row_id を置き、自然キーの 3 列はそのまま残した。tier t は第1スキルにテーブル 2(t-97)、第2スキルに 2(t-97)+1、スロットに t-97 を使う。神秘 (97) の第2スキルは空テーブルなので行が無い。kind=slots の 4 行は min_points=0 で max_points がそのレア度の最大スロット数 (97->1, 98->2, 99->3, 100->3)。525 行すべてで skill_id が skills.csv に存在することを確認済み。",
+      "notes_en": "Built from amuletSkillDataNN / amuletSlotDataNN in resident.arc. The natural key is (kind, tier, skill_id), unique over all 525 rows; row_id is a sequential key so that column 1 is an integer primary key. For kind=slots, max_points is the maximum slot count.",
+      "row_count": 525,
+      "id_range": [
+        1,
+        525
+      ]
+    },
+    {
+      "id": "talismans",
+      "title_ja": "護石",
+      "title_en": "Talismans",
+      "file": "talismans.csv",
+      "primary_key": "talisman_id",
+      "columns": [
+        {
+          "name": "talisman_id",
+          "type": "int",
+          "desc_ja": "護石ID (0..10)",
+          "desc_en": "Talisman ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "rarity",
+          "type": "int",
+          "desc_ja": "レア度 (TALISMAN_RARITY。0 は装備なし)",
+          "desc_en": "Rarity tier"
+        },
+        {
+          "name": "max_slots",
+          "type": "int",
+          "desc_ja": "そのレア度で付く最大スロット数",
+          "desc_en": "Max slots"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/amuletData_jpn.gmd",
+        "extract/jp_names/amulet.csv",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (EQUIP_TALISMAN_NAMES, TALISMAN_RARITY)",
+        "mhnxeditor/.work/finalaudit/refsrc/data/talisman-tables.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "amuletData_jpn.gmd は 2 文字列/護石で 11 件、amulet.csv と一致。レア度は gamedata.rs の TALISMAN_RARITY (0,97,97,98,98,99,99,99,100,100,100) で、97=神秘 98=閃光 99=風化 100=歴戦。max_slots は talisman-tables.csv の slots 行 (97->1, 98->2, 99->3, 100->3)。護石の抽選スキル範囲は talisman-tables.csv を参照。",
+      "notes_en": "11 talismans. Rarity tiers 97..100 map to Mystery/Shining/Timeworn/Enduring.",
+      "row_count": 11,
+      "id_range": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "weapon-tree",
+      "title_ja": "武器派生",
+      "title_en": "Weapon upgrade tree",
+      "file": "weapon-tree.csv",
+      "primary_key": "row_id",
+      "columns": [
+        {
+          "name": "row_id",
+          "type": "int",
+          "desc_ja": "連番 (1 始まり)。1 武器が最大 5 本へ派生するため複合キーになるので便宜上の主キー",
+          "desc_en": "Sequential key"
+        },
+        {
+          "name": "weapon_type_id",
+          "type": "int",
+          "desc_ja": "武器種ID (weapon-types.csv)",
+          "desc_en": "Weapon type ID"
+        },
+        {
+          "name": "weapon_index",
+          "type": "int",
+          "desc_ja": "派生先の武器ID (武器種ごと)",
+          "desc_en": "Child weapon index"
+        },
+        {
+          "name": "parent_weapon_index",
+          "type": "int",
+          "desc_ja": "派生元の武器ID",
+          "desc_en": "Parent weapon index"
+        },
+        {
+          "name": "required_level",
+          "type": "int",
+          "desc_ja": "派生に必要な派生元の強化レベル",
+          "desc_en": "Required level"
+        },
+        {
+          "name": "weapon_id",
+          "type": "int",
+          "desc_ja": "派生先の weapons.csv の weapon_id (form 0)",
+          "desc_en": "Child weapon_id"
+        },
+        {
+          "name": "parent_weapon_id",
+          "type": "int",
+          "desc_ja": "派生元の weapons.csv の weapon_id (form 0)",
+          "desc_en": "Parent weapon_id"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/weapon-tree.csv",
+        "romfs/nativeNX/table/weapon*BaseData.w*d"
+      ],
+      "confidence": "derived",
+      "notes_ja": "weaponNNBaseData の末尾 10 バイト = 5 x (u8 必要レベル, u8 派生先武器ID) を読んだ結果 (mhnxeditor の tools/equip_recipes.py と同じ手順)。1 武器が最大 5 本へ派生するため複合キーになり、1 列目に連番 row_id を置いた。798 行すべてで派生先・派生元の (class, weapon) が weapons.csv の form 0 に存在することを確認済み。",
+      "notes_en": "Read from the last 10 bytes of weaponNNBaseData (5 x (u8 level, u8 child id)). row_id is sequential because the key is composite.",
+      "row_count": 798,
+      "id_range": [
+        1,
+        798
+      ]
+    },
+    {
+      "id": "weapon-types",
+      "title_ja": "武器種",
+      "title_en": "Weapon types",
+      "file": "weapon-types.csv",
+      "primary_key": "weapon_type_id",
+      "columns": [
+        {
+          "name": "weapon_type_id",
+          "type": "int",
+          "desc_ja": "武器種ID (romfs の weaponNN の NN。5 は欠番)",
+          "desc_en": "Weapon type ID"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "武器種名（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "武器種名（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "equip_type_id",
+          "type": "int",
+          "desc_ja": "EQUIPMENT_TYPES 上の装備種別ID (= weapon_type_id + 7)",
+          "desc_en": "Equipment type ID"
+        },
+        {
+          "name": "hunt_weapon_index",
+          "type": "int",
+          "desc_ja": "HUNT_WEAPONS 上の添字 (0..13)",
+          "desc_en": "Index into HUNT_WEAPONS"
+        },
+        {
+          "name": "used",
+          "type": "bool",
+          "desc_ja": "実在する武器種か",
+          "desc_en": "Weapon class exists"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/weapon*MsgData_jpn.gmd",
+        "extract/jp_names/weapons.csv",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (HUNT_WEAPONS, EQUIPMENT_TYPES)"
+      ],
+      "confidence": "verified",
+      "notes_ja": "weapon_type_id は romfs の weaponNN ファイル名の NN。05 はファイルが存在しない欠番。日本語名は weapons.csv の type 列、英語名は HUNT_WEAPONS (0..14 の別採番で 5=Light Bowgun, 14=Prowler) の対応する添字から取った。equip_type_id は EQUIPMENT_TYPES の並び (7=Great Sword ... 21=Charge Blade、12 が欠番) と一致する。",
+      "notes_en": "weapon_type_id is the NN of romfs weaponNN files; 05 is absent. English names come from HUNT_WEAPONS, which uses a different 0..14 numbering.",
+      "row_count": 15,
+      "id_range": [
+        0,
+        14
+      ]
+    },
+    {
+      "id": "weapons",
+      "title_ja": "武器",
+      "title_en": "Weapons",
+      "file": "weapons.csv",
+      "primary_key": "weapon_id",
+      "columns": [
+        {
+          "name": "weapon_id",
+          "type": "int",
+          "desc_ja": "主キー。weapon_type_id*10000 + weapon_index*10 + form の合成ID",
+          "desc_en": "Synthetic key"
+        },
+        {
+          "name": "weapon_type_id",
+          "type": "int",
+          "desc_ja": "武器種ID (weapon-types.csv)",
+          "desc_en": "Weapon type ID"
+        },
+        {
+          "name": "weapon_index",
+          "type": "int",
+          "desc_ja": "武器種ごとの武器ID (0 始まり)",
+          "desc_en": "Per-class weapon ID"
+        },
+        {
+          "name": "form",
+          "type": "int",
+          "desc_ja": "名前の段階 (0=素の名前, 1, 2=強化後の名前)",
+          "desc_en": "Name stage"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "武器名（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "武器名（英語、form 0 のみ）",
+          "desc_en": "Name (English, form 0 only)"
+        },
+        {
+          "name": "desc_ja",
+          "type": "str",
+          "desc_ja": "説明（日本語）",
+          "desc_en": "Description (Japanese)"
+        },
+        {
+          "name": "levels",
+          "type": "str",
+          "desc_ja": "この名前になる強化レベル (セミコロン区切り)",
+          "desc_en": "Levels using this name"
+        }
+      ],
+      "source": [
+        "romfs/nativeNX/table/weapon*MsgData_jpn.gmd",
+        "romfs/nativeNX/table/weapon*LevelData.w*d",
+        "extract/jp_names/weapons.csv",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (EQUIP_*_NAMES)"
+      ],
+      "confidence": "verified",
+      "notes_ja": "ゲーム内の武器IDは武器種ごとに 0 から振られているため、主キーは weapon_type_id*10000 + weapon_index*10 + form の合成IDにした (元の座標は各列に残してある)。form は強化で名前が変わる段階で、セーブが保持するのは form 0 (equipnames.rs の記述)。英語名テーブル EQUIP_*_NAMES は 1 武器 1 名 (form 0) なので form 1/2 の name_en は空。各武器種の weapon_index 件数は EQUIP_*_NAMES の要素数と完全一致する (大剣137/片手剣129/ハンマー132/ランス127/ヘビィ109/ライト110/太刀127/スラアク110/ガンランス115/弓108/双剣126/笛112/虫棍83/チャアク81)。",
+      "notes_en": "The game numbers weapons per class, so the primary key is a synthetic type*10000+index*10+form. English names exist for form 0 only.",
+      "row_count": 4818,
+      "id_range": [
+        0,
+        140802
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+﻿weapon_type_id,name_ja,name_en,equip_type_id,hunt_weapon_index,used
+0,大剣,Great Sword,7,0,yes
+1,片手剣,Sword and Shield,8,1,yes
+2,ハンマー,Hammer,9,2,yes
+3,ランス,Lance,10,3,yes
+4,ヘビィボウガン,Heavy Bowgun,11,4,yes
+5,,,12,,no
+6,ライトボウガン,Light Bowgun,13,5,yes
+7,太刀,Longsword,14,6,yes
+8,スラッシュアックス,Switch Axe,15,7,yes
+9,ガンランス,Gunlance,16,8,yes
+10,弓,Bow,17,9,yes
+11,双剣,Dual Blades,18,10,yes
+12,狩猟笛,Hunting Horn,19,11,yes
+13,操虫棍,Insect Glaive,20,12,yes
+14,チャージアックス,Charge Blade,21,13,yes

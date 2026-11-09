@@ -1,0 +1,187 @@
+﻿offer_id	request_index	quest_id	quest_name_en	quest_name_ja	npc_file	npc_bit	npc_name	talk_kind	talk_line	accept_flag	also	offer
+1	0	208	On the Rebound	古代林の暴れん坊	20	14	Reliable Villager	8	0	300		village_star:2
+2	1	336	Moofah Must-haves	ムーファたちのふんわり毛玉	20	14	Reliable Villager	8	12	302		village_star:3 AND flag:301
+3	2	629	Advanced: The Goliaths	高難度：天地征服せし強者	20	14	Reliable Villager	8	28	304		village_star:6 AND flag:303 AND cleared:10710
+4	3	341	Travelers in Trouble	観光客の旅路を守れ！	2	1	Bherna Gal	8	119	306		village_star:3 AND flag:16
+5	4	406	A Unique Cuppa	とびきりのゼンマイティー作り	2	1	Bherna Gal	8	129	308		village_star:4 AND flag:307 AND flag:25
+6	5	10651	Woe Malfestio	夜鳥の会・危機一髪！	2	1	Bherna Gal	8	146	310		flag:309 AND listed:10646
+7	6	310	Fishy Favor	ステキなお魚、錦魚	26	20	Cheeko Sands Chief	8	0	312		village_star:3
+8	7	420	Hunt-a-thon: Daimyo Hermitaur	チコ村のヒーロー伝説	26	20	Cheeko Sands Chief	8	16	314		village_star:4 AND flag:313
+9	8	407	Hunt-a-thon: Gendrome	厄介者のドスゲネポス	41	22	Caravaneer	8	5	316		village_star:4
+10	9	632	Advanced: Nothing is Sacred	高難度：廻帰せし災厄の古龍	41	22	Caravaneer	8	19	318		flag:317 AND hr:7
+11	10	10739	Primal Forest Defense	原生林の平和を守れ	41	22	Caravaneer	8	32	320		flag:319 AND listed:10646
+12	11	10421	So Notable: Great Maccao	超☆メモ帳　～跳狗竜狩猟編～	46	27	Guildmarm	8	6	322		hub_star:4
+13	12	10506	So Notable: Kecha Wacha	超☆メモ帳　～奇猿狐狩猟編～	46	27	Guildmarm	8	21	324		hub_star:5 AND flag:323
+14	13	10706	So Notable: Seregios	超☆メモ帳　～千刃竜捕獲編～	46	27	Guildmarm	8	31	326		hub_star:7 AND flag:325
+15	14	10604	Watch Your Steppe	遺跡平原の黒蝕竜調査	42	23	Ace Commander	8	11	328		
+16	15	10723	Putting the Gore in Magala	顕現せし黒蝕竜	42	23	Ace Commander	8	22	330		flag:329 AND listed:10646
+17	16	10529	Twin Velocidrome	２頭のドスランポス	45	26	Ace Cadet	8	0	332		
+18	17	220	Slay the Velociprey!	ランポスたちを討伐せよ！	101	36	Kokoto Chief	4	0	336	150	village_star:2 AND notflag:150
+19	18	219	Hunt Down the Velocidrome!	ドスランポスを狩猟せよ！	101	36	Kokoto Chief	4	16	338	152	notflag:152 AND flag:151
+20	19	318	Local Threat	大怪鳥イャンクックを倒せ！	101	36	Kokoto Chief	4	25	340	154	village_star:3 AND notflag:154 AND flag:153
+21	20	319	Into the Wyvern's Den	潜入！　飛竜の巣！	101	36	Kokoto Chief	4	35	342	156	notflag:156 AND flag:155
+22	21	504	The Thunderclaw Wyvern	翠玉の閃電	101	36	Kokoto Chief	4	47	344	158	village_star:5 AND notflag:158 AND flag:157
+23	22	639	Advanced: Wrath of Rath	高難度：天と地の怒り	101	36	Kokoto Chief	9	70	346	160	village_star:6 AND questset:48 AND notflag:160 AND points:Kokoto:1500
+24	23				102	37	Kokoto Gal	8	65	348		village_star:5
+25	24	10726	A Fiery Temper	獰にして猛だが火でもある	127	52	Minegarde Sweetheart	8	4	350		hub_star:7 AND flag:349 AND listed:10646
+26	25	306	Jurassic Treasure: The Frog	古代林のトレジャー！　蛙の巻	126	51	Treshi	8	8	360		village_star:3
+27	26	404	Jurassic Treasure: The Bug	古代林のトレジャー！　虫の巻	126	51	Treshi	8	19	362		flag:361 AND cleared:425 AND npc_idle:126
+28	27	623	Advanced: Jurassic Treasure	高難度：古代林のトレジャー！	126	51	Treshi	8	31	364		village_star:6 AND hr:7 AND flag:363 AND npc_idle:126
+29	28	625	Advanced: Invoking Rath	高難度：一対の巨影	129	54	Red Hell Hunter	8	35	372		village_star:6 AND flag:128 AND listed:10646
+30	28	625	Advanced: Invoking Rath	高難度：一対の巨影	130	55	Black Hell Hunter	8	35	372		village_star:6 AND flag:128 AND listed:10646
+31	29	624	Advanced: Sly Swooper	高難度：黒狼鳥は舞い降りた	131	56	Dundorma Guardsman	8	8	374		village_star:6 AND hr:5
+32	30	634	Advanced: Invisible Thief	高難度：対霞龍防衛作戦！	131	56	Dundorma Guardsman	8	17	376		hr:9 AND flag:375
+33	31	10426	Delicious White Livers	肴のキモはホワイトレバー	132	57	Cathar Elder	8	0	378		
+34	32	10115	Ingredient Hunter	新たな食材ハンターの誕生！？	47	28	Street Cook	8	0	380		village_star:2
+35	33				50	31	Lil Miss Forge	8	9	382		hub_star:4
+36	34	10650	The Coal Still Burns	心を燃やせ、燃石炭！	50	31	Lil Miss Forge	8	16	384		flag:383 AND listed:10646
+37	35	10649	Triple Toady Terror	３頭寄れば獰猛蛙	336	103	Harth Chief	8	7	386		village_star:3 AND flag:385 AND listed:10646
+38	36	514	Hunt-a-thon: Gypceros	ゲリョスな季節	51	32	Wycoon	8	7	388		village_star:5
+39	37	10305	Fossilized Memories	化石に眠る太古の記憶	51	32	Wycoon	8	16	390		hub_star:3 AND flag:389
+40	38	10530	The New Tenant	雪山の主、ドドブランゴ	51	32	Wycoon	8	25	392		hub_star:5 AND flag:391
+41	39	10220	Ahoy! Royal Ludroth!	輸送中！　水獣の追従！	52	33	Argosy Captain	8	9	394	-796	hub_star:2
+42	40	607	The Perilous Pair	予想外！　つがいの妨害！	52	33	Argosy Captain	8	29	396	-796	village_star:6 AND flag:395
+43	41				52	33	Argosy Captain	8	45	398	-796	hub_star:5 AND flag:397
+44	42	10732	Into the Maelstrom	蒼く渦巻く登竜門	52	33	Argosy Captain	8	64	400	-796	hub_star:7 AND listed:10646 AND flag:399
+45	43	225	Slay the Giaprey!	ギアノスたちを討伐せよ！	201	58	Pokke Chief	4	0	402	200	village_star:2 AND notflag:200
+46	44	224	The Mountain Roughrider	雪山の荒くれ者	201	58	Pokke Chief	4	16	404	202	notflag:202 AND flag:201
+47	45	323	The Shadow in the Mountains	雪山に潜む影	201	58	Pokke Chief	4	25	406	204	village_star:3 AND notflag:204 AND flag:203
+48	46	324	No Go on the Popo	忍び寄る気配	201	58	Pokke Chief	4	33	408	206	notflag:206 AND flag:205
+49	47	508	The Unwavering Colossus	峨々たる巨獣	201	58	Pokke Chief	4	42	410	208	village_star:5 AND notflag:208 AND flag:207
+50	48	640	Advanced: The Golden Pair	高難度：最後の招待状	201	58	Pokke Chief	8	60	412	210	village_star:6 AND notflag:210 AND questset:48 AND points:Pokke:1500
+51	49				202	59	Pokke Gal	8	66	414		village_star:5
+52	50	10623	Bl-Bl-Blangongas!	ドドドドブランゴ！	229	76	Jumbo Sweetheart	8	0	416		hub_star:6 AND flag:415
+53	51	314	Cancer of the Dunes	旧砂漠の縄張り争いニャ！！	225	72	Trenya	8	5	418		village_star:3
+54	52	412	Hunt-a-thon: Velocidrome	森丘の静寂を守るのニャ！！	225	72	Trenya	8	14	420		village_star:4 AND flag:419 AND npc_idle:225
+55	53	615	Drawing the Waterline	渓流の覇権争いニャ！！	225	72	Trenya	8	24	422		village_star:6 AND flag:421 AND npc_idle:225
+56	54	10664	The Magma's Rage	極秘依頼！　獰猛なる溶岩竜！	226	73	Felcote	8	6	424		hub_star:6 AND listed:10646 AND hr:8 AND npc_idle:226
+57	55	10724	Tigrex, Tigrex, Burning Bright	轟虎馮海	226	73	Felcote	8	15	426		hr:8 AND flag:425 AND listed:10646 AND npc_idle:226
+58	56	626	Advanced: Seismic Scares	高難度：異常震域	226	73	Felcote	8	24	428		village_star:6 AND hr:8 AND flag:427 AND npc_idle:226
+59	57	10524	Nargacuga Throwdown	疾き迅竜の狩猟披露	228	75	Pokke Sweetheart	8	0	430		
+60	58	10317	Fro Shizzle	パッション炸裂☆究極アフロ	230	77	Funky Felyne	8	6	432		hub_star:3
+61	59	10124	The Ingredient of Legend	伝説のメニューに不可欠なモノ	48	29	Itinerant Cook	8	0	434		
+62	60	608	The Hero's Journey	英雄への道	231	78	Armory Granny	8	18	542		flag:786 AND npc_idle:231 AND cleared:605
+63	61				231	78	Armory Granny	8	40	436		hub_star:7 AND flag:543 AND npc_idle:231
+64	62	635	Advanced: Teostra's Return	高難度：炎王の帰還	231	78	Armory Granny	8	59	438		village_star:6 AND flag:437 AND hr:9 AND npc_idle:231
+65	63	10432	Clash of Rivals	ライバルの激突！！	53	34	Cha-Cha	8	10	440	865	hub_star:4
+66	64	10665	Minion Audition Imposition	子分・取り分・イイ気分♪	53	34	Cha-Cha	8	29	442	865	flag:441 AND listed:10646
+67	65	10743	Show Me Your Shaka-Strength	汝ノチカラヲ、見セテミヨ	53	34	Cha-Cha	8	47	444	865	hub_star:7 AND flag:443
+68	66	230	Bye Bye Jaggia	渓流のジャギィノス退治	301	79	Yukumo Chief	4	0	446	250	village_star:2 AND notflag:250
+69	67	229	Arzuros the Azure Beast	青熊獣アオアシラ	301	79	Yukumo Chief	4	16	448	252	village_star:2 AND notflag:252 AND flag:251
+70	68	328	Royal Spit Take	ロアルドロスを狩猟せよ！	301	79	Yukumo Chief	4	28	450	254	village_star:3 AND notflag:254 AND flag:253
+71	69	329	A Forest Fracas	ざわめく森	301	79	Yukumo Chief	4	37	452	256	village_star:3 AND notflag:256 AND flag:255
+72	70	510	The Entrancing Water Dancer	淡紅の泡狐がたゆたうか	301	79	Yukumo Chief	4	47	454	258	village_star:5 AND notflag:258 AND flag:257
+73	71	641	Advanced: Out of the Fry Pan	高難度：終焉を喰らう者	301	79	Yukumo Chief	8	62	456	260	village_star:6 AND notflag:260 AND questset:48 AND points:Yukumo:1500
+74	72	507	Hunt-a-thon: Khezu	ビリビリするらしいです×？？	302	80	Yukumo Gal	8	67	458		village_star:5
+75	73	10711	The Yukumo Gal Special	受付嬢オススメ！　雷狼竜×２	325	92	Yukumo Sweetheart	8	6	460		hub_star:7 AND flag:459
+76	74				307	85	Palico Armory	8	4	462		village_star:3
+77	75	10213	Finishing the Job	無謀な弟子の、後始末	307	85	Palico Armory	8	15	464		hub_star:2 AND flag:463
+78	76	10712	Repaying the Favor	無理した弟子の、後始末	307	85	Palico Armory	8	21	466		hub_star:7 AND flag:465
+79	77	10735	The Wolf and the Footbath	ユクモノ足湯と雷狼竜	323	90	Bath Cattendant	8	19	468		hr:8 AND footbath AND listed:10646
+80	78	10737	Steam and Smoke	湯けむりと噴煙と	323	90	Bath Cattendant	8	37	470		flag:469 AND requests_done:99-105:4 AND footbath AND npc_idle:323
+81	79	10742	Searching for Secret Baths	まだ見ぬ秘湯をもとめて	323	90	Bath Cattendant	8	54	472		flag:471 AND requests_done:99-105:7 AND footbath AND npc_idle:323
+82	80	331	Royal Honey Hunt	ロイヤルハニーハント	327	94	Head Moga Farmer	8	6	474		village_star:3 AND npc_idle:327
+83	81	416	Royal Pains	スプラッシュ・ストリーム	327	94	Head Moga Farmer	8	20	476		village_star:4 AND flag:475 AND npc_idle:327
+84	82	509	Lagiacrus Fuss	エレクトリカル・バトル	327	94	Head Moga Farmer	8	32	478		flag:477 AND cleared:511
+85	83				328	95	Moga Chief's Son	8	0	480		village_star:2
+86	84	418	Island Menace	孤島の鳥	328	95	Moga Chief's Son	8	16	482		village_star:4 AND flag:481
+87	85	10313	Lagiacrushed	孤島に渦巻く恐怖	328	95	Moga Chief's Son	8	29	484		hub_star:3 AND flag:483
+88	86	10315	Isle About that Bass	孤島を揺るがす剛音	328	95	Moga Chief's Son	8	41	486		hub_star:3 AND flag:485
+89	87				329	96	Fishmongress	8	0	488		village_star:2
+90	88	335	The Fungus Among Us	ほいっ！　キノコ納品ですよ！	330	97	Moga Sweetheart	8	0	490		
+91	89	10532	Awful Guest	孤島の迷惑客	330	97	Moga Sweetheart	8	21	492		hub_star:5 AND flag:491
+92	90	10519	Liver and Let Die	キモ・キモ・キモ！！！	332	99	Tanzia Sweetheart	8	9	494		hub_star:5
+93	91	622	Advanced: Fungus Fetchin'	高難度：食は渓流にあり！	332	99	Tanzia Sweetheart	8	35	496		village_star:6 AND flag:495
+94	92				334	101	Captain Tool	8	0	498		village_star:2
+95	93	609	The Bellowing Zinogre	雷狼竜はかく吠えり	335	102	Uppity Instructor	8	8	500		village_star:6 AND cleared:603
+96	94	233	Sunsnug Sprout Courier	ぽかぽかタケノコ納品	337	104	Headwhiskress	8	0	502		village_star:2
+97	95	338	Sunsnug Isle Rescue!	ぽかぽかレスキュー隊出動！	337	104	Headwhiskress	8	15	504		flag:503 AND cleared:303
+98	96	333	The Crabbiest Catch	盾蟹と貝と狩り	420	105	Moga Chief	8	10	506		cleared:311 AND footbath
+99	97				40	21	Jumbo Chief	8	0	508		
+100	98	633	Advanced: Snowtal Recall	高難度：吹雪の召喚者	40	21	Jumbo Chief	8	14	510		village_star:6 AND hr:9 AND flag:509
+101	99	10214	Fresh is Best	食材の価値は鮮度なり	422	107	Village Grocer	8	2	512		footbath
+102	100				423	108	The Combinator	8	12	514		footbath
+103	101	10653	Nibeling on Apples	幻のハップル？	424	109	Master Tool	8	7	516		footbath AND listed:10646
+104	102	10656	The Plesioth Adventure	ガノトトス冒険記	425	110	Master Shipwright	8	12	518		footbath AND listed:10646
+105	103	417	Peddling Practice	ぎょーしょーしゅぎょー	426	111	Spittle-ful Girl	8	2	520		footbath
+106	104	512	Island Heat	赤いおひさまアッチッチ	427	112	Tubular Tabby	8	8	522		footbath AND cleared:516
+107	105	327	For Whom the Egg Yolks	おいしい卵は誰のため？	428	113	Loc Lac Guide	8	12	524		village_star:3 AND footbath
+108	106	628	Advanced: Seltas Queen	高難度：重甲虫と腕試し！	128	53	Val Habar Master	8	0	526		
+109	107	630	Advanced: Barrage of Blue	高難度：青の連撃！	227	74	Pokke Manager	8	6	530		hub_star:6 AND flag:527 AND flag:701
+110	108	631	Advanced: Seeing Red	高難度：赤の猛攻！	227	74	Pokke Manager	8	19	532		hub_star:6 AND flag:531
+111	109	627	Advanced: Twinkle Toes	高難度：渾身のドボルベルク	331	98	Tanzia Port Boss	8	7	534		flag:533 AND footbath
+112	110	10744	The Marshlands Nightmare	沼地酔夢譚	324	91	Yukumo Manager	8	6	528		hub_star:7 AND flag:535 AND listed:10646
+113	111	10741	The Descending Fog	森丘の黒い霧	421	106	Minegarde Hermit	8	11	536		flag:529 AND hr:8 AND footbath
+114	112	10755	Triumphant Rage	憤怒の雄叫び	333	100	Loc Lac Chief	8	5	538		flag:537
+115	113	10740	The End of the Trials	試練の帰結点	128	53	Val Habar Master	8	13	540		flag:539
+116	114	10540	Desert Brawlers	熱砂の喧嘩は武器の素	326	93	Wyverian Artisan	8	5	544		hub_star:5 AND flag:543
+117	115	10631	Coal Hearted	たんと掘れ燃石炭	305	83	Yukumo Smithy	8	3	546		hub_star:6 AND flag:545
+118	116	10709	The Hapless Bodyguard	容赦なき、金獅子相手に用心棒	5	4	Manvil Smithy	8	67	548		hub_star:7 AND flag:547 AND listed:10646
+119	118	10736	The Thieving Gypceros	凶賊ゲリョス狩り	5	4	Manvil Smithy	8	114	552		flag:877 AND npc_idle:4
+120	119	107	Another Pack Attack	ネコ嬢のジャギィ討伐依頼	613	125	Meowstress	4	3	554	6	flag:5 AND notflag:6
+121	120				701	154	Wyventurer	8	407	1270		village_star:10 AND cleared:1002
+122	121	924	Flappy Pest	空路を阻む電竜退治！	702	155	Soaratorium Gal	8	237	1272		village_star:9 AND cleared:910 AND cleared:908 AND cleared:909 AND cleared:907 AND cleared:916
+123	122	11469	The Ol' Razzle Dazzle	感動の生まれる瞬間	714	165	Tanzia Arena Gal	8	37	1274		hub_star:12 AND flag:1415
+124	123	833	The Furtilizer That Time Furgot	珍肥料を手に入れるのニャ！	722	173	Moga Farm Felyne	8	33	1276		village_star:8
+125	124	11110	Pleasantly Sozzled	罪深きタルの食材探訪	720	171	Furtive Felyne	8	43	1278		hub_star:9 AND cleared:11109
+126	125	936	Sky Tribe: Rice to the Occasion	空の家族・メシを作るッス	718	169	Redspear Hunter	8	48	1280		village_star:9
+127	126	11210	Sky Tribe: Savior of the Skyway	空の家族・空路を守るッス	719	170	Blackspear Hunter	8	89	1282		hub_star:10 AND flag:1281
+128	127	913	Earn Your Gear	……求めるならば力を示して	721	172	Tanzia Gong Girl	8	36	1284		village_star:9 AND cleared:905
+129	128	11213	Earn Your Strength	……欲するならば資格を示して	721	172	Tanzia Gong Girl	8	49	1286		hub_star:10 AND flag:1285
+130	129	813	The Perils of Commerce	宣伝ネコの受難	613	125	Meowstress	8	162	1288		village_star:8
+131	130	11124	After That Bird!	毒怪鳥が盗んだものを追って	613	125	Meowstress	8	178	1290		hub_star:9 AND flag:1289 AND cleared:11109
+132	131	11329	Sweets for My Sweets	妹奮闘記～夜鳥退治～	805	182	Mewstress	8	126	1292		hub_star:11 AND flag:1289 AND group_done:11 AND cleared:11206|cleared:11235
+133	132	1051	Advanced: Jurassic Pair	高難度：古代林に現る２頭の影	1	0	Bherna Chief	8	315	1294		village_star:10 AND hr_unlocked AND cleared:1039
+134	133	11239	Commission: Basarios	依頼委託：火山の岩竜	43	24	Ace Lancer	8	46	1296		hub_star:10
+135	134	11244	Commission: Hyper Kecha Wacha	調査委託：獰猛な奇猿狐	43	24	Ace Lancer	8	63	1298		hub_star:10 AND flag:1297 AND group_done:10 AND cleared:11127|cleared:11107
+136	135	11207	Through Thick and Fin	閃きへの１ピースを求めて	125	50	Resting Hunter	8	72	1300		hub_star:10 AND cond140:0:0
+137	135	11207	Through Thick and Fin	閃きへの１ピースを求めて	125	50	Resting Hunter	8	91	1300		hub_star:10
+138	136				805	182	Mewstress	8	122	1302		village_star:7 AND hub_star:9 AND flag:1071 AND flag:1206
+139	137	11303	Uragaan Grief	トラウマガンキンを退治せよ	621	127	d'Artanyan	8	73	1304		hub_star:11 AND cleared:11313 AND flag:240
+140	138	11352	PR Disaster	ベルナ村の観光業が大炎上！	2	1	Bherna Gal	8	380	1306		hub_star:11 AND flag:311
+141	139	11349	Hunt-a-Thon: Gravios	グラビモス連続狩猟	41	22	Caravaneer	8	75	1308		hub_star:11 AND flag:321 AND cleared:11313
+142	140	11242	So Notable: Hyper Hermitaur	超☆メモ帳　～獰猛化盾蟹編～	46	27	Guildmarm	8	76	1310		hub_star:10 AND flag:327 AND group_done:10 AND cleared:11113
+143	141	11216	Face-off in the Jungle	密林のナルガクルガと対峙せよ	42	23	Ace Commander	8	73	1312		hub_star:10 AND flag:331
+144	142	11482	Primal Screams	原生林にて呻くは渾沌の竜	42	23	Ace Commander	8	91	1314		hub_star:12 AND flag:1313 AND hr:35
+145	143	11211	Share the Load (and the Reward)	二人で特訓、成果は山分け	45	26	Ace Cadet	8	50	1316		hub_star:10 AND flag:333
+146	144	1040	Advanced: Ranging Rathalos	高難度：森丘にて火竜は旋廻す	101	36	Kokoto Chief	8	178	1318		village_star:10 AND flag:159 AND hr:12 AND cleared:1039
+147	145	933	Interruption: Eggstra Delivery	割り込み受注：卵納品	127	52	Minegarde Sweetheart	8	53	1320		village_star:9 AND flag:351 AND cleared:905
+148	146				102	37	Kokoto Gal	8	277	1322		hub_star:10 AND flag:1321 AND cleared:11205
+149	147	11238	Interruption: Conga Line	割り込み受注：２頭の桃毛獣	127	52	Minegarde Sweetheart	8	63	1324		hub_star:10 AND flag:1323
+150	148	11206	Treasure Pinnacle: Rice	遺群嶺のトレジャー！　米の巻	126	51	Treshi	8	74	1326		hub_star:10 AND flag:365 AND cleared:11209 AND cleared:11209
+151	149	914	Fearful Symmetry	轟竜の狩猟をさせてやるぜ！	129	54	Red Hell Hunter	8	128	1328	1397	village_star:9
+152	149	914	Fearful Symmetry	轟竜の狩猟をさせてやるぜ！	130	55	Black Hell Hunter	8	128	1328	1397	village_star:9
+153	150	11214	Feeling Generally Crabby	鎌蟹の狩猟をさせてやるぜ！	129	54	Red Hell Hunter	8	143	1330	1398	hub_star:10 AND flag:1329
+154	150	11214	Feeling Generally Crabby	鎌蟹の狩猟をさせてやるぜ！	130	55	Black Hell Hunter	8	143	1330	1398	hub_star:10 AND flag:1329
+155	151	11129	The Bird Who Wood Be King	森丘の迷惑な怪鳥さん	131	56	Dundorma Guardsman	8	58	1332		hub_star:9 AND flag:377
+156	152	11445	Seregios Exposé	所により獰猛なセルレギオス	716	167	Elder Hall Minister	8	36	1334		hub_star:12 AND flag:1333 AND hr_unlocked AND cleared:11403|cleared:11463
+157	153	935	Snowball Skirmish	雪山、雪玉、雪合戦！！	47	28	Street Cook	8	49	1336		village_star:9 AND flag:381
+158	154	11233	Please Plesioth Me!	チコ村を脅かす水竜を狩れ！	47	28	Street Cook	8	65	1342		hub_star:10 AND flag:1337
+159	155	818	It's Not Uragaan's, It's Mine!	熱地に現る、ウラガンキン！	50	31	Lil Miss Forge	8	57	1338		village_star:8 AND flag:385 AND cleared:809 AND cleared:814 AND cleared:811
+160	156	1031	Deviljho Dispossession	遺群嶺を塞ぐ恐暴竜	51	32	Wycoon	8	67	1340		village_star:10 AND cleared:1001
+161	157	1041	Advanced: Roaring in the Ridge	高難度：雪山に佇む轟竜	201	58	Pokke Chief	8	156	1344		village_star:10 AND hr_unlocked AND cleared:1039
+162	158	1052	Advanced: Quarrel Quelling	高難度：喧嘩の仲裁は村を救う	202	59	Pokke Gal	8	281	1346		village_star:10 AND hr_unlocked AND flag:417 AND cleared:1039
+163	159	11424	Polar Peril	極天より来たる、崩せし神	226	73	Felcote	8	77	1348		hub_star:12 AND flag:429 AND hr:60
+164	160	11249	Afro Soul Is a Way of Life	ぶつけろ生き様☆アフロソウル	230	77	Funky Felyne	8	44	1350		hub_star:10 AND flag:433 AND cleared:11205
+165	161	11113	Daimyo Hermitaur Flambé	アツアツ砂漠の盾蟹狩猟	48	29	Itinerant Cook	8	54	1352		hub_star:9 AND flag:435
+166	162	11366	Material Old Girl	強い防具は素材から！	231	78	Armory Granny	8	103	1354		hub_star:3 AND flag:439 AND group_done:11 AND cleared:11328 AND cleared:11338
+167	163	11471	Fiery Four-way Fracas	鎧・砕・斬の包囲網を越えて	717	168	Legendary Artisan	8	37	1356		hub_star:12 AND flag:1355 AND flag:1415
+168	164	11241	Minion's Devotion	子分の自覚が足りないっチャ！	53	34	Cha-Cha	8	122	1358		hub_star:10 AND flag:445 AND cleared:11209
+169	165	11365	Arena Bakalaka-Battle! Woo!	闘技場での最終テストっチャ！	53	34	Cha-Cha	8	139	1360		hub_star:11 AND flag:1359 AND cleared:11310
+170	166	1042	Advanced: Moonlight Zinogre	高難度：月夜を仰ぐ雷狼竜	301	79	Yukumo Chief	8	153	1362		village_star:10 AND hr:12 AND cleared:1039
+171	167	11116	Sweetheart's Pick: Lofty Ludroth	看板娘セレクト：遺群嶺の水獣	325	92	Yukumo Sweetheart	8	63	1364		hub_star:9 AND flag:461 AND cleared:11109
+172	168	11215	A Coil to Arms	グルグルするらしいです	302	80	Yukumo Gal	8	287	1366		hub_star:10 AND flag:1365 AND cleared:11209
+173	169	11355	Howl at the Moon	月下雷鳴の記憶	307	85	Palico Armory	8	77	1368		hub_star:11 AND flag:715 AND cleared:11310
+174	170	11208	Chilled to the Marrow	身体の芯までビッリビリ	323	90	Bath Cattendant	8	118	1370		hub_star:10 AND flag:473 AND footbath AND cleared:11205
+175	171	925	Pheromone Moans	ジャングル・フェロモン	327	94	Head Moga Farmer	8	89	1372		village_star:9 AND flag:479 AND cleared:905
+176	172	11478	Zinogre-enthusiasm	孤島で遭遇！　獰猛な雷狼竜	328	95	Moga Chief's Son	8	106	1374		hub_star:12 AND flag:487 AND hr_unlocked AND cleared:11308|cleared:11355
+177	173	11104	Riverside Rumble	川辺のアオアシラ退治	329	96	Fishmongress	8	39	1376		hub_star:9 AND flag:489 AND cleared:11130
+178	174	11353	I Hope It's Not Barioth Flavored	氷牙竜が大発明のカギ？	330	97	Moga Sweetheart	8	75	1378		hub_star:11 AND flag:493 AND cleared:11310
+179	175				332	99	Tanzia Sweetheart	8	81	1380		hub_star:11 AND flag:497
+180	176	11449	Even Brachydios Need A Holiday	獰猛な砕竜は、孤島で何を思う	420	105	Moga Chief	8	62	1382		hub_star:12 AND flag:507 AND footbath AND hr_unlocked AND cleared:11407|cleared:11466
+181	177	736	Season's Eatings	旬な食材を採らせておくれ！	422	107	Village Grocer	8	42	1384		village_star:7 AND footbath AND flag:513 AND cleared:716
+182	178	11224	The Legend of King Apple	至宝の林檎王？	424	109	Master Tool	8	47	1386		hub_star:10 AND flag:517 AND footbath
+183	179	11470	Quest of Friendship	絆の証！　孤島の大決戦	128	53	Val Habar Master	8	51	1388		hub_star:12 AND flag:541 AND flag:1415
+184	180	11480	Arena Allegiances	絆の証！　闘技場の大決戦	333	100	Loc Lac Chief	8	50	1390		hub_star:12 AND flag:1389 AND hr_unlocked AND flag:940
+185	181	11479	Arctic Ridge Allegiances	絆の証？　雪山の獰猛大決戦	227	74	Pokke Manager	8	68	1392		hub_star:12 AND flag:1391 AND hr_unlocked AND flag:940
+186	182	11436	Seeking the Sea King	獰猛な海の王者は武器の素	326	93	Wyverian Artisan	8	50	1394		hub_star:12 AND flag:545 AND hr_unlocked AND cleared:11344|cleared:11307

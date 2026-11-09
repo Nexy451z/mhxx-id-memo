@@ -1,0 +1,138 @@
+﻿monster_id,name_ja,name_en,category,class,has_size_record,base_size_cm,mini_le,silver_ge,gold_ge,fixed_size,crown_awards,card_pos,notes_bit,family_of,confidence,notes_en
+1,リオレイア,Rathian,large,Flying Wyvern,yes,1654.3,90,115,123,no,yes,29,79,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+2,リオレイア希少種,Gold Rathian,large,Flying Wyvern,yes,1654.3,97,117,123,no,yes,30,81,,DERIVED,
+3,紫毒姫リオレイア,Dreadqueen Rathian,large,Flying Wyvern,yes,2055.68,96,105,109,no,yes,31,80,,DERIVED_COUNT_VALIDATED,
+4,リオレウス,Rathalos,large,Flying Wyvern,yes,1711.3,90,115,123,no,yes,47,82,,DERIVED,
+5,リオレウス希少種,Silver Rathalos,large,Flying Wyvern,yes,1711.3,97,117,123,no,yes,48,84,,DERIVED,
+6,黒炎王リオレウス,Dreadking Rathalos,large,Flying Wyvern,yes,2057.78,96,105,109,no,yes,49,83,,DERIVED,
+7,フルフル,Khezu,large,Flying Wyvern,yes,871.9,90,109,114,no,yes,27,85,,DERIVED,
+8,イャンクック,Yian Kut-Ku,large,Bird Wyvern,yes,898.6,90,115,123,no,yes,9,35,,DERIVED_COUNT_VALIDATED,
+9,ゲリョス,Gypceros,large,Bird Wyvern,yes,990.9,90,115,123,no,yes,14,36,,DERIVED_COUNT_VALIDATED,
+10,ガノトトス,Plesioth,large,,yes,2624.83,90,115,123,no,yes,33,11,,DERIVED,
+11,キリン,Kirin,large,Elder Dragon,yes,549.8,90,117,123,no,yes,70,95,,DERIVED,
+12,ドスランポス,Velocidrome,large,Bird Wyvern,yes,868.2,90,115,123,no,yes,1,28,,DERIVED_COUNT_VALIDATED,
+13,ドスゲネポス,Gendrome,large,Bird Wyvern,yes,864.5,90,115,123,no,yes,7,30,,DERIVED_COUNT_VALIDATED,
+14,ドスイーオス,Iodrome,large,Bird Wyvern,yes,911.7,90,115,123,no,yes,10,32,,DERIVED_COUNT_VALIDATED,
+15,ドスガレオス,Cephadrome,large,,yes,1677.6,90,115,123,no,yes,8,10,,DERIVED_COUNT_VALIDATED,
+16,イャンガルルガ,Yian Garuga,large,Bird Wyvern,yes,1395.6,90,115,123,no,yes,41,37,,DERIVED,
+17,隻眼イャンガルルガ,Deadeye Yian Garuga,large,Bird Wyvern,yes,1186.33,97,117,123,no,yes,42,38,,DERIVED,
+18,ダイミョウザザミ,Daimyo Hermitaur,large,,yes,495.0,90,115,123,no,yes,17,58,,DERIVED_COUNT_VALIDATED,
+19,矛砕ダイミョウザザミ,Stonefist Hermitaur,large,,yes,1494.73,97,114,119,no,yes,18,59,,DERIVED,
+20,ショウグンギザミ,Shogun Ceanataur,large,,yes,597.99,90,115,123,no,yes,36,60,,DERIVED,
+21,ドドブランゴ,Blangonga,large,Fanged Beast,yes,859.91,90,115,123,no,yes,34,48,,DERIVED,
+22,ラージャン,Rajang,large,Fanged Beast,yes,965.6,90,117,123,no,yes,74,50,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+23,激昂したラージャン,Furious Rajang,large,,yes,966.0,90,117,123,no,no,,,22,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree; editor IgnoreList: no crown sizes shown
+24,クシャルダオラ,Kushala Daora,large,Elder Dragon,yes,1801.3,90,117,123,no,yes,76,97,,DERIVED,
+25,オオナズチ,Chameleos,large,Elder Dragon,yes,1993.0,90,117,123,no,yes,77,98,,DERIVED,
+26,テオ・テスカトル,Teostra,large,Elder Dragon,yes,1739.8,90,117,123,no,yes,78,99,,DERIVED,
+27,ドスファンゴ,Bulldrome,large,Fanged Beast,yes,565.85,90,115,123,no,yes,2,41,,DERIVED_COUNT_VALIDATED,
+28,ティガレックス,Tigrex,large,Flying Wyvern,yes,1735.4,90,115,123,no,yes,66,86,,DERIVED,
+29,荒鉤爪ティガレックス,Grimclaw Tigrex,large,Flying Wyvern,yes,2121.1,96,105,109,no,yes,67,87,,DERIVED,
+30,アカムトルム,Akantor,large,Flying Wyvern,yes,3049.0,,,,yes,no,80,90,,DERIVED,editor IgnoreList: no crown sizes shown
+31,ヴォルガノス,Lavasioth,large,,yes,2077.67,90,115,123,no,yes,35,12,,DERIVED,
+32,ナルガクルガ,Nargacuga,large,Flying Wyvern,yes,1602.19,90,115,123,no,yes,39,77,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+33,白疾風ナルガクルガ,Silverwind Nargacuga,large,Flying Wyvern,yes,1702.33,97,117,123,no,yes,40,78,,DERIVED_COUNT_VALIDATED,
+34,ウカムルバス,Ukanlos,large,Flying Wyvern,yes,3186.6,,,,yes,no,81,91,,DERIVED,editor IgnoreList: no crown sizes shown
+35,イビルジョー,Deviljho,large,Brute Wyvern,yes,2046.8,90,120,128,no,yes,75,70,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+36,怒り喰らうイビルジョー,Savage Deviljho,large,,yes,2046.8,90,120,128,no,no,,,35,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree; editor IgnoreList: no crown sizes shown
+37,ウラガンキン,Uragaan,large,Brute Wyvern,yes,2085.42,90,115,123,no,yes,43,71,,DERIVED,
+38,宝纏ウラガンキン,Crystalbeard Uragaan,large,Brute Wyvern,yes,2654.74,96,105,109,no,yes,44,72,,DERIVED,
+39,ラギアクルス,Lagiacrus,large,Leviathan,yes,2648.58,90,115,123,no,yes,50,66,,DERIVED,
+40,ロアルドロス,Royal Ludroth,large,Leviathan,yes,1545.33,90,115,123,no,yes,21,62,,DERIVED_COUNT_VALIDATED,
+41,アグナコトル,Agnaktor,large,Leviathan,yes,2737.31,90,115,123,no,yes,62,64,,DERIVED,
+42,アルバトリオン,Alatreon,large,Elder Dragon,yes,2872.48,,,,yes,no,85,100,,DERIVED,editor IgnoreList: no crown sizes shown
+43,ドボルベルク,Duramboros,large,Brute Wyvern,yes,2084.2,90,115,123,no,yes,65,73,,DERIVED,
+44,ハプルボッカ,Nibelsnarf,large,Leviathan,yes,2040.46,90,115,123,no,yes,32,65,,DERIVED,
+45,ジンオウガ,Zinogre,large,,yes,1455.4,90,115,123,no,yes,51,93,,DERIVED,
+46,金雷公ジンオウガ,Thunderlord Zinogre,large,,yes,1534.46,97,117,123,no,yes,52,94,,DERIVED,
+47,アマツマガツチ,Amatsu,large,Elder Dragon,yes,2611.48,,,,yes,no,82,101,,DERIVED,editor IgnoreList: no crown sizes shown
+48,アオアシラ,Arzuros,large,Fanged Beast,yes,562.63,90,115,123,no,yes,4,45,,CONFIRMED,verified by controlled hunt diff (tally and size record agree)
+49,紅兜アオアシラ,Redhelm Arzuros,large,Fanged Beast,yes,822.34,96,105,109,no,yes,5,46,,DERIVED,
+50,ウルクスス,Lagombi,large,Fanged Beast,yes,527.3,90,115,123,no,yes,12,43,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+51,大雪主ウルクスス,Snowbaron Lagombi,large,Fanged Beast,yes,639.49,97,117,123,no,yes,13,44,,DERIVED_COUNT_VALIDATED,
+52,ラングロトラ,Volvidon,large,Fanged Beast,yes,696.68,90,115,123,no,yes,19,49,,DERIVED_COUNT_VALIDATED,
+53,ブラキディオス,Brachydios,large,Brute Wyvern,yes,1521.8,90,115,123,no,yes,71,74,,DERIVED,
+54,ケチャワチャ,Kecha Wacha,large,Fanged Beast,yes,886.1,90,109,114,no,yes,11,42,,DERIVED_COUNT_VALIDATED,
+55,テツカブラ,Tetsucabra,large,,yes,1265.8,90,115,123,no,yes,15,52,,DERIVED_COUNT_VALIDATED,
+56,岩穿テツカブラ,Drilltusk Tetsucabra,large,,yes,1512.91,96,105,109,no,yes,16,53,,DERIVED,
+57,ザボアザギル,Zamtrios,large,,yes,1519.6,90,115,123,no,yes,26,55,,DERIVED,
+58,ガララアジャラ,Najarala,large,,yes,4055.0,90,115,123,no,yes,38,68,,DERIVED,
+59,ゲネル・セルタス,Seltas Queen,large,,yes,1444.8,90,115,123,no,yes,46,8,,DERIVED,
+60,ゴア・マガラ,Gore Magala,large,,yes,1760.9,90,115,123,no,yes,63,92,,DERIVED,
+61,シャガルマガラ,Shagaru Magala,large,Elder Dragon,yes,1778.1,90,117,123,no,yes,72,96,,DERIVED,
+62,アルセルタス,Seltas,large,,yes,615.9,90,115,123,no,yes,3,7,,DERIVED_COUNT_VALIDATED,
+63,セルレギオス,Seregios,large,Flying Wyvern,yes,1728.1,90,109,114,no,yes,64,88,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+64,ホロロホルル,Malfestio,large,Bird Wyvern,yes,611.66,90,115,123,no,yes,24,39,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+65,ディノバルド,Glavenus,large,Brute Wyvern,yes,2539.49,90,115,123,no,yes,60,75,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+66,燼滅刃ディノバルド,Hellblade Glavenus,large,Brute Wyvern,yes,2840.85,97,114,119,no,yes,61,76,,DERIVED_COUNT_VALIDATED,
+67,ライゼクス,Astalos,large,Flying Wyvern,yes,1755.26,90,115,123,no,yes,56,89,,DERIVED,
+68,タマミツネ,Mizutsune,large,Leviathan,yes,1885.12,90,115,123,no,yes,54,67,,DERIVED_COUNT_VALIDATED,
+69,ガムート,Gammoth,large,Fanged Beast,yes,2276.07,90,109,114,no,yes,58,51,,DERIVED,
+70,オストガロア,Nakarkos,large,Elder Dragon,yes,5812.86,,,,yes,no,83,102,,DERIVED,editor IgnoreList: no crown sizes shown
+71,ドスマッカォ,Great Maccao,large,Bird Wyvern,yes,797.31,90,115,123,no,yes,0,34,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+72,アプトノス,Aptonoth,small,,no,,,,,no,no,,13,,DERIVED,
+73,アプケロス,Apceros,small,,no,,,,,no,no,,14,,DERIVED,
+74,ケルビ,Kelbi,small,,no,,,,,no,no,,15,,DERIVED,
+75,モス,Mosswine,small,,no,,,,,no,no,,16,,DERIVED,
+76,カンタロス,Hornetaur,small,,no,,,,,no,no,,2,,DERIVED,
+77,ランゴスタ,Vespoid,small,,no,,,,,no,no,,3,,DERIVED,
+78,アイルー,Felyne,small,,no,,,,,no,no,,0,,DERIVED,
+79,メラルー,Melynx,small,,no,,,,,no,no,,1,,DERIVED,
+80,ランポス,Velociprey,small,Bird Wyvern,no,,,,,no,no,,27,,DERIVED,
+81,ゲネポス,Genprey,small,Bird Wyvern,no,,,,,no,no,,29,,DERIVED,
+82,イーオス,Ioprey,small,Bird Wyvern,no,,,,,no,no,,31,,DERIVED,
+83,ガレオス,Cephalos,small,,no,,,,,no,no,,9,,DERIVED,
+84,ブルファンゴ,Bullfango,small,Fanged Beast,no,,,,,no,no,,40,,DERIVED,
+85,ポポ,Popo,small,,no,,,,,no,no,,17,,DERIVED,
+86,ギアノス,Giaprey,small,Bird Wyvern,no,,,,,no,no,,26,,DERIVED,
+87,ガウシカ,Anteka,small,,no,,,,,no,no,,18,,DERIVED,
+88,ガブラス,Remobra,small,,no,,,,,no,no,,69,,DERIVED,
+89,ヤオザミ,Hermitaur,small,,no,,,,,no,no,,56,,DERIVED,
+90,ガミザミ,Ceanataur,small,,no,,,,,no,no,,57,,DERIVED,
+91,ブランゴ,Blango,small,Fanged Beast,no,,,,,no,no,,47,,DERIVED,
+92,リノプロス,Rhenoplos,small,,no,,,,,no,no,,19,,DERIVED,
+93,ブナハブラ,Bnahabra,small,,no,,,,,no,no,,4,,DERIVED,
+94,オルタロス,Altaroth,small,,no,,,,,no,no,,5,,DERIVED,
+95,ジャギィ,Jaggi,small,Bird Wyvern,no,,,,,no,no,,24,,DERIVED,
+96,ジャギィノス,Jaggia,small,Bird Wyvern,no,,,,,no,no,,25,,DERIVED,
+97,ルドロス,Ludroth,small,Leviathan,no,,,,,no,no,,61,,DERIVED,
+98,ウロコトル,Uroktor,small,Leviathan,no,,,,,no,no,,63,,DERIVED,
+99,ズワロポス,Slagtoth,small,,no,,,,,no,no,,20,,DERIVED,
+100,ガーグァ,Gargwa,small,Bird Wyvern,no,,,,,no,no,,23,,DERIVED,
+101,スクアギル,Zamite,small,,no,,,,,no,no,,54,,DERIVED,
+102,クンチュウ,Konchu,small,,no,,,,,no,no,,6,,DERIVED,
+103,マッカォ,Maccao,small,Bird Wyvern,no,,,,,no,no,,33,,DERIVED,
+104,リモセトス,Larinoth,small,,no,,,,,no,no,,21,,DERIVED,
+105,ムーファ,Moofah,small,,no,,,,,no,no,,22,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+106,,,unused,,no,,,,,no,no,,,,DERIVED,dummy slot: the game's monsterName entry i-1 is dummy1-dummy7; editor labels Unknown
+107,,,unused,,no,,,,,no,no,,,,DERIVED,dummy slot: the game's monsterName entry i-1 is dummy1-dummy7; editor labels Unknown
+108,,,unused,,no,,,,,no,no,,,,DERIVED,dummy slot: the game's monsterName entry i-1 is dummy1-dummy7; editor labels Unknown
+109,,,unused,,no,,,,,no,no,,,,DERIVED,dummy slot: the game's monsterName entry i-1 is dummy1-dummy7; editor labels Unknown
+110,,,unused,,no,,,,,no,no,,,,DERIVED,dummy slot: the game's monsterName entry i-1 is dummy1-dummy7; editor labels Unknown
+111,,,unused,,no,,,,,no,no,,,,DERIVED,dummy slot: the game's monsterName entry i-1 is dummy1-dummy7; editor labels Unknown
+112,,,unused,,no,,,,,no,no,,,,DERIVED,dummy slot: the game's monsterName entry i-1 is dummy1-dummy7; editor labels Unknown
+113,バサルモス,Basarios,large,Flying Wyvern,yes,1426.5,90,115,123,no,yes,23,116,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+114,グラビモス,Gravios,large,Flying Wyvern,yes,2098.7,90,115,123,no,yes,53,117,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+115,ディアブロス,Diablos,large,Flying Wyvern,yes,1993.0,90,115,123,no,yes,68,112,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+116,鏖魔ディアブロス,Bloodbath Diablos,large,Flying Wyvern,yes,2409.35,96,110,114,no,yes,69,108,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+117,ラオシャンロン,Lao-Shan Lung,large,Elder Dragon,yes,6959.79,,,,yes,no,79,119,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree; editor IgnoreList: no crown sizes shown
+118,ミラボレアス,Fatalis,large,Elder Dragon,yes,4110.6,,,,yes,no,86,120,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+119,ミラボレアス【紅龍】,Crimson Fatalis,large,,yes,4110.6,,,,yes,no,,,118,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+120,ミラボレアス【祖龍】,White Fatalis,large,,yes,4119.2,,,,yes,no,,,118,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+121,鎧裂ショウグンギザミ,Rustrazor Ceanataur,large,,yes,688.44,96,110,114,no,yes,37,109,,CONFIRMED,verified by controlled hunt diff (tally and size record agree)
+122,ババコンガ,Congalala,large,Fanged Beast,yes,984.0,90,115,123,no,yes,20,115,,CONFIRMED,editor name + Monster List 3(0) = tally 3 capture 0; marker readout (Soulseer) was a transcription slip
+123,ドスギアノス,Giadrome,large,Bird Wyvern,yes,866.75,90,115,123,no,yes,6,118,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+124,ベリオロス,Barioth,large,Flying Wyvern,yes,1821.74,90,115,123,no,yes,45,111,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+125,ボルボロス,Barroth,large,Brute Wyvern,yes,1406.19,90,115,123,no,yes,22,114,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+126,猛り爆ぜるブラキディオス,Raging Brachydios,large,,yes,1521.8,90,115,123,no,no,,,53,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree; editor IgnoreList: no crown sizes shown
+127,ネルスキュラ,Nerscylla,large,,yes,998.9,90,112,118,no,yes,28,113,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+128,渾沌に呻くゴア・マガラ,Chaotic Gore Magala,large,,yes,1794.7,90,115,123,no,no,,,60,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree; editor IgnoreList: no crown sizes shown
+129,朧隠ホロロホルル,Nightcloak Malfestio,large,Bird Wyvern,yes,733.02,97,117,123,no,yes,25,110,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+130,青電主ライゼクス,Boltreaver Astalos,large,Flying Wyvern,yes,2219.42,96,105,109,no,yes,57,105,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+131,天眼タマミツネ,Soulseer Mizutsune,large,Leviathan,yes,2428.5,97,110,114,no,yes,55,106,,CONFIRMED,editor name + Monster List 3(1) = tally 2 capture 1
+132,銀嶺ガムート,Elderfrost Gammoth,large,Fanged Beast,yes,2276.07,97,110,114,no,yes,59,107,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+133,バルファルク,Valstrax,large,Elder Dragon,yes,2267.35,90,112,118,no,yes,73,103,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+134,,,unused,,yes,,,,,no,no,,,,DERIVED,"empty slot: empty name in the game's monsterName table, code 0x57 in the code table 0x1597ea4; editor labels Unknown[133]; editor IgnoreList: no crown sizes shown"
+135,アトラル・カ,Ahtal-Ka,large,,yes,1223.67,,,,yes,no,84,104,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree; editor IgnoreList: no crown sizes shown
+136,大雷光虫,Great Thunderbug,small,,no,,,,,no,no,,121,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree
+137,コンガ,Conga,small,Fanged Beast,no,,,,,no,no,,122,,DERIVED_EDITOR,name from the game's monsterName table (entry i-1) and MHXXSwitchSaveEditor MonsterHuntNames (editor index = i-1); they agree

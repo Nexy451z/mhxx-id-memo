@@ -1,0 +1,1509 @@
+﻿quest_index	quest_id	category	prowler	rank	name_en	name_ja	stage_id	group	alt	expansion	sets	quest_kind	time_limit	revive_count	reward	hrp	fee	sub_reward	sub_hrp	notes
+1	101	Village	no	1	Find the Ferns	古代林の特産ゼンマイ	1	1	0	no	0 13 48	3	50	3	300	30	0	600	10	
+2	102	Village	no	1	Due for Dragon Amber	悠久が眠る竜琥珀	1	0	0	no	0 13 48	3	50	3	300	30	0	300	10	
+3	103	Village	no	1	Medicinal Moths	滋養強壮不老の蛾	1	0	0	no	0 13 48	3	50	3	300	30	0	300	10	
+4	104	Village	no	1	Horns o' Plenty	森の中のケルビ	1	0	0	no	0 13 48	3	50	3	300	30	0	300	10	
+5	105	Village	no	1	A Fungal Hunt	古代の森でシメジ狩り	1	1	0	no	0 13 48	3	50	3	300	30	0	0	0	
+6	106	Village	no	1	Wipe Out!	マッカォの群れを討伐せよ！	1	1	0	no	0 13 48	1	50	3	300	30	0	0	0	
+7	107	Village	no	1	Another Pack Attack	ネコ嬢のジャギィ討伐依頼	101	1	0	no	0 13 41 48	1	50	3	300	30	0	0	0	
+8	201	Village	no	2	Harvest Tour: Jurassic Frontier	古代林の採集ツアー	1	0	0	no	1 14 48	3	50	3	12	0	0	0	0	
+9	202	Village	no	2	Harvest Tour: Dunes	旧砂漠の採集ツアー	5	0	0	no	1 14 48	3	50	3	12	0	0	0	0	
+10	203	Village	no	2	Harvest Tour: Verdant Hills	森丘の採集ツアー	2	0	0	no	1 14 42 48	3	50	3	12	0	0	0	0	
+11	204	Village	no	2	Harvest Tour: Arctic Ridge	雪山の採集ツアー	3	0	0	no	1 14 43 48	3	50	3	12	0	0	0	0	
+12	205	Village	no	2	Harvest Tour: Misty Peaks	渓流の採集ツアー	4	0	0	no	1 14 44 48	3	50	3	12	0	0	0	0	
+13	206	Village	no	2	Vaulting Outlaw	跳躍のアウトロー	1	25	0	no	1 14 48	0	50	3	900	70	100	600	10	
+14	207	Village	no	2	Rambunctious Rhenoplos	お騒がせのリノプロス	1	2	0	no	1 14 48	1	50	3	600	40	50	0	0	
+15	208	Village	no	2	On the Rebound	古代林の暴れん坊	101	0	0	no	1 14 41 48	1	50	3	1200	40	100	300	10	
+16	209	Village	no	2	A Berry Good Idea	リモセトス採果利用法	1	0	0	no	1 14 48	3	50	3	900	50	100	300	10	
+17	210	Village	no	2	A Fern is Forever	ゼンマイ肴に古代を感じて	101	0	0	no	1 14 48	3	50	3	1200	40	100	600	10	
+18	211	Village	no	2	Jurassic Frontier Accounting	古代林の精算アイテム納品	1	0	0	no	1 14 48	3	50	3	1500	100	200	900	70	
+19	212	Village	no	2	Gendrome Roadblock	ドスゲネポスを狩れ！	5	2	0	no	1 14 48	0	50	3	1200	90	100	600	10	
+20	213	Village	no	2	The Land Sharq	大地を泳ぐモンスター	5	2	0	no	1 14 48	0	50	3	1500	100	200	300	10	
+21	214	Village	no	2	Slay the Genprey!	ゲネポス討伐作戦！	5	0	0	no	1 14 48	1	50	3	900	40	100	300	10	
+22	215	Village	no	2	Hermit Grab	迫るヤオザミ包囲網	5	2	0	no	1 14 48	1	50	3	600	40	50	600	10	
+23	216	Village	no	2	Birthday Berries	砂漠の恵みの納品依頼	5	0	0	no	1 14 48	3	50	3	600	40	50	600	10	
+24	217	Village	no	2	Liver of Legend!	幻のキモを追え！	5	0	0	no	1 14 48	3	50	3	1500	50	200	900	10	
+25	218	Village	no	2	Dunes Accounting	旧砂漠の精算アイテム納品	5	0	0	no	1 14 48	3	50	3	1500	100	200	1200	90	
+26	219	Village	no	2	Hunt Down the Velocidrome!	ドスランポスを狩猟せよ！	2	0	0	no	1 14 42 48	0	50	3	900	70	100	600	10	
+27	220	Village	no	2	Slay the Velociprey!	ランポスたちを討伐せよ！	2	0	0	no	1 14 42 48	1	50	3	900	40	100	0	0	
+28	221	Village	no	2	Bullfango Tango	森のファンゴたち	102	0	0	no	1 14 42 48	1	50	3	1200	40	100	300	10	
+29	222	Village	no	2	Prime Premium Sashimi	森丘のトロサシミウオ	2	0	0	no	1 14 42 48	3	50	3	900	50	100	600	10	
+30	223	Village	no	2	Verdant Hills Accounting	森丘の精算アイテム納品	2	0	0	no	1 14 42 48	3	50	3	1500	100	200	900	70	
+31	224	Village	no	2	The Mountain Roughrider	雪山の荒くれ者	3	0	0	no	1 14 43 48	0	50	3	1200	80	100	300	10	
+32	225	Village	no	2	Slay the Giaprey!	ギアノスたちを討伐せよ！	3	0	0	no	1 14 43 48	1	50	3	900	40	100	0	0	
+33	226	Village	no	2	A Pack of Blangos	ブランゴたちの群れ	103	0	0	no	1 14 43 48	1	50	3	1500	40	200	300	10	
+34	227	Village	no	2	Medicinal Mountain Herbs	雪山草摘み	3	0	0	no	1 14 43 48	3	50	3	600	40	50	300	10	
+35	228	Village	no	2	Arctic Ridge Accounting	雪山の精算アイテム納品	3	0	0	no	1 14 43 48	3	50	3	1500	100	200	1200	80	
+36	229	Village	no	2	Arzuros the Azure Beast	青熊獣アオアシラ	4	0	0	no	1 14 44 48	0	50	3	1200	90	100	300	10	
+37	230	Village	no	2	Bye Bye Jaggia	渓流のジャギィノス退治	4	0	0	no	1 14 44 48	1	50	3	900	40	100	0	0	
+38	231	Village	no	2	Howling Harassment	真夜中のジャギィ達	104	0	0	no	1 14 44 48	1	50	3	1200	40	100	300	10	
+39	232	Village	no	2	Fungal Fad	夢のキノコジュース	4	0	0	no	1 14 44 48	3	50	3	600	40	50	300	10	
+40	233	Village	no	2	Sunsnug Sprout Courier	ぽかぽかタケノコ納品	4	0	0	no	1 14 44 48	3	50	3	900	40	100	300	10	
+41	234	Village	no	2	Misty Peaks Accounting	渓流の精算アイテム納品	4	0	0	no	1 14 44 48	3	50	3	1500	100	200	1200	90	
+42	301	Village	no	3	Harvest Tour: Deserted Island	孤島の採集ツアー	6	0	0	no	2 15 48	3	50	3	12	0	0	0	0	
+43	302	Village	no	3	Harvest Tour: Marshlands	沼地の採集ツアー	7	0	0	no	2 15 48	3	50	3	12	0	0	0	0	
+44	303	Village	no	3	Tusked Tantrum	鬼面狩人を威す	101	26	0	no	2 15 48	0	50	3	2400	180	300	300	20	
+45	304	Village	no	3	Stomping Grounds	古代林の大怪鳥	1	3	0	no	2 15 48	0	50	3	1800	140	200	300	10	
+46	305	Village	no	3	Chasing Tail	器用な尻尾に魅せられて	101	0	0	no	2 15 48	0	50	3	1800	110	200	600	10	
+47	306	Village	no	3	Jurassic Treasure: The Frog	古代林のトレジャー！　蛙の巻	1	0	0	no	2 15 42 48	2	50	3	3600	250	400	0	0	
+48	307	Village	no	3	Bit by the Fashion Bug	飛甲虫の反逆	101	0	0	no	2 15 48	1	50	3	1200	80	200	0	0	
+49	308	Village	no	3	Tumultuous Sprouts	波乱の萌芽	101	47	1	no	2 15 41 48	3	50	3	1200	80	200	0	0	
+50	309	Village	no	3	Tumultuous Sprouts	波乱の萌芽	101	48	1	no		3	50	3	1200	80	200	0	0	
+51	310	Village	no	3	Fishy Favor	ステキなお魚、錦魚	101	0	0	no	2 15 41 48	3	50	3	1800	100	200	0	0	
+52	311	Village	no	3	Crustacean Frustration	砂に潜む巨大蟹！	5	3	0	no	2 15 48	0	50	3	2400	180	300	1200	20	
+53	312	Village	no	3	The Desert Gourmand	砂上のテーブルマナー	5	3	0	no	2 15 48	0	50	3	2700	220	300	300	20	
+54	313	Village	no	3	Konchu Collector	クンチュウの行動研究	5	0	0	no	2 15 48	1	50	3	1200	80	200	1500	100	
+55	314	Village	no	3	Cancer of the Dunes	旧砂漠の縄張り争いニャ！！	5	0	0	no	2 15 43 48	1	50	3	1500	100	200	0	0	
+56	315	Village	no	3	Deliver the Liver	流行傾向・薬効のキモ	5	0	0	no	2 15 48	3	50	3	1200	80	200	900	10	
+57	316	Village	no	3	Farming Frustrations	狡猾な襲撃者たち	102	0	0	no	2 15 48	1	50	3	1800	80	200	900	70	
+58	317	Village	no	3	Financial Focus on Fungus	キノコ探しで大もうけ！？	2	0	0	no	2 15 48	3	50	3	900	80	100	300	10	
+59	318	Village	no	3	Local Threat	大怪鳥イャンクックを倒せ！	2	0	0	no	2 15 42 48	0	50	3	1800	140	200	300	10	
+60	319	Village	no	3	Into the Wyvern's Den	潜入！　飛竜の巣！	102	49	2	no	2 15 42 48	3	50	3	2400	120	300	0	0	
+61	320	Village	no	3	Into the Wyvern's Den	潜入！　飛竜の巣！	102	50	2	no		3	50	3	2400	120	300	0	0	
+62	321	Village	no	3	Snow with Occasional Lagombi	雪のちウルクスス	3	0	0	no	2 15 48	0	50	3	1800	100	200	300	10	
+63	322	Village	no	3	Anteka Anticipation	ガウシカ料理に挑戦ですニャ！	103	0	0	no	2 15 48	1	50	3	900	80	100	600	10	
+64	323	Village	no	3	The Shadow in the Mountains	雪山に潜む影	3	0	0	no	2 15 43 48	0	50	3	2700	220	300	300	20	
+65	324	Village	no	3	No Go on the Popo	忍び寄る気配	103	51	3	no	2 15 43 48	3	50	3	900	80	100	0	0	
+66	325	Village	no	3	No Go on the Popo	忍び寄る気配	103	52	3	no		3	50	3	900	80	100	0	0	
+67	326	Village	no	3	Bully the Bullfango	ブルファンゴを狩れ！	104	0	0	no	2 15 48	1	50	3	2100	80	300	1200	80	
+68	327	Village	no	3	For Whom the Egg Yolks	おいしい卵は誰のため？	4	0	0	no	2 15 44 48	3	50	3	1800	120	200	300	10	
+69	328	Village	no	3	Royal Spit Take	ロアルドロスを狩猟せよ！	4	0	0	no	2 15 44 48	0	50	3	2400	180	300	600	20	
+70	329	Village	no	3	A Forest Fracas	ざわめく森	104	53	4	no	2 15 44 48	0	50	3	1200	80	200	0	0	
+71	330	Village	no	3	A Forest Fracas	ざわめく森	104	54	4	no		0	50	3	1200	80	200	0	0	
+72	331	Village	no	3	Royal Honey Hunt	ロイヤルハニーハント	104	0	0	no	2 15 44 48	3	50	3	900	80	100	1200	90	
+73	332	Village	no	3	Current Events	強襲する孤島の水流！	6	3	0	no	2 15 48	0	50	3	2400	180	300	1200	20	
+74	333	Village	no	3	The Crabbiest Catch	盾蟹と貝と狩り	6	0	0	no	2 15 44 48	2	50	3	3600	250	400	300	30	
+75	334	Village	no	3	Pack Woes	不安なジャギィとジャギィノス	6	0	0	no	2 15 48	1	50	3	1800	80	200	0	0	
+76	335	Village	no	3	The Fungus Among Us	ほいっ！　キノコ納品ですよ！	6	0	0	no	2 15 44 48	3	50	3	1200	100	200	600	10	
+77	336	Village	no	3	Moofah Must-haves	ムーファたちのふんわり毛玉	6	0	0	no	2 15 41 48	3	50	3	900	100	100	0	0	
+78	337	Village	no	3	Deserted Island Accounting	孤島の精算アイテム納品	6	0	0	no	2 15 48	3	50	3	2100	150	300	2400	180	
+79	338	Village	no	3	Sunsnug Isle Rescue!	ぽかぽかレスキュー隊出動！	7	0	0	no	2 15 44 48	0	50	3	1800	110	200	1200	10	
+80	339	Village	no	3	Robbed Blind	毒怪鳥ゲリョスを追え！	7	3	0	no	2 15 48	0	50	3	2100	170	300	300	20	
+81	340	Village	no	3	Pest Control	甲虫の悪夢	7	0	0	no	2 15 48	1	50	3	1200	80	200	0	0	
+82	341	Village	no	3	Travelers in Trouble	観光客の旅路を守れ！	7	0	0	no	2 15 41 48	1	50	3	1200	80	200	1800	110	
+83	342	Village	no	3	Royal Rhinos Gone Wild	野性味溢れるロイヤルカブト	7	0	0	no	2 15 48	3	50	3	1800	80	200	1200	10	
+84	343	Village	no	3	Marshlands Accounting	沼地の精算アイテム納品	7	0	0	no	2 15 48	3	50	3	2100	150	300	1800	140	
+85	401	Village	no	4	Harvest Tour: Volcano	火山の採集ツアー	8	0	0	no	3 16 48	3	50	3	12	0	0	0	0	
+86	402	Village	no	4	The Nocturnal Enchanter	幻惑の魔術師	101	27	0	no	3 16 48	0	50	3	3000	200	300	600	20	
+87	403	Village	no	4	Wyvern of the Wind	疾風の迅竜	1	0	0	no	3 16 48	0	50	3	3600	250	400	600	30	
+88	404	Village	no	4	Jurassic Treasure: The Bug	古代林のトレジャー！　虫の巻	1	0	0	no	3 16 42 48	0	50	3	2400	120	300	900	10	
+89	405	Village	no	4	Unlock the Secret to...	化石のロマンは永遠に	101	0	0	no	3 16 48	3	50	3	3600	180	400	600	20	
+90	406	Village	no	4	A Unique Cuppa	とびきりのゼンマイティー作り	101	0	0	no	3 16 41 48	3	30	3	1800	150	200	600	20	
+91	407	Village	no	4	Hunt-a-thon: Gendrome	厄介者のドスゲネポス	5	0	0	no	3 16 41 48	4	50	3	2400	160	300	0	0	
+92	408	Village	no	4	Mining: The Final Frontier	未知なる鉱石採掘依頼	5	0	0	no	3 16 48	3	50	3	2700	180	300	2400	120	
+93	409	Village	no	4	Wrath of the Rathian	激闘！　雌火竜リオレイア	2	4	0	no	3 16 48	0	50	3	3300	220	400	600	20	
+94	410	Village	no	4	Noise Violation	ガララアジャラの狩猟	2	0	0	no	3 16 48	0	50	3	3600	240	400	600	20	
+95	411	Village	no	4	Hunt-a-thon: Yian Kut-Ku	怪鳥達の運動会	102	0	0	no	3 16 48	4	50	3	3300	250	400	0	0	
+96	412	Village	no	4	Hunt-a-thon: Velocidrome	森丘の静寂を守るのニャ！！	2	0	0	no	3 16 43 48	4	50	3	1800	130	200	0	0	
+97	413	Village	no	4	The New Tenant	雪山の主、ドドブランゴ	3	0	0	no	3 16 48	0	50	3	3300	240	400	1200	20	
+98	414	Village	no	4	Lagombi Lair	月光アイスダンス	103	0	0	no	3 16 48	0	50	3	3300	160	400	600	20	
+99	415	Village	no	4	Hungry Eyes	紅煌流星	104	4	0	no	3 16 48	0	50	3	3600	250	400	600	30	
+100	416	Village	no	4	Royal Pains	スプラッシュ・ストリーム	4	0	0	no	3 16 44 48	0	50	3	4500	290	500	600	30	
+101	417	Village	no	4	Peddling Practice	ぎょーしょーしゅぎょー	104	0	0	no	3 16 44 48	3	50	3	2100	120	300	0	0	
+102	418	Village	no	4	Island Menace	孤島の鳥	6	0	0	no	3 16 44 48	2	50	3	4500	280	500	600	30	
+103	419	Village	no	4	Deviled Legs	鬼達も引っくりかえる晩餐？	6	0	0	no	3 16 48	0	50	3	4500	290	500	600	30	
+104	420	Village	no	4	Hunt-a-thon: Daimyo Hermitaur	チコ村のヒーロー伝説	6	0	0	no	3 16 41 48	4	50	3	4500	320	500	0	0	
+105	421	Village	no	4	Marshlands Mission	湿地帯の鎌蟹	7	0	0	no	3 16 48	0	50	3	3300	240	400	1500	20	
+106	422	Village	no	4	Serpentine Samba	絞蛇竜は踊り奏でる	7	4	0	no	3 16 48	0	50	3	3600	240	400	600	20	
+107	423	Village	no	4	Lurkin' in the Murk	恐怖…！　沼地の怪談	7	4	0	no	3 16 48	0	50	3	5100	350	600	600	40	
+108	424	Village	no	4	Crustacean Infestation	ガミザミの群れを掃討せよ！	7	0	0	no	3 16 48	1	50	3	1800	120	200	600	10	
+109	425	Village	no	4	Tumbling Troublemaker	落石注意！？	8	0	0	no	3 16 48	0	50	3	2400	120	300	0	0	
+110	426	Village	no	4	Crustacean Infatuation	ショウグンギザミを愛でたくて	8	4	0	no	3 16 48	2	50	3	5100	340	600	600	30	
+111	427	Village	no	4	Rocking the Uroktor	溶岩獣を討伐せよ	8	0	0	no	3 16 48	1	50	3	2100	120	300	0	0	
+112	428	Village	no	4	Great Ore Discovery	大鉱脈、発見さる！	8	0	0	no	3 16 48	3	50	3	2400	120	300	3000	10	
+113	429	Village	no	4	Volcano Accounting	火山の精算アイテム納品	8	0	0	no	3 16 48	3	50	3	3000	200	300	1800	110	
+114	501	Village	no	5	The Dark Age	黒き禍	1	28	0	no	4 17 48	0	50	3	3900	250	400	600	30	
+115	502	Village	no	5	Trifecta of Terror	砂漠を喰らう	5	0	0	no	4 17 48	4	50	3	5700	370	600	0	0	
+116	503	Village	no	5	Garuga of the Hills	一匹狼に捧ぐ挽歌	102	0	0	no	4 17 48	0	50	3	3900	250	400	900	30	
+117	504	Village	no	5	The Thunderclaw Wyvern	翠玉の閃電	2	0	0	no	4 17 42 48	0	50	3	5100	320	600	900	30	
+118	505	Village	no	5	Fungus Fetch	再びキノコ探しで大もうけ！？	102	0	0	no	4 17 48	3	30	3	2700	180	300	900	20	
+119	506	Village	no	5	Two Roars in the Snow	雪獅子、二重の咆哮	3	0	0	no	4 17 48	0	50	3	6000	380	600	900	40	
+120	507	Village	no	5	Hunt-a-thon: Khezu	ビリビリするらしいです×？？	103	0	0	no	4 17 44 48	4	50	3	5100	370	600	0	0	
+121	508	Village	no	5	The Unwavering Colossus	峨々たる巨獣	3	0	0	no	4 17 43 48	0	50	3	5100	320	600	900	30	
+122	509	Village	no	5	Lagiacrus Fuss	エレクトリカル・バトル	104	0	0	no	4 17 44 48	0	50	3	4500	300	500	900	30	
+123	510	Village	no	5	The Entrancing Water Dancer	淡紅の泡狐がたゆたうか	104	0	0	no	4 17 44 48	0	50	3	5100	320	600	900	30	
+124	511	Village	no	5	The Fisherman's Fiend	大海の王・ラギアクルス！	6	5	0	no	4 17 48	0	50	3	4500	300	500	900	30	
+125	512	Village	no	5	Island Heat	赤いおひさまアッチッチ	6	0	0	no	4 17 44 48	0	50	3	4500	300	500	0	0	
+126	513	Village	no	5	Double Vision	混乱のホロロロホルルル	6	0	0	no	4 17 48	0	50	3	5400	320	600	0	0	
+127	514	Village	no	5	Hunt-a-thon: Gypceros	ゲリョスな季節	7	0	0	no	4 17 42 48	4	50	3	4200	290	500	0	0	
+128	515	Village	no	5	Behind Closed Ores	白昼のブルファンゴ討伐	7	0	0	no	4 17 48	1	50	3	2700	180	300	3600	240	
+129	516	Village	no	5	A King, Robed in Smoke	噴煙まとう王者	8	5	0	no	4 17 48	0	50	3	4500	300	500	900	30	
+130	517	Village	no	5	Fight or Uragaan!	脅威！　火山の鉄槌！	8	5	0	no	4 17 48	0	50	3	4200	250	500	900	30	
+131	518	Village	no	5	Great Knuckleballs o' Fire!	魔球！　火山のナックルボール	8	0	0	no	4 17 48	0	50	3	4500	190	500	0	0	
+132	519	Village	no	5	Hunt-a-thon: Iodrome	ドスイーオスのリーダー争い	8	0	0	no	4 17 48	4	50	3	3600	190	400	1800	20	
+133	520	Village	no	5	Envoy to Disaster	災厄の使者	8	0	0	no	4 17 48	1	50	3	3000	160	300	0	0	
+134	521	Village	no	5	A Late Jurassic Excursion	ドス来い！　真夜中の古代林	101	0	0	no	4 17 48	5	50	3	5400	290	600	2100	30	
+135	522	Village	no	5	A Sandy Battle Royale	砂漠でサバイバルバトル	5	0	0	no	4 17 48	5	50	3	5100	290	600	2100	30	
+136	523	Village	no	5	Scientific Method	孤島の研究対象	6	0	0	no	4 17 48	5	50	3	5400	320	600	2100	30	
+137	601	Village	no	6	The Scorching Blade	灼熱の刃	1	29	0	no	5 18 48	0	50	3	5100	320	600	1200	30	
+138	602	Village	no	6	Dark Wings, Dark Work	黒き衣を纏う竜	1	6	0	no	5 18 48	0	50	3	5100	310	600	1200	30	
+139	603	Village	no	6	Tuff Turf	縄張りに進入するべからず	101	6	0	no	5 18 48	0	50	3	4800	300	500	1200	30	
+140	604	Village	no	6	From Beyond the Sands	砂漠の彼方から	5	0	0	no	5 18 48	0	50	3	5100	320	600	1200	30	
+141	605	Village	no	6	Tigrex by the Tail	轟竜ティガレックス	5	6	0	no	5 18 48	0	50	3	5400	310	600	1200	30	
+142	606	Village	no	6	A Thousand Scales of Dread	千刃、襲来	5	6	0	no	5 18 48	0	50	3	5400	370	600	600	40	
+143	607	Village	no	6	The Perilous Pair	予想外！　つがいの妨害！	102	0	0	no	5 18 42 48	0	50	3	7200	420	800	0	0	
+144	608	Village	no	6	The Hero's Journey	英雄への道	103	0	0	no	5 18 43 48	0	50	3	5400	310	600	1200	30	
+145	609	Village	no	6	The Bellowing Zinogre	雷狼竜はかく吠えり	104	0	0	no	5 18 44 48	0	50	3	4800	300	500	1200	30	
+146	610	Village	no	6	Brachydios Mio!	剛拳爆砕！　ブラキディオス！	6	6	0	no	5 18 48	0	50	3	5700	370	600	1200	40	
+147	611	Village	no	6	Under the Gaze of Heaven	天下分け目の大合戦	7	0	0	no	5 18 48	0	50	3	6000	380	600	0	0	
+148	612	Village	no	6	Break the Brachydios	粉骨砕竜！	8	0	0	no	5 18 48	2	50	3	8700	520	900	600	50	
+149	613	Village	no	6	Night Terrors	ハンティングナイト！	102	0	0	no	5 18 48	5	50	3	5700	320	600	2400	30	
+150	614	Village	no	6	Bristly Fanged Beasts	剛毛フカフカの牙獣達	103	0	0	no	5 18 48	5	50	3	5700	290	600	2400	30	
+151	615	Village	no	6	Drawing the Waterline	渓流の覇権争いニャ！！	104	0	0	no	5 18 43 48	5	50	3	8400	460	900	2400	50	
+152	616	Village	no	6	The Cankerous Quagmire	毒まみれの沼地	7	0	0	no	5 18 48	5	50	3	6600	320	700	2400	30	
+153	617	Village	no	6	Volcano Triple Play	恐るべき火山の魔球	8	0	0	no	5 18 48	5	50	3	8100	340	900	2400	30	
+154	618	Village	no	6	It's Electric	雷電	101	0	0	no	5 18 48	1	50	3	6600	350	700	0	0	
+155	619	Village	no	6	The White Brute	白き霊獣	3	0	0	no	5 18 48	1	50	3	6600	350	700	1200	40	
+156	620	Village	no	6	Stop the Wheel	廻り集いて回帰せん	16	29	0	no	5 18 48	1	50	3	7200	400	800	1200	40	
+157	621	Village	no	6	The Fated Four	宿命の四天王	17	0	0	no	5 18 48	5	50	3	18600	900	1900	0	0	
+158	622	Village	no	6	Advanced: Fungus Fetchin'	高難度：食は渓流にあり！	4	0	0	no	5 18 44	3	50	3	3000	250	300	0	0	
+159	623	Village	no	6	Advanced: Jurassic Treasure	高難度：古代林のトレジャー！	101	0	0	no	5 18 42	0	50	3	7500	510	800	0	0	
+160	624	Village	no	6	Advanced: Sly Swooper	高難度：黒狼鳥は舞い降りた	2	0	0	no	5 18 42	0	50	3	6000	400	600	0	0	
+161	625	Village	no	6	Advanced: Invoking Rath	高難度：一対の巨影	2	0	0	no	5 18 42	0	50	3	10800	660	1100	0	0	
+162	626	Village	no	6	Advanced: Seismic Scares	高難度：異常震域	3	0	0	no	5 18 43	0	50	3	14700	780	1500	0	0	
+163	627	Village	no	6	Advanced: Twinkle Toes	高難度：渾身のドボルベルク	4	0	0	no	5 18 44	0	50	3	8100	490	900	0	0	
+164	628	Village	no	6	Advanced: Seltas Queen	高難度：重甲虫と腕試し！	13	0	0	no	5 18 42	0	50	3	6600	480	700	0	0	
+165	629	Village	no	6	Advanced: The Goliaths	高難度：天地征服せし強者	1	0	0	no	5 18 41	5	50	3	20100	1040	2100	3000	100	
+166	630	Village	no	6	Advanced: Barrage of Blue	高難度：青の連撃！	9	0	0	no	5 18 43	5	50	3	9900	550	1000	0	0	
+167	631	Village	no	6	Advanced: Seeing Red	高難度：赤の猛攻！	9	0	0	no	5 18 43	5	50	3	12300	670	1300	0	0	
+168	632	Village	no	6	Advanced: Nothing is Sacred	高難度：廻帰せし災厄の古龍	16	0	0	no	5 18 41	1	50	3	10800	640	1100	0	0	
+169	633	Village	no	6	Advanced: Snowtal Recall	高難度：吹雪の召喚者	103	0	0	no	5 18 44	1	35	3	12000	800	1200	0	0	
+170	634	Village	no	6	Advanced: Invisible Thief	高難度：対霞龍防衛作戦！	2	0	0	no	5 18 42	1	35	3	12000	800	1200	0	0	
+171	635	Village	no	6	Advanced: Teostra's Return	高難度：炎王の帰還	8	0	0	no	5 18 43	1	35	3	12000	800	1200	0	0	
+172	636	Village	no	6	Advanced: Might is Right	高難度：強者たちの祭典！	9	0	0	no	5 18	5	50	3	30000	1580	3000	0	0	
+173	637	Village	no	6	Advanced: State in Flux	高難度：非情に波状な状態異常	9	0	0	no	5 18	5	50	3	32400	1790	3300	0	0	
+174	638	Village	no	6	Advanced: The Field's a Stage	高難度：四天王の凱歌	9	0	0	no	5 18	5	50	3	27000	1430	2700	0	0	
+175	639	Village	no	6	Advanced: Wrath of Rath	高難度：天と地の怒り	9	0	0	no	5 18 42	0	50	3	22800	1180	2300	0	0	
+176	640	Village	no	6	Advanced: The Golden Pair	高難度：最後の招待状	9	0	0	no	5 18 43	0	50	3	18600	880	1900	0	0	
+177	641	Village	no	6	Advanced: Out of the Fry Pan	高難度：終焉を喰らう者	9	0	0	no	5 18 44	5	50	3	21600	1010	2200	0	0	
+178	702	Village	no	7	Harvest Tour: Ruined Pinnacle	遺群嶺の採集ツアー	24	0	0	yes	54 58 99	3	50	3	12	0	0	0	0	
+179	701	Village	no	7	Harvest Tour: Desert	砂漠の採集ツアー	22	0	0	yes	54 58 99	3	50	3	12	0	0	0	0	
+180	721	Village	no	7	Harvest Tour: Ancestral Steppe	遺跡平原の採集ツアー	11	0	0	yes	54 58 99	3	50	3	12	0	0	0	0	
+181	722	Village	no	7	Harvest Tour: Primal Forest	原生林の採集ツアー	13	0	0	yes	54 58 99	3	50	3	12	0	0	0	0	
+182	723	Village	no	7	Harvest Tour: Jurassic Frontier	古代林の採集ツアー	101	0	0	yes	54 58 99	3	50	3	12	0	0	0	0	
+183	724	Village	no	7	Harvest Tour: Dunes	旧砂漠の採集ツアー	5	0	0	yes	54 58 99	3	50	3	12	0	0	0	0	
+184	725	Village	no	7	Harvest Tour: Verdant Hills	森丘の採集ツアー	102	0	0	yes	54 58 99	3	50	3	12	0	0	0	0	
+185	726	Village	no	7	Harvest Tour: Arctic Ridge	雪山の採集ツアー	103	0	0	yes	54 58 99	3	50	3	12	0	0	0	0	
+186	727	Village	no	7	Harvest Tour: Misty Peaks	渓流の採集ツアー	104	0	0	yes	54 58 99	3	50	3	12	0	0	0	0	
+187	728	Village	no	7	Defiant Maccao	挑発上手の跳狗竜	24	0	0	yes	54 58 99	0	50	3	1500	120	200	1200	10	
+188	704	Village	no	7	Azure Azure Can Be	青熊獣、出没中につき	24	0	0	yes	54 58 99	0	50	3	1800	150	200	1200	20	
+189	706	Village	no	7	Kut-Ku Misunderstood	怪鳥の憂鬱	24	0	0	yes	54 58 99	0	50	3	2700	230	300	2700	20	
+190	713	Village	no	7	Research Team's First Rodeo	調査隊初陣！　遺群嶺の桃毛獣	24	30	0	yes	54 58 99	0	50	3	3600	300	400	0	0	
+191	714	Village	no	7	Ruined Pinnacle, RUINED	不潔ものの大集会	24	0	0	yes	54 58 99	1	50	3	1500	120	200	3600	300	
+192	715	Village	no	7	Brave New Ore	遺群嶺の不思議な石	24	7	0	yes	54 58 99	3	50	3	2400	110	300	2100	10	
+193	730	Village	no	7	Husk Hunter	彗星のカケラはどこに？	24	7	0	yes	54 58 99	3	50	3	3000	100	300	0	0	
+194	729	Village	no	7	Wyvern Egg Delivery: Breakfast	竜の卵の納品・モーニング	24	0	0	yes	54 58 99	3	50	3	2700	150	300	3600	280	
+195	711	Village	no	7	Fashion Victim	これが本当のダイミョウ行列？	22	7	0	yes	54 58 99	0	50	3	3600	280	400	1500	30	
+196	717	Village	no	7	A Friend in Need	友に迫る土砂竜	22	7	0	yes	54 58 99	0	50	3	4200	320	500	0	0	
+197	718	Village	no	7	March of the Genprey	ゲネポス行進曲	22	0	0	yes	54 58 99	1	50	3	2100	150	300	1800	150	
+198	719	Village	no	7	On Burrowed Time	砂中から忍び寄る影	22	0	0	yes	54 58 99	1	50	3	2400	160	300	2400	160	
+199	720	Village	no	7	A Berry Dubious Idea	熱帯イチゴはカネの味？	22	0	0	yes	54 58 99	3	50	3	1500	120	200	1800	10	
+200	703	Village	no	7	Bug Appétit Encore	珍味アルセルタスをもう一度	11	7	0	yes	54 58 99	0	50	3	1800	130	200	1200	10	
+201	707	Village	no	7	Enough Monkeying Around	イタズラ猿に制裁を	11	0	0	yes	54 58 99	0	50	3	3300	270	400	1500	30	
+202	709	Village	no	7	Poisoned for Action	毒怪鳥活用計画	13	7	0	yes	54 58 99	0	50	3	3300	270	400	1500	30	
+203	710	Village	no	7	Spit It Out	ぱっくん！　テツカブラ	1	7	0	yes	54 58 99	0	50	3	3600	280	400	1200	30	
+204	733	Village	no	7	Eau de Congalala	ババコンガを狩猟せよ	1	0	0	yes	54 58 99	0	50	3	3600	300	400	1500	30	
+205	734	Village	no	7	Bag a Barroth!	ボルボロスを捕獲せよ！	5	0	0	yes	54 58 99	2	50	3	6300	450	700	1500	50	
+206	732	Village	no	7	Dune the Honors	旧砂漠横断のお荷物	5	0	0	yes	54 58 99	0	50	3	7200	480	800	1200	50	
+207	735	Village	no	7	Verdant Hills Horror	森丘の怪	2	0	0	yes	54 58 99	0	50	3	5400	400	600	2700	40	
+208	705	Village	no	7	Investment Flanking	商売ガタキのドスギアノス	3	7	0	yes	54 58 99	0	50	3	1800	150	200	1800	20	
+209	708	Village	no	7	The Killer Rabbit of Arctic Ridge	氷雪に舞う白うさぎ	103	0	0	yes	54 58 99	0	50	3	2700	160	300	1200	20	
+210	716	Village	no	7	Taking Royal Liberties	渓流に棲む水獣	104	7	0	yes	54 58 99	0	50	3	3600	280	400	0	0	
+211	736	Village	no	7	Season's Eatings	旬な食材を採らせておくれ！	4	0	0	yes	54 58 99	0	50	3	3300	120	400	1800	10	
+212	801	Village	no	8	Harvest Tour: Jungle	密林の採集ツアー	23	0	0	yes	55 59 99	3	50	3	12	0	0	0	0	
+213	820	Village	no	8	Harvest Tour: Frozen Seaway	氷海の採集ツアー	14	0	0	yes	55 59 99	3	50	3	12	0	0	0	0	
+214	821	Village	no	8	Harvest Tour: Volcanic Hollow	地底火山の採集ツアー	12	0	0	yes	55 59 99	3	50	3	12	0	0	0	0	
+215	822	Village	no	8	Harvest Tour: Deserted Island	孤島の採集ツアー	6	0	0	yes	55 59 99	3	50	3	12	0	0	0	0	
+216	823	Village	no	8	Harvest Tour: Marshlands	沼地の採集ツアー	7	0	0	yes	55 59 99	3	50	3	12	0	0	0	0	
+217	824	Village	no	8	Harvest Tour: Volcano	火山の採集ツアー	8	0	0	yes	55 59 99	3	50	3	12	0	0	0	0	
+218	803	Village	no	8	Dazed and Confused	道化師は斯く嘲る	24	0	0	yes	55 59 99	0	50	3	4500	320	500	1800	30	
+219	807	Village	no	8	Grapes of Rathian	山嶺を舞うリオレイア	24	8	0	yes	55 59 99	0	50	3	5100	350	600	1800	40	
+220	809	Village	no	8	Airship Upgrade: Plesioth	龍識船強化！【水竜編】	24	8	0	yes	55 59 99	0	50	3	5100	350	600	0	0	
+221	812	Village	no	8	Naked Aggression	切り裂かれた誇り	24	0	0	yes	55 59 99	0	50	3	5100	380	600	1800	40	
+222	825	Village	no	8	Mushroom for Improvement	おやつは高層エリンギ	24	0	0	yes	55 59 99	3	50	3	2700	180	300	4500	320	
+223	826	Village	no	8	I See It Rollin'...	転がれ！　転がせ！　赤い牙獣	22	0	0	yes	55 59 99	0	50	3	3300	200	400	1500	20	
+224	808	Village	no	8	It's Gonna Eat Me!	喰われる前にヤレ！	22	8	0	yes	55 59 99	0	50	3	3900	350	400	1800	40	
+225	814	Village	no	8	Airship Upgrade: Nargacuga	龍識船強化！【迅竜編】	23	8	0	yes	55 59 99	0	50	3	5400	400	600	0	0	
+226	815	Village	no	8	Wrong Bird, Idiots...	なんと、黒狼鳥でした！	23	0	0	yes	55 59 99	0	50	3	6000	400	600	1800	40	
+227	816	Village	no	8	A Trace of Light	雷光の先の面影	23	0	0	yes	55 59 99	1	50	3	3000	200	300	5400	400	
+228	817	Village	no	8	Shell Game	はじける貝殻マネー	23	0	0	yes	55 59 99	3	50	3	2700	180	300	2100	20	
+229	828	Village	no	8	Wyvern Egg Delivery: Lunch	竜の卵の納品・ランチ	23	0	0	yes	55 59 99	3	50	3	3600	220	400	5100	350	
+230	829	Village	no	8	My New Life as a Maccao	飛んで跳ねて無我夢中	11	0	0	yes	55 59 99	0	50	3	4500	310	500	1200	30	
+231	806	Village	no	8	Primal Forest Arachnids	原生林に巣食う蜘蛛	13	31	0	yes	55 59 99	0	50	3	4500	350	500	0	0	
+232	830	Village	no	8	Much Ado about Najarala	嗚呼素晴らしき也、絞蛇竜	13	0	0	yes	55 59 99	2	50	3	8100	530	900	1800	50	
+233	804	Village	no	8	Bloof!	ぷくぅーっ！　ザボアザギル！	14	8	0	yes	55 59 99	0	50	3	4500	320	500	1800	30	
+234	831	Village	no	8	A Seaway Just for You	狩人のための舞台～氷海～	14	0	0	yes	55 59 99	0	50	3	3900	350	400	2400	40	
+235	832	Village	no	8	A Cure for Laziness	ものぐさには爆鎚竜で喝！	12	8	0	yes	55 59 99	0	50	3	6300	400	700	1800	40	
+236	833	Village	no	8	The Furtilizer That Time Furgot	珍肥料を手に入れるのニャ！	101	0	0	yes	55 59 99	3	50	3	2700	180	300	3000	20	
+237	834	Village	no	8	Just Deserts	砂まみれですな	5	0	0	yes	55 59 99	0	50	3	5700	410	600	2700	40	
+238	813	Village	no	8	The Perils of Commerce	宣伝ネコの受難	2	0	0	yes	55 59 99	0	50	3	7800	540	800	1800	50	
+239	805	Village	no	8	Khezu Deserve It	フルフルのまごころ診療所	103	0	0	yes	55 59 99	0	50	3	3900	350	400	1800	40	
+240	810	Village	no	8	Whiteout	ホワイトアウト	103	0	0	yes	55 59 99	0	50	3	5100	380	600	2100	40	
+241	835	Village	no	8	Fishing's Lure	たまには釣りでもいかが？	4	0	0	yes	55 59 99	3	50	3	3000	200	300	5100	350	
+242	836	Village	no	8	A Royal Rumble	陸の女王、捕獲作戦！	6	0	0	yes	55 59 99	2	50	3	7800	490	800	2700	50	
+243	837	Village	no	8	The Way of the Nargacuga	ナルガクルガのお手本	6	0	0	yes	55 59 99	0	50	3	5400	400	600	1800	40	
+244	838	Village	no	8	Deserted Island Missive	孤島からの伝書	6	0	0	yes	55 59 99	0	50	3	7500	480	800	1200	50	
+245	802	Village	no	8	Perfectly Normal Rock	でっかい岩だと思ったら…？	7	8	0	yes	55 59 99	0	50	3	4500	320	500	1800	30	
+246	839	Village	no	8	Marshlands Horror Story	沼地の恐怖体験	7	0	0	yes	55 59 99	0	50	3	8100	540	900	1200	50	
+247	811	Village	no	8	Airship Upgrade: Lavasioth	龍識船強化！【溶岩竜編】	8	8	0	yes	55 59 99	0	50	3	5100	380	600	0	0	
+248	818	Village	no	8	It's Not Uragaan's, It's Mine!	熱地に現る、ウラガンキン！	8	0	0	yes	55 59 99	0	50	3	6300	400	700	1800	40	
+249	840	Village	no	8	Volcanic Vexations	火山の厄介者たち	8	0	0	yes	55 59 99	0	50	3	6600	400	700	2700	40	
+250	917	Village	no	9	Rathalos Topping	遺群嶺の火竜	24	9	0	yes	56 60 99	0	50	3	6600	480	700	2400	50	
+251	918	Village	no	9	Taming of the Zinogre	嗚呼素晴らしき也、雷狼竜	24	0	0	yes	56 60 99	2	50	3	10800	670	1100	2700	70	
+252	919	Village	no	9	Ore d'Oeuvres	鎧竜は、とってもグルメ？	24	0	0	yes	56 60 99	0	50	3	7200	480	800	2400	50	
+253	916	Village	no	9	Ruined and Tarnished	漆黒に染まる嶺	24	9	0	yes	56 60 99	0	50	3	7500	490	800	0	0	
+254	920	Village	no	9	Desert Death Duel	砂漠の死闘と決意	22	0	0	yes	56 60 99	0	50	3	7500	510	800	2400	50	
+255	914	Village	no	9	Fearful Symmetry	轟竜の狩猟をさせてやるぜ！	22	0	0	yes	56 60 99	0	50	3	8100	490	900	2400	50	
+256	902	Village	no	9	The Fly in the Ointment	突撃取材！　巨大甲虫を追え！	23	0	0	yes	56 60 99	0	50	3	6600	480	700	2400	50	
+257	904	Village	no	9	Lagiacrus x Width x Height	海竜、沈降開始	23	0	0	yes	56 60 99	0	50	3	6600	480	700	2700	50	
+258	905	Village	no	9	Whatdunnit	犯人はキミだ、雷狼竜	23	9	0	yes	56 60 99	0	50	3	7200	480	800	2400	50	
+259	921	Village	no	9	Soap Opera	領主の命令～泡狐竜篇～	23	0	0	yes	56 60 99	0	50	3	7500	510	800	2400	50	
+260	922	Village	no	9	Mt. Duramboros	尾槌竜、登頂してこそ山男	23	0	0	yes	56 60 99	2	50	3	12300	690	1300	2700	70	
+261	923	Village	no	9	A Jungle Just for You	狩人のための舞台～密林～	23	0	0	yes	56 60 99	0	50	3	10200	600	1100	2700	60	
+262	924	Village	no	9	Flappy Pest	空路を阻む電竜退治！	11	0	0	yes	56 60 99	0	50	3	7500	510	800	2400	50	
+263	925	Village	no	9	Pheromone Moans	ジャングル・フェロモン	13	0	0	yes	56 60 99	2	50	3	9900	670	1000	1800	130	
+264	926	Village	no	9	Primal Panic	原生林からの救援要請	13	0	0	yes	56 60 99	0	50	3	7500	490	800	2400	50	
+265	927	Village	no	9	Distress Signal	闇に沈んだ暗殺者たち	13	0	0	yes	56 60 99	0	50	3	8100	560	900	2400	60	
+266	901	Village	no	9	Airship Upgrade: Barioth	龍識船強化！【氷牙竜編】	14	9	0	yes	56 60 99	0	50	3	6600	440	700	0	0	
+267	928	Village	no	9	Snow Joke	ガムートの強さは世界一	14	0	0	yes	56 60 99	2	50	3	11400	710	1200	2400	70	
+268	929	Village	no	9	Ruler of the Frozen Seaway	氷海に君臨する者	14	9	0	yes	56 60 99	0	50	3	8100	490	900	2700	50	
+269	930	Village	no	9	An Ice Surprise	氷槍のザボアザギルたち	14	0	0	yes	56 60 99	0	50	3	8100	510	900	1800	50	
+270	903	Village	no	9	You're under a Rath	火竜の山でつかまえて	12	0	0	yes	56 60 99	0	50	3	6600	480	700	2400	50	
+271	931	Village	no	9	Capture the Agnaktor	アグナコトルの捕獲	12	0	0	yes	56 60 99	2	50	3	10800	690	1100	2700	70	
+272	910	Village	no	9	Great, Glavenus Again	ディノバルド、再び！	101	9	0	yes	56 60 99	0	50	3	7500	510	800	0	0	
+273	932	Village	no	9	Desert Double Act	轟竜と赤甲獣のデュエット	5	0	0	yes	56 60 99	0	50	3	10500	550	1100	2400	60	
+274	908	Village	no	9	Alas, Astalos Again	ライゼクス、再び！	102	9	0	yes	56 60 99	0	50	3	7500	510	800	0	0	
+275	933	Village	no	9	Interruption: Eggstra Delivery	割り込み受注：卵納品	102	0	0	yes	56 60 99	3	50	3	4500	280	500	6600	480	
+276	934	Village	no	9	Once upon a Barioth	ベリオロスを捕獲せよ！	3	0	0	yes	56 60 99	2	50	3	9900	620	1000	2400	60	
+277	909	Village	no	9	Groan, Gammoth Again	ガムート、再び！	103	9	0	yes	56 60 99	0	50	3	7500	510	800	0	0	
+278	935	Village	no	9	Snowball Skirmish	雪山、雪玉、雪合戦！！	3	0	0	yes	56 60 99	0	50	3	7200	430	800	1200	40	
+279	907	Village	no	9	Man, Mizutsune Again?	タマミツネ、再び！	4	9	0	yes	56 60 99	0	50	3	7500	510	800	0	0	
+280	936	Village	no	9	Sky Tribe: Rice to the Occasion	空の家族・メシを作るッス	6	0	0	yes	56 60 99	0	50	3	6600	480	700	2400	50	
+281	906	Village	no	9	Wish upon a...Gravios?	彗星の前にあらわる鎧竜	7	32	0	yes	56 60 99	0	50	3	7200	480	800	0	0	
+282	913	Village	no	9	Earn Your Gear	……求めるならば力を示して	7	0	0	yes	56 60 99	0	50	3	8100	490	900	2400	50	
+283	911	Village	no	9	You Had One Job	火山にいる先輩後輩	8	0	0	yes	56 60 99	0	50	3	11100	700	1200	2700	70	
+284	938	Village	no	9	Disaster on the Steppes	凶運の遺跡平原	11	0	0	yes	56 60 99	5	50	3	11400	620	1200	2400	60	
+285	939	Village	no	9	Jurassic Frontier Fracas	古代林の大運動会	1	0	0	yes	56 60 99	5	50	3	9300	500	1000	2100	50	
+286	940	Village	no	9	Just a Mirage...?	旧砂漠でゆらめく蜃気楼	5	0	0	yes	56 60 99	5	50	3	12600	670	1300	2400	70	
+287	941	Village	no	9	Trouble Comes in Threes	火山の迷惑集団襲来！	8	0	0	yes	56 60 99	5	50	3	13200	690	1400	2100	70	
+288	915	Village	no	9	Impossible Standards	美しき幻獣	24	0	0	yes	56 60 99	1	50	3	9900	560	1000	0	0	
+289	937	Village	no	9	My Kirin for a Horse	騎士と古代林の挑戦	1	0	0	yes	56 60 99	1	50	3	9900	560	1000	0	0	
+290	1005	Village	no	10	Beware the Comet of Disaster	恐れ見よ、赤き災厄の彗星を	24	33	5	yes	57 61 99	1	50	3	10800	640	1100	0	0	
+291	1053	Village	no	10	Beware the Comet of Disaster	恐れ見よ、赤き災厄の彗星を	24	0	5	yes	57 61 99	1	35	3	10800	640	1100	0	0	
+292	1022	Village	no	10	The Baleful Comet	災厄は空からいづる	22	0	0	yes	57 61 99	1	35	3	10800	640	1100	3000	60	
+293	1021	Village	no	10	Turn That Frown Upside Down	凶星からの贈りもの	14	0	0	yes	57 61 99	1	35	3	10800	640	1100	3000	60	
+294	1020	Village	no	10	An Almost-Certainly-Fine Comet	災厄をもたらす彗星	1	0	0	yes	57 61 99	1	35	3	10800	640	1100	4200	60	
+295	1031	Village	no	10	Deviljho Dispossession	遺群嶺を塞ぐ恐暴竜	24	0	0	yes	57 61 99	0	50	3	10200	550	1100	3000	60	
+296	1001	Village	no	10	Thousand-Blade Brouhaha	千刃狂騒	22	10	0	yes	57 61 99	0	50	3	8100	600	900	3000	60	
+297	1002	Village	no	10	Duel With the Devil	死闘！　角竜ディアブロス	22	10	0	yes	57 61 99	0	50	3	8100	490	900	3000	50	
+298	1006	Village	no	10	Roar of the Rajang	金獅子、砂上に咆哮す	22	10	0	yes	57 61 99	0	50	3	10200	550	1100	3000	60	
+299	1054	Village	no	10	Wyvern Egg Delivery: Dinner	竜の卵の納品・ディナー	22	0	0	yes	57 61 99	3	50	3	6000	320	600	0	0	
+300	1032	Village	no	10	Red Dragon, Green Dragon	赤竜と緑竜	11	0	0	yes	57 61 99	0	50	3	10800	660	1100	2700	70	
+301	1033	Village	no	10	Primal Panic	原生林からの救援要請	13	0	0	yes	57 61 99	0	50	3	10200	550	1100	3000	60	
+302	1034	Village	no	10	A Cure for Idleness	怠け心には千刃竜で喝！	12	0	0	yes	57 61 99	2	50	3	12300	840	1300	2700	80	
+303	1003	Village	no	10	Bad Hair Day: Brachydios	俺のソウルはブロウアップ	12	10	0	yes	57 61 99	0	50	3	8700	600	900	3000	60	
+304	1035	Village	no	10	Bring Me My Sword	甲冑、弐領	12	0	0	yes	57 61 99	0	50	3	13200	770	1400	3000	80	
+305	1036	Village	no	10	Horned and Dangerous	角竜を捕獲せよ！	5	0	0	yes	57 61 99	2	50	3	12300	690	1300	3000	70	
+306	1007	Village	no	10	Deviljho Food Cake	すべてを喰らうもの	3	10	0	yes	57 61 99	0	50	3	10200	550	1100	2700	60	
+307	1037	Village	no	10	Barioth's Blizzard	雪山に舞う白き風！	103	0	0	yes	57 61 99	0	50	3	12000	700	1200	2700	70	
+308	1038	Village	no	10	Bag a Brachydios	粉骨砕竜、捕獲用意！	8	0	0	yes	57 61 99	2	50	3	13200	840	1400	2700	80	
+309	1004	Village	no	10	Wheel of Time	時を廻りて戻り来よ	16	10	0	yes	57 61 99	1	50	3	10800	640	1100	3000	60	
+310	1046	Village	no	10	Coalition of Chaos	領主の依頼～大連続篇～	23	0	0	yes	57 61 99	5	50	3	13200	710	1400	2100	70	
+311	1047	Village	no	10	Verdant Hills Just for You	狩人のための舞台～森丘～	2	0	0	yes	57 61 99	5	50	3	9900	580	1000	2100	60	
+312	1048	Village	no	10	Misty Peaks Missive	渓流からの伝書	4	0	0	yes	57 61 99	5	50	3	15300	780	1600	2100	80	
+313	1049	Village	no	10	Deserted Islands Horror	孤島の恐怖体験	6	0	0	yes	57 61 99	5	50	3	16500	900	1700	2100	90	
+314	1050	Village	no	10	The Marshlands Morass	逃れられない沼地の窮地	7	0	0	yes	57 61 99	5	50	3	12300	720	1300	2100	70	
+315	1049	Village	no	10	Deserted Islands Horror	孤島の恐怖体験	6	0	0	yes	57 61 99	5	50	3	16500	900	1700	2100	90	duplicate ID; the game reads the first occurrence only
+316	1050	Village	no	10	The Marshlands Morass	逃れられない沼地の窮地	7	0	0	yes	57 61 99	5	50	3	12300	720	1300	2100	70	duplicate ID; the game reads the first occurrence only
+317	1026	Village	no	10	Grave Peril	怨嗟の骸	21	33	0	yes	57 61 99	1	50	3	15000	960	1500	3600	100	
+318	1017	Village	no	10	King of Hellfire	獄炎の覇王	19	33	0	yes	57 61 99	1	50	3	13200	800	1400	3600	80	
+319	1018	Village	no	10	The Seat of a God	崩せ神の座、威の寝床	20	33	0	yes	57 61 99	1	50	3	13200	800	1400	3600	80	
+320	1019	Village	no	10	Stormlord	嵐龍天翔	18	33	0	yes	57 61 99	1	50	3	13200	800	1400	3600	80	
+321	1039	Village	no	10	Blazing Black of a Dark God	黒き光を放つ神	19	33	0	yes	57 61 99	1	50	3	15000	1200	1500	3600	120	
+322	1040	Village	no	10	Advanced: Ranging Rathalos	高難度：森丘にて火竜は旋廻す	2	0	0	yes	57 61	0	50	3	9900	710	1000	0	0	
+323	1041	Village	no	10	Advanced: Roaring in the Ridge	高難度：雪山に佇む轟竜	103	0	0	yes	57 61	0	50	3	12300	740	1300	0	0	
+324	1042	Village	no	10	Advanced: Moonlight Zinogre	高難度：月夜を仰ぐ雷狼竜	104	0	0	yes	57 61	0	50	3	10800	710	1100	0	0	
+325	1012	Village	no	10	Advanced: Wrong One Silver	高難度：銀陽は沈まない	2	0	0	yes	57 61	0	50	3	18900	1110	1900	0	0	
+326	1013	Village	no	10	Advanced: Heart of Gold	高難度：彼女は輝く金火竜	4	0	0	yes	57 61	0	50	3	18900	1110	1900	0	0	
+327	1044	Village	no	10	Advanced: Trial at the Pinnacle	高難度：遺群嶺の試練	24	0	0	yes	57 61	0	50	3	34200	1110	3500	0	0	
+328	1009	Village	no	10	Advanced: Steel Yourself	高難度：禍は鋼鉄よりも硬し	23	0	0	yes	57 61	1	35	3	18000	1200	1800	0	0	
+329	1045	Village	no	10	Advanced: Karma Chameleos	高難度：宵闇に消ゆ	24	0	0	yes	57 61	1	35	3	18000	1200	1800	0	0	
+330	1011	Village	no	10	Advanced: Empire of the Sun	高難度：陽炎の帝国	22	0	0	yes	57 61	1	35	3	18000	1200	1800	0	0	
+331	1051	Village	no	10	Advanced: Jurassic Pair	高難度：古代林に現る２頭の影	101	0	0	yes	57 61	5	50	3	18600	950	1900	0	0	
+332	1052	Village	no	10	Advanced: Quarrel Quelling	高難度：喧嘩の仲裁は村を救う	3	0	0	yes	57 61	5	50	3	12600	620	1300	0	0	
+333	1027	Village	no	10	Advanced: Monster Hunter!	高難度：モンスターハンター	9	0	0	yes	57 61	5	50	3	41100	2010	4200	0	0	
+334	1028	Village	no	10	Advanced: Proof of a Champion	高難度：覇者の証明	9	0	0	yes	57 61	5	50	3	36900	1820	3700	0	0	
+335	1029	Village	no	10	Advanced: Wycademy Challenge	高難度：龍歴院からの挑戦状	16	0	0	yes	57 61	5	50	3	44400	2020	4500	0	0	
+336	1030	Village	no	10	Advanced: Guild's Greatest Hit	高難度：ギルドからの試練	9	0	0	yes	57 61	5	50	3	44700	2060	4500	0	0	
+337	1055	Village	no	10	Advanced: Ultimate Generation	高難度：ダブルクロス	17	0	0	yes	57 61	5	50	3	56100	2760	5700	0	0	
+338	10101	Hub	no	1	Harvest Tour: Jurassic Frontier	古代林の採集ツアー	1	0	0	no	6 19	3	50	3	12	0	0	0	0	
+339	10102	Hub	no	1	Harvest Tour: Dunes	旧砂漠の採集ツアー	5	0	0	no	6 19	3	50	3	12	0	0	0	0	
+340	10103	Hub	no	1	Harvest Tour: Verdant Hills	森丘の採集ツアー	2	0	0	no	6 19	3	50	3	12	0	0	0	0	
+341	10104	Hub	no	1	Harvest Tour: Arctic Ridge	雪山の採集ツアー	3	0	0	no	6 19	3	50	3	12	0	0	0	0	
+342	10105	Hub	no	1	Harvest Tour: Misty Peaks	渓流の採集ツアー	4	0	0	no	6 19	3	50	3	12	0	0	0	0	
+343	10106	Hub	no	1	Boot to the Head	スピードキッカー	101	0	0	no	6 19	0	50	3	1800	100	200	600	10	
+344	10107	Hub	no	1	Tackling the Tetsucabra	鬼蛙テツカブラの狩猟	1	11	0	no	6 19	0	50	3	4200	250	500	600	30	
+345	10108	Hub	no	1	Lost in the Jurassic Frontier	盗まれて古代林！	1	11	0	no	6 19	0	50	3	3600	240	400	600	20	
+346	10109	Hub	no	1	Red-Faced Ruffians	真っ赤な顔の荒くれ者	1	0	0	no	6 19	1	50	3	1800	90	200	1800	100	
+347	10110	Hub	no	1	A Fern is Forever	ゼンマイ肴に古代を感じて	101	0	0	no	6 19	3	50	3	1200	90	200	900	10	
+348	10111	Hub	no	1	Gendrome Roadblock	ドスゲネポスを狩れ！	5	0	0	no	6 19	0	50	3	2100	130	300	300	10	
+349	10112	Hub	no	1	In Pursuit of the Sand Wyvern	砂の竜を追跡せよ！	5	0	0	no	6 19	0	50	3	2700	140	300	900	10	
+350	10113	Hub	no	1	Shells of Steel	鉄壁の盾蟹	5	0	0	no	6 19	0	50	3	4200	250	500	600	30	
+351	10114	Hub	no	1	Hermitaur Party	盾蟹たちの集い	5	0	0	no	6 19	1	50	3	2400	90	300	600	10	
+352	10115	Hub	no	1	Ingredient Hunter	新たな食材ハンターの誕生！？	5	0	0	no	6 19	3	50	3	1200	90	200	900	10	
+353	10116	Hub	no	1	Hunt Down the Velocidrome!	ドスランポスを狩猟せよ！	102	0	0	no	6 19	0	50	3	1800	100	200	300	10	
+354	10117	Hub	no	1	Local Threat	大怪鳥イャンクックを倒せ！	102	11	0	no	6 19	0	50	3	3000	200	300	600	20	
+355	10118	Hub	no	1	Financial Focus on Fungus	キノコ探しで大もうけ！？	2	0	0	no	6 19	3	50	3	1200	90	200	900	10	
+356	10119	Hub	no	1	Farming Frustrations	狡猾な襲撃者たち	2	0	0	no	6 19	1	50	3	1800	90	200	1800	100	
+357	10120	Hub	no	1	Snow with Occasional Lagombi	雪のちウルクスス	103	11	0	no	6 19	0	50	3	3000	140	300	300	10	
+358	10121	Hub	no	1	Preying on Giaprey	肉食竜の討伐！	3	0	0	no	6 19	1	50	3	1800	90	200	300	10	
+359	10122	Hub	no	1	Special Home Brew	雪山草を探せ！	3	0	0	no	6 19	3	50	3	1200	90	200	600	10	
+360	10123	Hub	no	1	Bulldrome of the Peaks	渓流の頭、ドスファンゴ	4	0	0	no	6 19	0	50	3	2100	120	300	300	10	
+361	10124	Hub	no	1	The Ingredient of Legend	伝説のメニューに不可欠なモノ	104	0	0	no	6 19	0	50	3	2100	130	300	600	10	
+362	10125	Hub	no	1	Royal Spit Take	ロアルドロスを狩猟せよ！	4	11	0	no	6 19	0	50	3	4200	250	500	600	30	
+363	10126	Hub	no	1	A Mother's Woes	ルドロス討伐作戦！	4	0	0	no	6 19	1	50	3	1500	90	200	600	10	
+364	10127	Hub	no	1	Jaggi Junket	渓流のジャギィ討伐作戦	4	0	0	no	6 19	1	50	3	1800	90	200	1200	10	
+365	10128	Hub	no	1	The Next Best Thing	花の香りを掘り当てて	104	0	0	no	6 19	3	50	3	1800	90	200	900	10	
+366	10201	Hub	no	2	Harvest Tour: Deserted Island	孤島の採集ツアー	6	0	0	no	7 20	3	50	3	12	0	0	0	0	
+367	10202	Hub	no	2	Harvest Tour: Marshlands	沼地の採集ツアー	7	0	0	no	7 20	3	50	3	12	0	0	0	0	
+368	10203	Hub	no	2	Insomnia? Meet Hypnotism	不眠のあなたに催眠療法	101	0	0	no	7 20	2	50	3	6300	340	700	600	30	
+369	10204	Hub	no	2	Walk 'n Roll	赤甲獣ラングロトラ現る！	1	0	0	no	7 20	0	50	3	3600	170	400	600	20	
+370	10205	Hub	no	2	Rocking Rhenoplos	草食竜と戯れて	1	0	0	no	7 20	1	50	3	2100	150	300	3000	200	
+371	10206	Hub	no	2	The Desert Gourmand	砂上のテーブルマナー	5	12	0	no	7 20	0	50	3	4500	310	500	900	30	
+372	10207	Hub	no	2	Tongue-Tied	マジヤベェ！　舌！	5	0	0	no	7 20	2	50	3	4800	200	500	600	20	
+373	10208	Hub	no	2	The Poison-fanged Duo	２対の麻痺牙	5	0	0	no	7 20	0	50	3	3000	210	300	600	20	
+374	10209	Hub	no	2	Konchu Collector	クンチュウの行動研究	5	0	0	no	7 20	1	50	3	1800	120	200	4500	310	
+375	10210	Hub	no	2	Liver of Legend!	幻のキモを追え！	5	0	0	no	7 20	3	50	3	2700	150	300	2700	140	
+376	10211	Hub	no	2	Noise Violation	ガララアジャラの狩猟	102	12	0	no	7 20	0	50	3	5700	330	600	900	30	
+377	10212	Hub	no	2	In Search of the Yian Garuga	失われた黒狼を求めて	2	12	0	no	7 20	0	50	3	6300	350	700	900	40	
+378	10213	Hub	no	2	Finishing the Job	無謀な弟子の、後始末	2	0	0	no	7 20	0	50	3	2700	160	300	0	0	
+379	10214	Hub	no	2	Fresh is Best	食材の価値は鮮度なり	102	0	0	no	7 20	1	50	3	2100	120	300	0	0	
+380	10215	Hub	no	2	The Shadow in the Mountains	雪山に潜む影	103	0	0	no	7 20	0	50	3	4500	310	500	900	30	
+381	10216	Hub	no	2	The New Tenant	雪山の主、ドドブランゴ	3	35	0	no	7 20	0	50	3	5400	330	600	900	30	
+382	10217	Hub	no	2	Blango Slaying Tactics	ブランゴ討伐作戦	3	0	0	no	7 20	1	50	3	2700	120	300	1200	10	
+383	10218	Hub	no	2	Operation: Secure Specimen	研究サンプル捕獲作戦	4	12	0	no	7 20	2	50	3	7500	420	800	600	40	
+384	10219	Hub	no	2	Royal Assassination	女王、降臨す	4	12	0	no	7 20	0	50	3	5400	310	600	1200	30	
+385	10220	Hub	no	2	Ahoy! Royal Ludroth!	輸送中！　水獣の追従！	4	0	0	no	7 20	0	50	3	6000	400	600	0	0	
+386	10221	Hub	no	2	Bye Bye Jaggia	渓流のジャギィノス退治	104	0	0	no	7 20	1	50	3	2100	120	300	1200	10	
+387	10222	Hub	no	2	Malfestio Festival	夜鳥の鱗粉を掻い潜れ	6	12	0	no	7 20	0	50	3	4800	280	500	900	30	
+388	10223	Hub	no	2	Wyvern of the Wind	疾風の迅竜	6	0	0	no	7 20	0	50	3	5700	350	600	0	0	
+389	10224	Hub	no	2	Tetsucabra Bounty	馬力、怪力、テツカブラ！	6	0	0	no	7 20	0	50	3	4200	250	500	900	30	
+390	10225	Hub	no	2	Deserted Island Dustup	孤島の相撲大会！	6	0	0	no	7 20	0	50	3	3000	210	300	600	20	
+391	10226	Hub	no	2	Bnahabra Bloodbath	飛甲虫たちの饗宴	6	0	0	no	7 20	1	50	3	3600	150	400	1200	20	
+392	10227	Hub	no	2	Poisonous Pest	ドスイーオスの毒牙	7	0	0	no	7 20	0	50	3	3000	160	300	600	20	
+393	10228	Hub	no	2	Pincer through the Sky	空を切り裂く鎌	7	0	0	no	7 20	0	50	3	5400	330	600	900	30	
+394	10229	Hub	no	2	Serpentine Samba	絞蛇竜は踊り奏でる	7	0	0	no	7 20	0	50	3	5700	330	600	900	30	
+395	10230	Hub	no	2	Ioprey Hunting	イーオス討伐作戦！	7	0	0	no	7 20	1	50	3	1800	120	200	900	10	
+396	10231	Hub	no	2	Attack of the Giant Bugs!	巨大昆虫、発生！	7	0	0	no	7 20	1	50	3	3600	150	400	1200	20	
+397	10232	Hub	no	2	Collect to Combine	調合素材を採取せよ！	7	0	0	no	7 20	3	50	3	1500	120	200	1200	10	
+398	10301	Hub	no	3	Harvest Tour: Volcano	火山の採集ツアー	8	0	0	no	8 21	3	50	3	12	0	0	0	0	
+399	10302	Hub	no	3	Flames of Glavenus Passion	心火の斬竜炉	101	0	0	no	8 21	0	50	3	8700	450	900	1200	50	
+400	10303	Hub	no	3	Tigrex by the Tail	轟竜ティガレックス	101	0	0	no	8 21	0	50	3	9000	430	900	600	40	
+401	10304	Hub	no	3	Dark Wings, Dark Work	黒き衣を纏う竜	1	13	0	no	8 21	0	50	3	8400	430	900	0	0	
+402	10305	Hub	no	3	Fossilized Memories	化石に眠る太古の記憶	1	0	0	no	8 21	3	50	3	6000	350	600	0	0	
+403	10306	Hub	no	3	A Thousand Scales of Dread	千刃、襲来	5	13	0	no	8 21	0	50	3	9000	520	900	1200	50	
+404	10307	Hub	no	3	A Shocking Scoundrel	電の反逆者	102	36	0	no	8 21	0	50	3	8700	450	900	1200	50	
+405	10308	Hub	no	3	The King's Domain	王の領域	2	0	0	no	8 21	0	50	3	7500	420	800	0	0	
+406	10309	Hub	no	3	Fury Run Afoul	憤激する巨獣	103	13	0	no	8 21	0	50	3	8700	450	900	600	50	
+407	10310	Hub	no	3	Lagiacrus Lethargy	驚浪雷奔ラギアクルス	4	0	0	no	8 21	0	50	3	7500	420	800	1200	40	
+408	10311	Hub	no	3	Moonlit Bubble Bath	月夜に映える泡の華	104	13	0	no	8 21	0	50	3	8700	450	900	1200	50	
+409	10312	Hub	no	3	Topple the Monarch	狩られる前に狩れ！	4	0	0	no	8 21	0	50	3	8100	420	900	600	40	
+410	10313	Hub	no	3	Lagiacrushed	孤島に渦巻く恐怖	6	0	0	no	8 21	0	50	3	7500	420	800	0	0	
+411	10314	Hub	no	3	Tuff Turf	縄張りに進入するべからず	6	0	0	no	8 21	2	50	3	10800	500	1100	0	0	
+412	10315	Hub	no	3	Isle About that Bass	孤島を揺るがす剛音	6	0	0	no	8 21	0	50	3	9000	520	900	1200	50	
+413	10316	Hub	no	3	Heaven and Earth	天と地の領域！	6	13	0	no	8 21	0	50	3	9300	580	1000	600	60	
+414	10317	Hub	no	3	Fro Shizzle	パッション炸裂☆究極アフロ	7	0	0	no	8 21	0	50	3	8700	450	900	600	50	
+415	10318	Hub	no	3	Bladed Glavenus	ブレイド・ディノバルド	8	13	0	no	8 21	2	50	3	11400	540	1200	0	0	
+416	10319	Hub	no	3	Fight or Uragaan!	脅威！　火山の鉄槌！	8	0	0	no	8 21	0	50	3	6900	350	700	1200	40	
+417	10320	Hub	no	3	The Shogun's Encampment	鎌将軍の包囲陣	8	0	0	no	8 21	0	50	3	7800	530	800	600	50	
+418	10321	Hub	no	3	Crustacean Infestation	ガミザミの群れを掃討せよ！	8	0	0	no	8 21	1	50	3	4500	200	500	1200	20	
+419	10322	Hub	no	3	Scavengers United	スカヴェンジャーズ軍団！	8	0	0	no	8 21	1	50	3	5100	200	600	1200	20	
+420	10323	Hub	no	3	More Coal Please	燃石炭採掘指令	8	0	0	no	8 21	3	50	3	4200	200	500	3000	20	
+421	10324	Hub	no	3	An Early Jurassic Excursion	ドス来い！　真昼の古代林	1	0	0	no	8 21	5	50	3	7500	390	800	1500	40	
+422	10325	Hub	no	3	Wyvern Sand Runners	砂上の竜脚	5	0	0	no	8 21	5	50	3	7800	460	800	1500	50	
+423	10326	Hub	no	3	Zinogre, Bearly Fazed	雷狼の尾を踏む青熊	6	0	0	no	8 21	5	50	3	7200	390	800	1500	40	
+424	10327	Hub	no	3	Making it Safe for Swine	沼地をめぐる攻防	7	0	0	no	8 21	5	50	3	8400	410	900	1500	40	
+425	10328	Hub	no	3	Rumble in the Volcano	ボルケーノブロー	8	0	0	no	8 21	5	50	3	9000	480	900	1500	50	
+426	10329	Hub	no	3	It's Electric	雷電	1	0	0	no	8 21	1	50	3	10200	490	1100	0	0	
+427	10330	Hub	no	3	The White Brute	白き霊獣	103	0	0	no	8 21	1	50	3	10200	490	1100	1200	50	
+428	10331	Hub	no	3	The Frozen Dictator	氷点下の支配者	103	0	0	no	8 21	1	35	3	12900	700	1300	1200	70	
+429	10332	Hub	no	3	The Elder Dragon of Mist	古の霞龍、オオナズチ	2	0	0	no	8 21	1	35	3	12900	700	1300	1200	70	
+430	10333	Hub	no	3	Emperor of Flame	煉獄の主、怒れる炎帝	8	0	0	no	8 21	1	35	3	12900	700	1300	1200	70	
+431	10334	Hub	no	3	Stop the Wheel	廻り集いて回帰せん	16	0	0	no	8 21	1	50	3	11100	560	1200	1200	60	
+432	10335	Hub	no	3	Two-headed Carcass	双頭の骸	21	37	0	no	8 21	1	50	3	15000	840	1500	1200	80	
+433	10401	Hub	no	4	Harvest Tour: A. Steppe	遺跡平原の採集ツアー	11	0	0	no	9 22	3	50	3	12	0	0	0	0	
+434	10402	Hub	no	4	Harvest Tour: Primal Forest	原生林の採集ツアー	13	0	0	no	9 22	3	50	3	12	0	0	0	0	
+435	10403	Hub	no	4	Harvest Tour: Jurassic Frontier	古代林の採集ツアー	101	0	0	no	9 22	3	50	3	12	0	0	0	0	
+436	10404	Hub	no	4	Harvest Tour: Dunes	旧砂漠の採集ツアー	5	0	0	no	9 22	3	50	3	12	0	0	0	0	
+437	10405	Hub	no	4	Harvest Tour: Verdant Hills	森丘の採集ツアー	102	0	0	no	9 22	3	50	3	12	0	0	0	0	
+438	10406	Hub	no	4	Harvest Tour: Arctic Ridge	雪山の採集ツアー	103	0	0	no	9 22	3	50	3	12	0	0	0	0	
+439	10407	Hub	no	4	Harvest Tour: Misty Peaks	渓流の採集ツアー	104	0	0	no	9 22	3	50	3	12	0	0	0	0	
+440	10408	Hub	no	4	Swing into Action	悪戯好きの奇猿狐を狩猟せよ	11	14	0	no	9 22	0	50	3	5100	330	600	1200	30	
+441	10409	Hub	no	4	Ruining the Ruins	遺跡の怪鳥、お邪魔もの	11	0	0	no	9 22	0	50	3	4200	280	500	2700	30	
+442	10410	Hub	no	4	Bag the Bounding Bandit	ドス来い！　遺跡平原の跳狗竜	11	0	0	no	9 22	2	50	3	3600	170	400	1500	20	
+443	10411	Hub	no	4	Jaggi of the Steppe	遺跡平原の狗竜達	11	0	0	no	9 22	1	50	3	2700	120	300	1200	10	
+444	10412	Hub	no	4	Ancestral Steppe Fungus Run	遺跡平原でキノコ狩り	11	0	0	no	9 22	3	50	3	2100	120	300	3000	160	
+445	10413	Hub	no	4	Bug Appétit	美味との遭遇？	13	14	0	no	9 22	0	50	3	3000	160	300	900	20	
+446	10414	Hub	no	4	Gendrome Roadblock	ドスゲネポスを狩れ！	13	0	0	no	9 22	0	50	3	3000	180	300	1500	20	
+447	10415	Hub	no	4	Lost in the Primal Forest	盗まれて原生林！	13	0	0	no	9 22	0	50	3	5100	330	600	1200	30	
+448	10416	Hub	no	4	Hunt Down the Velocidrome!	ドスランポスを狩猟せよ！	13	0	0	no	9 22	0	50	3	2700	140	300	1500	10	
+449	10417	Hub	no	4	Poison Paralysis Pinch	ドクターの毒×麻痺毒研究	13	0	0	no	9 22	1	50	3	2700	120	300	600	10	
+450	10418	Hub	no	4	Crystal Bone Collector	竜骨結晶の納品	13	0	0	no	9 22	3	50	3	2400	120	300	1200	10	
+451	10419	Hub	no	4	Hair of the Dog	良薬作りに必要なもの	13	0	0	no	9 22	3	50	3	2700	120	300	600	10	
+452	10420	Hub	no	4	Tackling the Tetsucabra	鬼蛙テツカブラの狩猟	101	0	0	no	9 22	0	50	3	6000	350	600	600	40	
+453	10421	Hub	no	4	So Notable: Great Maccao	超☆メモ帳　～跳狗竜狩猟編～	1	0	0	no	9 22	0	50	3	3900	220	400	1200	20	
+454	10422	Hub	no	4	The Land Sharq	大地を泳ぐモンスター	5	0	0	no	9 22	0	50	3	3900	200	400	1500	20	
+455	10423	Hub	no	4	Shells of Steel	鉄壁の盾蟹	5	14	0	no	9 22	0	50	3	6000	350	600	1800	40	
+456	10424	Hub	no	4	Birds of a Feather	迷惑な怪鳥と毒怪鳥	102	14	0	no	9 22	0	50	3	6600	490	700	2700	50	
+457	10425	Hub	no	4	Bullfango Brigade	ブルファンゴたちの大集会	2	0	0	no	9 22	1	50	3	3000	120	300	5100	330	
+458	10426	Hub	no	4	Delicious White Livers	肴のキモはホワイトレバー	2	0	0	no	9 22	3	50	3	2100	120	300	600	10	
+459	10427	Hub	no	4	The Bulldrome Charges	猪突猛進！　ドスファンゴ	103	0	0	no	9 22	0	50	3	3000	160	300	1200	20	
+460	10434	Hub	no	4	Enter the Giadrome	強敵、ドスギアノス現る！	3	0	0	yes	9	0	50	3	3000	180	300	2700	20	
+461	10428	Hub	no	4	Snow with Occasional Lagombi	雪のちウルクスス	3	0	0	no	9 22	0	50	3	4200	200	500	900	20	
+462	10429	Hub	no	4	Arzuros Encroaches	アオアシラの浸食	4	0	0	no	9 22	0	50	3	3000	180	300	300	20	
+463	10430	Hub	no	4	Royal Spit Take	ロアルドロスを狩猟せよ！	104	0	0	no	9 22	0	50	3	6000	350	600	1800	40	
+464	10431	Hub	no	4	Netting Neopterons	飛甲虫討伐ノススメ	104	0	0	no	9 22	1	50	3	4500	160	500	1500	20	
+465	10432	Hub	no	4	Clash of Rivals	ライバルの激突！！	15	0	0	no	9 22	1	50	3	4500	150	500	0	0	
+466	10433	Hub	no	4	A Powerful Team	集いし強豪	9	0	0	no	9 22	5	50	3	10200	550	1100	0	0	
+467	10501	Hub	no	5	Harvest Tour: Frozen Seaway	氷海の採集ツアー	14	0	0	no	10 23	3	50	3	12	0	0	0	0	
+468	10502	Hub	no	5	Harvest Tour: Volcanic Hollow	地底火山の採集ツアー	12	0	0	no	10 23	3	50	3	12	0	0	0	0	
+469	10503	Hub	no	5	Harvest Tour: Deserted Island	孤島の採集ツアー	6	0	0	no	10 23	3	50	3	12	0	0	0	0	
+470	10504	Hub	no	5	Harvest Tour: Marshlands	沼地の採集ツアー	7	0	0	no	10 23	3	50	3	12	0	0	0	0	
+471	10505	Hub	no	5	Harvest Tour: Volcano	火山の採集ツアー	8	0	0	no	10 23	3	50	3	12	0	0	0	0	
+472	10506	Hub	no	5	So Notable: Kecha Wacha	超☆メモ帳　～奇猿狐狩猟編～	11	0	0	no	10 23	0	50	3	7200	530	800	1800	50	
+473	10507	Hub	no	5	Ancestral Steppe Accounting	遺跡平原の精算アイテム納品	11	0	0	no	10 23	3	50	3	6000	300	600	1500	30	
+474	10543	Hub	no	5	Pink Stink	桃色大将ババコンガ	13	0	0	yes	10	0	50	3	6000	370	600	2700	40	
+475	10508	Hub	no	5	Dragon Lady	女王・リオレイアの狩猟	13	0	0	no	10 23	0	50	3	7500	430	800	1500	40	
+476	10509	Hub	no	5	The Ioprey Leader	イーオスたちの親玉	13	0	0	no	10 23	0	50	3	4200	220	500	1800	20	
+477	10510	Hub	no	5	The Intelligent Malfestio	知性溢れる？　夜鳥狩猟	13	15	0	no	10 23	0	50	3	6900	400	700	1500	40	
+478	10511	Hub	no	5	Serpentine Samba	絞蛇竜は踊り奏でる	13	15	0	no	10 23	0	50	3	8100	470	900	1500	50	
+479	10512	Hub	no	5	Spotted Beauty	マダラなアイツにご執心	13	0	0	no	10 23	0	50	3	4200	290	500	0	0	
+480	10513	Hub	no	5	Primal Forest Accounting	原生林の精算アイテム納品	13	0	0	no	10 23	3	50	3	6000	300	600	900	30	
+481	10514	Hub	no	5	Fin Finder	ザボアザギルの狩猟依頼	14	15	0	no	10 23	0	50	3	6900	400	700	600	40	
+482	10515	Hub	no	5	The Walls Have Eyes	壁に耳あり、天井に目あり？	14	0	0	no	10 23	0	50	3	6300	430	700	0	0	
+483	10516	Hub	no	5	Must Love Lagombi	お姉さまは白兎獣がお好き？	14	0	0	no	10 23	0	50	3	6000	320	600	3000	30	
+484	10517	Hub	no	5	Zamite Fight	獰猛なる矢尻たち	14	0	0	no	10 23	1	50	3	4500	180	500	6000	350	
+485	10518	Hub	no	5	Stone-cold Stones	極寒の地の採掘依頼	14	0	0	no	10 23	3	50	3	3000	180	300	1500	20	
+486	10519	Hub	no	5	Liver and Let Die	キモ・キモ・キモ！！！	14	0	0	no	10 23	3	50	3	3600	180	400	0	0	
+487	10520	Hub	no	5	Fight or Uragaan!	脅威！　火山の鉄槌！	12	0	0	no	10 23	0	50	3	9600	500	1000	1500	50	
+488	10521	Hub	no	5	Worst. Trip. Ever!	イャンガルルガの洗礼	12	15	0	no	10 23	0	50	3	9000	500	900	1500	50	
+489	10522	Hub	no	5	Tetsucabra Bounty	馬力、怪力、テツカブラ！	12	0	0	no	10 23	0	50	3	6000	350	600	3000	40	
+490	10523	Hub	no	5	Close Coal	燃石炭の納品	12	0	0	no	10 23	3	50	3	4200	200	500	1500	20	
+491	10524	Hub	no	5	Nargacuga Throwdown	疾き迅竜の狩猟披露	101	0	0	no	10 23	0	50	3	8100	500	900	1500	50	
+492	10525	Hub	no	5	Insomnia? Meet Hypnotism x 2	不眠のあなたに催眠療法×２	1	0	0	no	10 23	0	50	3	9900	640	1000	2700	60	
+493	10544	Hub	no	5	Brute of the Sands	土砂竜・ボルボロス！	5	0	0	yes	10	0	50	3	6300	400	700	2700	40	
+494	10526	Hub	no	5	The Desert Gourmand	砂上のテーブルマナー	5	0	0	no	10 23	0	50	3	6300	430	700	1200	40	
+495	10527	Hub	no	5	Line in the Sand	サンドのメシよりドスガレオス	5	0	0	no	10 23	0	50	3	5700	320	600	0	0	
+496	10528	Hub	no	5	Wrath of the Rathian	激闘！　雌火竜リオレイア	102	0	0	no	10 23	2	50	3	9900	520	1000	1500	50	
+497	10529	Hub	no	5	Twin Velocidrome	２頭のドスランポス	2	0	0	no	10 23	0	50	3	3900	220	400	0	0	
+498	10530	Hub	no	5	The New Tenant	雪山の主、ドドブランゴ	3	0	0	no	10 23	0	50	3	7500	470	800	2100	50	
+499	10531	Hub	no	5	A Plesioth in the Misty Peaks	渓流の水竜	104	38	0	no	10 23	0	50	3	7500	430	800	1500	40	
+500	10532	Hub	no	5	Awful Guest	孤島の迷惑客	6	0	0	no	10 23	0	50	3	7500	430	800	0	0	
+501	10546	Hub	no	5	Web Sighting	沼地の捕食者・ネルスキュラ	7	0	0	yes	10	0	50	3	7200	430	800	2400	40	
+502	10533	Hub	no	5	Poisonous Pair	イーオスの親玉たち	7	0	0	no	10 23	0	50	3	6000	350	600	0	0	
+503	10534	Hub	no	5	Attack of the Giant Bugs!	巨大昆虫、発生！	7	0	0	no	10 23	1	50	3	5100	250	600	1800	30	
+504	10545	Hub	no	5	Disruptive Eruption	火山の冒険	8	0	0	yes	10	0	50	3	6900	400	700	2700	40	
+505	10535	Hub	no	5	You Caught This? I Caught This	溶岩竜ヴォルガノス出現！	8	15	0	no	10 23	0	50	3	7500	470	800	1500	50	
+506	10536	Hub	no	5	Tumbling Troublemaker	落石注意！？	8	0	0	no	10 23	0	50	3	5100	240	600	3000	20	
+507	10537	Hub	no	5	Shogun in the Flames	炎の山の大将軍	8	0	0	no	10 23	0	50	3	7500	470	800	1500	50	
+508	10538	Hub	no	5	The Most Dangerous Game	ハンターと玉突き事故	9	0	0	no	10 23	1	50	3	3900	220	400	5100	240	
+509	10539	Hub	no	5	Status: Effected	毒、麻痺、混乱にご用心！	101	0	0	no	10 23	5	50	3	14700	800	1500	3000	80	
+510	10540	Hub	no	5	Desert Brawlers	熱砂の喧嘩は武器の素	5	0	0	no	10 23	5	50	3	13800	850	1400	3000	90	
+511	10541	Hub	no	5	The Hunter Games	グレート・ハンター・ゲーム	15	0	0	no	10 23	5	50	3	16500	980	1700	0	0	
+512	10542	Hub	no	5	Hunt, Sweat, and Tears	汗と涙の連続狩猟	9	0	0	no	10 23	5	50	3	14400	730	1500	0	0	
+513	10601	Hub	no	6	The Lightning Crown	素敵な素敵な電竜頭	11	16	0	no	11 24	0	50	3	12000	630	1200	2700	60	
+514	10602	Hub	no	6	What a Girl Wants	轟竜狩猟は妹のため	11	0	0	no	11 24	0	50	3	12600	610	1300	1800	60	
+515	10603	Hub	no	6	Rathalos Run	空の王者・リオレウス	11	0	0	no	11 24	0	50	3	10500	590	1100	1800	60	
+516	10604	Hub	no	6	Watch Your Steppe	遺跡平原の黒蝕竜調査	11	0	0	no	11 24	0	50	3	11700	610	1200	0	0	
+517	10605	Hub	no	6	Bug Buffet	最も危険な晩餐	13	16	0	no	11 24	0	50	3	10500	590	1100	1800	60	
+518	10606	Hub	no	6	A Bewitching Dance	妖艶なる舞	13	39	0	no	11 24	0	50	3	12000	630	1200	2700	60	
+519	10607	Hub	no	6	Dread Locked	跳梁し意思を用いず悪成さば	13	0	0	no	11 24	0	50	3	11700	610	1200	1800	60	
+520	10670	Hub	no	6	Barioth Hunt	ベリオロスの狩猟	14	0	0	yes	11	0	50	3	10500	540	1100	2700	50	
+521	10608	Hub	no	6	The Unshakable Mountain God	不動の山神	14	39	0	no	11 24	0	50	3	12000	630	1200	300	60	
+522	10609	Hub	no	6	Topple the Monarch	狩られる前に狩れ！	14	0	0	no	11 24	0	50	3	11400	590	1200	1800	60	
+523	10610	Hub	no	6	Bedevil a Deviljho	恐暴竜の根城	14	0	0	no	11 24	0	50	3	15000	680	1500	1800	70	
+524	10611	Hub	no	6	Frozen Seaway Accounting	氷海の精算アイテム納品	14	0	0	no	11 24	3	50	3	8100	450	900	4500	50	
+525	10671	Hub	no	6	A Cure for Cowardice	意気地なしには鎧竜で喝！	12	0	0	yes	11	0	50	3	11400	590	1200	2700	60	
+526	10612	Hub	no	6	Master of the Molten Deep	火の海に棲む竜！	12	16	0	no	11 24	0	50	3	11400	610	1200	3000	60	
+527	10613	Hub	no	6	Duel in the Volcanic Hollow	出陣！　地底火山の果し合い！	12	16	0	no	11 24	0	50	3	12000	630	1200	1800	60	
+528	10614	Hub	no	6	Volcanic Hollow Accounting	地底火山の精算アイテム納品	12	0	0	no	11 24	3	50	3	8100	450	900	1500	50	
+529	10615	Hub	no	6	Bug Bite	重厚で重甲な晩餐？	101	0	0	no	11 24	2	50	3	13800	710	1400	3000	160	
+530	10616	Hub	no	6	Heaven and Earth	天と地の領域！	1	0	0	no	11 24	0	50	3	12600	820	1300	0	0	
+531	10617	Hub	no	6	From Beyond the Sands	砂漠の彼方から	5	0	0	no	11 24	0	50	3	12000	630	1200	2700	60	
+532	10618	Hub	no	6	Legend of the Monkey King	猿王伝説！	5	0	0	no	11 24	0	50	3	15000	680	1500	1800	70	
+533	10619	Hub	no	6	Astalos Territory	ライゼクスの支配圏	2	0	0	no	11 24	0	50	3	12000	630	1200	1800	60	
+534	10620	Hub	no	6	Lord of the Skies	リオレウス狩猟指令	2	0	0	no	11 24	0	50	3	10500	590	1100	2700	140	
+535	10621	Hub	no	6	The Rajang in the Snow	吹雪に立つ金獅子	3	0	0	no	11 24	0	50	3	15000	680	1500	1800	70	
+536	10622	Hub	no	6	Fury Run Afoul	憤激する巨獣	103	0	0	no	11 24	0	50	3	12000	630	1200	1800	60	
+537	10623	Hub	no	6	Bl-Bl-Blangongas!	ドドドドブランゴ！	103	0	0	no	11 24	4	50	3	16200	780	1700	2700	80	
+538	10624	Hub	no	6	Surrounded by Bubbles	泡につつまれ狐につままれ	4	0	0	no	11 24	0	50	3	12000	630	1200	1800	60	
+539	10625	Hub	no	6	The Moving Mountain	動くこと、山の如し！	104	0	0	no	11 24	2	50	3	16500	730	1700	2700	70	
+540	10626	Hub	no	6	The Fisherman's Fiend	大海の王・ラギアクルス！	6	0	0	no	11 24	0	50	3	10500	590	1100	2700	60	
+541	10627	Hub	no	6	Open Season for Jaggia	ジャギィノス掃討作戦	6	0	0	no	11 24	1	50	3	4800	240	500	15000	680	
+542	10628	Hub	no	6	For Whom the Gong Tolls	ドボルがために銅鑼は鳴る	7	16	0	no	11 24	0	50	3	12600	610	1300	1800	60	
+543	10629	Hub	no	6	Quartz Rivalry	奥様は白水晶がお好き	7	0	0	no	11 24	3	50	3	6000	400	600	3300	40	
+544	10630	Hub	no	6	We Can Dig It	熱願の穴掘り	8	0	0	no	11 24	2	50	3	15000	730	1500	1800	70	
+545	10631	Hub	no	6	Coal Hearted	たんと掘れ燃石炭	8	0	0	no	11 24	3	30	3	4500	300	500	1800	30	
+546	10632	Hub	no	6	River of Fire	燃えさかる大河	8	0	0	no	11 24	0	50	3	10500	750	1100	2700	80	
+547	10633	Hub	no	6	Dances with Wyverns	飛竜たちの乱舞	11	0	0	no	11 24	5	50	3	16800	940	1700	4200	90	
+548	10634	Hub	no	6	Bugging Out	原生林の曲者たち	13	0	0	no	11 24	5	50	3	20700	1130	2100	4200	110	
+549	10635	Hub	no	6	A Three Hour Tour	スリルとショックの氷海ツアー	14	0	0	no	11 24	5	50	3	17700	1020	1800	4200	100	
+550	10636	Hub	no	6	A Hollow Defense	地底火山に響く侵略の足音	12	0	0	no	11 24	5	50	3	18900	1040	1900	4200	100	
+551	10637	Hub	no	6	Wild Gunman	ワイルドバレット	6	0	0	no	11 24	5	50	3	18300	1060	1900	4200	110	
+552	10638	Hub	no	6	Marshlands Rag	沼地の狂騒楽団	7	0	0	no	11 24	5	50	3	16800	870	1700	4200	90	
+553	10639	Hub	no	6	Firefight to the Finish!	燃えたぎれ！　火山の熱闘！！	8	0	0	no	11 24	5	50	3	18600	1090	1900	4200	110	
+554	10640	Hub	no	6	At the Slayground	狂乱の立体闘技場	10	0	0	no	11 24	5	50	3	21600	1120	2200	0	0	
+555	10641	Hub	no	6	It's Electric	雷電	1	0	0	no	11 24	1	50	3	14400	700	1500	0	0	
+556	10642	Hub	no	6	The White Brute	白き霊獣	103	0	0	no	11 24	1	50	3	14400	700	1500	1800	70	
+557	10643	Hub	no	6	A Scenic Locale	山紫水明の地	17	0	0	no	11 24	1	50	3	14400	700	1500	0	0	
+558	10644	Hub	no	6	Miasma Attack	どくどくパニック・毒怪鳥！！	11	0	0	no	11 24	0	50	3	6300	400	700	2100	40	
+559	10645	Hub	no	6	Stop the Wacha!	奇猿狐の蛮行を止めろ！	11	0	0	no	11 24	0	50	3	6300	400	700	2100	40	
+560	10646	Hub	no	6	We Are Not Amused	オーラ漂う陸の女王！	13	0	0	no	11 24	0	50	3	9000	520	900	2100	50	
+561	10647	Hub	no	6	Zamtrios Fight!	クール！　ザボアザギル！	14	0	0	no	11 24	0	50	3	8400	480	900	2100	50	
+562	10648	Hub	no	6	The Frog of War	獰猛と化した鬼蛙	12	0	0	no	11 24	0	50	3	7200	420	800	2100	40	
+563	10649	Hub	no	6	Triple Toady Terror	３頭寄れば獰猛蛙	12	0	0	no	11 24	4	50	3	15900	740	1600	1800	70	
+564	10650	Hub	no	6	The Coal Still Burns	心を燃やせ、燃石炭！	12	0	0	no	11 24	3	50	3	6000	320	600	11700	600	
+565	10651	Hub	no	6	Woe Malfestio	夜鳥の会・危機一髪！	1	0	0	no	11 24	0	50	3	8400	480	900	2100	50	
+566	10652	Hub	no	6	Born of Darkness	闇より生まれし者	101	0	0	no	11 24	0	50	3	9900	600	1000	2100	60	
+567	10653	Hub	no	6	Nibeling on Apples	幻のハップル？	5	0	0	no	11 24	0	50	3	7800	520	800	2100	50	
+568	10654	Hub	no	6	Warning: Hyper Yian Garuga!	黒狼鳥の獰猛警報！！	2	0	0	no	11 24	0	50	3	10800	600	1100	2100	60	
+569	10655	Hub	no	6	Hyper for Holes	凍てつく牙は獰猛に	103	0	0	no	11 24	0	50	3	9000	560	900	2100	60	
+570	10656	Hub	no	6	The Plesioth Adventure	ガノトトス冒険記	4	0	0	no	11 24	0	50	3	9000	520	900	2100	50	
+571	10657	Hub	no	6	Daimyo of the Deserted Island	孤島の暴君、ダイミョウザザミ	6	0	0	no	11 24	0	50	3	7200	420	800	2100	40	
+572	10658	Hub	no	6	Where the Wild Manes Are	獰猛なタテガミを求めて	6	0	0	no	11 24	0	50	3	7200	420	800	2100	40	
+573	10659	Hub	no	6	Hyper Investigation	獰猛個体・調査依頼	7	0	0	no	11 24	0	50	3	5100	340	600	2100	30	
+574	10660	Hub	no	6	The Khezu and the Shadow	フルフルは黒き影と共に	7	0	0	no	11 24	0	50	3	7800	520	800	2100	50	
+575	10661	Hub	no	6	Bring On the Shogun	攻究せよ、鎌持つショウグン	7	0	0	no	11 24	0	50	3	9000	560	900	2100	60	
+576	10662	Hub	no	6	Unnerving Najarala	絞蛇竜は不気味に嗤う	7	0	0	no	11 24	0	50	3	9900	560	1000	2100	60	
+577	10663	Hub	no	6	Eruption Embodied	竜の大鎚・火山の化身	8	0	0	no	11 24	0	50	3	11700	600	1200	2100	60	
+578	10664	Hub	no	6	The Magma's Rage	極秘依頼！　獰猛なる溶岩竜！	8	0	0	no	11 24	0	50	3	9000	560	900	2100	60	
+579	10665	Hub	no	6	Minion Audition Imposition	子分・取り分・イイ気分♪	7	0	0	no	11 24	5	50	3	12000	630	1200	2100	60	
+580	10701	Hub	no	7	Stop the Wheel	廻り集いて回帰せん	16	17	0	no	12 25	1	50	3	15600	800	1600	2100	80	
+581	10702	Hub	no	7	A Gathering of Wyverns	熱愛発覚！？　竜達の密会！	11	17	0	no	12 25	0	50	3	13800	850	1400	2700	90	
+582	10703	Hub	no	7	A Song of White and Lapis	白と瑠璃の輪舞曲	13	17	0	no	12 25	0	50	3	13500	820	1400	2700	80	
+583	10704	Hub	no	7	A Cold Set of Armor	冷たき甲冑	14	17	0	no	12 25	0	50	3	13500	820	1400	1800	80	
+584	10705	Hub	no	7	Rocked and Rolled	炸裂！　爆砕拳！	12	17	0	no	12 25	0	50	3	12600	740	1300	0	0	
+585	10706	Hub	no	7	So Notable: Seregios	超☆メモ帳　～千刃竜捕獲編～	12	0	0	no	12 25	2	50	3	16500	890	1700	2100	90	
+586	10707	Hub	no	7	Hammer vs. Blade	鎚と刀の鍔迫り合い	12	17	0	no	12 25	0	50	3	15300	900	1600	2700	90	
+587	10708	Hub	no	7	A Roar to the Heavens	天に吼えろ、大地を揺らせ	1	0	0	no	12 25	0	50	3	16800	960	1700	2700	100	
+588	10709	Hub	no	7	The Hapless Bodyguard	容赦なき、金獅子相手に用心棒	101	0	0	no	12 25	4	50	3	22500	1120	2300	1800	110	
+589	10710	Hub	no	7	Seer of Swords	千刃竜セルレギオス	5	40	0	no	12 25	0	50	3	12600	740	1300	2100	70	
+590	10768	Hub	no	7	Legendary Skills?	その腕前、噂通りかしら…？	5	42	0	yes	12	0	50	3	12600	610	1300	0	0	
+591	10711	Hub	no	7	The Yukumo Gal Special	受付嬢オススメ！　雷狼竜×２	104	0	0	no	12 25	0	50	3	16200	940	1700	0	0	
+592	10712	Hub	no	7	Repaying the Favor	無理した弟子の、後始末	6	0	0	no	12 25	0	50	3	12600	740	1300	2100	70	
+593	10713	Hub	no	7	You Bet Your Life	戦々恐々、最恐コンビ	8	0	0	no	12 25	0	50	3	21000	1090	2100	0	0	
+594	10714	Hub	no	7	Wyvern's Way	竜のコリーダ	10	0	0	no	12 25	0	50	3	15300	890	1600	0	0	
+595	10715	Hub	no	7	Bewitching Heat	灼熱と妖艶	17	0	0	no	12 25	0	50	3	16800	1010	1700	0	0	
+596	10716	Hub	no	7	The Mountain God's Lightning	山神と電影	17	0	0	no	12 25	0	50	3	16800	1010	1700	0	0	
+597	10717	Hub	no	7	A Man's Arena is His Castle	住めば都の闘技場暮らし	9	0	0	no	12 25	5	50	3	21600	1190	2200	0	0	
+598	10718	Hub	no	7	The Hunter Games	グランド・ハンター・ゲーム	15	0	0	no	12 25	5	50	3	25200	1400	2600	0	0	
+599	10719	Hub	no	7	The Flames of War	熱気で熱狂！　炎の軍勢！	9	0	0	no	12 25	5	50	3	36900	1980	3700	0	0	
+600	10720	Hub	no	7	A Shocking Revelation!	ビリビリバリバリパニック！！	9	0	0	no	12 25	5	50	3	38700	2040	3900	0	0	
+601	10721	Hub	no	7	The Gathering Storm	彼の地に集いし破滅の禍難	16	0	0	no	12 25	5	50	3	31500	1720	3200	0	0	
+602	10722	Hub	no	7	Hellfire Star	奈落の妖星	21	41	0	no	12 25	1	50	3	21000	1200	2100	0	0	
+603	10723	Hub	no	7	Putting the Gore in Magala	顕現せし黒蝕竜	11	0	0	no	12 25	0	50	3	14100	730	1500	2400	70	
+604	10770	Hub	no	7	Steppe in the Right Direction	遺跡平原からの伝書	11	0	0	yes	12	0	50	3	18000	820	1800	2400	80	
+605	10724	Hub	no	7	Tigrex, Tigrex, Burning Bright	轟虎馮海	14	0	0	no	12 25	0	50	3	15300	730	1600	2400	70	
+606	10725	Hub	no	7	A Thousand Blades of Wrath	昂ぶる千の刃	12	0	0	no	12 25	0	50	3	15300	890	1600	2400	90	
+607	10726	Hub	no	7	A Fiery Temper	獰にして猛だが火でもある	12	0	0	no	12 25	0	50	3	12600	710	1300	2400	70	
+608	10727	Hub	no	7	The Unassailable Seltas Queen	難攻不落の重甲虫	101	0	0	no	12 25	0	50	3	12600	710	1300	2400	70	
+609	10771	Hub	no	7	Rajang's Black Spirit	金獅子の黒き覇気	101	0	0	yes	12	0	50	3	18000	820	1800	2400	80	
+610	10728	Hub	no	7	Savage Sword of the Desert	灼熱砂上の荒ぶる刀剣	5	0	0	no	12 25	0	50	3	14400	760	1500	2400	80	
+611	10729	Hub	no	7	Wyvernlit Evening	電光煌めく飛竜の夜	102	0	0	no	12 25	0	50	3	14400	760	1500	2400	80	
+612	10730	Hub	no	7	Wyverns All Around Us	空の飛竜と陸の飛竜	2	0	0	no	12 25	0	50	3	15300	980	1600	2700	100	
+613	10731	Hub	no	7	Wild Gods, Calm Rangers	荒れる山神、鎮める狩人	3	0	0	no	12 25	0	50	3	14400	760	1500	2400	80	
+614	10732	Hub	no	7	Into the Maelstrom	蒼く渦巻く登竜門	4	0	0	no	12 25	0	50	3	12600	710	1300	2400	70	
+615	10733	Hub	no	7	The Lithe and Unbreaking	柔能く剛能く狩人を制す	4	0	0	no	12 25	0	50	3	14400	760	1500	2400	80	
+616	10734	Hub	no	7	The Peril of the Land	山紫水明の破壊者	4	0	0	no	12 25	0	50	3	15300	730	1600	2400	70	
+617	10735	Hub	no	7	The Wolf and the Footbath	ユクモノ足湯と雷狼竜	6	0	0	no	12 25	0	50	3	13800	710	1400	2400	70	
+618	10736	Hub	no	7	The Thieving Gypceros	凶賊ゲリョス狩り	7	0	0	no	12 25	4	50	3	16800	830	1700	2700	80	
+619	10737	Hub	no	7	Steam and Smoke	湯けむりと噴煙と	8	0	0	no	12 25	0	50	3	15300	890	1600	2400	90	
+620	10738	Hub	no	7	The Glowing Embers	熱き闘魂、纏いし炎戈	8	0	0	no	12 25	0	50	3	13800	730	1400	2400	70	
+621	10739	Hub	no	7	Primal Forest Defense	原生林の平和を守れ	13	0	0	no	12 25	5	50	3	20100	1170	2100	2400	120	
+622	10740	Hub	no	7	The End of the Trials	試練の帰結点	5	0	0	no	12 25	5	50	3	21300	1130	2200	2400	110	
+623	10741	Hub	no	7	The Descending Fog	森丘の黒い霧	102	0	0	no	12 25	5	50	3	17400	1020	1800	5100	100	
+624	10742	Hub	no	7	Searching for Secret Baths	まだ見ぬ秘湯をもとめて	104	0	0	no	12 25	5	50	3	25200	1300	2600	2400	130	
+625	10743	Hub	no	7	Show Me Your Shaka-Strength	汝ノチカラヲ、見セテミヨ	6	0	0	no	12 25	5	50	3	27300	1490	2800	2400	150	
+626	10744	Hub	no	7	The Marshlands Nightmare	沼地酔夢譚	7	0	0	no	12 25	5	50	3	21900	1290	2200	2400	130	
+627	10745	Hub	no	7	The Birds of Prey	奇奇怪怪のハードビーク	9	0	0	no	12 25	5	50	3	17100	990	1800	2400	100	
+628	10746	Hub	no	7	The Fanged Beasts	勇猛果敢なブレイブタスク	9	0	0	no	12 25	5	50	3	20700	1200	2100	2400	120	
+629	10747	Hub	no	7	The Winged Wyverns	震天動地なグランドウイング	9	0	0	no	12 25	5	50	3	29700	1650	3000	2400	170	
+630	10748	Hub	no	7	The Foes of the Deep	縦横無尽なフレックスフィン	15	0	0	no	12 25	5	50	3	30600	1750	3100	2400	180	
+631	10749	Hub	no	7	The Beasts of Brawn	鎧袖一触のパワフルアームズ	9	0	0	no	12 25	5	50	3	39600	2080	4000	2400	210	
+632	10750	Hub	no	7	Ring of the Silver Sol	白銀の火輪	2	0	0	no	12 25	0	50	3	18900	920	1900	2100	90	
+633	10751	Hub	no	7	Ring of the Golden Lune	黄金の月輪	4	0	0	no	12 25	0	50	3	18900	920	1900	2100	90	
+634	10752	Hub	no	7	Usurpers of the Throne	竜王の系譜	1	0	0	no	12 25	0	50	3	26700	1470	2700	2700	150	
+635	10772	Hub	no	7	Following the Fallen	いつか見た幻日	101	0	0	yes	12	0	50	3	22800	1100	2300	2400	110	
+636	10773	Hub	no	7	Fool's Gold	渓流からの救援要請	104	0	0	yes	12	0	50	3	22800	1100	2300	2400	110	
+637	10774	Hub	no	7	Shining Examples	金と銀の煌き	9	0	0	yes	12	0	50	3	31800	1770	3200	2400	180	
+638	10753	Hub	no	7	Child of Destruction	破壊と滅亡の申し子	8	0	0	no	12 25	0	50	3	18000	900	1800	2100	90	
+639	10754	Hub	no	7	A Shock in the Dark	月夜に出でし阿吽の雷撃	101	0	0	no	12 25	0	50	3	25200	1440	2600	0	0	
+640	10755	Hub	no	7	Triumphant Rage	憤怒の雄叫び	5	0	0	no	12 25	0	50	3	18000	900	1800	0	0	
+641	10756	Hub	no	7	The Frozen Dictator	氷点下の支配者	103	0	0	no	12 25	1	35	3	18000	1000	1800	2100	100	
+642	10757	Hub	no	7	Kushala Daora Strikes	舞い降りる鋼龍	14	0	0	no	12 25	1	35	3	18000	1000	1800	2100	100	
+643	10758	Hub	no	7	The Elder Dragon of Mist	古の霞龍、オオナズチ	2	0	0	no	12 25	1	35	3	18000	1000	1800	2100	100	
+644	10759	Hub	no	7	Beyond the Silence	しじまの向こう	7	0	0	no	12 25	1	35	3	18000	1000	1800	2100	100	
+645	10760	Hub	no	7	Emperor of Flame	煉獄の主、怒れる炎帝	8	0	0	no	12 25	1	35	3	18000	1000	1800	2100	100	
+646	10761	Hub	no	7	The Fires of Devastation	吹き荒れる災厄の火	12	0	0	no	12 25	1	35	3	18000	1000	1800	2100	100	
+647	10762	Hub	no	7	Grim Tidings	獄炎に座す、覇たる者	19	0	0	no	12 25	1	50	3	19200	1000	2000	2100	100	
+648	10763	Hub	no	7	Absolute Zero	絶対零度	20	0	0	no	12 25	1	50	3	19200	1000	2000	2100	100	
+649	10764	Hub	no	7	The Looming Calamity	舞うは嵐、奏でるは災禍の調べ	18	0	0	no	12 25	1	50	3	19200	1000	2000	2100	100	
+650	10765	Hub	no	7	The Brilliant Darkness	煌黒龍アルバトリオン	19	0	0	no	12 25	1	50	3	21000	1500	2100	2100	150	
+651	11101	Hub	no	G1	Harvest Tour: Ruined Pinnacle	遺群嶺の採集ツアー	24	0	0	yes	62 66	3	50	3	12	0	0	0	0	
+652	11102	Hub	no	G1	Harvest Tour: Desert	砂漠の採集ツアー	22	0	0	yes	62 66	3	50	3	12	0	0	0	0	
+653	11117	Hub	no	G1	Harvest Tour: Ancestral Steppe	遺跡平原の採集ツアー	11	0	0	yes	62 66	3	50	3	12	0	0	0	0	
+654	11118	Hub	no	G1	Harvest Tour: Primal Forest	原生林の採集ツアー	13	0	0	yes	62 66	3	50	3	12	0	0	0	0	
+655	11119	Hub	no	G1	Harvest Tour: Jurassic Frontier	古代林の採集ツアー	1	0	0	yes	62 66	3	50	3	12	0	0	0	0	
+656	11120	Hub	no	G1	Harvest Tour: Dunes	旧砂漠の採集ツアー	5	0	0	yes	62 66	3	50	3	12	0	0	0	0	
+657	11121	Hub	no	G1	Harvest Tour: Verdant Hills	森丘の採集ツアー	2	0	0	yes	62 66	3	50	3	12	0	0	0	0	
+658	11122	Hub	no	G1	Harvest Tour: Arctic Ridge	雪山の採集ツアー	3	0	0	yes	62 66	3	50	3	12	0	0	0	0	
+659	11123	Hub	no	G1	Harvest Tour: Misty Peaks	渓流の採集ツアー	4	0	0	yes	62 66	3	50	3	12	0	0	0	0	
+660	11106	Hub	no	G1	Pecking Order	つつかれて、またつつかれて	24	19	0	yes	62 66	0	50	3	7800	450	800	2700	50	
+661	11124	Hub	no	G1	After That Bird!	毒怪鳥が盗んだものを追って	24	0	0	yes	62 66	0	50	3	9300	530	1000	1800	50	
+662	11116	Hub	no	G1	Sweetheart's Pick: Lofty Ludroth	看板娘セレクト：遺群嶺の水獣	24	0	0	yes	62 66	0	50	3	10800	560	1100	3000	60	
+663	11125	Hub	no	G1	Fangs for the Bath	牙獣の行水	24	0	0	yes	62 66	0	50	3	7800	460	800	1800	50	
+664	11114	Hub	no	G1	Ruined Pinnacle, RUINED	不潔ものの大集会	24	0	0	yes	62 66	1	50	3	5700	360	600	5100	230	
+665	11126	Hub	no	G1	Just Five Morel Minutes...	高層エリンギは寝て待て	24	0	0	yes	62 66	3	50	3	5100	300	600	9300	530	
+666	11113	Hub	no	G1	Daimyo Hermitaur Flambé	アツアツ砂漠の盾蟹狩猟	22	0	0	yes	62 66	0	50	3	10800	560	1100	3000	60	
+667	11112	Hub	no	G1	A Berry Dubious Idea	熱帯イチゴはカネの味？	22	0	0	yes	62 66	3	50	3	5100	300	600	7200	320	
+668	11109	Hub	no	G1	Lost, But Not for Long	奪われて、追いかけて	11	19	0	yes	62 66	0	50	3	9300	530	1000	3000	50	
+669	11127	Hub	no	G1	Face Two Face	人騒がせないたずら者たち	11	0	0	yes	62 66	0	50	3	12900	850	1300	3000	90	
+670	11107	Hub	no	G1	Enough Monkeying Around	イタズラ猿に制裁を	13	0	0	yes	62 66	0	50	3	9300	530	1000	1500	50	
+671	11110	Hub	no	G1	Pleasantly Sozzled	罪深きタルの食材探訪	101	0	0	yes	62 66	0	50	3	10800	450	1100	2400	50	
+672	11128	Hub	no	G1	Antony and Tetsucabra	嗚呼素晴らしき也、鬼蛙	1	0	0	yes	62 66	2	50	3	13200	670	1400	2100	70	
+673	11103	Hub	no	G1	A Brush with Bugs	ムシのできない遭遇	1	0	0	yes	62 66	0	50	3	7800	420	800	1500	40	
+674	11111	Hub	no	G1	Surprise!	砂中からのサプライズ	5	19	0	yes	62 66	0	50	3	12600	700	1300	3000	70	
+675	11129	Hub	no	G1	The Bird Who Wood Be King	森丘の迷惑な怪鳥さん	102	0	0	yes	62 66	0	50	3	7800	450	800	1500	50	
+676	11108	Hub	no	G1	The Killer Rabbit of Arctic Ridge	氷雪に舞う白うさぎ	103	0	0	yes	62 66	0	50	3	7800	320	800	2700	30	
+677	11105	Hub	no	G1	Survival of the Biggest	ドスの威信を賭けた戦い	3	19	0	yes	62 66	0	50	3	7800	440	800	2400	40	
+678	11104	Hub	no	G1	Riverside Rumble	川辺のアオアシラ退治	4	0	0	yes	62 66	0	50	3	5400	290	600	1500	30	
+679	11130	Hub	no	G1	Water Fight	水獣たちの争い	104	19	0	yes	62 66	0	50	3	15300	900	1600	2400	90	
+680	11201	Hub	no	G2	Harvest Tour: Jungle	密林の採集ツアー	23	0	0	yes	63 67	3	50	3	12	0	0	0	0	
+681	11220	Hub	no	G2	Harvest Tour: Frozen Seaway	氷海の採集ツアー	14	0	0	yes	63 67	3	50	3	12	0	0	0	0	
+682	11221	Hub	no	G2	Harvest Tour: Deserted Island	孤島の採集ツアー	6	0	0	yes	63 67	3	50	3	12	0	0	0	0	
+683	11222	Hub	no	G2	Harvest Tour: Marshlands	沼地の採集ツアー	7	0	0	yes	63 67	3	50	3	12	0	0	0	0	
+684	11223	Hub	no	G2	Harvest Tour: Volcano	火山の採集ツアー	8	0	0	yes	63 67	3	50	3	12	0	0	0	0	
+685	11224	Hub	no	G2	The Legend of King Apple	至宝の林檎王？	24	0	0	yes	63 67	0	50	3	9300	530	1000	2400	50	
+686	11206	Hub	no	G2	Treasure Pinnacle: Rice	遺群嶺のトレジャー！　米の巻	24	0	0	yes	63 67	0	50	3	12600	640	1300	2700	60	
+687	11248	Hub	no	G2	Queen of the Ruined Pinnacle	遺群嶺の緑の女王	24	20	0	yes	63 67	0	50	3	13500	690	1400	3300	70	
+688	11250	Hub	no	G2	Naked Aggression	切り裂かれた誇り	24	0	0	yes	63 67	0	50	3	13500	760	1400	2700	80	
+689	11225	Hub	no	G2	Smithy Business	武具屋のお使い	24	0	0	yes	63 67	3	50	3	6300	350	700	13500	760	
+690	11202	Hub	no	G2	I See It Rollin'...	転がれ！　転がせ！　赤い牙獣	22	0	0	yes	63 67	0	50	3	9300	530	1000	3000	50	
+691	11204	Hub	no	G2	Dirty Deals	泥まみれの商魂！	22	43	0	yes	63 67	0	50	3	11400	640	1200	0	0	
+692	11211	Hub	no	G2	Share the Load (and the Reward)	二人で特訓、成果は山分け	22	0	0	yes	63 67	0	50	3	11400	690	1200	3300	70	
+693	11212	Hub	no	G2	Shadows in the Desert Lake	砂漠の水面に潜む影	22	20	0	yes	63 67	0	50	3	13500	690	1400	2400	70	
+694	11203	Hub	no	G2	Not Mushroom to Swing a Congalala	ババコンガのキノコ品評会	23	20	0	yes	63 67	0	50	3	10800	600	1100	1800	60	
+695	11210	Hub	no	G2	Sky Tribe: Savior of the Skyway	空の家族・空路を守るッス	23	0	0	yes	63 67	0	50	3	13500	690	1400	2400	70	
+696	11216	Hub	no	G2	Face-off in the Jungle	密林のナルガクルガと対峙せよ	23	0	0	yes	63 67	0	50	3	14700	800	1500	3300	80	
+697	11218	Hub	no	G2	Hit the Lights	ゆらめく光はまぶしくて	23	0	0	yes	63 67	1	50	3	6900	400	700	14700	800	
+698	11219	Hub	no	G2	Shelling Out for Fashion	貝殻に思いをのせて	23	0	0	yes	63 67	3	50	3	5400	350	600	2700	40	
+699	11226	Hub	no	G2	Royal Assassination	女王、降臨す	11	0	0	yes	63 67	0	50	3	13500	690	1400	2400	70	
+700	11209	Hub	no	G2	Feeding Time	ネルスキュラの生態研究	13	20	0	yes	63 67	0	50	3	13200	690	1400	3300	70	
+701	11217	Hub	no	G2	Poisoned Primal Forest	原生林は毒色に染まる	13	0	0	yes	63 67	1	50	3	7200	420	800	2400	40	
+702	11207	Hub	no	G2	Through Thick and Fin	閃きへの１ピースを求めて	14	0	0	yes	63 67	0	50	3	12600	640	1300	3300	60	
+703	11227	Hub	no	G2	Zamite Fright	強暴なる矢尻たち	14	0	0	yes	63 67	1	50	3	7800	440	800	2400	40	
+704	11228	Hub	no	G2	Fishing's Lure	たまには釣りでもいかが？	14	0	0	yes	63 67	3	50	3	6900	400	700	7800	320	
+705	11229	Hub	no	G2	The Next Stage of E-Volvi-lution	転んで跳ねて七転八倒	1	20	0	yes	63 67	0	50	3	9900	610	1000	3000	60	
+706	11230	Hub	no	G2	Brute of the Sands	土砂竜・ボルボロス！	5	0	0	yes	63 67	2	50	3	13500	770	1400	3300	80	
+707	11231	Hub	no	G2	Trade Dispute	砂漠の積荷は誰の物？	5	0	0	yes	63 67	0	50	3	11400	690	1200	3600	70	
+708	11215	Hub	no	G2	A Coil to Arms	グルグルするらしいです	102	0	0	yes	63 67	0	50	3	14700	760	1500	3300	80	
+709	11208	Hub	no	G2	Chilled to the Marrow	身体の芯までビッリビリ	103	0	0	yes	63 67	0	50	3	11400	690	1200	1800	70	
+710	11213	Hub	no	G2	Earn Your Strength	……欲するならば資格を示して	3	0	0	yes	63 67	0	50	3	13500	760	1400	3300	80	
+711	11232	Hub	no	G2	We've Reached Peak Blangonga	ドドブランゴは２頭いる	103	0	0	yes	63 67	0	50	3	18900	1220	1900	3600	120	
+712	11233	Hub	no	G2	Please Plesioth Me!	チコ村を脅かす水竜を狩れ！	104	0	0	yes	63 67	0	50	3	13500	690	1400	2400	70	
+713	11234	Hub	no	G2	Jumping at Shadows	漆黒の影	104	0	0	yes	63 67	0	50	3	14700	800	1500	2700	80	
+714	11235	Hub	no	G2	The Owled Man and the Sea	夜鳥のじけん	6	0	0	yes	63 67	0	50	3	12600	640	1300	2700	60	
+715	11205	Hub	no	G2	That's No Rock...	おのずと岩は動き出す	7	20	0	yes	63 67	0	50	3	12600	640	1300	3300	60	
+716	11236	Hub	no	G2	The Shadow in the Cave	洞窟に潜む影	7	0	0	yes	63 67	0	50	3	11400	690	1200	2100	70	
+717	11237	Hub	no	G2	March Melancolico	陰湿毒沼の狂想曲	7	0	0	yes	63 67	0	50	3	14700	760	1500	3600	80	
+718	11238	Hub	no	G2	Interruption: Conga Line	割り込み受注：２頭の桃毛獣	7	0	0	yes	63 67	0	50	3	15300	960	1600	2700	100	
+719	11239	Hub	no	G2	Commission: Basarios	依頼委託：火山の岩竜	8	0	0	yes	63 67	0	50	3	12600	640	1300	4200	60	
+720	11249	Hub	no	G2	Afro Soul Is a Way of Life	ぶつけろ生き様☆アフロソウル	8	0	0	yes	63 67	0	50	3	13500	760	1400	3300	80	
+721	11214	Hub	no	G2	Feeling Generally Crabby	鎌蟹の狩猟をさせてやるぜ！	8	0	0	yes	63 67	0	50	3	13500	760	1400	3300	80	
+722	11240	Hub	no	G2	Great Ore Discovery	大鉱脈、発見さる！	8	0	0	yes	63 67	3	50	3	7200	420	800	12600	640	
+723	11241	Hub	no	G2	Minion's Devotion	子分の自覚が足りないっチャ！	9	0	0	yes	63 67	5	50	3	19800	980	2000	3300	100	
+724	11242	Hub	no	G2	So Notable: Hyper Hermitaur	超☆メモ帳　～獰猛化盾蟹編～	24	0	0	yes	63 67	0	50	3	13200	670	1400	3600	70	
+725	11243	Hub	no	G2	Revenge from the Skies	逆襲の怪鳥	11	0	0	yes	63 67	0	50	3	9300	540	1000	3600	50	
+726	11244	Hub	no	G2	Commission: Hyper Kecha Wacha	調査委託：獰猛な奇猿狐	11	0	0	yes	63 67	0	50	3	11100	640	1200	3600	60	
+727	11245	Hub	no	G2	Frog's Face, Demon's Heart	獰猛な蛙は鬼よりも強く	14	0	0	yes	63 67	0	50	3	13200	670	1400	3600	70	
+728	11247	Hub	no	G2	The Verdant Hills Are Alive	毒怪鳥は元気に走る	102	0	0	yes	63 67	0	50	3	11100	640	1200	3600	60	
+729	11246	Hub	no	G2	The Hype is Royal	水獣の獰猛化観察記録	4	0	0	yes	63 67	0	50	3	13200	670	1400	3600	70	
+730	11343	Hub	no	G3	Harvest Tour: Volcanic Hollow	地底火山の採集ツアー	12	0	0	yes	64 68	3	50	3	12	0	0	0	0	
+731	11302	Hub	no	G3	The Unapproachable Yian Garuga	孤高の黒狼鳥	24	0	0	yes	64 68	0	50	3	16200	800	1700	3900	80	
+732	11344	Hub	no	G3	Paralyzing Peril	ラギアクルス襲撃の予感	24	0	0	yes	64 68	0	50	3	18900	950	1900	3900	100	
+733	11308	Hub	no	G3	Return from the Pinnacle	遺群嶺からの帰還	24	0	0	yes	64 68	0	50	3	20700	950	2100	3300	100	
+734	11311	Hub	no	G3	Pinnacle Pioneering	ハロー遺群嶺！	24	21	0	yes	64 68	0	50	3	21600	1010	2200	3900	100	
+735	11345	Hub	no	G3	Problem at the Pinnacle	遺群嶺の難題解決	24	0	0	yes	64 68	0	50	3	21300	980	2200	3000	100	
+736	11313	Hub	no	G3	The Boiling Broiling Desert	暑い熱い砂漠	22	21	0	yes	64 68	0	50	3	21600	1010	2200	3900	100	
+737	11346	Hub	no	G3	Strutting the Royal Runway	女帝の花道	23	0	0	yes	64 68	2	50	3	22800	1140	2300	5400	260	
+738	11310	Hub	no	G3	Water Kerfuffle	騎士と密林の夢	23	21	0	yes	64 68	0	50	3	21600	1010	2200	3900	100	
+739	11347	Hub	no	G3	Hunt-a-Thon: Yian Garuga	双子の黒狼鳥	23	0	0	yes	64 68	0	50	3	22800	1280	2300	2700	130	
+740	11348	Hub	no	G3	Primal Forest Fears	原生林の恐怖体験	13	0	0	yes	64 68	0	50	3	18000	1060	1800	3900	110	
+741	11349	Hub	no	G3	Hunt-a-Thon: Gravios	グラビモス連続狩猟	13	0	0	yes	64 68	4	50	3	30900	1520	3100	3600	150	
+742	11304	Hub	no	G3	The Lost Expedition	氷牙竜・ベリオロス！	14	21	0	yes	64 68	0	50	3	18900	870	1900	3900	90	
+743	11312	Hub	no	G3	Ice Recovery	氷海のすばらしい氷	14	21	0	yes	64 68	0	50	3	21600	1010	2200	3900	100	
+744	11309	Hub	no	G3	A Certain Gravitas	鎧竜グラビモスの脅威	12	21	0	yes	64 68	0	50	3	20700	950	2100	3900	100	
+745	11350	Hub	no	G3	Hunter Dojo: Tail-do	斬竜流　狩人道場	12	0	0	yes	64 68	2	50	3	26100	1210	2700	3600	120	
+746	11351	Hub	no	G3	It's Gotta Be Coal	かくし味は燃石炭	12	0	0	yes	64 68	3	50	3	9000	620	900	17400	800	
+747	11305	Hub	no	G3	The Royal Guard	重量級の女帝	101	0	0	yes	64 68	0	50	3	18900	950	1900	3900	100	
+748	11314	Hub	no	G3	Eclipse at Jurassic Frontier	古代林に来たりし黒き蝕	1	0	0	yes	64 68	0	50	3	21300	980	2200	3900	100	
+749	11352	Hub	no	G3	PR Disaster	ベルナ村の観光業が大炎上！	5	0	0	yes	64 68	0	50	3	28500	1570	2900	3900	160	
+750	11306	Hub	no	G3	Predator in the Hills	森丘の捕食者たち	2	0	0	yes	64 68	0	50	3	22800	1310	2300	2700	130	
+751	11353	Hub	no	G3	I Hope It's Not Barioth Flavored	氷牙竜が大発明のカギ？	3	0	0	yes	64 68	0	50	3	18900	870	1900	3900	90	
+752	11354	Hub	no	G3	Hunter Dojo: Tusk-fu	巨獣流　狩人道場	103	0	0	yes	64 68	2	50	3	26100	1210	2700	1800	120	
+753	11355	Hub	no	G3	Howl at the Moon	月下雷鳴の記憶	4	0	0	yes	64 68	0	50	3	20700	950	2100	3900	100	
+754	11356	Hub	no	G3	Hunter Dojo: Bubble-jitsu	泡狐竜流　狩人道場	104	0	0	yes	64 68	0	50	3	21600	1010	2200	3900	100	
+755	11357	Hub	no	G3	"Kiken" Means "Danger"!	空の王者を狩猟せよ！	6	0	0	yes	64 68	0	50	3	18900	950	1900	3900	100	
+756	11307	Hub	no	G3	The Sun, Also Wyverns	海竜のじけん	6	0	0	yes	64 68	0	50	3	18900	950	1900	3900	100	
+757	11358	Hub	no	G3	Hunter Dojo: Lightning Wushu	電竜流　狩人道場	7	0	0	yes	64 68	0	50	3	21600	1010	2200	3300	100	
+758	11303	Hub	no	G3	Uragaan Grief	トラウマガンキンを退治せよ	8	0	0	yes	64 68	0	50	3	17400	800	1800	3900	80	
+759	11359	Hub	no	G3	Heavenly Fire, Earthly Flame	空と地の挟撃	8	0	0	yes	64 68	0	50	3	22800	1370	2300	2700	140	
+760	11319	Hub	no	G3	Giant Dragon Invasion	巨大龍の侵攻	26	44	0	yes	64 68	1	35	3	30300	1570	3100	0	0	
+761	11360	Hub	no	G3	Frontier Fisticuffs	砂漠の死闘と希望	22	0	0	yes	64 68	5	50	3	24000	1190	2400	5100	120	
+762	11361	Hub	no	G3	Down With This Sort of Thing	遺跡平原の改善要求	11	0	0	yes	64 68	5	50	3	31500	1610	3200	5100	160	
+763	11363	Hub	no	G3	Searing Sands	旧砂漠に吹く熱風！	5	0	0	yes	64 68	5	50	3	27300	1530	2800	5100	150	
+764	11365	Hub	no	G3	Arena Bakalaka-Battle! Woo!	闘技場での最終テストっチャ！	9	0	0	yes	64 68	5	50	3	18300	1020	1900	3900	100	
+765	11325	Hub	no	G3	Trial by Fart	桃毛獣による新人への洗礼	24	0	0	yes	64 68	0	50	3	13200	720	1400	4200	70	
+766	11328	Hub	no	G3	The Pinnacle of Good Records	遺群嶺の楽しい旅	24	0	0	yes	64 68	0	50	3	15000	770	1500	4200	80	
+767	11333	Hub	no	G3	The Pinnacle of Terror	遺群嶺の怒れるリオレイア	24	0	0	yes	64 68	0	50	3	16200	830	1700	4200	80	
+768	11334	Hub	no	G3	Eat in Pieces	無茶苦茶ムシャムシャ	22	0	0	yes	64 68	0	50	3	13200	720	1400	4200	70	
+769	11335	Hub	no	G3	Diabolical Deluge	災禍の水竜	23	0	0	yes	64 68	0	50	3	16200	830	1700	4200	80	
+770	11332	Hub	no	G3	Temnoceranophobia	先生の鬼門は獰猛な影蜘蛛	13	0	0	yes	64 68	0	50	3	15600	830	1600	4200	80	
+771	11339	Hub	no	G3	...Or Just Wait for It to Poop	絞蛇竜の消化能力について	13	0	0	yes	64 68	0	50	3	17700	910	1800	4200	90	
+772	11330	Hub	no	G3	Zamtrios, Right Ahead!	シャークブリザード	14	0	0	yes	64 68	0	50	3	15000	770	1500	4200	80	
+773	11331	Hub	no	G3	Frozen Seaway Horror Story	氷海の恐怖体験	14	0	0	yes	64 68	0	50	3	13800	830	1400	4200	80	
+774	11329	Hub	no	G3	Sweets for My Sweets	妹奮闘記～夜鳥退治～	101	0	0	yes	64 68	0	50	3	15000	770	1500	4200	80	
+775	11340	Hub	no	G3	Nargacuga in the Jurassic Frontier	古代林で目撃された迅竜の報告	101	0	0	yes	64 68	0	50	3	17700	960	1800	4200	100	
+776	11327	Hub	no	G3	The Mud Must Flow	旧砂漠のすばらしい砂	5	0	0	yes	64 68	0	50	3	13500	770	1400	4200	80	
+777	11336	Hub	no	G3	Shhhhut Up	雪崩を呼ぶ遠吠え	103	0	0	yes	64 68	0	50	3	16200	910	1700	4200	90	
+778	11338	Hub	no	G3	No Place to Run	鎌蟹は逃げ道を狩る	7	0	0	yes	64 68	0	50	3	16200	910	1700	4200	90	
+779	11337	Hub	no	G3	It's a Miner's Life	鉱山哀歌	8	0	0	yes	64 68	0	50	3	16200	910	1700	4200	90	
+780	11367	Hub	no	G3	Let the Games Begin	本気の狩りは闘技場の中で	10	0	0	yes	64 68	0	50	3	18900	1170	1900	4200	120	
+781	11366	Hub	no	G3	Material Old Girl	強い防具は素材から！	8	0	0	yes	64 68	5	50	3	21900	1340	2200	4200	130	
+782	11316	Hub	no	G3	A Pinnacle Just for You	狩人のための舞台～遺群嶺～	24	0	0	yes	64 68	1	50	3	26100	1120	2700	0	0	
+783	11318	Hub	no	G3	Reality or Fantasy?	夢か現か幻か	1	0	0	yes	64 68	1	50	3	26100	1120	2700	0	0	
+784	11317	Hub	no	G3	The Phantom Beast!	幻獣、キリン現る！	3	0	0	yes	64 68	1	50	3	26100	1120	2700	3900	110	
+785	11401	Hub	no	G4	Sky Render	天を貫く凶星	24	45	0	yes	65 69	1	35	3	28200	1280	2900	0	0	
+786	11459	Hub	no	G4	Hunter Dojo: Valstrax-ryu	天彗龍流　狩人道場	22	0	0	yes	65 69	1	35	3	28200	1280	2900	4200	130	
+787	11458	Hub	no	G4	Supersonic	スーパーソニック	23	0	0	yes	65 69	1	35	3	28200	1280	2900	4500	130	
+788	11460	Hub	no	G4	Scales of Justice	天彗龍に目が眩む	103	0	0	yes	65 69	1	35	3	28200	1280	2900	4500	130	
+789	11403	Hub	no	G4	Battle of 1001 Blades	千刃は刀よりも鋭く	22	0	0	yes	65 69	0	50	3	22800	1190	2300	4500	120	
+790	11406	Hub	no	G4	Beware Twin Horns on the Sand	砂上に見ゆるは猛き双角	22	22	0	yes	65 69	0	50	3	22800	980	2300	4500	100	
+791	11461	Hub	no	G4	Deviljho Hunt	イビルジョーの狩猟	23	22	0	yes	65 69	0	50	3	27000	1090	2700	4500	110	
+792	11409	Hub	no	G4	Paint It Gold	金色に染まる	11	0	0	yes	65 69	0	50	3	27000	1090	2700	4500	110	
+793	11405	Hub	no	G4	Tracing the Family Tree	轟竜の軌跡を追いかけて	13	22	0	yes	65 69	0	50	3	22800	980	2300	4500	100	
+794	11462	Hub	no	G4	Price Freeze	氷海を爆走、暴走轟竜！	14	0	0	yes	65 69	0	50	3	22800	980	2300	4500	100	
+795	11463	Hub	no	G4	Seregios Scuffle	この先、千刃竜以外立入禁止	12	0	0	yes	65 69	0	50	3	22800	1190	2300	4500	120	
+796	11407	Hub	no	G4	Slam Gunk	光る粘菌のナゾを追え	12	0	0	yes	65 69	2	50	3	27300	1430	2800	4500	140	
+797	11464	Hub	no	G4	Diabolical Delight	角竜怒涛	5	0	0	yes	65 69	2	50	3	27300	1180	2800	4500	120	
+798	11465	Hub	no	G4	Emergency at the Arctic Ridge!	雪山からの救援要請	103	22	0	yes	65 69	0	50	3	27000	1090	2700	4500	110	
+799	11404	Hub	no	G4	Misty Opportunity?	小山も陽気に誘われて	4	0	0	yes	65 69	0	50	3	22800	980	2300	4500	100	
+800	11410	Hub	no	G4	Everything in Moderation	暴飲暴食ご用心	7	0	0	yes	65 69	0	50	3	27000	1090	2700	4500	110	
+801	11402	Hub	no	G4	Lavaclad Beast	マグマまといし竜	8	0	0	yes	65 69	0	50	3	20700	980	2100	4500	100	
+802	11466	Hub	no	G4	Brachydios Bypass	火山の脅威・ブラキディオス	8	0	0	yes	65 69	0	50	3	22800	1190	2300	4500	120	
+803	11467	Hub	no	G4	A Very Long Engravement	斬鉄の剣、不壊の鎧	8	22	0	yes	65 69	0	50	3	29700	1570	3000	2700	160	
+804	11408	Hub	no	G4	Ends of the Earth	天を廻りしその果てに…	16	0	0	yes	65 69	1	50	3	28200	1280	2900	4500	130	
+805	11468	Hub	no	G4	A Titanic Clash	戈と槌は相容れず	9	22	0	yes	65 69	0	50	3	30600	1570	3100	4500	160	
+806	11469	Hub	no	G4	The Ol' Razzle Dazzle	感動の生まれる瞬間	9	0	0	yes	65 69	0	50	3	37800	1740	3800	4500	170	
+807	11484	Hub	no	G4	Jurassic Skulduggery	古代林の陰謀	1	0	0	yes	65 69	5	50	3	52500	2460	5300	5100	250	
+808	11485	Hub	no	G4	Verdant Hills Missive	森丘からの伝書	2	0	0	yes	65 69	5	50	3	46200	2280	4700	5100	230	
+809	11470	Hub	no	G4	Quest of Friendship	絆の証！　孤島の大決戦	6	0	0	yes	65 69	5	50	3	31200	1620	3200	5100	160	
+810	11471	Hub	no	G4	Fiery Four-way Fracas	鎧・砕・斬の包囲網を越えて	8	0	0	yes	65 69	5	50	3	45600	2210	4600	5100	220	
+811	11432	Hub	no	G4	Castle on the Run	蠢く墟城	27	46	0	yes	65 69	1	50	3	37800	2080	3800	0	0	
+812	11472	Hub	no	G4	Pitched Pinnacle Battle	遺群嶺での攻防	24	0	0	yes	65 69	0	50	3	32400	1310	3300	4800	130	
+813	11442	Hub	no	G4	All Creatures Cleaved and Small	無心にて森羅万象を断つ	22	0	0	yes	65 69	0	50	3	26100	1210	2700	4800	120	
+814	11448	Hub	no	G4	Backwater Battle	砂漠の死闘と挑戦	22	0	0	yes	65 69	0	50	3	27300	1180	2800	4800	120	
+815	11474	Hub	no	G4	Rajang Against The Machine	我怒る、ゆえに我在り	22	0	0	yes	65 69	0	50	3	32400	1310	3300	4800	130	
+816	11436	Hub	no	G4	Seeking the Sea King	獰猛な海の王者は武器の素	23	0	0	yes	65 69	0	50	3	22800	1140	2300	4800	110	
+817	11440	Hub	no	G4	If These Rocks Could Talk	焦電	23	0	0	yes	65 69	0	50	3	26100	1210	2700	4800	120	
+818	11446	Hub	no	G4	Appeal from Authority	領主の懇願～尾槌竜篇～	23	0	0	yes	65 69	0	50	3	27300	1180	2800	4800	120	
+819	11434	Hub	no	G4	Neopteronophobia	先生の弱点は獰猛な重甲虫	13	0	0	yes	65 69	0	50	3	22800	1140	2300	4800	110	
+820	11439	Hub	no	G4	It Takes Mizutsune to Tango	シャル・ウィ・ダンス？	13	0	0	yes	65 69	0	50	3	26100	1210	2700	4800	120	
+821	11444	Hub	no	G4	Something Wicked	黒蝕竜は禍々しく猛る	13	0	0	yes	65 69	0	50	3	25500	1180	2600	4800	120	
+822	11433	Hub	no	G4	Setting the Barioth High	騎士と氷海の決闘	14	0	0	yes	65 69	0	50	3	22800	1040	2300	4800	100	
+823	11441	Hub	no	G4	The Big Push	巨獣の進攻	14	0	0	yes	65 69	0	50	3	26100	1210	2700	4800	120	
+824	11475	Hub	no	G4	What's Mine is Mine	採掘場を取り戻せ！	12	0	0	yes	65 69	0	50	3	21000	960	2100	4800	100	
+825	11443	Hub	no	G4	Agnaktor's Deep	炎戈竜は地底で吠える	12	0	0	yes	65 69	0	50	3	24900	1180	2500	4800	120	
+826	11483	Hub	no	G4	Garuga's Comeuppance	犯人は黒狼鳥	101	0	0	yes	65 69	0	50	3	19500	960	2000	4800	100	
+827	11445	Hub	no	G4	Seregios Exposé	所により獰猛なセルレギオス	5	0	0	yes	65 69	0	50	3	27300	1430	2800	4800	140	
+828	11447	Hub	no	G4	Tigrex Trap	轟々たる罠	3	0	0	yes	65 69	0	50	3	27300	1180	2800	4800	120	
+829	11478	Hub	no	G4	Zinogre-enthusiasm	孤島で遭遇！　獰猛な雷狼竜	6	0	0	yes	65 69	0	50	3	24900	1140	2500	4800	110	
+830	11449	Hub	no	G4	Even Brachydios Need A Holiday	獰猛な砕竜は、孤島で何を思う	6	0	0	yes	65 69	0	50	3	27300	1430	2800	4800	140	
+831	11438	Hub	no	G4	Marshland Fandango	沼地の冒険	7	0	0	yes	65 69	0	50	3	24900	1140	2500	4800	110	
+832	11435	Hub	no	G4	Let's Get Igneous	火山のすばらしい岩	8	0	0	yes	65 69	0	50	3	22800	1140	2300	4800	110	
+833	11486	Hub	no	G4	R.I.P.	天地が焔に染まるとき	11	0	0	yes	65 69	0	50	3	27300	1570	2800	4800	160	
+834	11487	Hub	no	G4	Death at My Greaves	死神は鎧をまとう	13	0	0	yes	65 69	0	50	3	28500	1570	2900	4800	160	
+835	11488	Hub	no	G4	Pinnacle Problems	戦慄の遺群嶺	24	0	0	yes	65 69	5	50	3	46200	2180	4700	5100	220	
+836	11489	Hub	no	G4	A Bed of Sand	狩魂よ砂中に眠れ	22	0	0	yes	65 69	5	50	3	46800	2210	4700	5100	220	
+837	11490	Hub	no	G4	Jungle Funk	風薫る密林	23	0	0	yes	65 69	5	50	3	39600	2020	4000	5100	200	
+838	11479	Hub	no	G4	Arctic Ridge Allegiances	絆の証？　雪山の獰猛大決戦	103	0	0	yes	65 69	5	50	3	43800	2160	4400	5100	220	
+839	11480	Hub	no	G4	Arena Allegiances	絆の証！　闘技場の大決戦	9	0	0	yes	65 69	5	50	3	57000	2650	5700	4800	270	
+840	11450	Hub	no	G4	Path of the Hunter	狩人達の究道	9	0	0	yes	65 69	5	50	3	78600	3610	7900	0	0	
+841	11418	Hub	no	G4	Silver-Tongued Storyteller	天を舞う白銀	102	0	0	yes	65 69	0	50	3	34200	1480	3500	4500	150	
+842	11419	Hub	no	G4	Gold Digger	大地に踊る黄金	23	0	0	yes	65 69	0	50	3	34200	1480	3500	4500	150	
+843	11481	Hub	no	G4	The Sun and the Moon	呼び合う太陽と月	24	0	0	yes	65 69	0	50	3	48000	2370	4800	4500	240	
+844	11477	Hub	no	G4	By the Light of the Silvery Rath	夜空に浮かぶ銀の太陽	104	0	0	yes	65 69	0	50	3	41100	1780	4200	4800	180	
+845	11476	Hub	no	G4	A Jurassic Frontier Just for You	狩人のための舞台～古代林～	101	0	0	yes	65 69	0	50	3	41100	1780	4200	4800	180	
+846	11473	Hub	no	G4	A Tragedy in Silver and Gold	金と銀がもたらす悲哀	24	0	0	yes	65 69	0	50	3	57300	2840	5800	0	0	
+847	11411	Hub	no	G4	Heaven and Hell	天を廻りて、冥界に堕つ	24	0	0	yes	65 69	0	50	3	31500	1360	3200	4800	140	
+848	11482	Hub	no	G4	Primal Screams	原生林にて呻くは渾沌の竜	13	0	0	yes	65 69	0	50	3	31500	1360	3200	4800	140	
+849	11420	Hub	no	G4	The Jungle VIP	金色超巨星	23	0	0	yes	65 69	0	50	3	32400	1440	3300	4800	140	
+850	11421	Hub	no	G4	Deranged Desert Deviljho	砂漠の死闘と未来	22	0	0	yes	65 69	0	50	3	32400	1440	3300	4800	140	
+851	11422	Hub	no	G4	Brachydios Brute Squad	溶岩島で爆ぜる砕光	19	0	0	yes	65 69	1	50	3	33300	1510	3400	4800	150	
+852	11413	Hub	no	G4	Steel Yourself	禍は鋼鉄よりも硬し	23	0	0	yes	65 69	1	35	3	32400	1600	3300	5100	160	
+853	11412	Hub	no	G4	Blizzard Blower	吹雪を呼ぶ者	103	0	0	yes	65 69	1	35	3	32400	1600	3300	5100	160	
+854	11414	Hub	no	G4	Out of Thin Air	虚空より現われし者	24	0	0	yes	65 69	1	35	3	32400	1600	3300	5100	160	
+855	11415	Hub	no	G4	Into Thin Air	虚空に消え去りし者	2	0	0	yes	65 69	1	35	3	32400	1600	3300	5100	160	
+856	11417	Hub	no	G4	Sandblasting	砂漠に散る爆炎の塵	22	0	0	yes	65 69	1	35	3	32400	1600	3300	5100	160	
+857	11416	Hub	no	G4	Explosion Marks the Spot	財宝は爆炎の中に	8	0	0	yes	65 69	1	35	3	32400	1600	3300	5100	160	
+858	11431	Hub	no	G4	A Bone to Pick	骸まとう龍	21	0	0	yes	65 69	1	50	3	37800	1920	3800	5100	190	
+859	11423	Hub	no	G4	Trial by Akantor	起源にして、頂点	19	0	0	yes	65 69	1	50	3	34800	1600	3500	5100	160	
+860	11424	Hub	no	G4	Polar Peril	極天より来たる、崩せし神	20	0	0	yes	65 69	1	50	3	34800	1600	3500	5100	160	
+861	11425	Hub	no	G4	Who Will Hunt the Rain?	全てを奪い去る嵐	18	0	0	yes	65 69	1	50	3	34800	1600	3500	5100	160	
+862	11455	Hub	no	G4	Glory Glory Alatreon	神への抵抗	19	0	0	yes	65 69	1	50	3	37800	2400	3800	5100	240	
+863	11454	Hub	no	G4	Fade to Black	伝説の黒龍	25	0	0	yes	65 69	1	35	3	45000	2560	4500	0	0	
+864	11456	Hub	no	G4	The End Is Nigh	終末の時	19	0	0	yes	65 69	1	35	3	45000	2560	4500	0	0	
+865	11457	Hub	no	G4	Old Fatalis	祖龍	25	0	0	yes	65 69	1	35	3	45000	2560	4500	0	0	
+866	100201	Village	yes	2	Prowler's First Errand	ニャンター、はじめてのお使い	1	129	0	no	14 38	3	50	3	600	40	100	0	0	
+867	100202	Village	yes	2	Jurassic Fungologist	古代林のキノコ生態調査	1	129	0	no	14 38	3	50	3	1200	40	200	0	0	
+868	100203	Village	yes	2	Lucky Frontier Cat	古代林のポイント招きネコ	101	129	0	no	14 38	3	50	3	900	50	100	0	0	
+869	100301	Village	yes	3	Verdant Hills Bully	森丘の悪戯っ子	2	129	0	no	15 38	1	50	3	600	80	100	0	0	
+870	100302	Village	yes	3	Lucky Hills Cat	森丘のポイント招きネコ	102	129	0	no	15 38	3	50	3	1500	100	200	0	0	
+871	100303	Village	yes	3	The Mining Drag	香り立つ渓流の鉱石	4	129	0	no	15 38	3	50	3	1500	80	200	0	0	
+872	100304	Village	yes	3	Felyne Fishing Weekly	釣りニャンデー創刊	2	129	0	no	15 38	3	50	3	900	90	100	0	0	
+873	100305	Village	yes	3	Grooming the Moofahs	チョキチョキムーファ	6	129	0	no	15 38	3	50	3	1200	90	200	0	0	
+874	100306	Village	yes	3	Bug Reports	沼地に異常事態発生虫？	7	129	0	no	15 38	1	50	3	600	80	100	0	0	
+875	100401	Village	yes	4	Great Maccao Headbreaker	跳狗竜の頭部破壊に挑戦！	1	129	0	no	16 38	0	50	3	900	60	100	0	0	
+876	100402	Village	yes	4	Dash It All	高速突進の交差点	102	129	0	no	16 38	1	50	3	1200	120	200	0	0	
+877	100403	Village	yes	4	An Offer You Can't Refuse	アヤシイお仕事	4	129	0	no	16 38	3	50	3	1500	130	200	0	0	
+878	100404	Village	yes	4	The Secret Ingredient	ザザミソは隠し味	8	129	0	no	16 38	3	50	3	1200	120	200	0	0	
+879	100405	Village	yes	4	Marshlands Fishing?	沼地は釣りの穴場？	7	129	0	no	16 38	3	50	3	1500	120	200	0	0	
+880	100406	Village	yes	4	Arctic Point Expedition	雪山のポイント捜索隊！	103	129	0	no	16 38	3	50	3	1800	150	200	0	0	
+881	100501	Village	yes	5	Blood Red Marshlands	赤く染まる沼地	7	129	0	no	17 38	1	50	3	900	160	100	0	0	
+882	100502	Village	yes	5	An Offer You Can't Relieve	アブナイお仕事	102	129	0	no	17 38	3	50	3	1200	170	200	0	0	
+883	100503	Village	yes	5	Uroktor Hide 'n Seek	ウロコトルと隠れんぼ	8	129	0	no	17 38	1	50	3	2100	160	300	0	0	
+884	100504	Village	yes	5	Into the Volcano	暗雲立ち込める火山帯	8	129	0	no	17 38	1	50	3	2400	160	300	0	0	
+885	100505	Village	yes	5	Kut-Ku Earbreaker	怪鳥の頭部破壊に挑戦！	101	129	0	no	17 38	0	50	3	1500	120	200	0	0	
+886	100601	Village	yes	6	The Right Cattitude	紅葉に散るは、熊か猫か	4	129	0	no	18 38	0	50	3	1800	210	200	0	0	
+887	100602	Village	yes	6	D. Hermitaur Shellbreaker	盾蟹のヤド破壊に挑戦！	5	129	0	no	18 38	0	50	3	1800	150	200	0	0	
+888	100603	Village	yes	6	Surrounded by Blue and Green	青と緑の波状包囲網	9	129	0	no	18 38	5	50	3	2100	230	300	0	0	
+889	100604	Village	yes	6	Poison and Fangs	牙と毒の沼地	7	129	0	no	18 38	0	50	3	3000	260	300	0	0	
+890	100701	Village	yes	7	Prowler's Second Errand	ニャンター、お使い再び	24	129	0	yes	58 70	3	50	3	1500	100	200	0	0	
+891	100702	Village	yes	7	Conga Line	芳香せしコンガ	101	129	0	yes	58 70	1	50	3	180	110	20	0	0	
+892	100703	Village	yes	7	Dashing Velocidrome	疾走するドスランポス	13	129	0	yes	58 70	0	50	3	2100	200	300	0	0	
+893	100801	Village	yes	8	Eggcellent Surprise	ナイショのお仕事	22	129	0	yes	59 70	3	50	3	2100	200	300	0	0	
+894	100802	Village	yes	8	Cold-Blooded Giadrome	冷血なるドスギアノス！	103	129	0	yes	59 70	0	50	3	3900	300	400	0	0	
+895	100803	Village	yes	8	Picturesque Pinnacle	美しき、遺群嶺	24	129	0	yes	59 70	1	50	3	2100	180	300	0	0	
+896	100804	Village	yes	8	Congalala Crestbreaker	桃毛獣のトサカ破壊に挑戦！	13	129	0	yes	59 70	0	50	3	2400	240	300	0	0	
+897	100901	Village	yes	9	Innocent Curiosity	狩場の光はすべて虫	12	129	0	yes	60 70	1	50	3	2400	220	300	0	0	
+898	100902	Village	yes	9	A Poison Paradise	身の毒は気の毒	8	129	0	yes	60 70	0	50	3	6000	340	600	0	0	
+899	100903	Village	yes	9	Lucky Dunes Cat	旧砂漠のポイント招きネコ	5	129	0	yes	60 70	3	50	3	2100	200	300	0	0	
+900	100904	Village	yes	9	Basarios Chestbreaker	岩竜の胸部破壊に挑戦！	7	129	0	yes	60 70	0	50	3	3000	260	300	0	0	
+901	101001	Village	yes	10	Lucky Hills Cat	森丘のポイント招きネコ	102	129	0	yes	61 70	3	50	3	3000	230	300	0	0	
+902	101002	Village	yes	10	Ludroth Lunacy	ルドロスの野次馬根性	6	129	0	yes	61 70	1	50	3	2700	240	300	0	0	
+903	101003	Village	yes	10	Duramboros Humpbreaker	尾槌竜のコブ破壊に挑戦！	23	129	0	yes	61 70	0	50	3	3600	390	400	0	0	
+904	101004	Village	yes	10	Snow Festival	スノーフェスティバル	14	129	0	yes	61 70	0	50	3	5400	380	600	0	0	
+905	101005	Village	yes	10	Drome Rush!	怒濤のドスラッシュ！	9	129	0	yes	61 70	5	50	3	9000	500	900	0	0	
+906	110101	Hub	yes	1	Dance: The Final Frontier	古代林のダンスパーティ	1	129	0	no	19 39	1	50	3	1200	90	200	0	0	
+907	110102	Hub	yes	1	Taste the Mountains	薬膳スープは雪山草仕立て	3	129	0	no	19 39	3	50	3	900	90	100	0	0	
+908	110103	Hub	yes	1	Lucky Mountain Cat	渓流のポイント招きネコ	104	129	0	no	19 39	3	50	3	1800	120	200	0	0	
+909	110201	Hub	yes	2	Running with the Night	闇夜を駆けるリノプロス	101	129	0	no	20 39	1	50	3	1500	120	200	0	0	
+910	110202	Hub	yes	2	A Cricket to Love	孤島のコオロギ恋い焦がれ	6	129	0	no	20 39	3	50	3	1200	120	200	0	0	
+911	110203	Hub	yes	2	A Resplendent Dance	絢爛豪華な武闘会	1	129	0	no	20 39	0	50	3	2100	160	300	0	0	
+912	110301	Hub	yes	3	Hot Scales & Sharp Pincers	熱いウロコと鋭いハサミ	8	129	0	no	21 39	1	50	3	3000	200	300	0	0	
+913	110302	Hub	yes	3	There's Always Room for Fish	サカニャが食べたい腹いっぱい	7	129	0	no	21 39	3	50	3	3000	220	300	0	0	
+914	110303	Hub	yes	3	Out of the Frying Pan	闘技場の牙獣と牙獣	9	129	0	no	21 39	5	50	3	3600	250	400	0	0	
+915	110401	Hub	yes	4	The Grandmeowster's Trials	大師範の試練	11	129	0	no	22 40	1	50	3	1500	120	200	0	0	
+916	110402	Hub	yes	4	We Cat All Be Heroes	ニャンターこそ正義のヒーロー	11	129	0	no	22 40	0	50	3	3000	200	300	0	0	
+917	110403	Hub	yes	4	Fois Gras Faux Pas	魚竜のキモは鮮度が命	5	129	0	no	22 40	3	50	3	3600	150	400	0	0	
+918	110404	Hub	yes	4	Splash in the Moonlight	スプラッシュパニック！	4	129	0	no	22 40	1	50	3	3600	120	400	0	0	
+919	110501	Hub	yes	5	Calm, Cool, and Collected	冷徹な吸血鮫	14	129	0	no	23 40	1	50	3	4500	180	500	0	0	
+920	110502	Hub	yes	5	Kecha Wacha Earbreaker	奇猿狐の耳破壊に挑戦！	11	129	0	no	23 40	0	50	3	2400	200	300	0	0	
+921	110503	Hub	yes	5	Fish On!	孤島の釣り合戦！	6	129	0	no	23 40	3	50	3	4500	200	500	0	0	
+922	110504	Hub	yes	5	Lucky Volcano Cat	地底火山のポイント招きネコ	12	129	0	no	23 40	3	50	3	3900	250	400	0	0	
+923	110505	Hub	yes	5	Under the Blazing Sun	炎天下の麻痺牙	5	129	0	no	23 40	0	50	3	3600	230	400	0	0	
+924	110601	Hub	yes	6	Everywhere You Look	振り返ってもヤツがいる	13	129	0	no	24 40	0	50	3	6000	350	600	0	0	
+925	110602	Hub	yes	6	Malfestio Headbreaker	夜鳥の頭部破壊に挑戦！	6	129	0	no	24 40	0	50	3	3000	240	300	0	0	
+926	110603	Hub	yes	6	The Snow Must Go On	スノードロップをあなたに	14	129	0	no	24 40	0	50	3	4500	380	500	0	0	
+927	110604	Hub	yes	6	Big Bro's Benevolence	メデタイお仕事	5	129	0	no	24 40	3	50	3	3900	300	400	0	0	
+928	110701	Hub	yes	7	The Ball's in Your Court	痺れる魔球	101	129	0	no	25 40	0	50	3	5400	420	600	0	0	
+929	110702	Hub	yes	7	Uragaan Shellbreaker	爆鎚竜の顎破壊に挑戦！	12	129	0	no	25 40	0	50	3	3600	300	400	0	0	
+930	110703	Hub	yes	7	Poison, Poison, Go Away	曇天毒雨	14	129	0	no	25 40	1	50	3	4200	300	500	0	0	
+931	110704	Hub	yes	7	Meownster Hunter	モンスターニャンター	9	129	0	no	25 40	5	50	3	7200	500	800	0	0	
+932	111101	Hub	yes	G1	Bnahabra in the Stomach	羽合の衆	24	129	0	yes	66 71	1	50	3	3300	250	400	0	0	
+933	111102	Hub	yes	G1	Lucky Steppe Cat	遺跡平原のポイント招きネコ	11	129	0	yes	66 71	3	50	3	7200	280	800	0	0	
+934	111103	Hub	yes	G1	Desert Furrontier	砂漠ゲネポス戦線	22	129	0	yes	66 71	1	50	3	3600	290	400	0	0	
+935	111201	Hub	yes	G2	Primal Furrontier	原生林コンガ戦線	13	129	0	yes	67 71	1	50	3	3900	310	400	0	0	
+936	111202	Hub	yes	G2	Thank-You Gift	カンシャのお仕事	102	129	0	yes	67 71	3	50	3	3000	240	300	0	0	
+937	111203	Hub	yes	G2	Royal Ludroth Manebreaker	水獣のタテガミ破壊に挑戦！	4	129	0	yes	67 71	0	50	3	4800	340	500	0	0	
+938	111301	Hub	yes	G3	Laughter is Not the Best Antidote	毒の洗礼	7	129	0	yes	68 71	0	50	3	8100	400	900	0	0	
+939	111302	Hub	yes	G3	Volcano Furrontier	火山ウロザミ戦線	8	129	0	yes	68 71	1	50	3	5400	340	600	0	0	
+940	111303	Hub	yes	G3	Lucky Jungle Cat	密林のポイント招きネコ	23	129	0	yes	68 71	3	50	3	9000	300	900	0	0	
+941	111304	Hub	yes	G3	Nerscylla Hidebreaker	影蜘蛛の背中破壊に挑戦！	13	129	0	yes	68 71	0	50	3	6000	420	600	0	0	
+942	111401	Hub	yes	G4	Lagiacrus Headbreaker	海竜の頭部破壊に挑戦！	6	129	0	yes	69 71	0	50	3	6900	570	700	0	0	
+943	111402	Hub	yes	G4	Ninjadromes	雪に紛れしドスギアノス	14	129	0	yes	69 71	0	50	3	9000	600	900	0	0	
+944	111403	Hub	yes	G4	Seltas Spat	徹甲虫と夫婦の絆	101	129	0	yes	69 71	0	50	3	7800	500	800	0	0	
+945	111404	Hub	yes	G4	Gravios Backbreaker	鎧竜の背中破壊に挑戦！	12	129	0	yes	69 71	0	50	3	6900	570	700	0	0	
+946	111405	Hub	yes	G4	Meownster Hunter Ultimate	モンスターニャンターＸＸ	9	129	0	yes	69 71	5	50	3	15000	1000	1500	0	0	
+947	40101	Special Permit	no		Redhelm I: Hunt	【特殊許可】紅兜狩猟依頼１	6	0	0	no	26	0	50	3	5100	360	600	0	0	
+948	40102	Special Permit	no		Redhelm II: Capture	【特殊許可】紅兜捕獲依頼２	4	0	0	no	26	2	50	3	6000	420	600	2100	130	
+949	40103	Special Permit	no		Redhelm III: Hunt	【特殊許可】紅兜狩猟依頼３	6	0	0	no	26	4	50	3	7200	480	800	0	0	
+950	40104	Special Permit	no		Redhelm IV: Hunt	【特殊許可】紅兜狩猟依頼４	104	0	0	no	26	0	50	3	10200	600	1100	6000	350	
+951	40105	Special Permit	no		Redhelm V: Hunt	【特殊許可】紅兜狩猟依頼５	6	0	0	no	26	0	50	3	12000	720	1200	1200	70	
+952	40106	Special Permit	no		Redhelm VI: Hunt	【特殊許可】紅兜狩猟依頼６	4	0	0	no	26	4	50	3	14100	840	1500	0	0	
+953	40107	Special Permit	no		Redhelm VII: Capture	【特殊許可】紅兜捕獲依頼７	6	0	0	no	26	2	50	3	16200	960	1700	7500	430	
+954	40108	Special Permit	no		Redhelm VIII: Hunt	【特殊許可】紅兜狩猟依頼８	17	0	0	no	26	0	50	3	18000	1080	1800	11400	590	
+955	40109	Special Permit	no		Redhelm IX: Hunt	【特殊許可】紅兜狩猟依頼９	6	0	0	no	26	0	50	3	20100	1200	2100	2400	120	
+956	40110	Special Permit	no		Redhelm X: Hunt	【特殊許可】紅兜狩猟依頼10	17	0	0	no	26	5	50	3	22200	1320	2300	0	0	
+957	40111	Special Permit	no		Redhelm G1: Capture	【特殊許可】紅兜捕獲依頼G1	23	0	0	yes	26	2	50	3	24000	1440	2400	3300	140	
+958	40112	Special Permit	no		Redhelm G2: Hunt	【特殊許可】紅兜狩猟依頼G2	6	0	0	yes	26	0	50	3	25200	1500	2600	3300	150	
+959	40113	Special Permit	no		Redhelm G3: Hunt	【特殊許可】紅兜狩猟依頼G3	23	0	0	yes	26	0	50	3	27000	1620	2700	3900	160	
+960	40114	Special Permit	no		Redhelm G4: Hunt	【特殊許可】紅兜狩猟依頼G4	104	0	0	yes	26	0	50	1	28200	1680	2900	0	0	
+961	40115	Special Permit	no		Redhelm G5: Hunt	【特殊許可】紅兜狩猟依頼G5	18	0	0	yes	26	5	50	3	30000	1800	3000	0	0	
+962	40116	Special Permit	no		Redhelm EX: Hunt	【超特殊許可】紅兜狩猟依頼	18	0	0	yes	80	0	50	3	31200	1860	3200	0	0	
+963	40201	Special Permit	no		Snowbaron I: Hunt	【特殊許可】大雪主狩猟依頼１	3	0	0	no	27	0	50	3	5400	330	600	0	0	
+964	40202	Special Permit	no		Snowbaron II: Capture	【特殊許可】大雪主捕獲依頼２	3	0	0	no	27	2	50	3	6600	390	700	3000	140	
+965	40203	Special Permit	no		Snowbaron III: Hunt	【特殊許可】大雪主狩猟依頼３	103	0	0	no	27	4	50	3	7500	460	800	0	0	
+966	40204	Special Permit	no		Snowbaron IV: Hunt	【特殊許可】大雪主狩猟依頼４	14	0	0	no	27	0	50	3	10800	650	1100	6900	400	
+967	40205	Special Permit	no		Snowbaron V: Hunt	【特殊許可】大雪主狩猟依頼５	3	0	0	no	27	0	50	3	12900	780	1300	1800	80	
+968	40206	Special Permit	no		Snowbaron VI: Hunt	【特殊許可】大雪主狩猟依頼６	14	0	0	no	27	4	50	3	15000	910	1500	0	0	
+969	40207	Special Permit	no		Snowbaron VII: Capture	【特殊許可】大雪主捕獲依頼７	14	0	0	no	27	2	50	3	17100	1040	1800	6300	430	
+970	40208	Special Permit	no		Snowbaron VIII: Hunt	【特殊許可】大雪主狩猟依頼８	3	0	0	no	27	0	50	3	19200	1170	2000	1800	120	
+971	40209	Special Permit	no		Snowbaron IX: Hunt	【特殊許可】大雪主狩猟依頼９	3	0	0	no	27	0	50	3	21300	1300	2200	2400	130	
+972	40210	Special Permit	no		Snowbaron X: Hunt	【特殊許可】大雪主狩猟依頼10	20	0	0	no	27	0	50	3	23400	1430	2400	2400	140	
+973	40211	Special Permit	no		Snowbaron G1: Capture	【特殊許可】大雪主捕獲依頼G1	3	0	0	yes	27	2	50	3	25500	1560	2600	3300	160	
+974	40212	Special Permit	no		Snowbaron G2: Hunt	【特殊許可】大雪主狩猟依頼G2	14	0	0	yes	27	0	50	3	26700	1630	2700	3300	160	
+975	40213	Special Permit	no		Snowbaron G3: Hunt	【特殊許可】大雪主狩猟依頼G3	3	0	0	yes	27	0	50	3	28800	1760	2900	3900	180	
+976	40214	Special Permit	no		Snowbaron G4: Hunt	【特殊許可】大雪主狩猟依頼G4	103	0	0	yes	27	0	50	1	29700	1820	3000	0	0	
+977	40215	Special Permit	no		Snowbaron G5: Hunt	【特殊許可】大雪主狩猟依頼G5	20	0	0	yes	27	5	50	3	31800	1950	3200	0	0	
+978	40216	Special Permit	no		Snowbaron EX: Hunt	【超特殊許可】大雪主狩猟依頼	20	0	0	yes	81	0	50	3	33000	2020	3300	0	0	
+979	40301	Special Permit	no		Stonefist I: Hunt	【特殊許可】矛砕狩猟依頼１	6	0	0	no	28	0	50	3	5700	350	600	0	0	
+980	40302	Special Permit	no		Stonefist II: Capture	【特殊許可】矛砕捕獲依頼２	5	0	0	no	28	2	50	3	6900	420	700	2100	130	
+981	40303	Special Permit	no		Stonefist III: Hunt	【特殊許可】矛砕狩猟依頼３	6	0	0	no	28	4	50	3	8100	490	900	0	0	
+982	40304	Special Permit	no		Stonefist IV: Hunt	【特殊許可】矛砕狩猟依頼４	5	0	0	no	28	0	50	3	11400	700	1200	3900	200	
+983	40305	Special Permit	no		Stonefist V: Hunt	【特殊許可】矛砕狩猟依頼５	6	0	0	no	28	0	50	3	13500	840	1400	1200	80	
+984	40306	Special Permit	no		Stonefist VI: Hunt	【特殊許可】矛砕狩猟依頼６	5	0	0	no	28	4	50	3	15900	980	1600	0	0	
+985	40307	Special Permit	no		Stonefist VII: Capture	【特殊許可】矛砕捕獲依頼７	6	0	0	no	28	2	50	3	18000	1120	1800	10500	590	
+986	40308	Special Permit	no		Stonefist VIII: Hunt	【特殊許可】矛砕狩猟依頼８	5	0	0	no	28	0	50	3	20400	1260	2100	1800	130	
+987	40309	Special Permit	no		Stonefist IX: Hunt	【特殊許可】矛砕狩猟依頼９	5	0	0	no	28	0	50	3	22500	1400	2300	0	0	
+988	40310	Special Permit	no		Stonefist X: Hunt	【特殊許可】矛砕狩猟依頼10	17	0	0	no	28	0	50	3	24900	1540	2500	2400	150	
+989	40311	Special Permit	no		Stonefist G1: Capture	【特殊許可】矛砕捕獲依頼G1	22	0	0	yes	28	2	50	3	27000	1680	2700	3300	170	
+990	40312	Special Permit	no		Stonefist G2: Hunt	【特殊許可】矛砕狩猟依頼G2	5	0	0	yes	28	0	50	3	28200	1750	2900	3300	180	
+991	40313	Special Permit	no		Stonefist G3: Hunt	【特殊許可】矛砕狩猟依頼G3	6	0	0	yes	28	0	50	3	30300	1890	3100	3900	190	
+992	40314	Special Permit	no		Stonefist G4: Hunt	【特殊許可】矛砕狩猟依頼G4	22	0	0	yes	28	0	50	1	31500	1960	3200	0	0	
+993	40315	Special Permit	no		Stonefist G5: Hunt	【特殊許可】矛砕狩猟依頼G5	19	0	0	yes	28	0	50	3	33600	2100	3400	0	0	
+994	40316	Special Permit	no		Stonefist EX: Hunt	【超特殊許可】矛砕狩猟依頼	19	0	0	yes	82	0	50	3	34800	2170	3500	0	0	
+995	40401	Special Permit	no		Dreadqueen I: Hunt	【特殊許可】紫毒姫狩猟依頼１	7	0	0	no	29	0	50	3	6300	400	700	0	0	
+996	40402	Special Permit	no		Dreadqueen II: Capture	【特殊許可】紫毒姫捕獲依頼２	2	0	0	no	29	2	50	3	7500	480	800	1800	100	
+997	40403	Special Permit	no		Dreadqueen III: Hunt	【特殊許可】紫毒姫狩猟依頼３	101	0	0	no	29	0	50	3	8700	560	900	900	60	
+998	40404	Special Permit	no		Dreadqueen IV: Hunt	【特殊許可】紫毒姫狩猟依頼４	11	0	0	no	29	0	50	3	12600	800	1300	0	0	
+999	40405	Special Permit	no		Dreadqueen V: Hunt	【特殊許可】紫毒姫狩猟依頼５	2	0	0	no	29	0	50	3	15000	960	1500	1500	100	
+1000	40406	Special Permit	no		Dreadqueen VI: Hunt	【特殊許可】紫毒姫狩猟依頼６	5	0	0	no	29	4	50	3	17400	1120	1800	0	0	
+1001	40407	Special Permit	no		Dreadqueen VII: Capture	【特殊許可】紫毒姫捕獲依頼７	7	0	0	no	29	2	50	3	20100	1280	2100	7500	470	
+1002	40408	Special Permit	no		Dreadqueen VIII: Hunt	【特殊許可】紫毒姫狩猟依頼８	17	0	0	no	29	0	50	3	22500	1440	2300	1500	140	
+1003	40409	Special Permit	no		Dreadqueen IX: Hunt	【特殊許可】紫毒姫狩猟依頼９	104	0	0	no	29	4	50	3	24900	1600	2500	0	0	
+1004	40410	Special Permit	no		Dreadqueen X: Hunt	【特殊許可】紫毒姫狩猟依頼10	17	0	0	no	29	5	50	3	27300	1760	2800	2400	180	
+1005	40411	Special Permit	no		Dreadqueen G1: Capture	【特殊許可】紫毒姫捕獲依頼G1	23	0	0	yes	29	2	50	3	30000	1920	3000	3300	190	
+1006	40412	Special Permit	no		Dreadqueen G2: Hunt	【特殊許可】紫毒姫狩猟依頼G2	22	0	0	yes	29	0	50	3	31200	2000	3200	3300	200	
+1007	40413	Special Permit	no		Dreadqueen G3: Hunt	【特殊許可】紫毒姫狩猟依頼G3	7	0	0	yes	29	0	50	1	33600	2160	3400	0	0	
+1008	40414	Special Permit	no		Dreadqueen G4: Hunt	【特殊許可】紫毒姫狩猟依頼G4	24	0	0	yes	29	0	50	3	34800	2240	3500	3900	220	
+1009	40415	Special Permit	no		Dreadqueen G5: Hunt	【特殊許可】紫毒姫狩猟依頼G5	16	0	0	yes	29	5	50	3	37200	2400	3800	0	0	
+1010	40416	Special Permit	no		Dreadqueen EX: Hunt	【超特殊許可】紫毒姫狩猟依頼	16	0	0	yes	83	0	50	3	38700	2480	3900	0	0	
+1011	40501	Special Permit	no		Drilltusk I: Hunt	【特殊許可】岩穿狩猟依頼１	6	0	0	no	30	0	50	3	12000	750	1200	0	0	
+1012	40502	Special Permit	no		Drilltusk II: Capture	【特殊許可】岩穿捕獲依頼２	12	0	0	no	30	2	50	3	13200	830	1400	0	0	
+1013	40503	Special Permit	no		Drilltusk III: Hunt	【特殊許可】岩穿狩猟依頼３	1	0	0	no	30	4	50	3	14400	900	1500	0	0	
+1014	40504	Special Permit	no		Drilltusk IV: Hunt	【特殊許可】岩穿狩猟依頼４	14	0	0	no	30	0	50	3	15600	980	1600	1200	100	
+1015	40505	Special Permit	no		Drilltusk V: Hunt	【特殊許可】岩穿狩猟依頼５	12	0	0	no	30	0	50	3	17700	1130	1800	6000	350	
+1016	40506	Special Permit	no		Drilltusk VI: Hunt	【特殊許可】岩穿狩猟依頼６	6	0	0	no	30	4	50	3	18900	1200	1900	0	0	
+1017	40507	Special Permit	no		Drilltusk VII: Capture	【特殊許可】岩穿捕獲依頼７	1	0	0	no	30	2	50	3	20100	1280	2100	6900	400	
+1018	40508	Special Permit	no		Drilltusk VIII: Hunt	【特殊許可】岩穿狩猟依頼８	20	0	0	no	30	0	50	3	21300	1350	2200	1800	140	
+1019	40509	Special Permit	no		Drilltusk IX: Hunt	【特殊許可】岩穿狩猟依頼９	12	0	0	no	30	0	50	3	23700	1500	2400	2400	150	
+1020	40510	Special Permit	no		Drilltusk X: Hunt	【特殊許可】岩穿狩猟依頼10	19	0	0	no	30	0	50	3	26100	1650	2700	0	0	
+1021	40511	Special Permit	no		Drilltusk G1: Capture	【特殊許可】岩穿捕獲依頼G1	6	0	0	yes	30	2	50	3	28500	1800	2900	3300	180	
+1022	40512	Special Permit	no		Drilltusk G2: Hunt	【特殊許可】岩穿狩猟依頼G2	14	0	0	yes	30	0	50	3	29700	1880	3000	3300	190	
+1023	40513	Special Permit	no		Drilltusk G3: Hunt	【特殊許可】岩穿狩猟依頼G3	12	0	0	yes	30	0	50	3	32100	2030	3300	3900	200	
+1024	40514	Special Permit	no		Drilltusk G4: Hunt	【特殊許可】岩穿狩猟依頼G4	101	0	0	yes	30	0	50	1	33300	2100	3400	0	0	
+1025	40515	Special Permit	no		Drilltusk G5: Hunt	【特殊許可】岩穿狩猟依頼G5	20	0	0	yes	30	5	50	3	35400	2250	3600	0	0	
+1026	40516	Special Permit	no		Drilltusk EX: Hunt	【超特殊許可】岩穿狩猟依頼	19	0	0	yes	84	0	50	3	36600	2330	3700	0	0	
+1027	40601	Special Permit	no		Silverwind I: Hunt	【特殊許可】白疾風狩猟依頼１	4	0	0	no	31	0	50	3	13200	850	1400	0	0	
+1028	40602	Special Permit	no		Silverwind II: Capture	【特殊許可】白疾風捕獲依頼２	1	0	0	no	31	2	50	3	14400	940	1500	5100	330	
+1029	40603	Special Permit	no		Silverwind III: Hunt	【特殊許可】白疾風狩猟依頼３	6	0	0	no	31	4	50	3	15600	1020	1600	0	0	
+1030	40604	Special Permit	no		Silverwind IV: Hunt	【特殊許可】白疾風狩猟依頼４	104	0	0	no	31	0	50	3	17100	1110	1800	1500	110	
+1031	40605	Special Permit	no		Silverwind V: Hunt	【特殊許可】白疾風狩猟依頼５	101	0	0	no	31	0	50	3	19500	1280	2000	5100	240	
+1032	40606	Special Permit	no		Silverwind VI: Hunt	【特殊許可】白疾風狩猟依頼６	6	0	0	no	31	4	50	3	21000	1360	2100	0	0	
+1033	40607	Special Permit	no		Silverwind VII: Capture	【特殊許可】白疾風捕獲依頼７	1	0	0	no	31	2	50	3	22200	1450	2300	0	0	
+1034	40608	Special Permit	no		Silverwind VIII: Hunt	【特殊許可】白疾風狩猟依頼８	4	0	0	no	31	0	50	3	23400	1530	2400	2100	150	
+1035	40609	Special Permit	no		Silverwind IX: Hunt	【特殊許可】白疾風狩猟依頼９	104	0	0	no	31	0	50	3	26100	1700	2700	2400	170	
+1036	40610	Special Permit	no		Silverwind X: Hunt	【特殊許可】白疾風狩猟依頼10	17	0	0	no	31	0	50	3	28800	1870	2900	0	0	
+1037	40611	Special Permit	no		Silverwind G1: Capture	【特殊許可】白疾風捕獲依頼G1	23	0	0	yes	31	2	50	3	31200	2040	3200	3300	200	
+1038	40612	Special Permit	no		Silverwind G2: Hunt	【特殊許可】白疾風狩猟依頼G2	6	0	0	yes	31	0	50	3	32700	2130	3300	3300	210	
+1039	40613	Special Permit	no		Silverwind G3: Hunt	【特殊許可】白疾風狩猟依頼G3	23	0	0	yes	31	0	50	3	35100	2300	3600	3900	230	
+1040	40614	Special Permit	no		Silverwind G4: Hunt	【特殊許可】白疾風狩猟依頼G4	4	0	0	yes	31	0	50	1	36600	2380	3700	0	0	
+1041	40615	Special Permit	no		Silverwind G5: Hunt	【特殊許可】白疾風狩猟依頼G5	18	0	0	yes	31	5	50	3	39000	2550	3900	0	0	
+1042	40616	Special Permit	no		Silverwind EX: Hunt	【超特殊許可】白疾風狩猟依頼	18	0	0	yes	85	0	50	3	40500	2640	4100	0	0	
+1043	40701	Special Permit	no		Crystalbeard I: Hunt	【特殊許可】宝纏狩猟依頼１	8	0	0	no	32	0	50	3	13800	900	1400	0	0	
+1044	40702	Special Permit	no		Crystalbeard II: Capture	【特殊許可】宝纏捕獲依頼２	12	0	0	no	32	2	50	3	15000	990	1500	4200	220	
+1045	40703	Special Permit	no		Crystalbeard III: Hunt	【特殊許可】宝纏狩猟依頼３	8	0	0	no	32	4	50	3	16500	1080	1700	0	0	
+1046	40704	Special Permit	no		Crystalbeard IV: Hunt	【特殊許可】宝纏狩猟依頼４	12	0	0	no	32	0	50	3	17700	1170	1800	1500	120	
+1047	40705	Special Permit	no		Crystalbeard V: Hunt	【特殊許可】宝纏狩猟依頼５	12	0	0	no	32	0	50	3	20400	1350	2100	10500	590	
+1048	40706	Special Permit	no		Crystalbeard VI: Hunt	【特殊許可】宝纏狩猟依頼６	8	0	0	no	32	4	50	3	21900	1440	2200	0	0	
+1049	40707	Special Permit	no		Crystalbeard VII: Capture	【特殊許可】宝纏捕獲依頼７	12	0	0	no	32	2	50	3	23400	1530	2400	11400	610	
+1050	40708	Special Permit	no		Crystalbeard VIII: Hunt	【特殊許可】宝纏狩猟依頼８	8	0	0	no	32	0	50	3	24600	1620	2500	2100	160	
+1051	40709	Special Permit	no		Crystalbeard IX: Hunt	【特殊許可】宝纏狩猟依頼９	12	0	0	no	32	0	50	3	27300	1800	2800	2400	180	
+1052	40710	Special Permit	no		Crystalbeard X: Hunt	【特殊許可】宝纏狩猟依頼10	19	0	0	no	32	0	50	3	30000	1980	3000	0	0	
+1053	40711	Special Permit	no		Crystalbeard G1: Capture	【特殊許可】宝纏捕獲依頼G1	12	0	0	yes	32	2	50	3	32700	2160	3300	3900	220	
+1054	40712	Special Permit	no		Crystalbeard G2: Hunt	【特殊許可】宝纏狩猟依頼G2	8	0	0	yes	32	0	50	3	34200	2250	3500	3900	230	
+1055	40713	Special Permit	no		Crystalbeard G3: Hunt	【特殊許可】宝纏狩猟依頼G3	8	0	0	yes	32	0	50	3	36900	2430	3700	3900	240	
+1056	40714	Special Permit	no		Crystalbeard G4: Hunt	【特殊許可】宝纏狩猟依頼G4	12	0	0	yes	32	0	50	1	38100	2520	3900	0	0	
+1057	40715	Special Permit	no		Crystalbeard G5: Hunt	【特殊許可】宝纏狩猟依頼G5	19	0	0	yes	32	0	50	3	40800	2700	4100	0	0	
+1058	40716	Special Permit	no		Crystalbeard EX: Hunt	【超特殊許可】宝纏狩猟依頼	19	0	0	yes	86	0	50	3	42300	2790	4300	0	0	
+1059	40801	Special Permit	no		Deadeye I: Hunt	【特殊許可】隻眼狩猟依頼１	2	0	0	no	33	0	50	3	14400	950	1500	0	0	
+1060	40802	Special Permit	no		Deadeye II: Capture	【特殊許可】隻眼捕獲依頼２	12	0	0	no	33	2	50	3	15900	1050	1600	6000	350	
+1061	40803	Special Permit	no		Deadeye III: Hunt	【特殊許可】隻眼狩猟依頼３	1	0	0	no	33	4	50	3	17100	1140	1800	0	0	
+1062	40804	Special Permit	no		Deadeye IV: Hunt	【特殊許可】隻眼狩猟依頼４	2	0	0	no	33	0	50	3	18600	1240	1900	1500	120	
+1063	40805	Special Permit	no		Deadeye V: Hunt	【特殊許可】隻眼狩猟依頼５	101	0	0	no	33	0	50	3	21300	1430	2200	7500	430	
+1064	40806	Special Permit	no		Deadeye VI: Hunt	【特殊許可】隻眼狩猟依頼６	12	0	0	no	33	4	50	3	22800	1520	2300	0	0	
+1065	40807	Special Permit	no		Deadeye VII: Capture	【特殊許可】隻眼捕獲依頼７	12	0	0	no	33	2	50	3	24300	1620	2500	9600	500	
+1066	40808	Special Permit	no		Deadeye VIII: Hunt	【特殊許可】隻眼狩猟依頼８	2	0	0	no	33	0	50	3	25800	1710	2600	2100	170	
+1067	40809	Special Permit	no		Deadeye IX: Hunt	【特殊許可】隻眼狩猟依頼９	101	0	0	no	33	0	50	3	28500	1900	2900	2400	190	
+1068	40810	Special Permit	no		Deadeye X: Hunt	【特殊許可】隻眼狩猟依頼10	17	0	0	no	33	0	50	3	31500	2090	3200	0	0	
+1069	40811	Special Permit	no		Deadeye G1: Capture	【特殊許可】隻眼捕獲依頼G1	24	0	0	yes	33	2	50	3	34200	2280	3500	3900	230	
+1070	40812	Special Permit	no		Deadeye G2: Hunt	【特殊許可】隻眼狩猟依頼G2	1	0	0	yes	33	0	50	1	35700	2380	3600	0	0	
+1071	40813	Special Permit	no		Deadeye G3: Hunt	【特殊許可】隻眼狩猟依頼G3	2	0	0	yes	33	0	50	3	38400	2570	3900	3900	260	
+1072	40814	Special Permit	no		Deadeye G4: Hunt	【特殊許可】隻眼狩猟依頼G4	23	0	0	yes	33	0	50	3	39900	2660	4000	4500	270	
+1073	40815	Special Permit	no		Deadeye G5: Hunt	【特殊許可】隻眼狩猟依頼G5	16	0	0	yes	33	5	50	3	42600	2850	4300	0	0	
+1074	40816	Special Permit	no		Deadeye EX: Hunt	【超特殊許可】隻眼狩猟依頼	16	0	0	yes	87	0	50	3	44100	2950	4500	0	0	
+1075	40901	Special Permit	no		Dreadking I: Hunt	【特殊許可】黒炎王狩猟依頼１	2	0	0	no	34	0	50	3	15000	1000	1500	0	0	
+1076	40902	Special Permit	no		Dreadking II: Capture	【特殊許可】黒炎王捕獲依頼２	11	0	0	no	34	2	50	3	16500	1100	1700	5100	330	
+1077	40903	Special Permit	no		Dreadking III: Hunt	【特殊許可】黒炎王狩猟依頼３	6	0	0	no	34	0	50	3	18000	1200	1800	1800	120	
+1078	40904	Special Permit	no		Dreadking IV: Hunt	【特殊許可】黒炎王狩猟依頼４	8	0	0	no	34	4	50	3	19500	1300	2000	0	0	
+1079	40905	Special Permit	no		Dreadking V: Hunt	【特殊許可】黒炎王狩猟依頼５	11	0	0	no	34	0	50	3	22200	1500	2300	0	0	
+1080	40906	Special Permit	no		Dreadking VI: Hunt	【特殊許可】黒炎王狩猟依頼６	102	0	0	no	34	0	50	3	23700	1600	2400	2100	160	
+1081	40907	Special Permit	no		Dreadking VII: Capture	【特殊許可】黒炎王捕獲依頼７	12	0	0	no	34	2	50	3	25200	1700	2600	0	0	
+1082	40908	Special Permit	no		Dreadking VIII: Hunt	【特殊許可】黒炎王狩猟依頼８	17	0	0	no	34	0	50	3	26700	1800	2700	2100	180	
+1083	40909	Special Permit	no		Dreadking IX: Hunt	【特殊許可】黒炎王狩猟依頼９	1	0	0	no	34	4	50	3	29700	2000	3000	0	0	
+1084	40910	Special Permit	no		Dreadking X: Hunt	【特殊許可】黒炎王狩猟依頼10	17	0	0	no	34	0	50	3	32700	2200	3300	2400	220	
+1085	40911	Special Permit	no		Dreadking G1: Capture	【特殊許可】黒炎王捕獲依頼G1	8	0	0	yes	34	2	50	3	35700	2400	3600	3900	240	
+1086	40912	Special Permit	no		Dreadking G2: Hunt	【特殊許可】黒炎王狩猟依頼G2	12	0	0	yes	34	0	50	1	37200	2500	3800	0	0	
+1087	40913	Special Permit	no		Dreadking G3: Hunt	【特殊許可】黒炎王狩猟依頼G3	24	0	0	yes	34	0	50	3	40200	2700	4100	3900	270	
+1088	40914	Special Permit	no		Dreadking G4: Hunt	【特殊許可】黒炎王狩猟依頼G4	1	0	0	yes	34	0	50	3	41700	2800	4200	4500	280	
+1089	40915	Special Permit	no		Dreadking G5: Hunt	【特殊許可】黒炎王狩猟依頼G5	19	0	0	yes	34	0	50	3	44400	3000	4500	0	0	
+1090	40916	Special Permit	no		Dreadking EX: Hunt	【超特殊許可】黒炎王狩猟依頼	19	0	0	yes	88	0	50	3	45900	3100	4600	0	0	
+1091	41001	Special Permit	no		Thunderlord I: Hunt	【特殊許可】金雷公狩猟依頼１	4	0	0	no	35	0	50	3	15600	1050	1600	0	0	
+1092	41002	Special Permit	no		Thunderlord II: Capture	【特殊許可】金雷公捕獲依頼２	14	0	0	no	35	2	50	3	17100	1160	1800	0	0	
+1093	41003	Special Permit	no		Thunderlord III: Hunt	【特殊許可】金雷公狩猟依頼３	104	0	0	no	35	0	50	3	18600	1260	1900	3000	160	
+1094	41004	Special Permit	no		Thunderlord IV: Hunt	【特殊許可】金雷公狩猟依頼４	101	0	0	no	35	4	50	3	20100	1370	2100	0	0	
+1095	41005	Special Permit	no		Thunderlord V: Hunt	【特殊許可】金雷公狩猟依頼５	4	0	0	no	35	0	50	3	23100	1580	2400	0	0	
+1096	41006	Special Permit	no		Thunderlord VI: Hunt	【特殊許可】金雷公狩猟依頼６	17	0	0	no	35	0	50	3	24900	1680	2500	2100	170	
+1097	41007	Special Permit	no		Thunderlord VII: Hunt	【特殊許可】金雷公狩猟依頼７	1	0	0	no	35	4	50	3	26400	1790	2700	0	0	
+1098	41008	Special Permit	no		Thunderlord VIII: Capture	【特殊許可】金雷公捕獲依頼８	14	0	0	no	35	2	50	3	27900	1890	2800	0	0	
+1099	41009	Special Permit	no		Thunderlord IX: Hunt	【特殊許可】金雷公狩猟依頼９	16	0	0	no	35	4	50	3	30900	2100	3100	0	0	
+1100	41010	Special Permit	no		Thunderlord X: Hunt	【特殊許可】金雷公狩猟依頼10	17	0	0	no	35	0	50	3	33900	2310	3400	2400	230	
+1101	41011	Special Permit	no		Thunderlord G1: Capture	【特殊許可】金雷公捕獲依頼G1	24	0	0	yes	35	2	50	3	37200	2520	3800	3900	250	
+1102	41012	Special Permit	no		Thunderlord G2: Hunt	【特殊許可】金雷公狩猟依頼G2	6	0	0	yes	35	0	50	1	38700	2630	3900	0	0	
+1103	41013	Special Permit	no		Thunderlord G3: Hunt	【特殊許可】金雷公狩猟依頼G3	23	0	0	yes	35	0	50	3	41700	2840	4200	3900	280	
+1104	41014	Special Permit	no		Thunderlord G4: Hunt	【特殊許可】金雷公狩猟依頼G4	104	0	0	yes	35	0	50	3	43200	2940	4400	4500	290	
+1105	41015	Special Permit	no		Thunderlord G5: Hunt	【特殊許可】金雷公狩猟依頼G5	16	0	0	yes	35	5	50	3	46200	3150	4700	0	0	
+1106	41016	Special Permit	no		Thunderlord EX: Hunt	【超特殊許可】金雷公狩猟依頼	16	0	0	yes	89	0	50	3	48000	3260	4800	0	0	
+1107	41101	Special Permit	no		Grimclaw I: Hunt	【特殊許可】荒鉤爪狩猟依頼１	3	0	0	no	36	0	50	3	16200	1100	1700	0	0	
+1108	41102	Special Permit	no		Grimclaw II: Capture	【特殊許可】荒鉤爪捕獲依頼２	13	0	0	no	36	2	50	3	17700	1210	1800	2700	140	
+1109	41103	Special Permit	no		Grimclaw III: Hunt	【特殊許可】荒鉤爪狩猟依頼３	17	0	0	no	36	0	50	3	19200	1320	2000	1800	130	
+1110	41104	Special Permit	no		Grimclaw IV: Hunt	【特殊許可】荒鉤爪狩猟依頼４	5	0	0	no	36	4	50	3	21000	1430	2100	0	0	
+1111	41105	Special Permit	no		Grimclaw V: Hunt	【特殊許可】荒鉤爪狩猟依頼５	13	0	0	no	36	0	50	3	24000	1650	2400	4200	220	
+1112	41106	Special Permit	no		Grimclaw VI: Hunt	【特殊許可】荒鉤爪狩猟依頼６	3	0	0	no	36	4	50	3	25800	1760	2600	0	0	
+1113	41107	Special Permit	no		Grimclaw VII: Hunt	【特殊許可】荒鉤爪狩猟依頼７	20	0	0	no	36	0	50	3	27300	1870	2800	2100	190	
+1114	41108	Special Permit	no		Grimclaw VIII: Capture	【特殊許可】荒鉤爪捕獲依頼８	5	0	0	no	36	2	50	3	28800	1980	2900	0	0	
+1115	41109	Special Permit	no		Grimclaw IX: Hunt	【特殊許可】荒鉤爪狩猟依頼９	5	0	0	no	36	4	50	3	32100	2200	3300	0	0	
+1116	41110	Special Permit	no		Grimclaw X: Hunt	【特殊許可】荒鉤爪狩猟依頼10	20	0	0	no	36	0	50	3	35400	2420	3600	2400	240	
+1117	41111	Special Permit	no		Grimclaw G1: Capture	【特殊許可】荒鉤爪捕獲依頼G1	22	0	0	yes	36	2	50	3	38400	2640	3900	4500	260	
+1118	41112	Special Permit	no		Grimclaw G2: Hunt	【特殊許可】荒鉤爪狩猟依頼G2	11	0	0	yes	36	5	50	3	40200	2750	4100	4500	280	
+1119	41113	Special Permit	no		Grimclaw G3: Hunt	【特殊許可】荒鉤爪狩猟依頼G3	5	0	0	yes	36	0	50	3	43200	2970	4400	0	0	
+1120	41114	Special Permit	no		Grimclaw G4: Hunt	【特殊許可】荒鉤爪狩猟依頼G4	24	0	0	yes	36	0	50	1	45000	3080	4500	0	0	
+1121	41115	Special Permit	no		Grimclaw G5: Hunt	【特殊許可】荒鉤爪狩猟依頼G5	20	0	0	yes	36	5	50	3	48000	3300	4800	0	0	
+1122	41116	Special Permit	no		Grimclaw EX: Hunt	【超特殊許可】荒鉤爪狩猟依頼	16	0	0	yes	90	0	50	3	49800	3410	5000	0	0	
+1123	41201	Special Permit	no		Hellblade I: Hunt	【特殊許可】燼滅刃狩猟依頼１	1	0	0	no	37	0	50	3	16800	1150	1700	0	0	
+1124	41202	Special Permit	no		Hellblade II: Capture	【特殊許可】燼滅刃捕獲依頼２	5	0	0	no	37	2	50	3	18300	1270	1900	3000	180	
+1125	41203	Special Permit	no		Hellblade III: Hunt	【特殊許可】燼滅刃狩猟依頼３	19	0	0	no	37	0	50	3	20100	1380	2100	1800	140	
+1126	41204	Special Permit	no		Hellblade IV: Hunt	【特殊許可】燼滅刃狩猟依頼４	12	0	0	no	37	4	50	3	21600	1500	2200	0	0	
+1127	41205	Special Permit	no		Hellblade V: Hunt	【特殊許可】燼滅刃狩猟依頼５	8	0	0	no	37	0	50	3	24900	1730	2500	0	0	
+1128	41206	Special Permit	no		Hellblade VI: Hunt	【特殊許可】燼滅刃狩猟依頼６	5	0	0	no	37	4	50	3	26700	1840	2700	0	0	
+1129	41207	Special Permit	no		Hellblade VII: Hunt	【特殊許可】燼滅刃狩猟依頼７	17	0	0	no	37	0	50	3	28500	1960	2900	2100	200	
+1130	41208	Special Permit	no		Hellblade VIII: Capture	【特殊許可】燼滅刃捕獲依頼８	12	0	0	no	37	2	50	3	30000	2070	3000	0	0	
+1131	41209	Special Permit	no		Hellblade IX: Hunt	【特殊許可】燼滅刃狩猟依頼９	101	0	0	no	37	4	50	3	33300	2300	3400	0	0	
+1132	41210	Special Permit	no		Hellblade X: Hunt	【特殊許可】燼滅刃狩猟依頼10	19	0	0	no	37	0	50	3	36600	2530	3700	2400	250	
+1133	41211	Special Permit	no		Hellblade G1: Capture	【特殊許可】燼滅刃捕獲依頼G1	1	0	0	yes	37	2	50	3	39900	2760	4000	4500	280	
+1134	41212	Special Permit	no		Hellblade G2: Hunt	【特殊許可】燼滅刃狩猟依頼G2	23	0	0	yes	37	0	50	3	41700	2880	4200	4500	290	
+1135	41213	Special Permit	no		Hellblade G3: Hunt	【特殊許可】燼滅刃狩猟依頼G3	22	0	0	yes	37	0	50	3	45000	3110	4500	4500	310	
+1136	41214	Special Permit	no		Hellblade G4: Hunt	【特殊許可】燼滅刃狩猟依頼G4	8	0	0	yes	37	0	50	1	46500	3220	4700	0	0	
+1137	41215	Special Permit	no		Hellblade G5: Hunt	【特殊許可】燼滅刃狩猟依頼G5	19	0	0	yes	37	5	50	3	49800	3450	5000	0	0	
+1138	41216	Special Permit	no		Hellblade EX: Hunt	【超特殊許可】燼滅刃狩猟依頼	19	0	0	yes	91	0	50	3	51600	3570	5200	0	0	
+1139	41311	Special Permit	no		Nightcloak G1: Capture	【特殊許可】朧隠捕獲依頼G1	101	0	0	yes	72	2	50	3	29100	1860	3000	3300	190	
+1140	41312	Special Permit	no		Nightcloak G2: Hunt	【特殊許可】朧隠狩猟依頼G2	6	0	0	yes	72	0	50	3	30300	1940	3100	3300	190	
+1141	41313	Special Permit	no		Nightcloak G3: Hunt	【特殊許可】朧隠狩猟依頼G3	24	0	0	yes	72	0	50	3	32700	2090	3300	4500	210	
+1142	41314	Special Permit	no		Nightcloak G4: Hunt	【特殊許可】朧隠狩猟依頼G4	13	0	0	yes	72	0	50	1	33900	2170	3400	0	0	
+1143	41315	Special Permit	no		Nightcloak G5: Hunt	【特殊許可】朧隠狩猟依頼G5	16	0	0	yes	72	5	50	3	36300	2330	3700	0	0	
+1144	41316	Special Permit	no		Nightcloak EX: Hunt	【超特殊許可】朧隠狩猟依頼	16	0	0	yes	92	0	50	3	37800	2400	3800	0	0	
+1145	41411	Special Permit	no		Rustrazor G1: Capture	【特殊許可】鎧裂捕獲依頼G1	8	0	0	yes	73	2	50	3	30600	1980	3100	3300	200	
+1146	41412	Special Permit	no		Rustrazor G2: Hunt	【特殊許可】鎧裂狩猟依頼G2	7	0	0	yes	73	0	50	3	31800	2060	3200	3300	210	
+1147	41413	Special Permit	no		Rustrazor G3: Hunt	【特殊許可】鎧裂狩猟依頼G3	24	0	0	yes	73	0	50	3	34500	2230	3500	4500	220	
+1148	41414	Special Permit	no		Rustrazor G4: Hunt	【特殊許可】鎧裂狩猟依頼G4	8	0	0	yes	73	0	50	1	35700	2310	3600	0	0	
+1149	41415	Special Permit	no		Rustrazor G5: Hunt	【特殊許可】鎧裂狩猟依頼G5	19	0	0	yes	73	5	50	3	38100	2480	3900	0	0	
+1150	41416	Special Permit	no		Rustrazor EX: Hunt	【超特殊許可】鎧裂狩猟依頼	19	0	0	yes	93	0	50	3	39600	2560	4000	0	0	
+1151	41511	Special Permit	no		Soulseer G1: Capture	【特殊許可】天眼捕獲依頼G1	104	0	0	yes	74	2	50	3	39900	2760	4000	3900	280	
+1152	41512	Special Permit	no		Soulseer G2: Hunt	【特殊許可】天眼狩猟依頼G2	23	0	0	yes	74	5	50	3	41700	2880	4200	3900	290	
+1153	41513	Special Permit	no		Soulseer G3: Hunt	【特殊許可】天眼狩猟依頼G3	13	0	0	yes	74	0	50	1	45000	3110	4500	0	0	
+1154	41514	Special Permit	no		Soulseer G4: Hunt	【特殊許可】天眼狩猟依頼G4	4	0	0	yes	74	0	50	3	46500	3220	4700	4500	320	
+1155	41515	Special Permit	no		Soulseer G5: Hunt	【特殊許可】天眼狩猟依頼G5	18	0	0	yes	74	5	50	3	49800	3450	5000	0	0	
+1156	41516	Special Permit	no		Soulseer EX: Hunt	【超特殊許可】天眼狩猟依頼	18	0	0	yes	94	0	50	3	51600	3570	5200	0	0	
+1157	41611	Special Permit	no		Boltreaver G1: Capture	【特殊許可】青電主捕獲依頼G1	2	0	0	yes	75	2	50	3	39900	2760	4000	3900	280	
+1158	41612	Special Permit	no		Boltreaver G2: Hunt	【特殊許可】青電主狩猟依頼G2	7	0	0	yes	75	0	50	1	41700	2880	4200	0	0	
+1159	41613	Special Permit	no		Boltreaver G3: Hunt	【特殊許可】青電主狩猟依頼G3	11	0	0	yes	75	0	50	3	45000	3110	4500	3900	310	
+1160	41614	Special Permit	no		Boltreaver G4: Hunt	【特殊許可】青電主狩猟依頼G4	102	0	0	yes	75	0	50	3	46500	3220	4700	4500	320	
+1161	41615	Special Permit	no		Boltreaver G5: Hunt	【特殊許可】青電主狩猟依頼G5	16	0	0	yes	75	5	50	3	49800	3450	5000	0	0	
+1162	41616	Special Permit	no		Boltreaver EX: Hunt	【超特殊許可】青電主狩猟依頼	16	0	0	yes	95	0	50	3	51600	3570	5200	0	0	
+1163	41711	Special Permit	no		Elderfrost G1: Capture	【特殊許可】銀嶺捕獲依頼G1	14	0	0	yes	76	2	50	3	39900	2760	4000	3900	280	
+1164	41712	Special Permit	no		Elderfrost G2: Hunt	【特殊許可】銀嶺狩猟依頼G2	3	0	0	yes	76	0	50	1	41700	2880	4200	0	0	
+1165	41713	Special Permit	no		Elderfrost G3: Hunt	【特殊許可】銀嶺狩猟依頼G3	14	0	0	yes	76	0	50	3	45000	3110	4500	3900	310	
+1166	41714	Special Permit	no		Elderfrost G4: Hunt	【特殊許可】銀嶺狩猟依頼G4	103	0	0	yes	76	0	50	3	46500	3220	4700	4500	320	
+1167	41715	Special Permit	no		Elderfrost G5: Hunt	【特殊許可】銀嶺狩猟依頼G5	20	0	0	yes	76	5	50	3	49800	3450	5000	0	0	
+1168	41716	Special Permit	no		Elderfrost EX: Hunt	【超特殊許可】銀嶺狩猟依頼	20	0	0	yes	96	0	50	3	51600	3570	5200	0	0	
+1169	41811	Special Permit	no		Bloodbath G1: Hunt	【特殊許可】鏖魔狩猟依頼G1	22	0	0	yes	77	0	50	3	41400	2880	4200	0	0	
+1170	41812	Special Permit	no		Bloodbath G2: Capture	【特殊許可】鏖魔捕獲依頼G2	22	0	0	yes	77	2	50	1	43200	3000	4400	0	0	
+1171	41813	Special Permit	no		Bloodbath G3: Hunt	【特殊許可】鏖魔狩猟依頼G3	22	0	0	yes	77	0	50	3	46500	3240	4700	4500	320	
+1172	41814	Special Permit	no		Bloodbath G4: Hunt	【特殊許可】鏖魔狩猟依頼G4	5	0	0	yes	77	0	50	3	48300	3360	4900	4500	340	
+1173	41815	Special Permit	no		Bloodbath G5: Hunt	【特殊許可】鏖魔狩猟依頼G5	19	0	0	yes	77	0	50	3	51600	3600	5200	0	0	
+1174	41816	Special Permit	no		Bloodbath EX: Hunt	【超特殊許可】鏖魔狩猟依頼	19	0	0	yes	97	0	50	3	53400	3720	5400	0	0	
+1175	30101	Training	no		Hunter Training: The Basics	ハンター訓練≪基礎の基礎≫	1	0	0	no		3	50	3	150	0	0	0	0	
+1176	30102	Training	no		Hunter Training: Combining	ハンター訓練≪採取と調合≫	1	0	0	no		3	50	3	150	0	0	0	0	
+1177	30103	Training	no		Hunter Training: Mining	ハンター訓練≪採掘≫	1	0	0	no		3	50	3	150	0	0	0	0	
+1178	30104	Training	no		Hunter Training: Fishing	ハンター訓練≪釣り≫	1	0	0	no		3	50	3	150	0	0	50	0	
+1179	30105	Training	no		Hunter Training: Transporting	ハンター訓練≪運搬≫	1	0	0	no		3	50	3	150	0	0	0	0	
+1180	30106	Training	no		Hunter Training: Slaying	ハンター訓練≪討伐≫	1	0	0	no		0	50	3	150	0	0	0	0	
+1181	30107	Training	no		Hunter Training: Capturing	ハンター訓練≪捕獲≫	1	0	0	no		0	50	3	150	0	0	0	0	
+1182	130301	Training	yes		Prowler Training: The Basics	ニャンター訓練≪基礎の基礎≫	1	0	0	no		3	50	3	150	0	0	0	0	
+1183	130302	Training	yes		Prowler Training: Combining	ニャンター訓練≪採取と調合≫	1	0	0	no		3	50	3	150	0	0	0	0	
+1184	130303	Training	yes		Prowler Training: Gathering	ニャンター訓練≪採集≫	1	0	0	no		3	50	3	150	0	0	0	0	
+1185	130304	Training	yes		Prowler Training: Fishing	ニャンター訓練≪釣り≫	1	0	0	no		3	50	3	150	0	0	50	0	
+1186	130305	Training	yes		Prowler Training: Transporting	ニャンター訓練≪運搬≫	1	0	0	no		3	50	3	150	0	0	0	0	
+1187	130307	Training	yes		Prowler Training: Slaying I	ニャンター訓練≪討伐Ⅰ≫	9	0	0	no		0	50	3	150	0	0	0	0	
+1188	130308	Training	yes		Prowler Training: Slaying II	ニャンター訓練≪討伐Ⅱ≫	9	0	0	yes		0	50	3	150	0	0	0	0	
+1189	130306	Training	yes		Prowler Training: Capturing	ニャンター訓練≪捕獲≫	1	0	0	no		0	50	3	150	0	0	0	0	
+1190	30201	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1191	30202	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1192	30203	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1193	30204	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1194	30205	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1195	30206	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1196	30207	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1197	30208	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1198	30209	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1199	30210	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1200	30211	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1201	30212	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1202	30213	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1203	30214	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1204	30215	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1205	30216	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1206	30217	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1207	30218	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1208	30219	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1209	30220	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1210	30221	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1211	30222	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1212	30223	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1213	30224	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1214	30225	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1215	30226	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1216	30227	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1217	30228	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1218	30229	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1219	30230	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1220	30231	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1221	30232	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1222	30233	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1223	30234	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1224	30235	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1225	30236	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1226	30237	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1227	30238	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1228	30239	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1229	30240	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1230	30241	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1231	30242	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1232	30243	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1233	30244	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1234	30245	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1235	30246	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1236	30247	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1237	30248	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1238	30249	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1239	30250	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1240	30251	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1241	30252	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1242	30253	Training	no		Guild Style Training	ギルドスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1243	30254	Training	no		Striker Style Training	ストライカースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1244	30255	Training	no		Aerial Style Training	エリアルスタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1245	30256	Training	no		Adept Style Training	ブシドースタイルで訓練	9	0	0	no		0	50	3	150	0	0	0	0	
+1246	30257	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1247	30258	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1248	30259	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1249	30260	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1250	30261	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1251	30262	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1252	30263	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1253	30264	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1254	30265	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1255	30266	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1256	30267	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1257	30268	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1258	30269	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1259	30270	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1260	30271	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1261	30272	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1262	30273	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1263	30274	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1264	30275	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1265	30276	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1266	30277	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1267	30278	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1268	30279	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1269	30280	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1270	30281	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1271	30282	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1272	30283	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1273	30284	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1274	30285	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1275	30286	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1276	30287	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1277	30288	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1278	30289	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1279	30290	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1280	30291	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1281	30292	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1282	30293	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1283	30294	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1284	30295	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1285	30296	Training	no		Valor Style Training	ブレイヴスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1286	30297	Training	no		Alchemy Style Training	レンキンスタイルで訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1287	30298	Training	no		SP Hunter Arts Training	ＳＰ狩技で訓練	9	0	0	yes		0	50	3	150	0	0	0	0	
+1288	20001	Arena	no		Grudge Match: Malfestio	ホロロホルル討伐	9	0	0	no	45 46 47 53 78 79 98	1	50	9	900	0	0	0	0	
+1289	20002	Arena	no		Grudge Match: Khezu	フルフル討伐	9	0	0	no	45 46 47 53 78 79 98	1	50	9	900	0	0	0	0	
+1290	20003	Arena	no		Grudge Match: Najarala	ガララアジャラ討伐	9	0	0	no	45 46 47 53 78 79 98	1	50	9	900	0	0	0	0	
+1291	20004	Arena	no		Grudge Match: Rathalos	リオレウス討伐	9	0	0	no	45 46 47 53 78 79 98	1	50	9	900	0	0	0	0	
+1292	20005	Arena	no		Grudge Match: Kecha Wacha	ケチャワチャ討伐	10	0	0	no	45 46 47 53 78 79 98	1	50	9	1800	0	0	0	0	
+1293	20006	Arena	no		Grudge Match: Plesioth	ガノトトス討伐	15	0	0	no	45 46 47 53 78 79 98	1	50	9	1800	0	0	0	0	
+1294	20007	Arena	no		Grudge Match: Brachydios	ブラキディオス討伐	9	0	0	no	45 46 47 53 78 79 98	1	50	9	2700	0	0	0	0	
+1295	20008	Arena	no		Grudge Match: Barioth	ベリオロス討伐	9	0	0	yes	78 79 98	1	50	9	2700	0	0	0	0	
+1296	20009	Arena	no		Grudge Match: Yian Garuga	イャンガルルガ討伐	9	0	0	yes	78 79 98	1	50	9	3600	0	0	0	0	
+1297	20010	Arena	no		Grudge Match: Uragaan	ウラガンキン討伐	9	0	0	yes	78 79 98	1	50	9	4500	0	0	0	0	
+1298	20011	Arena	no		Grudge Match: Seregios	セルレギオス討伐	9	0	0	yes	78 79 98	1	50	9	4500	0	0	0	0	
+1299	120001	Arena	yes		Grudge Match: Great Maccao	ドスマッカォ討伐	9	0	0	no	45 46 47 53 78 79 98	1	50	9	900	0	0	0	0	
+1300	120002	Arena	yes		Grudge Match: Gypceros	ゲリョス討伐	9	0	0	no	45 46 47 53 78 79 98	1	50	9	900	0	0	0	0	
+1301	120003	Arena	yes		Grudge Match: Bird Wyverns	鳥竜種２頭討伐	9	0	0	no	45 46 47 53 78 79 98	1	50	9	2700	0	0	0	0	
+1302	120004	Arena	yes		Grudge Match: Barroth	ボルボロス討伐	9	0	0	yes	78 79 98	1	50	9	2700	0	0	0	0	
+1303	120005	Arena	yes		Grudge Match: Tetsucabra	テツカブラ討伐	9	0	0	yes	78 79 98	1	50	9	3600	0	0	0	0	
+1304	120006	Arena	yes		Grudge Match: Congalala	ババコンガ討伐	10	0	0	yes	78 79 98	1	50	9	3600	0	0	0	0	
+1305	1010005	Event Hub	no	3	DUMMY	ＵＳＪ・幻惑なる２頭の輪舞曲		127	0	yes		1	50	3						placeholder entry
+1306	1010006	Event Hub	no	1	Hunter Low-rank 2	ハンター下位予備１	1	127	0	yes		0	50	3	0	0	0	0	0	unused event slot
+1307	1010007	Event Hub	no	1	Hunter Low-rank 3	ハンター下位予備２	1	127	0	yes		0	50	3	0	0	0	0	0	unused event slot
+1308	1010001	Event Hub	no	3	DUMMY	ＵＳＪ・巨大斬竜との激闘		127	0	no		0	50	3						placeholder entry
+1309	1010002	Event Hub	no	3	DUMMY	サンリオ・ひとぐでしようぜ		127	0	no		3	50	3						placeholder entry
+1310	1010003	Event Hub	no	3	DUMMY	カプコン・燃えるスピリッツ		127	0	no		4	50	3						placeholder entry
+1311	1010004	Event Hub	no	3	A Season for Lava	溶岩塊の季節	8	127	0	no		4	50	3	11700	630	1200	1200	60	
+1312	1110007	Event Hub	yes	2	Nakayoshi: Silver Crystal	なかよし・幻の水晶を求めて	7	127	0	yes		3	50	3	3600	210	400	0	0	
+1313	1110008	Event Hub	yes	2	Prowler Low-rank 2	ニャター下位予備１	9	127	0	yes		5	50	3	0	0	0	0	0	unused event slot
+1314	1110009	Event Hub	yes	2	Prowler Low-rank 3	ニャター下位予備２	9	127	0	yes		5	50	3	0	0	0	0	0	unused event slot
+1315	1110001	Event Hub	yes	2	CoroCoro: Lost in the Swamp	コロコロ・沼地に迷いこんだゾ	7	127	0	no		1	50	3	2700	120	300	0	0	
+1316	1110002	Event Hub	yes	3	The King of Lynians!	マガジン・最強獣人決定戦！	15	127	0	no		1	50	3	2100	200	300	0	0	
+1317	1110003	Event Hub	yes	3	Jump: Crimson Strongmen	ＪＵＭＰ・真紅の強者たち	8	127	0	no		5	50	3	4800	230	500	0	0	
+1318	1110004	Event Hub	yes	2	Initiate: Operation Moofah	ダンボーのムーファ大作戦！	6	127	0	no		3	50	3	3000	210	300	0	0	
+1319	1110005	Event Hub	yes	2	The Uniqlo Avant-garde	ユニクロ・新たなる挑戦	5	127	0	no		1	50	3	3000	200	300	0	0	
+1320	1010168	Event Hub	no	5	Jump: The Desert Crown	ＪＵＭＰ・砂漠に眠る王冠	5	127	0	yes		0	50	3	6300	400	700	1500	40	
+1321	1010173	Event Hub	no	7	DUMMY	ＵＳＪ・天翔ける輝星の軌跡		127	0	yes		1	50	3						placeholder entry
+1322	1010169	Event Hub	no	6	DUMMY	サンリオ・紅蓮の炎に抱かれて		127	0	yes		0	50	3						placeholder entry
+1323	1010171	Event Hub	no	5	The Legend of Zelda: Power	ゼルダの伝説・力の試練	9	127	0	yes		0	50	3	6900	400	700	1500	40	
+1324	1010172	Event Hub	no	7	Fire Emblem: Warding Despair	ＦＥ・世界が絶望に染まる前に	1	127	0	yes		0	50	3	27300	1320	2800	0	0	
+1325	1010170	Event Hub	no	7	Strider: Frozen Mission	ストライダー飛竜・氷海任務	14	127	0	yes		0	50	3	21600	1080	2200	0	0	
+1326	1010174	Event Hub	no	6	Okami: Most Wanted	大神・妖怪手配書出張版	6	127	0	yes		0	50	3	10200	580	1100	0	0	
+1327	1010175	Event Hub	no	7	Ghosts 'n Goblins: Seeing Red	魔界村・赤き強敵の危険な炎	8	127	0	yes		0	50	3	15300	850	1600	0	0	
+1328	1010176	Event Hub	no	1	Hunter High-rank 9	ハンター上位予備１	1	127	0	yes		0	50	3	0	0	0	0	0	unused event slot
+1329	1010177	Event Hub	no	1	Hunter High-rank 10	ハンター上位予備２	1	127	0	yes		0	50	3	0	0	0	0	0	unused event slot
+1330	1010101	Event Hub	no	7	Crows: The Black Crows	クローズ・黒きカラスたち	101	127	0	no		0	50	3	12600	800	1300	2700	80	
+1331	1010102	Event Hub	no	5	Yowamushi Pedal: Princess	弱虫ペダル・ヒーメヒメヒメ！	5	127	0	no		4	50	3	16200	710	1700	3000	70	
+1332	1010103	Event Hub	no	7	Baki: Biggest vs. Strongest	範馬刃牙・最大ＶＳ最強	9	127	0	no		0	50	3	20400	1100	2100	2700	110	
+1333	1010104	Event Hub	no	6	CoroCoro: Rolling Bowlers	コロコロ・転がるボーラ―ズ	9	127	0	no		5	50	3	15300	760	1600	0	0	
+1334	1010105	Event Hub	no	7	Ushio & Tora: White Mizutsune	うしおととら・白面の泡狐竜	104	127	0	no		0	50	3	18600	1000	1900	2700	100	
+1335	1010106	Event Hub	no	7	Magi: Rescue from the Fall	マギ・堕転から救う者	17	127	0	no		0	50	3	17100	880	1800	2700	90	
+1336	1010107	Event Hub	no	7	The Exploding Flame King	マガジン・紅蓮爆炎の王	8	127	0	no		1	50	3	21600	1200	2200	2400	120	
+1337	1010108	Event Hub	no	7	Yu-Gi-Oh: A Beautiful Wyvern	遊戯王・美しき龍との決闘	16	127	0	no		1	50	3	20700	1060	2100	2400	110	
+1338	1010109	Event Hub	no	7	Jump: Boiling Magma	ＪＵＭＰ・沸き立つマグマ	8	127	0	no		0	50	3	12000	750	1200	2700	80	
+1339	1010110	Event Hub	no	7	Famitsu: Mizutsune Feature	ファミ通・泡狐竜に突撃取材！	13	127	0	no		4	50	3	26100	1210	2700	5100	120	
+1340	1010111	Event Hub	no	7	Dengeki: Turbulent Seas	電撃・荒れ狂う海凶	6	127	0	no		0	50	3	15300	850	1600	2700	90	
+1341	1010112	Event Hub	no	7	Uniqlo Shock Fest	ユニクロ・かつてない衝撃	2	127	0	no		0	50	3	20400	1210	2100	2700	120	
+1342	1010113	Event Hub	no	7	DUMMY	ＵＳＪ・絢爛華麗な舞いを		127	0	no		5	50	3						placeholder entry
+1343	1010114	Event Hub	no	7	DUMMY	ＵＳＪ・昂る電光、猛る炎		127	0	no		5	50	3						placeholder entry
+1344	1010115	Event Hub	no	7	DUMMY	ＵＳＪ・極寒と灼熱のドリーム		127	0	no		5	50	3						placeholder entry
+1345	1010116	Event Hub	no	6	DUMMY	サンリオ・お魚たちを救え！		127	0	no		0	50	3						placeholder entry
+1346	1010117	Event Hub	no	7	DUMMY	マクロスΔ・新たなる戦乙女達		127	0	no		5	50	3						placeholder entry
+1347	1010118	Event Hub	no	7	Star Fox: Battle at Arctic Ridge	スターフォックス・雪山決戦！	3	127	0	no		0	50	3	10800	680	1100	2700	70	
+1348	1010119	Event Hub	no	7	The Three Virtues	ゼルダの伝説・力と知恵と勇気	9	127	0	no		5	50	3	26700	1490	2700	2400	150	
+1349	1010120	Event Hub	no	7	Metroid: Special Mission	メトロイド・特殊任務	12	127	0	no		0	50	3	14400	800	1500	2700	80	
+1350	1010121	Event Hub	no	7	The Steel Vanguard	幻譚～怨鋼の尖兵	103	127	0	no		1	50	3	21600	1200	2200	2400	120	
+1351	1010122	Event Hub	no	7	The Voracious King	幻譚～貪食の恐王	101	127	0	no		0	50	3	21600	980	2200	2700	100	
+1352	1010123	Event Hub	no	7	DMC: The Seltas Queen's Cry	ＤＭＣ・悪魔の如き重甲虫	13	127	0	no		0	50	3	16800	940	1700	2700	90	
+1353	1010124	Event Hub	no	7	Mega Man: Yellow Devil	ロックマン・黄色い悪魔	15	127	0	no		0	50	3	8700	500	900	4200	50	
+1354	1010125	Event Hub	no	7	Capcom: Brilliant Orchestra	カプコン・壮大なオルケスタ	2	127	0	no		0	50	3	12900	750	1300	2700	80	
+1355	1010127	Event Hub	no	7	Felyne Village: The Tourney	アイルー村・ぽかぽか狩猟大会	10	127	0	no		5	50	3	19200	1040	2000	0	0	
+1356	1010128	Event Hub	no	7	Fan Club: Great All Stars	モンハン部・ドスオールスター	9	127	0	no		5	50	3	10500	530	1100	1800	50	
+1357	1010129	Event Hub	no	7	Fan Club: Remobra Removal	モンハン部・ガブラス狩猟戦線	9	127	0	no		1	50	3	6000	300	600	6900	400	
+1358	1010130	Event Hub	no	7	Capcom: White & Black	カプコン・白と黒の乱舞	104	127	0	no		5	50	3	20400	1140	2100	2700	110	
+1359	1010131	Event Hub	no	7	Capcom: The Ruler's Rage	カプコン・覇王烈昂	19	127	0	no		1	50	3	23100	1200	2400	0	0	
+1360	1010133	Event Hub	no	7	Moonlit Tryst	月下の夜会	104	127	0	no		0	50	3	31800	1770	3200	0	0	
+1361	1010134	Event Hub	no	7	Raging Twins	双獅激天	9	127	0	no		0	50	3	30300	1730	3100	0	0	
+1362	1010135	Event Hub	no	7	All's Hair in Glove & War	怒髪に挑めと獰猛な横暴	13	127	0	no		0	50	3	21600	980	2200	2700	100	
+1363	1010137	Event Hub	no	7	A Golden Moon Rises	太古に浮かぶ、黄金の月	1	127	0	no		0	50	3	27300	1320	2800	2700	130	
+1364	1010138	Event Hub	no	7	Silver and Gold	円舞獰乱	17	127	0	no		0	50	3	38400	2120	3900	2700	210	
+1365	1010140	Event Hub	no	7	Secret Nibelsnarf Hunt	潜入任務　潜口竜を狩猟せよ！	5	127	0	no		0	50	3	9300	620	1000	2700	60	
+1366	1010141	Event Hub	no	7	The Obvious Choice...	砂漠の大名・座する盾	5	127	0	no		0	50	3	8700	500	900	2700	50	
+1367	1010142	Event Hub	no	7	It Would Be a Shame If...	火山の将軍・舞いし鎌	8	127	0	no		0	50	3	10800	680	1100	2700	70	
+1368	1010143	Event Hub	no	7	Not Stepping One Foot...	近寄りがたいアイツ	12	127	0	no		0	50	3	18300	1070	1900	2700	110	
+1369	1010144	Event Hub	no	7	Picturesque Encounter	白銀の世界で荒天に吼える	14	127	0	no		0	50	3	16500	850	1700	2700	90	
+1370	1010145	Event Hub	no	7	Absolute Power	絶対強者	103	127	0	no		0	50	3	18300	880	1900	2700	90	
+1371	1010146	Event Hub	no	7	A Land Draped in Fantasy	幻想、地を奔る	17	127	0	no		1	50	3	17400	840	1800	0	0	
+1372	1010147	Event Hub	no	7	The Formless One	姿なき者・オオナズチ	17	127	0	no		1	50	3	21600	1200	2200	0	0	
+1373	1010148	Event Hub	no	7	The White God Returns	崩竜激震	20	127	0	no		1	50	3	23100	1200	2400	0	0	
+1374	1010149	Event Hub	no	7	Evil Descendeth Upon Us	霊峰禍つ舞	18	127	0	no		1	50	3	23100	1200	2400	0	0	
+1375	1010150	Event Hub	no	7	Where Gods Fear to Tread	神への挑戦	19	127	0	no		1	50	3	25200	1800	2600	0	0	
+1376	1010151	Event Hub	no	7	Harbinger of Death	死を喚ぶ妖星	21	127	0	no		1	50	3	25200	1440	2600	0	0	
+1377	1010152	Event Hub	no	7	No Party Poopers!	申楽跳梁	9	127	0	no		5	50	3	23400	1240	2400	0	0	
+1378	1010153	Event Hub	no	7	The Five Kings of Destruction	四天王と暴喰の王	17	127	0	no		5	50	3	63600	3230	6400	0	0	
+1379	1010154	Event Hub	no	7	How It's Done	猛なる連舞をご覧じろ	8	127	0	no		5	50	3	31800	1830	3200	0	0	
+1380	1010155	Event Hub	no	7	Unbridled Rage	その怒り、制止不能	9	127	0	no		0	50	3	30300	1730	3100	0	0	
+1381	1010156	Event Hub	no	7	Insanity and Destruction	狂気と破壊の化身	11	127	0	no		0	50	3	30300	1730	3100	0	0	
+1382	1010157	Event Hub	no	7	Volcano Item Delivery	火山の鉄血アイテム納品！	8	127	0	no		3	50	3	18000	1000	1800	0	0	
+1383	1010158	Event Hub	no	6	Anything For a Buck	超ビッグな狩猟依頼	101	127	0	no		0	50	3	4800	250	500	0	0	
+1384	1010159	Event Hub	no	7	A Mammoth Mistake	小さくても巨獣	14	127	0	no		0	50	3	15000	800	1500	0	0	
+1385	1010161	Event Hub	no	7	The Untamed Mountains	荒ぶる連峰	9	127	0	no		0	50	3	20700	1190	2100	2400	120	
+1386	1010163	Event Hub	no	7	The Best of the Best	最強への挑戦	9	127	0	no		5	50	3	58800	2970	5900	0	0	
+1387	1010164	Event Hub	no	7	The Greatest Hunter	狩人の頂	9	127	0	no		5	50	3	53100	2860	5400	0	0	
+1388	1010165	Event Hub	no	7	Retreat Run-in	皐月に竜と泳ぐ	15	127	0	no		5	50	3	26400	1520	2700	0	0	
+1389	1010166	Event Hub	no	7	Overcome with Awe	長い者に巻かれた！	9	127	0	no		5	50	3	25200	1400	2600	0	0	
+1390	1010167	Event Hub	no	7	The Hammer and the Pike	鎚と戈の競演	10	127	0	no		0	50	3	17700	1070	1800	2400	110	
+1391	1110112	Event Hub	yes	5	Case Closed: Monster Files	名探偵コナン・連続狩猟事件！	9	127	0	yes		5	50	3	9600	480	1000	0	0	
+1392	1110113	Event Hub	yes	4	DUMMY	サンリオ・ひとぐでしようニャ		127	0	yes		3	50	3						placeholder entry
+1393	1110114	Event Hub	yes	4	Prowler High-rank 3	ニャンター上位予備１	9	127	0	yes		0	50	3	0	0	0	0	0	unused event slot
+1394	1110115	Event Hub	yes	4	Prowler High-rank 4	ニャンター上位予備２	9	127	0	yes		0	50	3	0	0	0	0	0	unused event slot
+1395	1110101	Event Hub	yes	4	CoroCoro: Big Bad Bugs	コロコロ・キケンなデカイ虫	9	127	0	no		1	50	3	3000	140	300	0	0	
+1396	1110102	Event Hub	yes	4	A Hero's Return	ゼルダの伝説・勇者、ふたたび	9	127	0	no		0	50	3	4200	220	500	0	0	
+1397	1110103	Event Hub	yes	4	Mario: The White Donkey Kong?	マリオ・白いドンキーコング？	3	127	0	no		1	50	3	3900	160	400	0	0	
+1398	1110104	Event Hub	yes	5	Animal Crossing: Picnic Day	どうぶつの森・ピクニックの日	1	127	0	no		3	50	3	6300	420	700	0	0	
+1399	1110105	Event Hub	yes	7	SF: Ultimate Entrance Exam	ＳＦ・サイキョ―流入門試験	9	127	0	no		5	50	3	7800	360	800	0	0	
+1400	1110106	Event Hub	yes	7	Fan Club: Arena Action	モンハン部・闘技場連続特訓！	9	127	0	no		5	50	3	12000	610	1200	0	0	
+1401	1110111	Event Hub	yes	6	Too Hot to Handle	あっちっちなおとどけもの	12	127	0	no		3	50	3	6900	350	700	0	0	
+1402	1110108	Event Hub	yes	6	Making the Cut	お願い！　雌火竜の尻尾切断	2	127	0	no		0	50	3	3000	260	300	0	0	
+1403	1110109	Event Hub	yes	7	Catch a Rathalos by the Tail	火竜の尻尾切断に挑戦！	8	127	0	no		0	50	3	4200	320	500	0	0	
+1404	1011006	Event Hub	no	G2	Famitsu: Kecha the Scoop!	ファミ通・奇猿狐に突撃取材！	10	127	0	yes		0	50	3	11100	640	1200	3600	60	
+1405	1011007	Event Hub	no	G3	Dengeki: Top of Old Sparky	電撃・迅雷閃く遺群嶺	24	127	0	yes		1	50	3	26100	1120	2700	3900	110	
+1406	1011002	Event Hub	no	G2	Kingdom: Test of the Best!	キングダム・大陸最強決定戦！	22	127	0	yes		0	50	3	13200	670	1400	3600	70	
+1407	1011003	Event Hub	no	G3	DUMMY	ハンター×ハンター・最終試験		127	0	yes		5	50	3						placeholder entry
+1408	1011001	Event Hub	no	G4	Case Closed: Desert Arrest!	名探偵コナン・砂漠の逮捕劇！	22	127	0	yes		2	50	3	35700	1710	3600	4800	170	
+1409	1011004	Event Hub	no	G3	Shonen: Winged Nocturne	マガジン・星降る翼の夜想曲	101	127	0	yes		0	50	3	15000	770	1500	4200	80	
+1410	1011005	Event Hub	no	G4	Drifters: Isle of Lost Souls	ドリフターズ・孤島の漂流者	6	127	0	yes		0	50	3	32700	1710	3300	6000	170	
+1411	1011008	Event Hub	no	G4	The Legend of Zelda: Courage	ゼルダの伝説・勇気の試練	14	127	0	yes		1	50	3	39000	1920	3900	5400	190	
+1412	1011009	Event Hub	no	G4	DUMMY	ＵＳＪ・霊峰に吹き荒れる嵐		127	0	yes		1	50	3						placeholder entry
+1413	1011010	Event Hub	no	G4	Into the Maw of Darkness	牙狼・闇に堕ちし呀	17	127	0	yes		0	50	3	29700	1370	3000	34200	1480	
+1414	1011011	Event Hub	no	G4	Fan Club: Climbing The Ranks	モンハン部・熱血昇段試験	15	127	0	yes		0	50	3	27300	1370	2800	5100	140	
+1415	1011012	Event Hub	no	G4	URGENT: COAL MINERS NEEDED	急募・炭鉱採掘求ム	12	127	0	yes		3	50	3	6300	500	700	22800	1190	
+1416	1011013	Event Hub	no	G2	Frozen Free-For-All	氷海の大決闘：化け鮫ＶＳ鬼蛙	14	127	0	yes		0	50	3	16500	960	1700	3600	100	
+1417	1011015	Event Hub	no	G3	Nerscylla Nightmare	影蜘蛛ハンティング！	10	127	0	yes		0	50	3	26400	1590	2700	4500	160	
+1418	1011016	Event Hub	no	G2	It'll Come Out in the Wash	消しても消えない状態異常！？	9	127	0	yes		5	50	3	21900	1240	2200	3300	120	
+1419	1011017	Event Hub	no	G3	"My Love is Like a Chill Wind...?"	雪山に咲け、恋の花	3	127	0	yes		5	50	3	31800	1610	3200	4200	160	
+1420	1011018	Event Hub	no	G3	A Solid Argument	岩の如き硬い鎧	7	127	0	yes		0	50	3	27900	1530	2800	5100	150	
+1421	1011019	Event Hub	no	G4	Glimmers of False Hope	夜空照らすは偽りの月陽	104	127	0	yes		0	50	3	57300	2840	5800	0	0	
+1422	1011024	Event Hub	no	G4	Forewarned is Four-Horned	４本の角	22	127	0	yes		0	50	3	38400	1880	3900	4800	190	
+1423	1011020	Event Hub	no	G4	Violence in the Verdure	森丘で暴虐の限りをつくすもの	2	127	0	yes		0	50	3	31200	1450	3200	5100	150	
+1424	1011021	Event Hub	no	G4	Paws Off My Fish!	釣り場の平和を守ってニャ！	4	127	0	yes		0	50	3	31200	1450	3200	5100	150	
+1425	1011022	Event Hub	no	G4	Big, Bad 'n' Woolly	きょじゅうをやっつけて	3	127	0	yes		0	50	3	31200	1450	3200	5100	150	
+1426	1011023	Event Hub	no	G4	Blade Blazing Brightly Black	黒く燃える灼熱の刃	1	127	0	yes		0	50	3	31200	1450	3200	5100	150	
+1427	1011025	Event Hub	no	G4	Meat is Murder	飢え渇き生態を蹂躙す	11	127	0	yes		0	50	3	39000	1730	3900	0	0	
+1428	1011026	Event Hub	no	G4	The Cry of Chaos	哭き呻くもの	11	127	0	yes		0	50	3	37800	1630	3800	0	0	
+1429	1011027	Event Hub	no	G4	Brutal Brachydios	絶望の淵の溶岩島	19	127	0	yes		1	50	3	40200	1810	4100	0	0	
+1430	1011028	Event Hub	no	G4	Bequest Quest	怒髪天を貫き何処へ往く	16	127	0	yes		0	50	3	39000	1730	3900	0	0	
+1431	1011029	Event Hub	no	G4	Forget Valstrax, Big Sis is Scarier!	天彗龍より姉御が怖いぜぃ！	17	127	0	yes		1	50	3	33900	1540	3400	0	0	
+1432	1011030	Event Hub	no	G4	The Gloom of 1,001 Nights	千夜一夜の太古の閣	27	127	0	yes		1	50	3	45600	2500	4600	0	0	
+1433	1011031	Event Hub	no	G4	A Terrible Light	心を照らす畏怖の光	16	127	0	yes		1	50	3	33900	1540	3400	0	0	
+1434	1011032	Event Hub	no	G4	Legitimate Soaratorium Quest	ナイショの霞龍	23	127	0	yes		1	50	3	39000	1920	3900	0	0	
+1435	1011033	Event Hub	no	G4	Lord of the Volcanic Hollow	地底火山の炎の王	12	127	0	yes		1	50	3	39000	1920	3900	0	0	
+1436	1011034	Event Hub	no	G4	Welcome Back To Hell	奈落からの招待状	21	127	0	yes		1	50	3	45600	2300	4600	0	0	
+1437	1011035	Event Hub	no	G4	Monster on a Crusade	覇竜との聖戦さ…	19	127	0	yes		1	50	3	41700	1920	4200	0	0	
+1438	1011036	Event Hub	no	G4	Ukanlos-Made Global Cooling	古の白き神	20	127	0	yes		1	50	3	41700	1920	4200	0	0	
+1439	1011037	Event Hub	no	G4	Lao-Shan Lung Time No See	老山龍、侵攻中！	26	127	0	yes		1	35	3	36600	1880	3700	0	0	
+1440	1011039	Event Hub	no	G4	Alatreon and Alack	煌黒はとこしえに	19	127	0	yes		1	50	3	45600	2880	4600	0	0	
+1441	1011040	Event Hub	no	G4	End of a Dark History	黒き伝説との対峙	25	127	0	yes		1	50	3	54000	3070	5400	0	0	
+1442	1011041	Event Hub	no	G4	To Slay a Legend	伝説との戦い	19	127	0	yes		1	50	3	54000	3070	5400	0	0	
+1443	1011042	Event Hub	no	G4	Defy the Prophecy	滅びの伝説に挑みし者	25	127	0	yes		1	50	3	54000	3070	5400	0	0	
+1444	1011043	Event Hub	no	G4	Monster Hunter Channel I	ＭＨヒストリーⅠ	9	127	0	yes		5	50	3	69000	3330	6900	0	0	
+1445	1011044	Event Hub	no	G4	Monster Hunter Channel II	ＭＨヒストリーⅡ	9	127	0	yes		5	50	3	80400	4070	8100	0	0	
+1446	1011045	Event Hub	no	1	@	ハンターＧ級予備４		127	0	yes		0	50	3						unused event slot
+1447	1011046	Event Hub	no	1	@	ハンターＧ級予備５		127	0	yes		0	50	3						unused event slot
+1448	1011047	Event Hub	no	1	@	ハンターＧ級予備６		127	0	yes		0	50	3						unused event slot
+1449	1011048	Event Hub	no	1	@	ハンターＧ級予備７		127	0	yes		0	50	3						unused event slot
+1450	1011049	Event Hub	no	1	@	ハンターＧ級予備８		127	0	yes		0	50	3						unused event slot
+1451	1111003	Event Hub	yes	G2	CoroCoro: Fart of Darkness	コロコロ・キケンな屁をこく獣	23	127	0	yes		0	50	3	11400	630	1200	0	0	
+1452	1111001	Event Hub	yes	G3	Baki: Deadly Claws	刃牙道・尻尾こそが剣！！！	9	127	0	yes		0	50	3	8100	610	900	0	0	
+1453	1111002	Event Hub	yes	G1	WORST: Skull Motif	ＷＯＲＳＴ・セニドクロ	9	127	0	yes		0	50	3	13800	650	1400	0	0	
+1454	1111007	Event Hub	yes	G4	DUMMY	ＵＳＪ・乱れ荒れ暴れ狂う角		127	0	yes		0	50	3						placeholder entry
+1455	1111006	Event Hub	yes	G2	The Legend of Zelda: Wisdom	ゼルダの伝説・知恵の試練	10	127	0	yes		0	50	3	7200	420	800	0	0	
+1456	1111004	Event Hub	yes	G1	Turnabout Takedown	逆転裁判・闘技場で法廷バトル	9	127	0	yes		0	50	3	8100	500	900	0	0	
+1457	1111005	Event Hub	yes	G3	Capcom: Prowler's Spirit	カプコン・見よ！ニャンター魂	9	127	0	yes		0	50	3	7500	570	800	0	0	
+1458	1111008	Event Hub	yes	G1	@	ニャンターＧ級予備１		127	0	yes		0	50	3						unused event slot
+1459	1111009	Event Hub	yes	G1	@	ニャンターＧ級予備２		127	0	yes		0	50	3						unused event slot
+1460	1111010	Event Hub	yes	G1	@	ニャンターＧ級予備３		127	0	yes		0	50	3						unused event slot
+1461	1111011	Event Hub	yes	G1	@	ニャンターＧ級予備４		127	0	yes		0	50	3						unused event slot
+1462	1111012	Event Hub	yes	G1	@	ニャンターＧ級予備５		127	0	yes		0	50	3						unused event slot
+1463	1111013	Event Hub	yes	G1	@	ニャンターＧ級予備６		127	0	yes		0	50	3						unused event slot
+1464	1111014	Event Hub	yes	G1	Prowler G-rank Quest 7	ニャンターＧ級予備７	9	127	0	yes		0	50	3	0	0	0	0	0	unused event slot
+1465	1111015	Event Hub	yes	G1	Prowler G-rank Quest 8	ニャンターＧ級予備８	9	127	0	yes		0	50	3	0	0	0	0	0	unused event slot
+1466	1020015	Event Arena	no		XX Trials: Dreadqueen	イベント：紫毒姫討伐	9	128	0	yes		1	50	9	4500	0	0	0	0	
+1467	1020016	Event Arena	no		XX Trials: Thunderlord	イベント：金雷公討伐	9	128	0	yes		1	50	9	4500	0	0	0	0	
+1468	1020017	Event Arena	no		XX Trials: Silverwind	イベント：白疾風討伐	9	128	0	yes		1	50	9	4500	0	0	0	0	
+1469	1020018	Event Arena	no		XX Trials: Dreadking	イベント：黒炎王討伐	9	128	0	yes		1	50	9	4500	0	0	0	0	
+1470	1020019	Event Arena	no		XX Trials: Grimclaw	イベント：荒鉤爪討伐	9	128	0	yes		1	50	9	4500	0	0	0	0	
+1471	1020020	Event Arena	no		XX Trials: Gravios	イベント：グラビモス討伐	9	128	0	yes		1	50	9	3600	0	0	0	0	
+1472	1020021	Event Arena	no		XX Trials: Elderfrost	イベント：銀嶺討伐	9	128	0	yes		1	50	9	4500	0	0	0	0	
+1473	1020022	Event Arena	no		XX Trials: Hunt-a-thon I	イベント：大連続狩猟Ｇ１	9	128	0	yes		5	50	9	4500	0	0	0	0	
+1474	1020023	Event Arena	no		XX Trials: Hunt-a-thon II	イベント：大連続狩猟Ｇ２	9	128	0	yes		5	50	9	4500	0	0	0	0	
+1475	1020024	Event Arena	no		XX Trials: Stonefist	イベント：矛砕討伐	9	128	0	yes		1	50	9	4500	0	0	0	0	
+1476	1020025	Event Arena	no		XX Trials: Drilltusk	イベント：岩穿討伐	9	128	0	yes		1	50	9	4500	0	0	0	0	
+1477	1020026	Event Arena	no		XX Trials: Redhelm	イベント：紅兜討伐	9	128	0	yes		1	50	9	4500	0	0	0	0	
+1478	1020027	Event Arena	no		XX Trials: Deadeye	イベント：隻眼討伐	9	128	0	yes		1	50	9	4500	0	0	0	0	
+1479	1020028	Event Arena	no		XX Trials: Snowbaron	イベント：大雪主討伐	9	128	0	yes		1	50	9	4500	0	0	0	0	
+1480	1020029	Event Arena	no		XX Trials: Hunt-a-thon III	イベント：大連続狩猟Ｇ３	9	128	0	yes		5	50	9	4500	0	0	0	0	
+1481	1020030	Event Arena	no		@	予備枠		128	0	yes		1	50	9						unused event slot
+1482	1020001	Event Arena	no		Event: Slay a Mizutsune	イベント：タマミツネ討伐	9	128	0	no		1	50	9	2700	0	0	0	0	
+1483	1020002	Event Arena	no		Event: Slay a Glavenus	イベント：ディノバルド討伐	9	128	0	no		1	50	9	2700	0	0	0	0	
+1484	1020003	Event Arena	no		Event: Slay a Gammoth	イベント：ガムート討伐	9	128	0	no		1	50	9	2700	0	0	0	0	
+1485	1020004	Event Arena	no		Event: Slay an Astalos	イベント：ライゼクス討伐	9	128	0	no		1	50	9	2700	0	0	0	0	
+1486	1020005	Event Arena	no		Event: Slay a Lagiacrus	イベント：ラギアクルス討伐	15	128	0	no		1	50	9	2700	0	0	0	0	
+1487	1020006	Event Arena	no		Event: Hunt-a-thon 1	イベント：大連続狩猟１	9	128	0	no		5	50	9	2700	0	0	0	0	
+1488	1020007	Event Arena	no		Event: Hunt-a-thon 2	イベント：大連続狩猟２	9	128	0	no		5	50	9	2700	0	0	0	0	
+1489	1020008	Event Arena	no		Event: Hunt-a-thon 3	イベント：大連続狩猟３	9	128	0	no		5	50	9	2700	0	0	0	0	
+1490	1020009	Event Arena	no		Event: Slay a Zinogre	イベント：ジンオウガ討伐	9	128	0	no		1	50	9	2700	0	0	0	0	
+1491	1020010	Event Arena	no		Event: Slay a Gore Magala	イベント：ゴア・マガラ討伐	9	128	0	no		1	50	9	2700	0	0	0	0	
+1492	1020011	Event Arena	no		Event: Slay a Tigrex	イベント：ティガレックス討伐	9	128	0	no		1	50	9	2700	0	0	0	0	
+1493	1020012	Event Arena	no		Event: Slay a Rathalos	イベント：リオレウス討伐	9	128	0	no		1	50	9	2700	0	0	0	0	
+1494	1020013	Event Arena	no		Event: Slay a Nargacuga	イベント：ナルガクルガ討伐	9	128	0	no		1	50	9	2700	0	0	0	0	
+1495	1020014	Event Arena	no		Event: Hunt-a-thon 4	イベント：大連続狩猟４	9	128	0	no		5	50	9	2700	0	0	0	0	
+1496	1120007	Event Arena	yes		XX Trials: Rathalos	イベント：リオレウス討伐	9	128	0	yes		1	50	9	3600	0	0	0	0	
+1497	1120008	Event Arena	yes		XX Trials: Tigrex	イベント：ティガレックス討伐	9	128	0	yes		1	50	9	3600	0	0	0	0	
+1498	1120009	Event Arena	yes		XX Trials: Nargacuga	イベント：ナルガクルガ討伐	9	128	0	yes		1	50	9	3600	0	0	0	0	
+1499	1120010	Event Arena	yes		XX Trials: Zinogre	イベント：ジンオウガ討伐	9	128	0	yes		1	50	9	3600	0	0	0	0	
+1500	1120011	Event Arena	yes		XX Trials: Brachydios	イベント：ブラキディオス討伐	9	128	0	yes		1	50	9	3600	0	0	0	0	
+1501	1120012	Event Arena	yes		XX Trials: Hunt-a-thon IV	イベント：大連続狩猟Ｇ４	9	128	0	yes		5	50	9	4500	0	0	0	0	
+1502	1120013	Event Arena	yes		Quest Template	予備枠	9	128	0	yes		1	50	9	4500	0	0	0	0	unused event slot
+1503	1120001	Event Arena	yes		Event: Slay a Volvidon	イベント：ラングロトラ討伐	9	128	0	no		1	50	9	1800	0	0	0	0	
+1504	1120002	Event Arena	yes		Event: Slay a Royal Ludroth	イベント：ロアルドロス討伐	15	128	0	no		1	50	9	1800	0	0	0	0	
+1505	1120003	Event Arena	yes		Event: Slay a Lagombi	イベント：ウルクスス討伐	9	128	0	no		1	50	9	1800	0	0	0	0	
+1506	1120004	Event Arena	yes		Event: Slay a Yian Kut-Ku	イベント：イャンクック討伐	9	128	0	no		1	50	9	1800	0	0	0	0	
+1507	1120005	Event Arena	yes		Event: Slay an Arzuros	イベント：アオアシラ討伐	9	128	0	no		1	50	9	1800	0	0	0	0	
+1508	1120006	Event Arena	yes		Event: Hunt-a-thon 5	イベント：大連続狩猟５	9	128	0	no		5	50	9	2700	0	0	0	0	

@@ -1,0 +1,12 @@
+﻿talisman_id,name_ja,name_en,rarity,max_slots
+0,装備なし,,0,
+1,兵士の護石,Pawn Talisman,97,1
+2,闘士の護石,Bishop Talisman,97,1
+3,騎士の護石,Knight Talisman,98,2
+4,城塞の護石,Rook Talisman,98,2
+5,女王の護石,Queen Talisman,99,3
+6,王の護石,King Talisman,99,3
+7,龍の護石,Dragon Talisman,99,3
+8,英雄の護石,Hero Talisman,100,3
+9,伝説の護石,Legend Talisman,100,3
+10,天の護石,Creator Talisman,100,3

@@ -1,0 +1,32 @@
+﻿stage_id,name_ja,name_en,short_en,map_code,night,base_stage_id,quest_count,confidence,notes_ja
+1,古代林,Jurassic Frontier,J. Frontier,m01,no,,85,derived,Harvest Tour 201「古代林の採集ツアー」（58/256 件の依頼文に一致）
+2,森丘,Verdant Hills,V. Hills,m02,no,,53,derived,Harvest Tour 203「森丘の採集ツアー」（37/59 件の依頼文に一致）
+3,雪山,Arctic Ridge,A. Ridge,m03,no,,48,derived,Harvest Tour 204「雪山の採集ツアー」（36/55 件の依頼文に一致）
+4,渓流,Misty Peaks,M. Peaks,m04,no,,52,derived,Harvest Tour 205「渓流の採集ツアー」（29/61 件の依頼文に一致）
+5,旧砂漠,Dunes,Dunes,m05,no,,88,derived,Harvest Tour 202「旧砂漠の採集ツアー」（51/97 件の依頼文に一致）
+6,孤島,Deserted Island,D. Island,m06,no,,80,derived,Harvest Tour 301「孤島の採集ツアー」（54/81 件の依頼文に一致）
+7,沼地,Marshlands,Marshlands,m07,no,,70,derived,Harvest Tour 302「沼地の採集ツアー」（45/70 件の依頼文に一致）
+8,火山,Volcano,Volcano,m08,no,,88,derived,Harvest Tour 401「火山の採集ツアー」（68/91 件の依頼文に一致）
+9,闘技場,Arena,Arena,m09,no,,218,curated,依頼文の「闘技場」（69/301 件の依頼文に一致）
+10,,Volcano Slayground,V. Slayground,m10,no,,10,curated,依頼文の「闘技場」「立体闘技場」（11/20 件）のみで、stage 9「闘技場」との日本語名の区別がこの dump だけでは確定できないため name_ja は空
+11,遺跡平原,Ancestral Steppe,A. Steppe,m11,no,,46,derived,Harvest Tour 721「遺跡平原の採集ツアー」（31/49 件の依頼文に一致）
+12,地底火山,Volcanic Hollow,V. Hollow,m12,no,,61,derived,Harvest Tour 821「地底火山の採集ツアー」（43/62 件の依頼文に一致）
+13,原生林,Primal Forest,Primal Forest,m13,no,,57,derived,Harvest Tour 722「原生林の採集ツアー」（35/61 件の依頼文に一致）
+14,氷海,Frozen Seaway,F. Seaway,m14,no,,57,derived,Harvest Tour 820「氷海の採集ツアー」（43/66 件の依頼文に一致）
+15,,Frozen Slayground,F. Slayground,m15,no,,11,curated,依頼文の「闘技場」（4/12 件）のみで、stage 9「闘技場」との日本語名の区別がこの dump だけでは確定できないため name_ja は空
+16,禁足地,Sanctuary,Sanctuary,m16,no,,23,curated,依頼文の「禁足地」（18/26 件の依頼文に一致）
+17,塔,Forlorn Arena,Forlorn Arena,m17,no,,25,curated,依頼文の「塔」（20/41 件の依頼文に一致）。ゲーム内の英語短縮名は Forlorn Arena で、日本語の「塔」とは一対一に対応しない（英語名はゲームの message table のまま）
+18,霊峰,Sacred Pinnacle,S. Pinnacle,m18,no,,10,curated,依頼文の「霊峰」（10/13 件の依頼文に一致）
+19,溶岩島,Ingle Isle,Ingle Isle,m19,no,,31,curated,依頼文の「溶岩島」（22/36 件の依頼文に一致）
+20,極圏,Polar Field,Polar Field,m20,no,,15,curated,依頼文の「極圏」（14/16 件の依頼文に一致）
+21,竜ノ墓場,Wyvern's End,Wyvern's End,m21,no,,6,curated,依頼文の「竜ノ墓場」（3/8 件の依頼文に一致）
+22,砂漠,Desert,Desert,m22,no,,48,derived,Harvest Tour 701「砂漠の採集ツアー」（35/53 件の依頼文に一致）
+23,密林,Jungle,Jungle,m23,no,,46,derived,Harvest Tour 801「密林の採集ツアー」（34/49 件の依頼文に一致）
+24,遺群嶺,Ruined Pinnacle,Ruined Pinnacle,m24,no,,64,derived,Harvest Tour 702「遺群嶺の採集ツアー」（57/75 件の依頼文に一致）
+25,シュレイド城,Castle Schrade,Castle Schrade,m25,no,,4,curated,依頼文の「シュレイド城」（1/7 件の依頼文に一致）
+26,砦,Fortress,Fortress,m26,no,,2,curated,依頼文の「砦」（2/3 件の依頼文に一致）
+27,旧砦跡,Forlorn Citadel,Forlorn Citadel,m27,no,,2,curated,依頼文の「旧砦跡」（1/3 件の依頼文に一致）
+101,古代林,Jurassic Frontier,J. Frontier,m01,yes,1,60,derived,Harvest Tour 723「古代林の採集ツアー」（42/61 件の依頼文に一致）
+102,森丘,Verdant Hills,V. Hills,m02,yes,2,33,derived,Harvest Tour 725「森丘の採集ツアー」（23/33 件の依頼文に一致）
+103,雪山,Arctic Ridge,A. Ridge,m03,yes,3,44,derived,Harvest Tour 726「雪山の採集ツアー」（25/44 件の依頼文に一致）
+104,渓流,Misty Peaks,M. Peaks,m04,yes,4,44,derived,Harvest Tour 727「渓流の採集ツアー」（30/46 件の依頼文に一致）

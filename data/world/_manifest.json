@@ -1,0 +1,1378 @@
+{
+  "area": "world",
+  "tables": [
+    {
+      "id": "monsters",
+      "title_ja": "モンスター",
+      "title_en": "Monsters",
+      "file": "monsters.csv",
+      "primary_key": "monster_id",
+      "row_count": 137,
+      "id_range": [
+        1,
+        137
+      ],
+      "columns": [
+        {
+          "name": "monster_id",
+          "type": "int",
+          "desc_ja": "モンスターID（セーブの狩猟記録の添字）",
+          "desc_en": "Monster ID (hunt-record index)"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "category",
+          "type": "str",
+          "desc_ja": "large / small / unused",
+          "desc_en": "large / small / unused"
+        },
+        {
+          "name": "class",
+          "type": "str",
+          "desc_ja": "種別（飛竜種など）",
+          "desc_en": "Monster class"
+        },
+        {
+          "name": "has_size_record",
+          "type": "bool",
+          "desc_ja": "サイズ記録を持つか",
+          "desc_en": "Has a size record"
+        },
+        {
+          "name": "base_size_cm",
+          "type": "float",
+          "desc_ja": "基準サイズ(cm)",
+          "desc_en": "Base size (cm)"
+        },
+        {
+          "name": "mini_le",
+          "type": "int",
+          "desc_ja": "最小冠の閾値(%)",
+          "desc_en": "Mini crown threshold (%)"
+        },
+        {
+          "name": "silver_ge",
+          "type": "int",
+          "desc_ja": "銀冠の閾値(%)",
+          "desc_en": "Silver crown threshold (%)"
+        },
+        {
+          "name": "gold_ge",
+          "type": "int",
+          "desc_ja": "金冠の閾値(%)",
+          "desc_en": "Gold crown threshold (%)"
+        },
+        {
+          "name": "fixed_size",
+          "type": "bool",
+          "desc_ja": "サイズ変動なし",
+          "desc_en": "Fixed size"
+        },
+        {
+          "name": "crown_awards",
+          "type": "bool",
+          "desc_ja": "冠の勲章対象",
+          "desc_en": "Counts for crown awards"
+        },
+        {
+          "name": "card_pos",
+          "type": "int",
+          "desc_ja": "ギルドカードの並び位置",
+          "desc_en": "Guild Card position"
+        },
+        {
+          "name": "notes_bit",
+          "type": "int",
+          "desc_ja": "狩猟ノートのビット",
+          "desc_en": "Hunter's Notes bit"
+        },
+        {
+          "name": "family_of",
+          "type": "int",
+          "desc_ja": "派生元モンスターID",
+          "desc_en": "Base monster ID (variants)"
+        },
+        {
+          "name": "confidence",
+          "type": "str",
+          "desc_ja": "名前の確度（元データ）",
+          "desc_en": "Name confidence (source)"
+        },
+        {
+          "name": "notes_en",
+          "type": "str",
+          "desc_ja": "元データの注記（英語）",
+          "desc_en": "Source note"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/monster-index.csv",
+        "mhnxeditor/.work/finalaudit/refsrc/data/monster-sizes.csv",
+        "mhnxeditor/crates/mhnx-core/src/gamedata.rs (MONSTER_HUNT_NAMES)"
+      ],
+      "confidence": "derived",
+      "notes_ja": "monster_id はセーブの狩猟記録の添字 1..137（docs/02-monster-records.md）。name_ja は gamedata.rs の MONSTER_HUNT_NAMES（ゲーム内の名称テーブル由来、137 件・同順）。106..112 は「不明」、134 は空スロットのため name_ja を空にした。name_en は monster-index.csv。サイズ系の列は monster-sizes.csv を index で結合。",
+      "notes_en": ""
+    },
+    {
+      "id": "stages",
+      "title_ja": "ステージ",
+      "title_en": "Stages",
+      "file": "stages.csv",
+      "primary_key": "stage_id",
+      "row_count": 31,
+      "id_range": [
+        1,
+        104
+      ],
+      "columns": [
+        {
+          "name": "stage_id",
+          "type": "int",
+          "desc_ja": "ステージID（questData .mib +0x14）",
+          "desc_en": "Stage ID (questData .mib +0x14)"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語・正式）",
+          "desc_en": "Name (English, full)"
+        },
+        {
+          "name": "short_en",
+          "type": "str",
+          "desc_ja": "クエストボードの短縮名（英語）",
+          "desc_en": "Quest-board short name (English)"
+        },
+        {
+          "name": "map_code",
+          "type": "str",
+          "desc_ja": "ステージのリソース名",
+          "desc_en": "Stage resource name"
+        },
+        {
+          "name": "night",
+          "type": "bool",
+          "desc_ja": "夜版か",
+          "desc_en": "Night variant"
+        },
+        {
+          "name": "base_stage_id",
+          "type": "int",
+          "desc_ja": "夜版の元ステージID",
+          "desc_en": "Day stage of a night variant"
+        },
+        {
+          "name": "quest_count",
+          "type": "int",
+          "desc_ja": "quests.csv の該当行数",
+          "desc_en": "Rows in quests.csv"
+        },
+        {
+          "name": "confidence",
+          "type": "str",
+          "desc_ja": "確度",
+          "desc_en": "Confidence"
+        },
+        {
+          "name": "notes_ja",
+          "type": "str",
+          "desc_ja": "根拠",
+          "desc_en": "Evidence"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/quest-info.csv (stage 列)",
+        "mhnxeditor/.work/finalaudit/refsrc/tools/quest_info.py (STAGE_TEXT)",
+        "romfs/nativeNX/arc/quest/q*.arc (questData .mib +0x14, questData_*_jpn)",
+        "romfs/nativeNX/arc/stage (m01d..m27d)"
+      ],
+      "confidence": "curated",
+      "notes_ja": "テーブル全体の confidence は行の弱い方に合わせて curated。うち 19 行（1-8, 11-14, 22-24, 101-104）は Harvest Tour の日英タイトルが1 対 1 で対応するため derived、残り 12 行（9, 10, 15-21, 25-27）が curated。stage_id は questData .mib の +0x14。quest-info.csv の stage 列と1855 クエスト中 1512 件で全一致（不一致 0）。1..27 は arc/stage の m01d..m27d に対応し、101..104 は 1..4 の夜版（Harvest Tour の日本語名が同一）。name_en はゲーム自身の questMessage_eng の短縮名（refsrc の STAGE_TEXT）を正式名に展開したもの。name_ja は questData の日本語本文からの対応付けで、根拠件数を各行の notes_ja に書いた。",
+      "notes_en": ""
+    },
+    {
+      "id": "quests",
+      "title_ja": "クエスト",
+      "title_en": "Quests",
+      "file": "quests.csv",
+      "primary_key": "quest_index",
+      "row_count": 1508,
+      "id_range": [
+        1,
+        1508
+      ],
+      "columns": [
+        {
+          "name": "quest_index",
+          "type": "int",
+          "desc_ja": "クエストリストの添字（ビットマップ位置）",
+          "desc_en": "Quest list index (bitmap position)"
+        },
+        {
+          "name": "quest_id",
+          "type": "int",
+          "desc_ja": "クエストID",
+          "desc_en": "Quest ID"
+        },
+        {
+          "name": "category",
+          "type": "str",
+          "desc_ja": "Village / Hub / Arena / Training / Special Permit / Event など",
+          "desc_en": "Category"
+        },
+        {
+          "name": "prowler",
+          "type": "bool",
+          "desc_ja": "ニャンター専用か",
+          "desc_en": "Prowler only"
+        },
+        {
+          "name": "rank",
+          "type": "str",
+          "desc_ja": "★レベル（1-10、G級は G1-G4、空欄は不明）",
+          "desc_en": "Star rank (1-10, G1-G4, empty = unknown)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "クエスト名（英語）",
+          "desc_en": "Quest name (English)"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "クエスト名（日本語）",
+          "desc_en": "Quest name (Japanese)"
+        },
+        {
+          "name": "stage_id",
+          "type": "int",
+          "desc_ja": "ステージID",
+          "desc_en": "Stage ID"
+        },
+        {
+          "name": "group",
+          "type": "int",
+          "desc_ja": "quest_group のグループ番号",
+          "desc_en": "quest_group group byte"
+        },
+        {
+          "name": "alt",
+          "type": "int",
+          "desc_ja": "グループ内の代替セット",
+          "desc_en": "Alternative set in the group"
+        },
+        {
+          "name": "expansion",
+          "type": "bool",
+          "desc_ja": "XX 追加クエストか",
+          "desc_en": "Added by the XX expansion"
+        },
+        {
+          "name": "sets",
+          "type": "str",
+          "desc_ja": "クエストセット番号（空白区切り）",
+          "desc_en": "Quest set numbers (space separated)"
+        },
+        {
+          "name": "quest_kind",
+          "type": "int",
+          "desc_ja": "クエスト種類（.mib +0x10）",
+          "desc_en": "Quest kind (.mib +0x10)"
+        },
+        {
+          "name": "time_limit",
+          "type": "int",
+          "desc_ja": "制限時間（分）",
+          "desc_en": "Time limit (minutes)"
+        },
+        {
+          "name": "revive_count",
+          "type": "int",
+          "desc_ja": "復活回数",
+          "desc_en": "Revive count"
+        },
+        {
+          "name": "reward",
+          "type": "int",
+          "desc_ja": "報酬金(z)",
+          "desc_en": "Reward (z)"
+        },
+        {
+          "name": "hrp",
+          "type": "int",
+          "desc_ja": "HRポイント",
+          "desc_en": "Hunter Rank points"
+        },
+        {
+          "name": "fee",
+          "type": "int",
+          "desc_ja": "契約金(z)",
+          "desc_en": "Contract fee (z)"
+        },
+        {
+          "name": "sub_reward",
+          "type": "int",
+          "desc_ja": "サブ報酬金(z)",
+          "desc_en": "Subquest reward (z)"
+        },
+        {
+          "name": "sub_hrp",
+          "type": "int",
+          "desc_ja": "サブHRポイント",
+          "desc_en": "Subquest HR points"
+        },
+        {
+          "name": "notes",
+          "type": "str",
+          "desc_ja": "元データの注記",
+          "desc_en": "Source note"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/quest-index.csv",
+        "mhnxeditor/.work/finalaudit/refsrc/data/quest-info.csv",
+        "romfs/nativeNX/arc/quest/q*.arc (questData .mib, questData_*_jpn)"
+      ],
+      "confidence": "derived",
+      "notes_ja": "主キーは quest_index（クエストリストの添字 1..1508）。quest_id は 1049 と 1050 がリストに 2 回現れる（index 313/314 と 315/316）ため一意でない。name_ja は questData_*_jpn の 0 番目（タイトル）。stage_id は .mib +0x14。quest_kind/time_limit/revive_count も .mib から。",
+      "notes_en": ""
+    },
+    {
+      "id": "quest-monsters",
+      "title_ja": "クエスト出現モンスター",
+      "title_en": "Quest monsters",
+      "file": "quest-monsters.csv",
+      "primary_key": "row_id",
+      "row_count": 2449,
+      "id_range": [
+        1,
+        2449
+      ],
+      "columns": [
+        {
+          "name": "row_id",
+          "type": "int",
+          "desc_ja": "連番（主キー）",
+          "desc_en": "Serial primary key"
+        },
+        {
+          "name": "quest_id",
+          "type": "int",
+          "desc_ja": "クエストID",
+          "desc_en": "Quest ID"
+        },
+        {
+          "name": "entry_no",
+          "type": "int",
+          "desc_ja": "クエスト内の出現順（0 始まり）",
+          "desc_en": "Boss entry ordinal in the quest (0-based)"
+        },
+        {
+          "name": "monster_id",
+          "type": "int",
+          "desc_ja": "モンスターID",
+          "desc_en": "Monster ID"
+        },
+        {
+          "name": "size",
+          "type": "int",
+          "desc_ja": "サイズ(%)",
+          "desc_en": "Size (%)"
+        },
+        {
+          "name": "size_table",
+          "type": "int",
+          "desc_ja": "サイズ変動テーブル番号",
+          "desc_en": "Size variation table"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/quest-monsters.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "元 CSV は (quest_id, monster_id, size, size_table) が 49 組重複する（同じクエストに同条件の個体が 2 体出る正規のデータ）。主キーは連番 row_id とし、自然キーは (quest_id, entry_no)。entry_no は quest_sizes.py が書き出した順（クエスト内のボス枠順、サイズを持つ枠のみ）の 0 始まり連番。",
+      "notes_en": ""
+    },
+    {
+      "id": "quest-rewards",
+      "title_ja": "クエスト報酬枠",
+      "title_en": "Quest rewards",
+      "file": "quest-rewards.csv",
+      "primary_key": "row_id",
+      "row_count": 4897,
+      "id_range": [
+        1,
+        4897
+      ],
+      "columns": [
+        {
+          "name": "row_id",
+          "type": "int",
+          "desc_ja": "連番（主キー）",
+          "desc_en": "Serial primary key"
+        },
+        {
+          "name": "quest_id",
+          "type": "int",
+          "desc_ja": "クエストID",
+          "desc_en": "Quest ID"
+        },
+        {
+          "name": "slot",
+          "type": "int",
+          "desc_ja": "報酬枠番号 0..4",
+          "desc_en": "Reward slot 0..4"
+        },
+        {
+          "name": "rem_id",
+          "type": "int",
+          "desc_ja": "報酬テーブル(.rem)番号",
+          "desc_en": "Reward table (.rem) id"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/quest-rewards.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "自然キーは (quest_id, slot)（4897 行すべて一意）。主キーは連番 row_id。rem_id は報酬抽選テーブル .rem の番号で、実際の当選品は refsrc/data/rewards.csv（rem 単位）を引く。",
+      "notes_en": ""
+    },
+    {
+      "id": "npcs",
+      "title_ja": "NPC",
+      "title_en": "NPCs",
+      "file": "npcs.csv",
+      "primary_key": "npc_id",
+      "row_count": 188,
+      "id_range": [
+        1,
+        999
+      ],
+      "columns": [
+        {
+          "name": "npc_id",
+          "type": "int",
+          "desc_ja": "NPC ID",
+          "desc_en": "NPC ID"
+        },
+        {
+          "name": "bit",
+          "type": "int",
+          "desc_ja": "NPC ビットマップのビット番号",
+          "desc_en": "Per-NPC bitmap bit"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "talk_file",
+          "type": "bool",
+          "desc_ja": "会話ファイルを持つか",
+          "desc_en": "Has a talk file"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/npc-index.csv",
+        "romfs/nativeNX/table/NpcName_jpn.gmd"
+      ],
+      "confidence": "derived",
+      "notes_ja": "npc-index.csv の bit を NpcName_jpn.gmd の添字にそのまま使った（bit 0 → ベルナ村の村長 = Bherna Chief、以下 188 件すべて対応）。npc_id は 1..812 で連番ではない。",
+      "notes_en": ""
+    },
+    {
+      "id": "arena",
+      "title_ja": "闘技大会",
+      "title_en": "Arena",
+      "file": "arena.csv",
+      "primary_key": "arena_index",
+      "row_count": 17,
+      "id_range": [
+        0,
+        16
+      ],
+      "columns": [
+        {
+          "name": "arena_index",
+          "type": "int",
+          "desc_ja": "闘技大会の並び順",
+          "desc_en": "Arena record index"
+        },
+        {
+          "name": "quest_id",
+          "type": "int",
+          "desc_ja": "クエストID",
+          "desc_en": "Quest ID"
+        },
+        {
+          "name": "prowler",
+          "type": "bool",
+          "desc_ja": "ニャンター部門か",
+          "desc_en": "Prowler division"
+        },
+        {
+          "name": "grade_a",
+          "type": "int",
+          "desc_ja": "A グレードのタイム(秒)",
+          "desc_en": "Grade A time (seconds)"
+        },
+        {
+          "name": "grade_b",
+          "type": "int",
+          "desc_ja": "B グレードのタイム(秒)",
+          "desc_en": "Grade B time (seconds)"
+        },
+        {
+          "name": "grade_c",
+          "type": "int",
+          "desc_ja": "C グレードのタイム(秒)",
+          "desc_en": "Grade C time (seconds)"
+        },
+        {
+          "name": "sets",
+          "type": "str",
+          "desc_ja": "クエストセット番号（空白区切り）",
+          "desc_en": "Quest set numbers"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/arena.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "闘技大会 17 件（ハンター 11・ニャンター 6）。grade_* はグレード取得の制限時間（秒）。",
+      "notes_en": ""
+    },
+    {
+      "id": "awards",
+      "title_ja": "勲章",
+      "title_en": "Awards",
+      "file": "awards.csv",
+      "primary_key": "award_id",
+      "row_count": 132,
+      "id_range": [
+        0,
+        131
+      ],
+      "columns": [
+        {
+          "name": "award_id",
+          "type": "int",
+          "desc_ja": "勲章ビット番号",
+          "desc_en": "Award bit"
+        },
+        {
+          "name": "grid",
+          "type": "str",
+          "desc_ja": "ギルドカードのページ",
+          "desc_en": "Guild Card page"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "勲章名（日本語）",
+          "desc_en": "Award name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "勲章名（英語）",
+          "desc_en": "Award name (English)"
+        },
+        {
+          "name": "desc_ja",
+          "type": "str",
+          "desc_ja": "説明（日本語）",
+          "desc_en": "Description (Japanese)"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/awards.csv",
+        "romfs/nativeNX/table/GC_Medal_jpn.gmd"
+      ],
+      "confidence": "derived",
+      "notes_ja": "GC_Medal_jpn.gmd は 264 件で、0..131 が勲章名、132..263 が同じ順の説明。award_id = ビット番号。名前は bit、説明は 132+bit で引いた（例: bit 0 = ベルナ村長の飾り帯 / 「村の★１と★２の全クエストをクリアした証」）。",
+      "notes_en": ""
+    },
+    {
+      "id": "canteen",
+      "title_ja": "食堂",
+      "title_en": "Canteen",
+      "file": "canteen.csv",
+      "primary_key": "canteen_id",
+      "row_count": 144,
+      "id_range": [
+        1,
+        144
+      ],
+      "columns": [
+        {
+          "name": "canteen_id",
+          "type": "int",
+          "desc_ja": "連番（主キー）",
+          "desc_en": "Serial primary key"
+        },
+        {
+          "name": "kind",
+          "type": "str",
+          "desc_ja": "ingredient（食材）/ dish（料理）",
+          "desc_en": "ingredient / dish"
+        },
+        {
+          "name": "bit",
+          "type": "int",
+          "desc_ja": "食材・料理のビット番号",
+          "desc_en": "Ingredient / dish bit"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "名前（日本語）",
+          "desc_en": "Name (Japanese)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "名前（英語）",
+          "desc_en": "Name (English)"
+        },
+        {
+          "name": "category",
+          "type": "str",
+          "desc_ja": "肉・穀物・野菜・魚・飲み物・special・starter",
+          "desc_en": "Category"
+        },
+        {
+          "name": "ingredient_a",
+          "type": "str",
+          "desc_ja": "料理の食材1（食材ビット）",
+          "desc_en": "Dish ingredient 1 (bit)"
+        },
+        {
+          "name": "ingredient_b",
+          "type": "str",
+          "desc_ja": "料理の食材2（食材ビット）",
+          "desc_en": "Dish ingredient 2 (bit)"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/canteen.csv",
+        "romfs/nativeNX/table/Kitchen_jpn.gmd"
+      ],
+      "confidence": "derived",
+      "notes_ja": "自然キーは (kind, bit)。主キーは連番 canteen_id。Kitchen_jpn.gmd の並びは、各カテゴリ先頭 7 件の食材が 103..133、XX で追加された 14 件が 251..264、料理 0..76 が 134..210、料理 77..98 が 265..286。名前の意味（例 dish 0 Dauntless Pasta = 屋台の根性まかない飯、dish 98 Ultimate Rice = 屋台の究極まかない飯）で全 144 件を確認した。",
+      "notes_en": ""
+    },
+    {
+      "id": "provisions",
+      "title_ja": "調合・素材の供出値",
+      "title_en": "Provisions",
+      "file": "provisions.csv",
+      "primary_key": "item_id",
+      "row_count": 1878,
+      "id_range": [
+        318,
+        2501
+      ],
+      "columns": [
+        {
+          "name": "item_id",
+          "type": "int",
+          "desc_ja": "アイテムID",
+          "desc_en": "Item ID"
+        },
+        {
+          "name": "value",
+          "type": "int",
+          "desc_ja": "供出値",
+          "desc_en": "Provision value"
+        },
+        {
+          "name": "group1",
+          "type": "int",
+          "desc_ja": "供出グループ1",
+          "desc_en": "Provision group 1"
+        },
+        {
+          "name": "group2",
+          "type": "int",
+          "desc_ja": "供出グループ2",
+          "desc_en": "Provision group 2"
+        },
+        {
+          "name": "group3",
+          "type": "int",
+          "desc_ja": "供出グループ3",
+          "desc_en": "Provision group 3"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/provisions.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "武具の生産・強化で「素材の供出」に使う値。itemData の +27（値）と +28 の u16 x3（グループ）。グループ 4 は鉱石系（鉄鉱石 1 など）。",
+      "notes_en": ""
+    },
+    {
+      "id": "requests",
+      "title_ja": "村依頼",
+      "title_en": "Requests",
+      "file": "requests.csv",
+      "primary_key": "request_index",
+      "row_count": 184,
+      "id_range": [
+        0,
+        183
+      ],
+      "columns": [
+        {
+          "name": "request_index",
+          "type": "int",
+          "desc_ja": "依頼レコード番号 0..183",
+          "desc_en": "Request record index"
+        },
+        {
+          "name": "kind",
+          "type": "int",
+          "desc_ja": "0 クエスト / 1 納品 / 2 不明 / 3 終端",
+          "desc_en": "0 quest / 1 delivery / 2 unknown / 3 end"
+        },
+        {
+          "name": "stage",
+          "type": "int",
+          "desc_ja": "解放される村・集会所の段階",
+          "desc_en": "Progress stage"
+        },
+        {
+          "name": "npc_id",
+          "type": "int",
+          "desc_ja": "依頼主 NPC の番号",
+          "desc_en": "Requesting NPC"
+        },
+        {
+          "name": "village",
+          "type": "str",
+          "desc_ja": "依頼が出る村",
+          "desc_en": "Village"
+        },
+        {
+          "name": "quest_id",
+          "type": "int",
+          "desc_ja": "対象クエストID",
+          "desc_en": "Quest ID"
+        },
+        {
+          "name": "quest_name_en",
+          "type": "str",
+          "desc_ja": "クエスト名（英語）",
+          "desc_en": "Quest name (English)"
+        },
+        {
+          "name": "quest_name_ja",
+          "type": "str",
+          "desc_ja": "クエスト名（日本語）",
+          "desc_en": "Quest name (Japanese)"
+        },
+        {
+          "name": "prereq_quest",
+          "type": "int",
+          "desc_ja": "前提クエストID",
+          "desc_en": "Prerequisite quest"
+        },
+        {
+          "name": "reward_id",
+          "type": "int",
+          "desc_ja": "報酬アイテムID",
+          "desc_en": "Reward item ID"
+        },
+        {
+          "name": "reward_count",
+          "type": "int",
+          "desc_ja": "報酬個数",
+          "desc_en": "Reward count"
+        },
+        {
+          "name": "accept_flag",
+          "type": "int",
+          "desc_ja": "受注フラグ番号",
+          "desc_en": "Accepted flag index"
+        },
+        {
+          "name": "done_flag",
+          "type": "int",
+          "desc_ja": "報告済みフラグ番号",
+          "desc_en": "Completed flag index"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "依頼名（日本語）",
+          "desc_en": "Request name (Japanese)"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/request-index.csv",
+        "romfs/nativeNX/table/activityData_jpn.gmd",
+        "romfs/nativeNX/arc/quest/q*.arc (questData_*_jpn)"
+      ],
+      "confidence": "derived",
+      "notes_ja": "activityData_jpn.gmd は 920 件 = 184 レコード x 5。依頼 index i の名前は 5*i 番目（例 i=0「しっかり者の村人の依頼１」、i=3「ベルナ村の受付嬢の依頼１」）。quest_name_ja は対象クエストの questData タイトル。",
+      "notes_en": ""
+    },
+    {
+      "id": "monster-carves",
+      "title_ja": "モンスター剥ぎ取り",
+      "title_en": "Monster carves",
+      "file": "monster-carves.csv",
+      "primary_key": "carve_id",
+      "row_count": 2551,
+      "id_range": [
+        1,
+        2551
+      ],
+      "columns": [
+        {
+          "name": "carve_id",
+          "type": "int",
+          "desc_ja": "連番（主キー）",
+          "desc_en": "Serial primary key"
+        },
+        {
+          "name": "monster_id",
+          "type": "int",
+          "desc_ja": "モンスターID",
+          "desc_en": "Monster ID"
+        },
+        {
+          "name": "rank",
+          "type": "str",
+          "desc_ja": "low / high / g",
+          "desc_en": "low / high / g"
+        },
+        {
+          "name": "sets",
+          "type": "int",
+          "desc_ja": "剥ぎ取りセット番号",
+          "desc_en": "Carve set number"
+        },
+        {
+          "name": "kind",
+          "type": "str",
+          "desc_ja": "body / tail / shiny / other",
+          "desc_en": "body / tail / shiny / other"
+        },
+        {
+          "name": "entry_no",
+          "type": "int",
+          "desc_ja": "同セット内の行番号（0 始まり）",
+          "desc_en": "Row ordinal within the table"
+        },
+        {
+          "name": "item_id",
+          "type": "int",
+          "desc_ja": "アイテムID",
+          "desc_en": "Item ID"
+        },
+        {
+          "name": "count",
+          "type": "int",
+          "desc_ja": "個数",
+          "desc_en": "Count"
+        },
+        {
+          "name": "chance",
+          "type": "int",
+          "desc_ja": "確率(%)",
+          "desc_en": "Chance (%)"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/monster-carves.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "自然キーは (monster_id, rank, sets, kind, entry_no)。元 CSV は (monster_id, rank, sets, kind, item_id) が 2 件だけ重複する（モンスター38 の kind=other に別テーブルの同アイテムが 2 行）。entry_no は同じ (monster,rank,sets,kind) 内の 0 始まり連番。1 テーブルの確率合計は 100。",
+      "notes_en": ""
+    },
+    {
+      "id": "recipes",
+      "title_ja": "生産・強化レシピ",
+      "title_en": "Recipes",
+      "file": "recipes.csv",
+      "primary_key": "recipe_id",
+      "row_count": 28623,
+      "id_range": [
+        1,
+        28623
+      ],
+      "columns": [
+        {
+          "name": "recipe_id",
+          "type": "int",
+          "desc_ja": "連番（主キー）",
+          "desc_en": "Serial primary key"
+        },
+        {
+          "name": "kind",
+          "type": "str",
+          "desc_ja": "weapon:<武器種> / armor / deco",
+          "desc_en": "weapon:<class> / armor / deco"
+        },
+        {
+          "name": "target_id",
+          "type": "int",
+          "desc_ja": "生産対象の武器ID・防具ID・装飾品アイテムID",
+          "desc_en": "Weapon / armor / decoration ID"
+        },
+        {
+          "name": "level",
+          "type": "int",
+          "desc_ja": "0 = 生産、1 以上 = そのレベルへの強化",
+          "desc_en": "0 forge, 1+ upgrade level"
+        },
+        {
+          "name": "recipe_no",
+          "type": "int",
+          "desc_ja": "同じ (kind, target_id, level) 内の 0 始まり連番",
+          "desc_en": "Ordinal within (kind, target_id, level)"
+        },
+        {
+          "name": "item1",
+          "type": "int",
+          "desc_ja": "素材1のアイテムID",
+          "desc_en": "Material 1 item ID"
+        },
+        {
+          "name": "count1",
+          "type": "int",
+          "desc_ja": "素材1の個数",
+          "desc_en": "Material 1 count"
+        },
+        {
+          "name": "item2",
+          "type": "int",
+          "desc_ja": "素材2のアイテムID",
+          "desc_en": "Material 2 item ID"
+        },
+        {
+          "name": "count2",
+          "type": "int",
+          "desc_ja": "素材2の個数",
+          "desc_en": "Material 2 count"
+        },
+        {
+          "name": "item3",
+          "type": "int",
+          "desc_ja": "素材3のアイテムID",
+          "desc_en": "Material 3 item ID"
+        },
+        {
+          "name": "count3",
+          "type": "int",
+          "desc_ja": "素材3の個数",
+          "desc_en": "Material 3 count"
+        },
+        {
+          "name": "item4",
+          "type": "int",
+          "desc_ja": "素材4のアイテムID",
+          "desc_en": "Material 4 item ID"
+        },
+        {
+          "name": "count4",
+          "type": "int",
+          "desc_ja": "素材4の個数",
+          "desc_en": "Material 4 count"
+        },
+        {
+          "name": "provision_group",
+          "type": "int",
+          "desc_ja": "供出グループ",
+          "desc_en": "Provision group"
+        },
+        {
+          "name": "provision_value",
+          "type": "int",
+          "desc_ja": "供出値",
+          "desc_en": "Provision value"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/recipes.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "自然キーは (kind, target_id, level, recipe_no)。元 CSV は (kind, id, level) が 127 組重複する（同じ武器・装飾品に別素材の生産レシピが 2 本ある正規のデータ）。recipe_no はその 0 始まり連番。素材なしは item=0 / count=0。",
+      "notes_en": ""
+    },
+    {
+      "id": "rewards",
+      "title_ja": "クエスト報酬テーブル",
+      "title_en": "Reward tables",
+      "file": "rewards.csv",
+      "primary_key": "reward_id",
+      "row_count": 10992,
+      "id_range": [
+        1,
+        10992
+      ],
+      "columns": [
+        {
+          "name": "reward_id",
+          "type": "int",
+          "desc_ja": "連番（主キー）",
+          "desc_en": "Serial primary key"
+        },
+        {
+          "name": "rem_id",
+          "type": "int",
+          "desc_ja": "報酬テーブル(.rem)番号",
+          "desc_en": "Reward table (.rem) id"
+        },
+        {
+          "name": "entry_no",
+          "type": "int",
+          "desc_ja": "テーブル内の行番号（0 始まり）",
+          "desc_en": "Row ordinal within the table"
+        },
+        {
+          "name": "item_id",
+          "type": "int",
+          "desc_ja": "アイテムID",
+          "desc_en": "Item ID"
+        },
+        {
+          "name": "count",
+          "type": "int",
+          "desc_ja": "個数",
+          "desc_en": "Count"
+        },
+        {
+          "name": "chance",
+          "type": "int",
+          "desc_ja": "確率(%)",
+          "desc_en": "Chance (%)"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/rewards.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "quest-rewards.csv の rem_id を引く先。rem_id ごとに 1..22 行あり、同じ rem に同じアイテムが 2 行出ることがある（571 組）ので、自然キーは (rem_id, entry_no)。(rem_id, item_id, count, chance) も10,992 行すべて一意。chance は 1..100 で、1 テーブルの合計は 100。",
+      "notes_en": ""
+    },
+    {
+      "id": "quest-unlock",
+      "title_ja": "クエスト出現条件",
+      "title_en": "Quest unlock rules",
+      "file": "quest-unlock.csv",
+      "primary_key": "quest_id",
+      "row_count": 1506,
+      "id_range": [
+        101,
+        1120013
+      ],
+      "columns": [
+        {
+          "name": "quest_id",
+          "type": "int",
+          "desc_ja": "クエストID",
+          "desc_en": "Quest ID"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "クエスト名（英語）",
+          "desc_en": "Quest name (English)"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "クエスト名（日本語）",
+          "desc_en": "Quest name (Japanese)"
+        },
+        {
+          "name": "rule",
+          "type": "str",
+          "desc_ja": "出現条件（flag: / cleared: / hr: / village_star: など）",
+          "desc_en": "Unlock rule"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/quest-unlock.csv",
+        "romfs/nativeNX/arc/quest/q*.arc (questData_*_jpn)"
+      ],
+      "confidence": "derived",
+      "notes_ja": "quest_id は 1,506 件で、quests.csv の quest_id 集合と完全に一致する。rule は \"flag:396\" \"cleared:11404\" \"hr:7\" \"village_star:6 AND ...\" の形で、空欄 204 件は条件なし（最初から出る）。name_ja は questData のタイトル。",
+      "notes_en": ""
+    },
+    {
+      "id": "unlock-lists",
+      "title_ja": "解放ビット一覧",
+      "title_en": "Unlock maps",
+      "file": "unlock-lists.csv",
+      "primary_key": "unlock_id",
+      "row_count": 1418,
+      "id_range": [
+        1,
+        1418
+      ],
+      "columns": [
+        {
+          "name": "unlock_id",
+          "type": "int",
+          "desc_ja": "連番（主キー）",
+          "desc_en": "Serial primary key"
+        },
+        {
+          "name": "map",
+          "type": "str",
+          "desc_ja": "解放マップ名（lab / song / armory:7 / trader:words など）",
+          "desc_en": "Unlock map name"
+        },
+        {
+          "name": "bit",
+          "type": "int",
+          "desc_ja": "マップ内のビット番号",
+          "desc_en": "Bit in the map"
+        },
+        {
+          "name": "target_id",
+          "type": "int",
+          "desc_ja": "解放される装備・アイテムID（無い行は空）",
+          "desc_en": "Unlocked equipment / item id"
+        },
+        {
+          "name": "need",
+          "type": "str",
+          "desc_ja": "解放条件（start / dlc / v2|h2 / q806&q10768 など）",
+          "desc_en": "Unlock condition"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/unlock-lists.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "自然キーは (map, bit)（1,418 行すべて一意）。map は 38 種で、研究施設 lab・ジュークボックス song・武具屋 armory:1..21・交易商 trader:*・shop:0/1 など。need は \"start\"（最初から）\"dlc\"（配信）\"never\"（未使用）や \"v2|h2\"（村★2 または 集会所★2）\"q806&q10768\"（両方クリア）の形。",
+      "notes_en": ""
+    },
+    {
+      "id": "size-variation",
+      "title_ja": "サイズ変動テーブル",
+      "title_en": "Size variation tables",
+      "file": "size-variation.csv",
+      "primary_key": "variation_id",
+      "row_count": 1385,
+      "id_range": [
+        1,
+        1385
+      ],
+      "columns": [
+        {
+          "name": "variation_id",
+          "type": "int",
+          "desc_ja": "連番（主キー）",
+          "desc_en": "Serial primary key"
+        },
+        {
+          "name": "size_table",
+          "type": "int",
+          "desc_ja": "サイズ変動テーブル番号 0..51",
+          "desc_en": "Size variation table 0..51"
+        },
+        {
+          "name": "rate",
+          "type": "int",
+          "desc_ja": "倍率（%・整数）",
+          "desc_en": "Scale rate (%)"
+        },
+        {
+          "name": "chance",
+          "type": "int",
+          "desc_ja": "確率(%)",
+          "desc_en": "Chance (%)"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/size-variation.csv"
+      ],
+      "confidence": "verified",
+      "notes_ja": "ゲームの em_size_yure_data（52 テーブル）。クエストの boss 枠がsize_table を指し、サイズ = クエストの size% × rate。自然キーは (size_table, rate)（1,385 行すべて一意）。rate は 88..130、chance 0 の行は元データに無い。",
+      "notes_en": ""
+    },
+    {
+      "id": "rotating-quests",
+      "title_ja": "日替わりクエスト",
+      "title_en": "Rotating quests",
+      "file": "rotating-quests.csv",
+      "primary_key": "rotating_bit",
+      "row_count": 51,
+      "id_range": [
+        0,
+        50
+      ],
+      "columns": [
+        {
+          "name": "rotating_bit",
+          "type": "int",
+          "desc_ja": "日替わりビット 0..50",
+          "desc_en": "Rotating bit 0..50"
+        },
+        {
+          "name": "quest_id",
+          "type": "int",
+          "desc_ja": "クエストID",
+          "desc_en": "Quest ID"
+        },
+        {
+          "name": "param_hex",
+          "type": "str",
+          "desc_ja": "クエストパラメータ（16 進）",
+          "desc_en": "Quest parameter (hex)"
+        },
+        {
+          "name": "name_en",
+          "type": "str",
+          "desc_ja": "クエスト名（英語）",
+          "desc_en": "Quest name (English)"
+        },
+        {
+          "name": "name_ja",
+          "type": "str",
+          "desc_ja": "クエスト名（日本語）",
+          "desc_en": "Quest name (Japanese)"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/rotating-quests.csv",
+        "romfs/nativeNX/arc/quest/q*.arc (questData_*_jpn)"
+      ],
+      "confidence": "derived",
+      "notes_ja": "セーブの base + 0x504B のビットで、次に 1 クエストクリアするまで有効。ビット 0..50 の 51 件で、quest_id はすべて quests.csv に存在する。name_ja は questData のタイトル。",
+      "notes_en": ""
+    },
+    {
+      "id": "request-offer",
+      "title_ja": "村依頼の提示条件",
+      "title_en": "Request offers",
+      "file": "request-offer.csv",
+      "primary_key": "offer_id",
+      "row_count": 186,
+      "id_range": [
+        1,
+        186
+      ],
+      "columns": [
+        {
+          "name": "offer_id",
+          "type": "int",
+          "desc_ja": "連番（主キー）",
+          "desc_en": "Serial primary key"
+        },
+        {
+          "name": "request_index",
+          "type": "int",
+          "desc_ja": "requests.csv の request_index",
+          "desc_en": "requests.csv request_index"
+        },
+        {
+          "name": "quest_id",
+          "type": "int",
+          "desc_ja": "クエストID",
+          "desc_en": "Quest ID"
+        },
+        {
+          "name": "quest_name_en",
+          "type": "str",
+          "desc_ja": "クエスト名（英語）",
+          "desc_en": "Quest name (English)"
+        },
+        {
+          "name": "quest_name_ja",
+          "type": "str",
+          "desc_ja": "クエスト名（日本語）",
+          "desc_en": "Quest name (Japanese)"
+        },
+        {
+          "name": "npc_file",
+          "type": "int",
+          "desc_ja": "会話ファイル番号",
+          "desc_en": "Talk file number"
+        },
+        {
+          "name": "npc_bit",
+          "type": "int",
+          "desc_ja": "会話ファイル内の NPC ビット",
+          "desc_en": "NPC bit in the talk file"
+        },
+        {
+          "name": "npc_name",
+          "type": "str",
+          "desc_ja": "NPC 名（英語）",
+          "desc_en": "NPC name (English)"
+        },
+        {
+          "name": "talk_kind",
+          "type": "int",
+          "desc_ja": "会話の種類",
+          "desc_en": "Talk kind"
+        },
+        {
+          "name": "talk_line",
+          "type": "int",
+          "desc_ja": "会話行番号",
+          "desc_en": "Talk line"
+        },
+        {
+          "name": "accept_flag",
+          "type": "int",
+          "desc_ja": "受注フラグ番号",
+          "desc_en": "Accepted flag index"
+        },
+        {
+          "name": "also",
+          "type": "str",
+          "desc_ja": "同時に設定・解除するフラグ",
+          "desc_en": "Flags set or cleared with it"
+        },
+        {
+          "name": "offer",
+          "type": "str",
+          "desc_ja": "提示条件（village_star: / flag: / cleared: など）",
+          "desc_en": "Offer condition"
+        }
+      ],
+      "source": [
+        "mhnxeditor/.work/finalaudit/refsrc/data/request-offer.csv",
+        "romfs/nativeNX/arc/quest/q*.arc (questData_*_jpn)"
+      ],
+      "confidence": "derived",
+      "notes_ja": "NPC の会話データから読んだ「この依頼を出す条件」。自然キーは (request_index, npc_file, npc_bit, talk_line) で 186 行すべて一意。request_index は 4 組 (28, 135, 149, 150) が 2 行ずつあり、28/149/150 は赤鬼/黒鬼の 2 人、135 は同じ NPC の別の会話行。quest_id が空の行は納品依頼（kind 1）でクエストを持たない。",
+      "notes_en": ""
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+﻿rotating_bit,quest_id,param_hex,name_en,name_ja
+0,308,0x002C0164,Tumultuous Sprouts,波乱の萌芽
+1,309,0x002C0264,Tumultuous Sprouts,波乱の萌芽
+2,319,0x002F0164,Into the Wyvern's Den,潜入！　飛竜の巣！
+3,320,0x002F0264,Into the Wyvern's Den,潜入！　飛竜の巣！
+4,324,0x00330164,No Go on the Popo,忍び寄る気配
+5,325,0x00330264,No Go on the Popo,忍び寄る気配
+6,329,0x00310164,A Forest Fracas,ざわめく森
+7,330,0x00310264,A Forest Fracas,ざわめく森
+8,618,0x00090332,It's Electric,雷電
+9,619,0x00000432,The White Brute,白き霊獣
+10,633,0x00000450,Advanced: Snowtal Recall,高難度：吹雪の召喚者
+11,634,0x00000450,Advanced: Invisible Thief,高難度：対霞龍防衛作戦！
+12,635,0x00000450,Advanced: Teostra's Return,高難度：炎王の帰還
+13,10329,0x00000032,It's Electric,雷電
+14,10330,0x00000032,The White Brute,白き霊獣
+15,10331,0x00000050,The Frozen Dictator,氷点下の支配者
+16,10332,0x00000050,The Elder Dragon of Mist,古の霞龍、オオナズチ
+17,10333,0x00000050,Emperor of Flame,煉獄の主、怒れる炎帝
+18,10641,0x00000032,It's Electric,雷電
+19,10642,0x00000032,The White Brute,白き霊獣
+20,10643,0x00000032,A Scenic Locale,山紫水明の地
+21,10756,0x00010528,The Frozen Dictator,氷点下の支配者
+22,10757,0x00000528,Kushala Daora Strikes,舞い降りる鋼龍
+23,10758,0x00010528,The Elder Dragon of Mist,古の霞龍、オオナズチ
+24,10759,0x00000528,Beyond the Silence,しじまの向こう
+25,10760,0x00010528,Emperor of Flame,煉獄の主、怒れる炎帝
+26,10761,0x00000528,The Fires of Devastation,吹き荒れる災厄の火
+27,915,0x00000032,Impossible Standards,美しき幻獣
+28,937,0x00000032,My Kirin for a Horse,騎士と古代林の挑戦
+29,1009,0x00000050,Advanced: Steel Yourself,高難度：禍は鋼鉄よりも硬し
+30,1045,0x00000050,Advanced: Karma Chameleos,高難度：宵闇に消ゆ
+31,1011,0x00000050,Advanced: Empire of the Sun,高難度：陽炎の帝国
+32,11316,0x00000032,A Pinnacle Just for You,狩人のための舞台～遺群嶺～
+33,11318,0x00000032,Reality or Fantasy?,夢か現か幻か
+34,11317,0x00000032,The Phantom Beast!,幻獣、キリン現る！
+35,1005,0x00040700,Beware the Comet of Disaster,恐れ見よ、赤き災厄の彗星を
+36,1053,0x00000719,Beware the Comet of Disaster,恐れ見よ、赤き災厄の彗星を
+37,1022,0x00000719,The Baleful Comet,災厄は空からいづる
+38,1021,0x00000719,Turn That Frown Upside Down,凶星からの贈りもの
+39,1020,0x00000719,An Almost-Certainly-Fine Comet,災厄をもたらす彗星
+40,11413,0x00010528,Steel Yourself,禍は鋼鉄よりも硬し
+41,11412,0x00000528,Blizzard Blower,吹雪を呼ぶ者
+42,11414,0x00010528,Out of Thin Air,虚空より現われし者
+43,11415,0x00000528,Into Thin Air,虚空に消え去りし者
+44,11417,0x00010528,Sandblasting,砂漠に散る爆炎の塵
+45,11416,0x00000528,Explosion Marks the Spot,財宝は爆炎の中に
+46,11401,0x00030719,Sky Render,天を貫く凶星
+47,11459,0x00000719,Hunter Dojo: Valstrax-ryu,天彗龍流　狩人道場
+48,11458,0x00000719,Supersonic,スーパーソニック
+49,11460,0x00000719,Scales of Justice,天彗龍に目が眩む
+50,730,0x00000600,Husk Hunter,彗星のカケラはどこに？

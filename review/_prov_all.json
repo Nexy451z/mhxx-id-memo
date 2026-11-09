@@ -1,0 +1,316 @@
+{
+ "results": [
+  {
+   "table": "armor",
+   "checked": 20,
+   "mismatches": [],
+   "note": "armor_series.csv と name/desc を突合",
+   "skipped": false
+  },
+  {
+   "table": "armor-parts",
+   "checked": 5,
+   "mismatches": [],
+   "note": "gen.py PARTS / EQUIPMENT_TYPES と突合",
+   "skipped": false
+  },
+  {
+   "table": "armor-skills",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc armor-skills.csv と同一順で突合 (part は 1 始まり→0 始まり)",
+   "skipped": false
+  },
+  {
+   "table": "combinations",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc combinations.csv と同一順で突合",
+   "skipped": false
+  },
+  {
+   "table": "decorations",
+   "checked": 20,
+   "mismatches": [],
+   "note": "JWL_NAMES / JWL_I_DS / itemData と突合",
+   "skipped": false
+  },
+  {
+   "table": "hunter-arts",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc hunter-arts.csv と突合",
+   "skipped": false
+  },
+  {
+   "table": "item-categories",
+   "checked": 20,
+   "mismatches": [],
+   "note": "itemCategoryTypeData_jpn.gmd と突合",
+   "skipped": false
+  },
+  {
+   "table": "items",
+   "checked": 20,
+   "mismatches": [],
+   "note": "items.csv (itemData_jpn.gmd) と name/desc を突合",
+   "skipped": false
+  },
+  {
+   "table": "kinsects",
+   "checked": 20,
+   "mismatches": [],
+   "note": "KINSECT_NAMES / insectData_jpn.gmd と突合",
+   "skipped": false
+  },
+  {
+   "table": "palico-actions",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc palico-actions.csv と同一順で突合",
+   "skipped": false
+  },
+  {
+   "table": "palico-armor",
+   "checked": 20,
+   "mismatches": [],
+   "note": "PALICO_HEAD/ARMOR_NAMES (逆引き _IDS) / otArmorData_jpn.gmd と突合",
+   "skipped": false
+  },
+  {
+   "table": "palico-levels",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc palico-levels.csv と同一順で突合",
+   "skipped": false
+  },
+  {
+   "table": "palico-skills",
+   "checked": 20,
+   "mismatches": [],
+   "note": "PALICO_SKILLS と突合",
+   "skipped": false
+  },
+  {
+   "table": "palico-support",
+   "checked": 20,
+   "mismatches": [],
+   "note": "PALICO_SUPPORT_MOVES と突合",
+   "skipped": false
+  },
+  {
+   "table": "palico-weapons",
+   "checked": 20,
+   "mismatches": [],
+   "note": "PALICO_WEAPON_NAMES / palico_weapon.csv と突合",
+   "skipped": false
+  },
+  {
+   "table": "skill-effects",
+   "checked": 20,
+   "mismatches": [],
+   "note": "jp_names/skills.csv (skillData_jpn.gmd) と突合",
+   "skipped": false
+  },
+  {
+   "table": "skills",
+   "checked": 20,
+   "mismatches": [],
+   "note": "SKILL_NAMES / skillTypeData_jpn.gmd と突合",
+   "skipped": false
+  },
+  {
+   "table": "smithy-lists",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc smithy-lists.csv と同一順で突合",
+   "skipped": false
+  },
+  {
+   "table": "talisman-tables",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc talisman-tables.csv と同一順で突合",
+   "skipped": false
+  },
+  {
+   "table": "talismans",
+   "checked": 11,
+   "mismatches": [],
+   "note": "EQUIP_TALISMAN_NAMES / TALISMAN_RARITY と突合",
+   "skipped": false
+  },
+  {
+   "table": "weapon-tree",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc weapon-tree.csv と同一順で突合",
+   "skipped": false
+  },
+  {
+   "table": "weapon-types",
+   "checked": 15,
+   "mismatches": [],
+   "note": "HUNT_WEAPONS (hunt_weapon_index 経由) と突合",
+   "skipped": false
+  },
+  {
+   "table": "weapons",
+   "checked": 20,
+   "mismatches": [],
+   "note": "weapons.csv (weaponNNMsgData_jpn.gmd) と name/levels を突合",
+   "skipped": false
+  },
+  {
+   "table": "monsters",
+   "checked": 20,
+   "mismatches": [],
+   "note": "monster-index.csv / MONSTER_HUNT_NAMES[id-1] と突合",
+   "skipped": false
+  },
+  {
+   "table": "stages",
+   "checked": 20,
+   "mismatches": [],
+   "note": "quest-info.csv stage 分布 / night 系 / ENUM_MAP_ 表記 と突合",
+   "skipped": false
+  },
+  {
+   "table": "quests",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc quest-index.csv と突合",
+   "skipped": false
+  },
+  {
+   "table": "quest-monsters",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc quest-monsters.csv (quest_id 内の順序) と突合",
+   "skipped": false
+  },
+  {
+   "table": "quest-rewards",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc quest-rewards.csv と突合",
+   "skipped": false
+  },
+  {
+   "table": "npcs",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc npc-index.csv / NpcName_jpn.gmd と突合",
+   "skipped": false
+  },
+  {
+   "table": "arena",
+   "checked": 17,
+   "mismatches": [],
+   "note": "refsrc arena.csv と突合",
+   "skipped": false
+  },
+  {
+   "table": "awards",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc awards.csv / GC_Medal_jpn.gmd と突合",
+   "skipped": false
+  },
+  {
+   "table": "canteen",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc canteen.csv / Kitchen_jpn.gmd と突合",
+   "skipped": false
+  },
+  {
+   "table": "provisions",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc provisions.csv と突合",
+   "skipped": false
+  },
+  {
+   "table": "requests",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc request-index.csv / activityData_jpn.gmd (5*i) と突合",
+   "skipped": false
+  },
+  {
+   "table": "monster-carves",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc monster-carves.csv (同一キー内の順序) と突合",
+   "skipped": false
+  },
+  {
+   "table": "recipes",
+   "checked": 20,
+   "mismatches": [],
+   "note": "refsrc recipes.csv (同一キー内の順序) と突合",
+   "skipped": false
+  },
+  {
+   "table": "rewards",
+   "checked": 20,
+   "mismatches": [],
+   "note": "出典コーパス照合 (汎用) [adapter なし]",
+   "skipped": false
+  },
+  {
+   "table": "quest-unlock",
+   "checked": 20,
+   "mismatches": [],
+   "note": "出典コーパス照合 (汎用) [adapter なし]",
+   "skipped": false
+  },
+  {
+   "table": "unlock-lists",
+   "checked": 20,
+   "mismatches": [],
+   "note": "出典コーパス照合 (汎用) [adapter なし]",
+   "skipped": false
+  },
+  {
+   "table": "size-variation",
+   "checked": 20,
+   "mismatches": [],
+   "note": "出典コーパス照合 (汎用) [adapter なし]",
+   "skipped": false
+  },
+  {
+   "table": "rotating-quests",
+   "checked": 20,
+   "mismatches": [],
+   "note": "出典コーパス照合 (汎用) [adapter なし]",
+   "skipped": false
+  },
+  {
+   "table": "request-offer",
+   "checked": 20,
+   "mismatches": [],
+   "note": "出典コーパス照合 (汎用) [adapter なし]",
+   "skipped": false
+  }
+ ],
+ "notes": [
+  {
+   "table": "kinsects",
+   "note": "id 0: 出典の \"(None)\" を空文字に置換 (SPEC §2 の空文字方針)"
+  },
+  {
+   "table": "talismans",
+   "note": "id 0: 出典の \"(None)\" を空文字に置換 (SPEC §2 の空文字方針)"
+  },
+  {
+   "table": "stages",
+   "note": "stage 20: ENUM_MAP_='極園' / 本表='極圏' (quest 本文由来の表記を採用)"
+  },
+  {
+   "table": "stages",
+   "note": "stage 21: ENUM_MAP_='竜の墓場' / 本表='竜ノ墓場' (quest 本文由来の表記を採用)"
+  }
+ ]
+}

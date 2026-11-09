@@ -1,0 +1,263 @@
+﻿decoration_id	name_en	name_ja	item_id	slot_size	skill1_id	skill1_name_ja	skill1_points	skill2_id	skill2_name_ja	skill2_points	is_dummy
+1	Antidote Jwl 1	耐毒珠【１】	2638	1	1	毒	1	4	気絶	-1	no
+2	Antidote Jwl 2	耐毒珠【２】	2639	2	1	毒	3	4	気絶	-1	no
+3	Paralysis Jwl 1	耐麻珠【１】	2640	1	2	麻痺	1	1	毒	-1	no
+4	Paralysis Jwl 2	耐麻珠【２】	2641	2	2	麻痺	3	1	毒	-1	no
+5	Pep Jwl 1	耐眠珠【１】	2642	1	3	睡眠	1	8	だるま	-1	no
+6	Pep Jwl 2	耐眠珠【２】	2643	2	3	睡眠	3	8	だるま	-1	no
+7	Steadfast Jwl 1	耐絶珠【１】	2644	1	4	気絶	1	2	麻痺	-1	no
+8	Standfast Jwl 1	制絶珠【１】	2645	1	4	気絶	2				no
+9	Earplug Jwl 1	防音珠【１】	2646	1	5	聴覚保護	1	115	加護	-1	no
+10	Earplug Jwl 3	防音珠【３】	2647	3	5	聴覚保護	4	115	加護	-2	no
+11	Wind Res Jwl 1	防風珠【１】	2648	1	6	風圧	1	135	運気	-1	no
+12	Wind Res Jwl 2	防風珠【２】	2649	2	6	風圧	3	135	運気	-1	no
+13	Footing Jwl 1	耐震珠【１】	2650	1	7	耐震	1	3	睡眠	-1	no
+14	Tectonic Jwl 1	抗震珠【１】	2651	1	7	耐震	2				no
+15	Bind Jwl 1	耐達磨珠【１】	2652	1	8	だるま	1	3	睡眠	-1	no
+16	Shackle Jwl 1	抗達磨珠【１】	2653	1	8	だるま	2				no
+17	Heat Res Jwl 1	耐暑珠【１】	2654	1	9	耐暑	2				no
+18	Cold Res Jwl 1	耐寒珠【１】	2655	1	10	耐寒	2				no
+19	Polar Jwl 1	北風珠【１】	2656	1	11	寒冷適応	1	9	耐暑	-1	no
+20	Polar Jwl 3	北風珠【３】	2657	3	11	寒冷適応	4	9	耐暑	-2	no
+21	Solar Jwl 1	南風珠【１】	2658	1	12	炎熱適応	1	10	耐寒	-1	no
+22	Solar Jwl 3	南風珠【３】	2659	3	12	炎熱適応	4	10	耐寒	-2	no
+23	Safe Jwl 1	耐盗珠【１】	2660	1	13	盗み無効	2				no
+24	Def Lock Jwl 1	耐防珠【１】	2661	1	14	対防御DOWN	2				no
+25	Sane Jwl 1	抗狂珠【１】	2662	1	15	狂撃耐性	1	82	回避性能	-1	no
+26	Sane Jwl 3	抗狂珠【３】	2663	3	15	狂撃耐性	5	82	回避性能	-1	no
+27	Biology Jwl 1	菌学珠【１】	2664	1	16	細菌学	1	103	気配	-1	no
+28	Microbio Jwl 1	菌究珠【１】	2665	1	16	細菌学	2				no
+29	Staunch Jwl 1	抗傷珠【１】	2666	1	17	裂傷	2				no
+30	Attack Jwl 1	攻撃珠【１】	2667	1	18	攻撃	1	19	防御	-1	no
+31	Attack Jwl 2	攻撃珠【２】	2668	2	18	攻撃	3	19	防御	-1	no
+32	Attack Jwl 3	攻撃珠【３】	2669	3	18	攻撃	5	19	防御	-1	no
+33	Defense Jwl 1	防御珠【１】	2670	1	19	防御	1	18	攻撃	-1	no
+34	Defense Jwl 2	防御珠【２】	2671	2	19	防御	3	18	攻撃	-1	no
+35	Vitality Jwl 1	体力珠【１】	2672	1	20	体力	2				no
+36	Fire Res Jwl 1	耐火珠【１】	2673	1	21	火耐性	1	22	水耐性	-1	no
+37	Nul-Fire Jwl 1	制火珠【１】	2674	1	21	火耐性	2				no
+38	Water Res Jwl 1	耐水珠【１】	2675	1	22	水耐性	1	23	雷耐性	-1	no
+39	Nul-Water Jwl 1	制水珠【１】	2676	1	22	水耐性	2				no
+40	ThunderRes Jwl 1	耐雷珠【１】	2677	1	23	雷耐性	1	24	氷耐性	-1	no
+41	Nul-Thundr Jwl 1	制雷珠【１】	2678	1	23	雷耐性	2				no
+42	Ice Res Jwl 1	耐氷珠【１】	2679	1	24	氷耐性	1	21	火耐性	-1	no
+43	Nul-Ice Jwl 1	制氷珠【１】	2680	1	24	氷耐性	2				no
+44	Dragon Res Jwl 1	耐龍珠【１】	2681	1	25	龍耐性	1	1	毒	-1	no
+45	Nul-Dragon Jwl 1	制龍珠【１】	2682	1	25	龍耐性	2				no
+46	Resistor Jwl 1	属耐珠【１】	2683	1	26	属性耐性	1	20	体力	-1	no
+47	Resistor Jwl 3	属耐珠【３】	2684	3	26	属性耐性	4	20	体力	-2	no
+48	Blaze Jwl 1	火炎珠【１】	2685	1	27	火属性攻撃	1	28	水属性攻撃	-1	no
+49	Blaze Jwl 2	火炎珠【２】	2686	2	27	火属性攻撃	3	28	水属性攻撃	-1	no
+50	Stream Jwl 1	流水珠【１】	2687	1	28	水属性攻撃	1	29	雷属性攻撃	-1	no
+51	Stream Jwl 2	流水珠【２】	2688	2	28	水属性攻撃	3	29	雷属性攻撃	-1	no
+52	Bolt Jwl 1	雷光珠【１】	2689	1	29	雷属性攻撃	1	30	氷属性攻撃	-1	no
+53	Bolt Jwl 2	雷光珠【２】	2690	2	29	雷属性攻撃	3	30	氷属性攻撃	-1	no
+54	Frost Jwl 1	氷結珠【１】	2691	1	30	氷属性攻撃	1	27	火属性攻撃	-1	no
+55	Frost Jwl 2	氷結珠【２】	2692	2	30	氷属性攻撃	3	27	火属性攻撃	-1	no
+56	Dragon Jwl 1	破龍珠【１】	2693	1	31	龍属性攻撃	1	33	特殊攻撃	-1	no
+57	Dragon Jwl 2	破龍珠【２】	2694	2	31	龍属性攻撃	3	33	特殊攻撃	-1	no
+58	Element Jwl 1	属攻珠【１】	2695	1	32	属性攻撃	1	33	特殊攻撃	-1	no
+59	Element Jwl 3	属攻珠【３】	2696	3	32	属性攻撃	4	33	特殊攻撃	-2	no
+60	Disabler Jwl 1	特攻珠【１】	2697	1	33	特殊攻撃	1	32	属性攻撃	-1	no
+61	Disabler Jwl 2	特攻珠【２】	2698	2	33	特殊攻撃	3	32	属性攻撃	-1	no
+62	Grinder Jwl 1	研磨珠【１】	2699	1	34	研ぎ師	2				no
+63	Handicraft Jwl 1	匠珠【１】	2700	1	35	匠	1	36	斬れ味	-1	no
+64	Handicraft Jwl 3	匠珠【３】	2701	3	35	匠	4	36	斬れ味	-2	no
+65	Razor Jwl 1	斬鉄珠【１】	2702	1	36	斬れ味	1	35	匠	-1	no
+66	Razor Jwl 3	斬鉄珠【３】	2703	3	36	斬れ味	4	35	匠	-2	no
+67	Fencer Jwl 1	剣豪珠【１】	2704	1	37	剣術	1	35	匠	-1	no
+68	Fencer Jwl 3	剣豪珠【３】	2705	3	37	剣術	4	35	匠	-2	no
+69	Sharp Jwl 1	剛刃珠【１】	2706	1	38	研磨術	1	34	研ぎ師	-1	no
+70	Sharp Jwl 3	剛刃珠【３】	2707	3	38	研磨術	4	34	研ぎ師	-2	no
+71	Blunt Jwl 1	鈍器珠【１】	2708	1	39	鈍器	1	18	攻撃	-1	no
+72	Blunt Jwl 2	鈍器珠【２】	2709	2	39	鈍器	3	18	攻撃	-2	no
+73	Draw Jwl 1	抜刀珠【１】	2710	1	40	抜刀会心	1	70	達人	-1	no
+74	Draw Jwl 2	抜刀珠【２】	2711	2	40	抜刀会心	3	70	達人	-1	no
+75	Gambit Jwl 1	抜打珠【１】	2712	1	41	抜刀減気	1	36	斬れ味	-1	no
+76	Gambit Jwl 3	抜打珠【３】	2713	3	41	抜刀減気	4	36	斬れ味	-2	no
+77	Sheath Jwl 1	速納珠【１】	2714	1	42	納刀	1	34	研ぎ師	-1	no
+78	Sheath Jwl 2	速納珠【２】	2715	2	42	納刀	3	34	研ぎ師	-1	no
+79	Sheath Art Jwl 1	納研珠【１】	2716	1	43	納刀研磨	2	42	納刀	-1	no
+80	Dummy Jwl 1	ダミー珠１	2717	1							no
+81	Dummy Jwl 2	ダミー珠２	2718	1							no
+82	Scalpel Jwl 1	刃鱗珠【１】	2719	1	44	刃鱗	1				no
+83	Dummy Jwl 3	ダミー珠３	2720	1							no
+84	Scalpel Jwl 3	刃鱗珠【３】	2721	3	44	刃鱗	4				no
+85	Quickload Jwl 1	早填珠【１】	2722	1	45	装填速度	1	46	反動	-1	no
+86	Quickload Jwl 2	早填珠【２】	2723	2	45	装填速度	3	46	反動	-1	no
+87	Absorber Jwl 1	抑反珠【１】	2724	1	46	反動	1	45	装填速度	-1	no
+88	Absorber Jwl 3	抑反珠【３】	2725	3	46	反動	4	45	装填速度	-2	no
+89	Sniper Jwl 1	点射珠【１】	2726	1	47	精密射撃	2				no
+90	Forceshot Jwl 1	強弾珠【１】	2727	1	48	通常弾強化	1	46	反動	-1	no
+91	Forceshot Jwl 3	強弾珠【３】	2728	3	48	通常弾強化	4	46	反動	-2	no
+92	Pierce Jwl 1	貫通珠【１】	2729	1	49	貫通弾強化	1	46	反動	-1	no
+93	Pierce Jwl 3	貫通珠【３】	2730	3	49	貫通弾強化	4	46	反動	-2	no
+94	Pellet Jwl 1	散弾珠【１】	2731	1	50	散弾強化	1	46	反動	-1	no
+95	Pellet Jwl 3	散弾珠【３】	2732	3	50	散弾強化	4	46	反動	-2	no
+96	Heavyshot Jwl 1	重弾珠【１】	2733	1	51	重撃弾強化	1	46	反動	-1	no
+97	Heavyshot Jwl 3	重弾珠【３】	2734	3	51	重撃弾強化	4	46	反動	-2	no
+98	ShotPlus Jwl 1	加弾珠【１】	2735	1	52	通常弾追加	1	45	装填速度	-1	no
+99	ShotPlus Jwl 2	加弾珠【２】	2736	2	52	通常弾追加	3	45	装填速度	-1	no
+100	PiercePlus Jwl 1	加貫珠【１】	2737	1	53	貫通弾追加	2				no
+101	PelletPlus Jwl 1	加散珠【１】	2738	1	54	散弾追加	2				no
+102	CragPlus Jwl 1	加榴珠【１】	2739	1	55	榴弾追加	2				no
+103	ClustPlus Jwl 1	加拡珠【１】	2740	1	56	拡散弾追加	1	45	装填速度	-1	no
+104	ClustPlus Jwl 3	加拡珠【３】	2741	3	56	拡散弾追加	4	45	装填速度	-2	no
+105	Poisoncoat Jwl 1	毒瓶珠【１】	2742	1	57	毒瓶追加	2				no
+106	Paracoat Jwl 1	痺瓶珠【１】	2743	1	58	麻痺瓶追加	1	18	攻撃	-1	no
+107	Paracoat Jwl 2	痺瓶珠【２】	2744	2	58	麻痺瓶追加	3	18	攻撃	-1	no
+108	Sleep Jwl 1	眠瓶珠【１】	2745	1	59	睡眠瓶追加	2				no
+109	Powercoat Jwl 1	強瓶珠【１】	2746	1	60	強撃瓶追加	1	70	達人	-1	no
+110	Powercoat Jwl 2	強瓶珠【２】	2747	2	60	強撃瓶追加	3	70	達人	-1	no
+111	Elemcoat Jwl 1	属瓶珠【１】	2748	1	61	属強瓶追加	1	33	特殊攻撃	-1	no
+112	Elemcoat Jwl 2	属瓶珠【２】	2749	2	61	属強瓶追加	3	33	特殊攻撃	-1	no
+113	Rangecoat Jwl 1	接瓶珠【１】	2750	1	62	接撃瓶追加	2				no
+114	Draincoat Jwl 1	減瓶珠【１】	2751	1	63	減気瓶追加	2				no
+115	Blastcoat Jwl 1	爆瓶珠【１】	2752	1	64	爆破瓶追加	2				no
+116	Salvo Jwl 1	速射珠【１】	2753	1	65	速射	1	45	装填速度	-1	no
+117	Salvo Jwl 3	速射珠【３】	2754	3	65	速射	4	45	装填速度	-2	no
+118	Precise Jwl 1	射法珠【１】	2755	1	66	射法	1	67	装填数	-1	no
+119	Precise Jwl 2	射法珠【２】	2756	2	66	射法	3	67	装填数	-1	no
+120	Capacity Jwl 1	装填珠【１】	2757	1	67	装填数	1	45	装填速度	-1	no
+121	Capacity Jwl 3	装填珠【３】	2758	3	67	装填数	4	45	装填速度	-2	no
+122	Irregular Jwl 1	変射珠【１】	2759	1	68	変則射撃	2				no
+123	Thrift Jwl 1	節弾珠【１】	2760	1	69	弾薬節約	1	47	精密射撃	-1	no
+124	Thrift Jwl 2	節弾珠【２】	2761	2	69	弾薬節約	3	47	精密射撃	-1	no
+125	Expert Jwl 1	達人珠【１】	2762	1	70	達人	1	25	龍耐性	-1	no
+126	Expert Jwl 2	達人珠【２】	2763	2	70	達人	3	25	龍耐性	-1	no
+127	Expert Jwl 3	達人珠【３】	2764	3	70	達人	5	25	龍耐性	-1	no
+128	Tenderizer Jwl 1	痛撃珠【１】	2765	1	71	痛撃	1	20	体力	-1	no
+129	Tenderizer Jwl 3	痛撃珠【３】	2766	3	71	痛撃	4	20	体力	-2	no
+130	Chain Jwl 1	連撃珠【１】	2767	1	72	連撃	1	115	加護	-1	no
+131	Chain Jwl 3	連撃珠【３】	2768	3	72	連撃	4	115	加護	-2	no
+132	Crit Status Jwl 1	特会珠【１】	2769	1	73	特殊会心	1	18	攻撃	-1	no
+133	Crit Status Jwl 2	特会珠【２】	2770	2	73	特殊会心	3	18	攻撃	-1	no
+134	CritElementJwl 1	属会珠【１】	2771	1	74	属性会心	1	18	攻撃	-1	no
+135	CritElementJwl 2	属会珠【２】	2772	2	74	属性会心	3	18	攻撃	-1	no
+136	Critical Jwl 1	会心珠【１】	2773	1	75	会心強化	1	18	攻撃	-1	no
+137	Critical Jwl 3	会心珠【３】	2774	3	75	会心強化	4	18	攻撃	-2	no
+138	Neg-Crit Jwl 1	裏会心珠【１】	2775	1	76	裏会心	1	18	攻撃	-1	no
+139	Dummy Jwl 4	ダミー珠４	2776	1							no
+140	Neg-Crit Jwl 3	裏会心珠【３】	2777	3	76	裏会心	4	18	攻撃	-2	no
+141	Charger Jwl 1	短縮珠【１】	2778	1	77	溜め短縮	1	79	体術	-1	no
+142	Charger Jwl 3	短縮珠【３】	2779	3	77	溜め短縮	4	79	体術	-2	no
+143	Sprinter Jwl 1	強走珠【１】	2780	1	78	スタミナ	1	121	腹減り	-1	no
+144	Sprinter Jwl 3	強走珠【３】	2781	3	78	スタミナ	4	121	腹減り	-2	no
+145	Physique Jwl 1	体術珠【１】	2782	1	79	体術	1	78	スタミナ	-1	no
+146	Physique Jwl 2	体術珠【２】	2783	2	79	体術	3	78	スタミナ	-1	no
+147	Refresh Jwl 1	早気珠【１】	2784	1	80	気力回復	1	82	回避性能	-1	no
+148	Refresh Jwl 2	早気珠【２】	2785	2	80	気力回復	3	82	回避性能	-1	no
+149	Fleet-Footed Jwl 1	走継珠【１】	2786	1	81	走行継続	1	79	体術	-1	no
+150	Fleet-Footed Jwl 2	走継珠【２】	2787	2	81	走行継続	3	79	体術	-1	no
+151	Dummy Jwl 5	ダミー珠５	2788	1							no
+152	Evasion Jwl 1	回避珠【１】	2789	1	82	回避性能	1	20	体力	-1	no
+153	Evasion Jwl 2	回避珠【２】	2790	2	82	回避性能	3	20	体力	-1	no
+154	Jumping Jwl 1	跳躍珠【１】	2791	1	83	回避距離	1	20	体力	-1	no
+155	Jumping Jwl 3	跳躍珠【３】	2792	3	83	回避距離	4	20	体力	-2	no
+156	Bubble Jwl 1	泡沫珠【１】	2793	1	84	泡沫	1	80	気力回復	-1	no
+157	Bubble Jwl 3	泡沫珠【３】	2794	3	84	泡沫	4	80	気力回復	-2	no
+158	Ironwall Jwl 1	鉄壁珠【１】	2795	1	85	ガード性能	1	79	体術	-1	no
+159	Ironwall Jwl 2	鉄壁珠【２】	2796	2	85	ガード性能	3	79	体術	-1	no
+160	Shield Jwl 1	強壁珠【１】	2797	1	86	ガード強化	1	78	スタミナ	-1	no
+161	Shield Jwl 2	強壁珠【２】	2798	2	86	ガード強化	3	78	スタミナ	-1	no
+162	KO Jwl 1	ＫＯ珠【１】	2799	1	87	KO	1	77	溜め短縮	-1	no
+163	KO Jwl 2	ＫＯ珠【２】	2800	2	87	KO	3	77	溜め短縮	-1	no
+164	Drain Jwl 1	奪気珠【１】	2801	1	88	減気攻撃	1	78	スタミナ	-1	no
+165	Drain Jwl 2	奪気珠【２】	2802	2	88	減気攻撃	3	78	スタミナ	-1	no
+166	Sonorous Jwl 1	鼓笛珠【１】	2803	1	89	笛	2				no
+167	Artillery Jwl 1	砲術珠【１】	2804	1	90	砲術	2				no
+168	Destroyer Jwl 1	重撃珠【１】	2805	1	91	重撃	1	70	達人	-1	no
+169	Destroyer Jwl 3	重撃珠【３】	2806	3	91	重撃	4	70	達人	-2	no
+170	Bombardier Jwl 1	爆師珠【１】	2807	1	92	爆弾強化	2				no
+171	Throttle Jwl 1	全開珠【１】	2808	1	93	本気	1	103	気配	-1	no
+172	Throttle Jwl 2	全開珠【２】	2809	2	93	本気	3	103	気配	-1	no
+173	Spirit Jwl 1	闘魂珠【１】	2810	1	94	闘魂	1	85	ガード性能	-1	no
+174	Spirit Jwl 2	闘魂珠【２】	2811	2	94	闘魂	3	85	ガード性能	-1	no
+175	Flawless Jwl 1	無傷珠【１】	2812	1	95	無傷	1	118	回復速度	-1	no
+176	Flawless Jwl 2	無傷珠【２】	2813	2	95	無傷	3	118	回復速度	-1	no
+177	Favor Jwl 1	好機珠【１】	2814	1	96	チャンス	1	119	効果持続	-1	no
+178	Favor Jwl 3	好機珠【３】	2815	3	96	チャンス	4	119	効果持続	-2	no
+179	DRG Trait Jwl 1	龍気珠【１】	2816	1	97	龍気	1	19	防御	-1	no
+180	Dummy Jwl 6	ダミー珠６	2817	1							no
+181	DRG Trait Jwl 3	龍気珠【３】	2818	3	97	龍気	4	19	防御	-2	no
+182	Potential Jwl 1	底力珠【１】	2819	1	98	底力	1	115	加護	-1	no
+183	Potential Jwl 2	底力珠【２】	2820	2	98	底力	3	115	加護	-1	no
+184	Fortitude Jwl 1	逆境珠【１】	2821	1	99	逆境	1	117	回復量	-1	no
+185	Fortitude Jwl 2	逆境珠【２】	2822	2	99	逆境	3	117	回復量	-1	no
+186	Furor Jwl 1	逆上珠【１】	2823	1	100	逆上	1	79	体術	-1	no
+187	Furor Jwl 2	逆上珠【２】	2824	2	100	逆上	3	79	体術	-1	no
+188	Crisis Jwl 1	窮地珠【１】	2825	1	101	窮地	1	1	毒	-1	no
+189	Crisis Jwl 2	窮地珠【２】	2826	2	101	窮地	3	1	毒	-1	no
+190	Guts Jwl 1	根性珠【１】	2827	1	102	根性	1	128	調合成功率	-1	no
+191	Guts Jwl 2	根性珠【２】	2828	2	102	根性	3	128	調合成功率	-1	no
+192	Ninja Jwl 1	忍脚珠【１】	2829	1	103	気配	2				no
+193	Player Jwl 1	采配珠【１】	2830	1	104	采配	1	119	効果持続	-1	no
+194	Morale Jwl 1	名采配珠【１】	2831	1	104	采配	2				no
+195	Leader Jwl 1	号令珠【１】	2832	1	105	号令	1	131	採取	-1	no
+196	Leader Jwl 2	号令珠【２】	2833	2	105	号令	3	131	採取	-1	no
+197	Rodeo Jwl 1	乗慣珠【１】	2834	1	106	乗り	2				no
+198	Flight Jwl 1	飛燕珠【１】	2835	1	107	跳躍	2				no
+199	Insight Jwl 1	無心珠【１】	2836	1	108	無心	1	103	気配	-1	no
+200	Insight Jwl 3	無心珠【３】	2837	3	108	無心	4	103	気配	-2	no
+201	Proud Jwl 1	我慢珠【１】	2838	1	109	我慢	2	108	無心	-1	no
+202	Dummy Jwl 7	ダミー珠７	2839	1							no
+203	Dummy Jwl 8	ダミー珠８	2840	1							no
+204	Tech Ext Jwl 1	技延珠【１】	2841	1	110	ＳＰ延長	1	108	無心	-1	no
+205	Tech Ext Jwl 2	技延珠【２】	2842	2	110	ＳＰ延長	3	108	無心	-1	no
+206	Dummy Jwl 9	ダミー珠９	2843	1							no
+207	Psychic Jwl 1	千里珠【１】	2844	1	111	千里眼	2				no
+208	Perception Jwl 1	観察珠【１】	2845	1	112	観察眼	2				no
+209	Ranger Jwl 1	狩人珠【１】	2846	1	113	狩人	2				no
+210	Transportr Jwl 1	運搬珠【１】	2847	1	114	運搬	2				no
+211	Protection Jwl 1	加護珠【１】	2848	1	115	加護	1				no
+212	Asylum Jwl 1	神護珠【１】	2849	1	115	加護	2				no
+213	Hero Jwl 1	英雄珠【１】	2850	1	116	英雄の盾	1	135	運気	-1	no
+214	Hero Jwl 3	英雄珠【３】	2851	3	116	英雄の盾	4	135	運気	-2	no
+215	Medicine Jwl 1	治癒珠【１】	2852	1	117	回復量	1	118	回復速度	-1	no
+216	Medicine Jwl 2	治癒珠【２】	2853	2	117	回復量	3	118	回復速度	-1	no
+217	Recovery Jwl 1	早復珠【１】	2854	1	118	回復速度	1	123	食事	-1	no
+218	Recovery Jwl 2	早復珠【２】	2855	2	118	回復速度	3	123	食事	-1	no
+219	Enduring Jwl 1	持続珠【１】	2856	1	119	効果持続	2				no
+220	Friendship Jwl 1	友愛珠【１】	2857	1	120	広域	1	103	気配	-1	no
+221	Friendship Jwl 2	友愛珠【２】	2858	2	120	広域	3	103	気配	-1	no
+222	Hungerless Jwl 1	無食珠【１】	2859	1	121	腹減り	2				no
+223	Metabolism Jwl 1	食漢珠【１】	2860	1	122	食いしん坊	2				no
+224	Gobbler Jwl 1	早食珠【１】	2861	1	123	食事	1	117	回復量	-1	no
+225	Gobbler Jwl 3	早食珠【３】	2862	3	123	食事	4	117	回復量	-2	no
+226	Satiated Jwl 1	節食珠【１】	2863	1	124	節食	2	134	気まぐれ	-1	no
+227	Meateater Jwl 1	肉食珠【１】	2864	1	125	肉食	1	121	腹減り	-1	no
+228	Meatlover Jwl 1	肉好珠【１】	2865	1	125	肉食	2				no
+229	Fungiform Jwl 1	茸好珠【１】	2866	1	126	茸食	2	125	肉食	-1	no
+230	Grass Jwl 1	野草珠【１】	2867	1	127	野草知識	2				no
+231	Professor Jwl 1	博士珠【１】	2868	1	128	調合成功率	2				no
+232	Factory Jwl 1	弾製珠【１】	2869	1	129	調合数	2				no
+233	Trapmaster Jwl 1	罠師珠【１】	2870	1	130	高速設置	2				no
+234	Gathering Jwl 1	採取珠【１】	2871	1	131	採取	2				no
+235	Honeybee Jwl 1	蜜集珠【１】	2872	1	132	ハチミツ	1	134	気まぐれ	-1	no
+236	Queenbee Jwl 1	蜜占珠【１】	2873	1	132	ハチミツ	2				no
+237	Charmer Jwl 1	護石珠【１】	2874	1	133	護石王	1				no
+238	Charmer Jwl 3	護石珠【３】	2875	3	133	護石王	4				no
+239	Blessing Jwl 1	祝福珠【１】	2876	1	134	気まぐれ	2				no
+240	Fate Jwl 1	運気珠【１】	2877	1	135	運気	1	134	気まぐれ	-1	no
+241	Fate Jwl 3	運気珠【３】	2878	3	135	運気	4	134	気まぐれ	-2	no
+242	Carver Jwl 1	皮剥珠【１】	2879	1	136	剥ぎ取り	1	135	運気	-1	no
+243	Carver Jwl 3	皮剥珠【３】	2880	3	136	剥ぎ取り	4	135	運気	-2	no
+244	Capture Jwl 1	捕獲珠【１】	2881	1	137	捕獲	1	135	運気	-1	no
+245	Capture Jwl 3	捕獲珠【３】	2882	3	137	捕獲	4	135	運気	-2	no
+246	Bell Jwl 1	歴鈴珠【１】	2883	1	138	ベルナ	2				no
+247	Novice Jwl 1	始猟珠【１】	2884	1	139	ココット	2				no
+248	Snowflake Jwl 1	雪花珠【１】	2885	1	140	ポッケ	2				no
+249	Springs Jwl 1	仙湯珠【１】	2886	1	141	ユクモ	2				no
+250	Wisdom Jwl 1	識究珠【１】	2887	1	142	龍識船	2				no
+251	Sky Tavern Jwl 1	空宴珠【１】	2888	1	143	飛行酒場	2				no
+252	Dummy Jwl 10	ダミー珠１０	2889								yes
+253	Dummy Jwl 11	ダミー珠１１	2890								yes
+254	Dummy Jwl 12	ダミー珠１２	2891								yes
+255	Dummy Jwl 13	ダミー珠１３	2892								yes
+256	Dummy Jwl 14	ダミー珠１４	2893								yes
+257	Dummy Jwl 15	ダミー珠１５	2894								yes
+258	Dummy Jwl 16	ダミー珠１６	2895								yes
+259	Dummy Jwl 17	ダミー珠１７	2896								yes
+260	Dummy Jwl 18	ダミー珠１８	2897								yes
+261	Dummy Jwl 19	ダミー珠１９	2898								yes
+262	Dummy Jwl 20	ダミー珠２０	2899								yes

@@ -1,0 +1,226 @@
+{
+ "findings": [
+  {
+   "severity": "Critical",
+   "area": "manifest",
+   "message": "_manifest.json が存在しない",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\world"
+  },
+  {
+   "severity": "Major",
+   "area": "index",
+   "message": "index.json に未収録のテーブル id",
+   "evidence": "['kinsects', 'armor-parts', 'palico-support', 'skill-effects', 'skills', 'weapon-types', 'armor', 'items', 'talismans', 'weapons', 'palico-skills', 'decorations', 'palico-armor', 'palico-weapons', 'item-categories', 'hunter-arts']"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\armor.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\armor-parts.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\decorations.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\hunter-arts.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\item-categories.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\items.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\kinsects.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\palico-armor.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\palico-skills.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\palico-support.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\palico-weapons.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\skill-effects.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\skills.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\talismans.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\weapon-types.tsv"
+  },
+  {
+   "severity": "Major",
+   "area": "tsv",
+   "message": "TSV が存在しない (build.py 未実行 or 出力先違い)",
+   "evidence": "C:\\anyWorkspace\\nx\\mhxx\\mhxx-id-memo\\data\\equip\\weapons.tsv"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/armor: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (EQUIP_*_NAMES/_IDS)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (EQUIP_*_NAMES\\_IDS))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/armor-parts: 'extract/jp_names/gen.py (PARTS)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\extract\\jp_names\\gen.py (PARTS))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/armor-parts: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (EQUIPMENT_TYPES)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (EQUIPMENT_TYPES))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/decorations: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (JWL_NAMES, JWL_I_DS)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (JWL_NAMES, JWL_I_DS))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/kinsects: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (KINSECT_NAMES)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (KINSECT_NAMES))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/palico-armor: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (PALICO_HEAD_NAMES/_IDS, PALICO_ARMOR_NAMES/_IDS)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (PALICO_HEAD_NAMES\\_IDS, PALICO_ARMOR_NAMES\\_IDS))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/palico-skills: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (PALICO_SKILLS, PALICO_SKILL_NAMES)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (PALICO_SKILLS, PALICO_SKILL_NAMES))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/palico-support: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (PALICO_SUPPORT_MOVES)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (PALICO_SUPPORT_MOVES))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/palico-weapons: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (PALICO_WEAPON_NAMES)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (PALICO_WEAPON_NAMES))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/skills: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (SKILL_NAMES)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (SKILL_NAMES))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/talismans: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (EQUIP_TALISMAN_NAMES, TALISMAN_RARITY)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (EQUIP_TALISMAN_NAMES, TALISMAN_RARITY))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/weapon-types: 'romfs/nativeNX/table/weapon*MsgData_jpn.gmd' (解決先 C:\\anyWorkspace\\nx\\mhxx\\romfs\\nativeNX\\table\\weapon*MsgData_jpn.gmd)"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/weapon-types: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (HUNT_WEAPONS, EQUIPMENT_TYPES)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (HUNT_WEAPONS, EQUIPMENT_TYPES))"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/weapons: 'romfs/nativeNX/table/weapon*MsgData_jpn.gmd' (解決先 C:\\anyWorkspace\\nx\\mhxx\\romfs\\nativeNX\\table\\weapon*MsgData_jpn.gmd)"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/weapons: 'romfs/nativeNX/table/weapon*LevelData.w*d' (解決先 C:\\anyWorkspace\\nx\\mhxx\\romfs\\nativeNX\\table\\weapon*LevelData.w*d)"
+  },
+  {
+   "severity": "Minor",
+   "area": "manifest",
+   "message": "source パスが実在しない",
+   "evidence": "equip/weapons: 'mhnxeditor/crates/mhnx-core/src/gamedata.rs (EQUIP_*_NAMES)' (解決先 C:\\anyWorkspace\\nx\\mhxx\\mhnxeditor\\crates\\mhnx-core\\src\\gamedata.rs (EQUIP_*_NAMES))"
+  }
+ ],
+ "tables": [
+  "armor",
+  "armor-parts",
+  "decorations",
+  "hunter-arts",
+  "item-categories",
+  "items",
+  "kinsects",
+  "palico-armor",
+  "palico-skills",
+  "palico-support",
+  "palico-weapons",
+  "skill-effects",
+  "skills",
+  "talismans",
+  "weapon-types",
+  "weapons"
+ ]
+}

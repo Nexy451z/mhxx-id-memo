@@ -1,0 +1,145 @@
+﻿canteen_id,kind,bit,name_ja,name_en,category,ingredient_a,ingredient_b
+1,ingredient,0,リモセラミ,Larinoth Salami,meat,,
+2,ingredient,1,アンモミート,Anmo Beef,meat,,
+3,ingredient,2,サイコロミート,Diced Steak,meat,,
+4,ingredient,3,リノプロシュート,Rheno Prosciutto,meat,,
+5,ingredient,4,ホロロース,Malfest Roast,meat,,
+6,ingredient,5,アツアツハツ,Hot Heart,meat,,
+7,ingredient,6,マグマトン,Magma Pork,meat,,
+8,ingredient,7,リュウノテール,Dragontail,meat,,
+9,ingredient,8,厚切リモ背肉,Larinoth Cuts,meat,,
+10,ingredient,9,高玄米,Superior Rice,grain,,
+11,ingredient,10,チココーン,Cheeko Corn,grain,,
+12,ingredient,11,ロックラックルミ,Loc Lac Walnut,grain,,
+13,ingredient,12,ロックラッカセイ,Loc Lac Peanut,grain,,
+14,ingredient,13,ゼンマイ米,Spring Rice,grain,,
+15,ingredient,14,フワッフワッフル,Fluffy Waffle,grain,,
+16,ingredient,15,五穀豊穣米,Manygrain Rice,grain,,
+17,ingredient,16,大ドンドル豆,Big Dundor Bean,grain,,
+18,ingredient,17,マスターベーグル,Megabagel,grain,,
+19,ingredient,18,チョモラン米,Chomoran Rice,grain,,
+20,ingredient,19,ベルナッパ,Bherna Greens,vegetable,,
+21,ingredient,20,モグモガーリック,Moga Garlic,vegetable,,
+22,ingredient,21,ツチタケノコ,Bamboo Sprouts,vegetable,,
+23,ingredient,22,ベルナス,Bherna Eggplant,vegetable,,
+24,ingredient,23,完熟シナトマト,Cathar Tomato,vegetable,,
+25,ingredient,24,ハップルアップル,Nibelapple,vegetable,,
+26,ingredient,25,ユキヤマツタケ,Frozen Mushrooms,vegetable,,
+27,ingredient,26,エンペラーセロリ,Emperor Celery,vegetable,,
+28,ingredient,27,砲丸レタス,Cannon Lettuce,vegetable,,
+29,ingredient,28,林檎王【凜護】,King of All Fruits,vegetable,,
+30,ingredient,29,モガ大トロ,Prime Moga Tuna,fish,,
+31,ingredient,30,モガニ,Moga Crab,fish,,
+32,ingredient,31,古代真鯛,Ancient Seabream,fish,,
+33,ingredient,32,モガモ貝,Moga Mussel,fish,,
+34,ingredient,33,ジャンボウ,Jumbo Fish,fish,,
+35,ingredient,34,シナトビウオ,Cathar Flying Fish,fish,,
+36,ingredient,35,コダイオウイカ,Ancient Giant Squid,fish,,
+37,ingredient,36,カタマリアワビ,Abalone Cluster,fish,,
+38,ingredient,37,珍味・甲冑魚,Armorfish Morsel,fish,,
+39,ingredient,38,天然チコフグ,Natural Blowfish,fish,,
+40,ingredient,39,達人ビール,Master Ale,drink,,
+41,ingredient,40,ブレスワイン,Blessed Wine,drink,,
+42,ingredient,41,龍ノコハク酒,Wyvern Amber Ale,drink,,
+43,ingredient,42,ポッカウォッカ,Pokkawokka,drink,,
+44,ingredient,43,大吟醸・龍ころし,Dragonslayer-brand Firewater,drink,,
+45,ingredient,44,ニャトーロマーネ,Chat-eau de Nya,drink,,
+46,dish,0,屋台の根性まかない飯,Dauntless Pasta,starter,,
+47,dish,1,屋台の精力まかない飯,Vigorous Stir-fry,starter,,
+48,dish,2,リモセラミート首長巻き,Larinoth Salami Roll,,0,1
+49,dish,3,チココーンバターご飯,Cheeko Corn Butter Rice,,9,10
+50,dish,4,モグモガーリックライス,Moga Garlic Rice,,9,20
+51,dish,5,モガニのベルナッパ包み揚げ,Moga Deep-fried Crab,,19,30
+52,dish,6,リモセラミのガーリックピザ,Larinoth Garlic Pizza,,0,20
+53,dish,7,古代風モガ大トロカルパッチョ,Moga Carpaccio,,29,1
+54,dish,8,リモセラミとお肉のキッシュ,Larinoth Quiche,,0,2
+55,dish,9,砂丘チャーハン,Desert Fried Rice,,9,11
+56,dish,10,高原ツチタケノコご飯,Bamboo Rice,,9,21
+57,dish,11,ベルナッパと古代真鯛のあら汁,Bherna Seabream Soup,,19,31
+58,dish,12,ツチタケノコとお肉の醤油炒め,Stir-fry Meat 'n Sprouts,,0,21
+59,dish,13,モガ大トロール肉巻き,Moga Rolls,,29,2
+60,dish,14,屋台の情熱まかない飯,Ardent Crockpot,special,,
+61,dish,15,アンモミートボール,Anmo Meatballs,,1,3
+62,dish,16,チココーンスロー,Cheeko Coleslaw,,10,12
+63,dish,17,お肉たっぷり麻婆ベルナス,Bherna Meaty Tofu,,1,22
+64,dish,18,チココーンのコーンがり焼き,Cheeko BBQ Corn,,10,32
+65,dish,19,ベルナスのモガペペロンチーノ,Moga Pepperoncino,,20,22
+66,dish,20,モガニたっぷりリノプロ焼売,Crab 'n Rheno Dumplings,,30,3
+67,dish,21,サイプロシュートの肉団子,Prosciutto Meatballs,,2,3
+68,dish,22,ロックラック名物ナッツ炒め,Nutty Stir-fry,,11,12
+69,dish,23,ベルナスの肉挟み揚げ,Deep-fried Eggplant,,2,22
+70,dish,24,モガモ貝のクルミ揚げ,Deep-fried Mussel,,11,32
+71,dish,25,ツチタケノコとナスのグリエ,Grilled Shootplant,,21,22
+72,dish,26,古代真鯛のアンティパスト,Seabream Antipasto,,31,3
+73,dish,27,屋台の闘魂まかない飯,Spirited Chowder,special,,
+74,dish,28,サイホロ贅沢シュラスコ,Diced BBQ,,2,4
+75,dish,29,ロックラックルミ古代茶漬け,Loc Lac Rice Tea,,11,13
+76,dish,30,シナトマ添えサイコロステーキ,Cathar Tomato Steak,,2,23
+77,dish,31,クルミとジャンボウの和え物,Chopped Fish 'n Nuts,,11,33
+78,dish,32,ツチタケノコ入りチキンライス,Chicken Shoot Rice,,21,23
+79,dish,33,古代真鯛の夜鳥仕立て,Puréed Seabream,,31,4
+80,dish,34,リノホロロースカツ,Roasted Rheno,,3,4
+81,dish,35,ゼンマイ米のロック豆ご飯,Loc Lac Spring Rice,,12,13
+82,dish,36,リノプロシュートの天空サラダ,Prosciutto Salad,,3,23
+83,dish,37,ジャンボウの落花生味噌あえ,Grounded Peanut Dip,,12,33
+84,dish,38,ベルナスとシナトマのパスタ,Eggplant 'n Tomato Pasta,,22,23
+85,dish,39,モガモ貝とホロ肉のアヒージョ,Mussel 'n Meat Ajillo,,32,4
+86,dish,40,屋台の愛情まかない飯,Affectionate Soup,special,,
+87,dish,41,リノハツサンドウィッチ,Rheno Heartful Sandwich,,3,5
+88,dish,42,ロースハツ丼,Hot Heart Bowl,,4,5
+89,dish,43,アツハツジャンボウ鍋,Jumbo Hotpot,,33,5
+90,dish,44,シナトビウオの落花生衣揚げ,Fried Flying Fish,,12,34
+91,dish,45,天空海鮮丼,Abyssal Fish Bowl,,13,34
+92,dish,46,モガモ貝のアツハツ焼き,BBQ Hot Mussels,,32,5
+93,dish,47,ベルナスとお肉のカルボナード,Bherna Carbonade,,22,39
+94,dish,48,落花生クリームのフワッフル,Creamy Waffles,,12,14
+95,dish,49,ふわふわゼンマイオムレツ,Fluffy Spring Omelet,,13,14
+96,dish,50,砂漠チンジャオホロロース,Ginger Malfest Roast,,4,24
+97,dish,51,ベルナスのリンゴ酢マリネ,Marinated Eggplants,,22,24
+98,dish,52,シナト風アップルトマトタルト,Cathar Apple Tart,,23,24
+99,dish,53,ハップルアップルの生ハム巻き,Nibelapple Ham Rolls,,3,24
+100,dish,54,達人仕込みの野菜シチュー,Master Veggie Stew,,23,39
+101,dish,55,屋台の特上まかない飯,Exquisite Rice,special,,
+102,dish,56,肉盛りマグマ丼,Magma Meat Bowl,,3,6
+103,dish,57,五穀豊穣ロックライス,Loc Lac Rice,,12,15
+104,dish,58,マツタケのリノハムみぞれ和え,Chopped Rheno Ham,,3,25
+105,dish,59,コダイオウイカのリング揚げ,Fried Squid Rings,,12,35
+106,dish,60,雪山ベルナスの朴葉焼き,Chilled Fried Eggplant,,22,25
+107,dish,61,モガモ貝とマトンの火山カレー,Moga Spicy Curry,,32,6
+108,dish,62,ベルナスのブレスシチュー,Eggplant Stew,,22,40
+109,dish,63,ホロロースのマグマ煮込み,Hot Malfest Beef,,4,6
+110,dish,64,五穀豊穣ゼンマイおむすび,Manygrain Riceball,,13,15
+111,dish,65,夜鳥の土瓶蒸し,Steam-boiled Fowl,,4,25
+112,dish,66,コダイオウイカのイカめし,Ancient Squid Rice,,13,35
+113,dish,67,天空の雪山サラダ,Snowy Salad,,23,25
+114,dish,68,ジャンボウのマグマ焼き,Jumbo Fried Pork,,33,6
+115,dish,69,完熟シナトマトのワイン煮,Drizzled Cathar Tomato,,23,40
+116,dish,70,酒のジュレと生ハムの龍サラダ,Dragon Salad,,3,41
+117,dish,71,ラッカセイの龍炒め,Stir-fry Dragon Peanuts,,12,41
+118,dish,72,ベルナスの龍酒蒸し,Dragon Eggplants,,22,41
+119,dish,73,モガモ貝のみぞれ龍煮,Shaved Dragon Mussels,,32,41
+120,dish,74,ゼンマイ米の龍寿司,Spring Dragon Sushi,,13,41
+121,dish,75,シナトマトの龍リゾット,Cathar Dragon Risotto,,23,41
+122,dish,76,ジャンボウの龍カマ焼き,Jumbo Fried Dragon,,33,41
+123,dish,77,竜の合挽きハンバーグ,Wyvernburger,,4,7
+124,dish,78,ホロロースの皇帝風マリネ,Crispy Malfest Marinade,,4,26
+125,dish,79,コダイオウイカの宮廷風煮つけ,Ancient Squid Stew,,35,26
+126,dish,80,ドカ盛りアワビナス重ね蒸し,Steamed Abalone and Eggplant,,22,36
+127,dish,81,ドンドル納豆イカソウメン和え,Dundor Bean and Squid Noodles,,35,16
+128,dish,82,ベルナスのウォッカ蒸し,Steamed Bherna Eggplant,,22,42
+129,dish,83,リモホロ・ミックスグリル,Lari-Malfest Mixed Grill,,4,8
+130,dish,84,甲冑スープのホロ叉焼麺,Malfest Ramen,,4,37
+131,dish,85,ベルナスの砲丸焼き,Grilled Bherna Eggplant,,22,27
+132,dish,86,マスターイカフライバーガー,Master's Fried Squid Burger,,35,17
+133,dish,87,ベルナスの吟醸酒粕漬け,Pickled Bherna Eggplant,,22,43
+134,dish,88,ガッツリモ背肉丼,Hearty Larinoth Rice Bowl,,8,18
+135,dish,89,林檎王の厚切りミートパイ,King of All Meat Pies,,8,28
+136,dish,90,リモ背肉とチコフグのあら汁,Larinoth and Blowfish Soup,,8,38
+137,dish,91,至宝の林檎王リゾット,King of All Risottos,,28,18
+138,dish,92,特製チコフグ雑炊,Special Blowfish Porridge,,18,38
+139,dish,93,チコフグと林檎王のセビーチェ,King of All Blowfish Ceviches,,28,38
+140,dish,94,リモストロガノフ,Larinoth Stroganoff,,44,8
+141,dish,95,ほろ酔いワイン茶漬け,Strong Wine Gruel,,44,18
+142,dish,96,林檎王ニャトーコンポート,King of All Jams,,44,28
+143,dish,97,薫り高いチコフグのムニエル,Blowfish Meunière,,44,38
+144,dish,98,屋台の究極まかない飯,Ultimate Rice,special,,
