@@ -1,16 +1,17 @@
 # GTM / GA4 ページ内イベント
 
-このビューアは Google Tag Manager（コンテナ `GTM-T9NHWQW4`）を設置済みで、
-ページ内の操作を `dataLayer.push({ event: 'mhxx_xxx', ... })` で送ります。
+このビューアは **GA4 を直接埋め込み**（gtag.js）、ページ内の操作を
+`gtag('event', 'mhxx_xxx', {...})` で送ります。GTM は使いません（手作業ゼロで運用するため）。
 
 | 項目 | 値 |
 |---|---|
-| GTM コンテナ | `GTM-T9NHWQW4` |
 | GA4 測定 ID | `G-QPCD4BGBL8` |
 | GA4 プロパティ | mhxx-id-memo |
 | サイト | <https://nexy451z.github.io/mhxx-id-memo/> |
+| デバッグ | `?ga_debug=1` を付けると GA4 の DebugView に流れる |
 
-> サイト側に `gtag.js` を直接貼ると GTM と二重計測になります。**GA4 は GTM 経由で設定**してください。
+> 以前の GTM コンテナ `GTM-T9NHWQW4` はサイトから外しました。GTM を再度使う場合は、
+> gtag.js と二重計測にならないよう片方を外してください。
 
 - 実装: `web/index.html` の `track(name, params)` ヘルパー
 - すべての呼び出しは `try/catch` で包んであり、**計測が失敗してもアプリの挙動は変わりません**

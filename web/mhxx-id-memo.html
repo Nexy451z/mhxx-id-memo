@@ -2,15 +2,17 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T9NHWQW4');</script>
-<!-- End Google Tag Manager -->
-<!-- gtag 互換シム（GA4 の gtag() 形式でも送れるようにする。GTM スニペットとは共存可） -->
-<script>window.gtag = window.gtag || function () { (window.dataLayer = window.dataLayer || []).push(arguments); };</script>
+<!-- Google tag (gtag.js) — GA4 G-QPCD4BGBL8 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QPCD4BGBL8" onload="window.__gtagReady=true;if(window.__gtagFlush){try{window.__gtagFlush();}catch(e){}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  /* ?ga_debug=1 を付けると GA4 の DebugView に流れる（動作確認用） */
+  gtag('config', 'G-QPCD4BGBL8',
+    /[?&]ga_debug=1(&|$)/.test(location.search) ? { debug_mode: true } : {});
+</script>
+<!-- End Google tag -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>MHXX ID MEMO — Monster Hunter XX データ ID ビューア</title>
@@ -360,10 +362,6 @@ html[data-theme="dark"] .hex .f6{background:#262c34;color:#b6c0cb}
 </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9NHWQW4"
-height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <div id="app">
   <aside id="sidebar">
     <div class="sb-head">
@@ -772,21 +770,48 @@ function isTyping(node) {
   return t === 'INPUT' || t === 'TEXTAREA' || t === 'SELECT' || node.isContentEditable === true;
 }
 
-/* ============================================================ 計測（GTM / GA4）
+/* ============================================================ 計測（GA4 直接）
    方針:
    - 失敗してもアプリの挙動に影響させない（try/catch で握りつぶす）
    - 検索文字列・行の中身は送らない。件数・ID・種別だけ送る
-   - イベント名は mhxx_ 接頭辞 + snake_case（40 文字以内） */
+   - イベント名は mhxx_ 接頭辞 + snake_case（40 文字以内）
+   - gtag.js は head で同期定義済み（未ロード時は dataLayer にキューされる） */
+var __gaQueue = [];
+var __gaTimer = null;
+/* gtag.js は script の onload 後もしばらく初期化が続く。
+   google_tag_manager に測定 ID が現れてから送らないと、初期イベントが
+   黙って捨てられる（実測で確認）。 */
+function __gaReady() {
+  try {
+    return !!(window.google_tag_manager && window.google_tag_manager['G-QPCD4BGBL8']);
+  } catch (e) { return false; }
+}
+function __gaFlush() {
+  try {
+    if (!__gaReady()) { return false; }
+    while (__gaQueue.length) {
+      var it = __gaQueue.shift();
+      window.gtag('event', it[0], it[1]);
+    }
+    return true;
+  } catch (e) { return false; }
+}
+window.__gtagFlush = __gaFlush;
 function track(name, params) {
   try {
-    window.dataLayer = window.dataLayer || [];
-    var o = { event: name };
-    if (params) {
-      for (var k in params) {
-        if (Object.prototype.hasOwnProperty.call(params, k)) { o[k] = params[k]; }
-      }
+    var p = params || {};
+    if (__gaReady() && typeof window.gtag === 'function') {
+      window.gtag('event', name, p);
+      return;
     }
-    window.dataLayer.push(o);
+    __gaQueue.push([name, p]);
+    if (!__gaTimer) {
+      var tries = 0;
+      __gaTimer = setInterval(function () {
+        tries++;
+        if (__gaFlush() || tries > 100) { clearInterval(__gaTimer); __gaTimer = null; }
+      }, 100);
+    }
   } catch (e) { /* 計測失敗は無視 */ }
 }
 
