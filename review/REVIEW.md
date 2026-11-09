@@ -25,8 +25,8 @@
 | Critical | 0 |
 | Major（未解決） | 0 |
 | Major（レビュー中に解決） | 2 |
-| Minor（未解決・任意） | 1 |
-| Minor（レビュー中に解決） | 1 |
+| Minor（未解決・任意） | 0 |
+| Minor（レビュー中に解決） | 2 |
 
 ---
 
@@ -222,7 +222,12 @@ python review/check_html.py                   # HTML / JS
 - `docs/table-definitions.md` / `docs/sources.md` / `docs/build-report.md`: build.py の自動生成で、
   42 テーブル / 91,406 行と実データに一致。
 - `README.md`: 記述内容（使い方・再生成手順・検証内容）は実装と一致。コードフェンスも正常（4 箇所 = 2 ブロック）。
+- `docs/sources.md` には「プレースホルダ（値なし）の扱い」節があり、`(None)` を空文字化する表と `-` を保持する表の
+  2 方針と理由が明記されている（レビュー中の m1 指摘に対応）。
 - `data/equip/NOTES.md` / `data/world/NOTES.md`: 存在し、抽出方法を記載。
+- レビュー中に `tools/build.py` が改訂された（`demote_headings()` 追加 = NOTES.md の見出しを
+  `docs/sources.md` へ埋め込む際に段下げする。コードフェンス内は不可触）。改訂後の出力で再検証し、
+  データ版 `sha256:9f346b94…` は不変・`docs/sources.md` の見出し階層も H1 が 1 つだけで正常なことを確認した。
 
 ---
 
@@ -292,7 +297,7 @@ lead の指定は「10 テーブル」だったが、実データで `primary_ke
 
 | ID | 対象 | 内容 | 状態 |
 |---|---|---|---|
-| m1 | kinsects / talismans / npcs | プレースホルダの扱いが不統一。kinsects・talismans は出典の `(None)` を空文字化、npcs は出典の `-` をそのまま保持（16 行）。どちらも出典に忠実だが方針が揃っていない | **未解決（任意）**。データ修正は不要、方針の 1 行明記を推奨 |
+| m1 | kinsects / talismans / npcs | プレースホルダの扱いが不統一だった（kinsects・talismans は出典の `(None)` を空文字化、npcs は出典の `-` をそのまま保持） | **解決済み**（`docs/sources.md` に「プレースホルダ（値なし）の扱い」節が追加され、2 方針と理由が明記された） |
 | m2 | talisman-tables | `notes_ja` に自然キー `(kind, tier, skill_id)` の明示がなかった | **解決済み**（analyst-equip が追記。notes_ja 526 字） |
 
 ### 情報（欠陥ではない）
@@ -308,8 +313,7 @@ lead の指定は「10 テーブル」だったが、実データで `primary_ke
 
 1. **M2（lead）**: git 初期コミットを実施（SPEC §4 で git 操作は lead の担当）。
    `.gitignore` は `__pycache__/` 等を除外済み。`review/_*.json` などレビュー中間ファイルの扱いも併せて判断されたい。
-2. **m1（任意）**: プレースホルダ方針を `docs/sources.md` か各 `NOTES.md` に 1 行明記する
-   （例: 「出典の `(None)` は空文字、`-` は出典どおり保持」）。データ修正は不要。
+（m1 は `docs/sources.md` に方針が明記され解決済み。データ修正が必要な箇所は 0 件。）
 
 > データ（CSV / manifest）の値そのものに修正が必要な箇所は **0 件**。
 
